@@ -1,6 +1,7 @@
-
+#dist: trusty
+#sudo: required
 before_install:
     - wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-    - apt-get install clang-4.0 lldb-4.0
+    - sudo apt-get install clang-4.0 lldb-4.0
 script:
     - clang-4.0 --version
