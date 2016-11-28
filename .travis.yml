@@ -1,7 +1,10 @@
 #dist: trusty
 #sudo: required
 before_install:
-    - wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-    - sudo apt-get install clang-4.0 lldb-4.0
+  - wget -nv -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+  - sudo apt-add-repository -y 'deb http://llvm.org/apt/trusty llvm-toolchain-trusty-3.8 main'
+  - sudo apt-add-repository -y 'deb http://llvm.org/apt/trusty llvm-toolchain-trusty-4.0 main'
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq -y clang-4.0
 script:
-    - clang-4.0 --version
+  - clang-4.0 --version
