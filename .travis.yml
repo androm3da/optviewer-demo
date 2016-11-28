@@ -7,4 +7,6 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq -y clang-4.0
 script:
-  - clang-4.0 --version
+  - echo 'int main() { return 0; }' > main.c
+  - clang-4.0 -fsave-optimization-record main.c
+  - cat $(find . -name '*.yaml')
