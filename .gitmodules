@@ -1,0 +1,6 @@
+[submodule "cpython"]
+	path = cpython
+	url = https://github.com/python/cpython/
+[submodule "llvm"]
+	path = llvm
+	url = https://github.com/llvm-mirror/llvm

@@ -2,11 +2,11 @@ dist: trusty
 sudo: required
 before_install:
   - wget -nv -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
-  - sudo apt-add-repository -y 'deb http://llvm.org/apt/trusty llvm-toolchain-trusty-3.8 main'
+# - sudo apt-add-repository -y 'deb http://llvm.org/apt/trusty llvm-toolchain-trusty-3.8 main'
   - sudo apt-add-repository -y 'deb http://llvm.org/apt/trusty llvm-toolchain-trusty main'
   - sudo apt-get update -qq
-  - sudo apt-get install -qq -y clang-4.0
+install:
+  - sudo apt-get install -qq -y clang-4.0 binutils-gold
 script:
-  - echo 'int main() { return 0; }' > main.c
-  - clang-4.0 -fsave-optimization-record main.c
-  - cat $(find . -name '*.yaml')
+  - cd cpython; CC=clang-4.0 CFLAGS="-fsave-optimization-record" ./configure --with-optimizations && make
+  - ./llvm/utils/opt-viewer/opt-viewer.py $(find cpython -name '*.yaml') -source_dir cpython out/
