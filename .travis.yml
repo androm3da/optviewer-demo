@@ -10,4 +10,5 @@ install:
   - sudo apt-get install -qq -y clang-4.0 binutils-gold
 script:
   - cd cpython; CC=clang-4.0 CFLAGS="-fsave-optimization-record" ./configure --with-optimizations && make ; cd -
-  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py $(find cpython -name '*.yaml') -source-dir cpython/ out/
+  - find cpython -name '*.yaml'
+  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir cpython/ $(find cpython -name '*.yaml') out/
