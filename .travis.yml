@@ -10,5 +10,6 @@ install:
   - sudo apt-get install -qq -y clang-4.0 binutils-gold
 script:
   - cd thrift; ./bootstrap.sh &&  CXX=clang++-4.0 CC=clang-4.0 CXXFLAGS="-fsave-optimization-record" CFLAGS="-fsave-optimization-record" ./configure && make ; cd -
+  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir thrift/ $(find thrift -name '*.yaml') opt_analysis/
   - cd cpython; CC=clang-4.0 CFLAGS="-fsave-optimization-record" ./configure --with-optimizations && make ; cd -
-  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir cpython/ $(find cpython -name '*.yaml') out/
+  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir cpython/ $(find cpython -name '*.yaml') opt_analysis/
