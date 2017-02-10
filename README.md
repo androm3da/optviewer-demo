@@ -5,6 +5,7 @@ opt-viewer can tell you more about missed optimization opportunities.  The
 optimizers that `clang` uses can explain the rationale for why their specific
 optimization method couldn't be leveraged in given parts of your source.
 
+![Build status](https://travis-ci.org/androm3da/optviewer-demo.svg?branch=master)
 
 # Usage
 
