@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 before_install:
   - wget -nv -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-  - sudo apt-add-repository -y 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty main'
+  - sudo apt-add-repository -y 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-4.0 main'
   - sudo apt-get update -qq
   - virtualenv optviewer
   - source optviewer/bin/activate ; pip install pyyaml pygments
