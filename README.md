@@ -7,6 +7,9 @@ optimization method couldn't be leveraged in given parts of your source.
 
 ![Build status](https://travis-ci.org/androm3da/optviewer-demo.svg?branch=master)
 
+## Output Examples
+* [CPython](https://androm3da.github.io/optviewer-demo/output_analysis/cpython/)
+
 # Usage
 
 ## Prep

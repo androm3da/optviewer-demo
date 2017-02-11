@@ -1,18 +1,18 @@
 dist: trusty
 sudo: required
-global:
-    env:
-    - ENCRYPTION_LABEL: d87c07fd1a5b
-    - GENERATED_OUTPUT: "${HOME}/output_analysis/"
-
 before_install:
   - wget -nv -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
   - sudo apt-add-repository -y 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-4.0 main'
   - sudo apt-get update -qq
   - virtualenv optviewer
   - source optviewer/bin/activate ; pip install pyyaml pygments
-  - ./generate_analysis.sh ${GENERATED_OUTPUT}
 install:
   - sudo apt-get install -qq -y clang-4.0 binutils-gold
 script:
+  - ./generate_analysis.sh
   - ./deploy.sh
+
+branches:
+  only:
+  - master
+  - dev
