@@ -29,11 +29,13 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 export GENERATED_OUTPUT=${HOME}/output_analysis/
-rm -rf  ${HOME}/output_repo/output_analysis/
-mv ${GENERATED_OUTPUT} ${HOME}/output_repo/
 #find ${HOME}/output_repo/output_analysis/
 git fetch --all
 git checkout ${TARGET_BRANCH}
+
+rm -rf  ${HOME}/output_repo/output_analysis/
+mv ${GENERATED_OUTPUT} ${HOME}/output_repo/
+
 git add output_analysis/
 git commit -m "Deploy output for '${THIS_REPO_SHA}'"
 
