@@ -1,0 +1,891 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">+----------------------------------------------------------------------+</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">Zend</span> <span class="n">Engine</span>                                                          <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">+----------------------------------------------------------------------+</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1998</span><span class="o">-</span><span class="mi">2016</span> <span class="n">Zend</span> <span class="n">Technologies</span> <span class="n">Ltd</span><span class="p">.</span> <span class="p">(</span><span class="nl">http</span><span class="p">:</span><span class="c1">//www.zend.com) |</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">+----------------------------------------------------------------------+</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">This</span> <span class="n">source</span> <span class="n">file</span> <span class="n">is</span> <span class="n">subject</span> <span class="n">to</span> <span class="n">version</span> <span class="mf">2.00</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Zend</span> <span class="n">license</span><span class="p">,</span>     <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">that</span> <span class="n">is</span> <span class="n">bundled</span> <span class="n">with</span> <span class="k">this</span> <span class="n">package</span> <span class="n">in</span> <span class="n">the</span> <span class="n">file</span> <span class="n">LICENSE</span><span class="p">,</span> <span class="n">and</span> <span class="n">is</span>        <span class="o">|</span> 
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">available</span> <span class="n">through</span> <span class="n">the</span> <span class="n">world</span><span class="o">-</span><span class="n">wide</span><span class="o">-</span><span class="n">web</span> <span class="n">at</span> <span class="n">the</span> <span class="n">following</span> <span class="nl">url</span><span class="p">:</span>           <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//www.zend.com/license/2_00.txt.                                |</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">If</span> <span class="n">you</span> <span class="n">did</span> <span class="n">not</span> <span class="n">receive</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Zend</span> <span class="n">license</span> <span class="n">and</span> <span class="n">are</span> <span class="n">unable</span> <span class="n">to</span>  <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">obtain</span> <span class="n">it</span> <span class="n">through</span> <span class="n">the</span> <span class="n">world</span><span class="o">-</span><span class="n">wide</span><span class="o">-</span><span class="n">web</span><span class="p">,</span> <span class="n">please</span> <span class="n">send</span> <span class="n">a</span> <span class="n">note</span> <span class="n">to</span>          <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="n">license</span><span class="err">@</span><span class="n">zend</span><span class="p">.</span><span class="n">com</span> <span class="n">so</span> <span class="n">we</span> <span class="n">can</span> <span class="n">mail</span> <span class="n">you</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">immediately</span><span class="p">.</span>              <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">+----------------------------------------------------------------------+</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span> <span class="nl">Authors</span><span class="p">:</span> <span class="n">Andi</span> <span class="n">Gutmans</span> <span class="o">&lt;</span><span class="n">andi</span><span class="err">@</span><span class="n">zend</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>                                <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">|</span>          <span class="n">Zeev</span> <span class="n">Suraski</span> <span class="o">&lt;</span><span class="n">zeev</span><span class="err">@</span><span class="n">zend</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>                                <span class="o">|</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">+----------------------------------------------------------------------+</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* $Id$ */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef ZEND_VARIABLES_H</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZEND_VARIABLES_H</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">BEGIN_EXTERN_C</span><span class="p">()</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_dtor_func</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">zend_always_inline</span> <span class="kt">void</span> <span class="n">_zval_dtor</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="k">if</span> <span class="p">(</span><span class="n">zvalue</span><span class="o">-&gt;</span><span class="n">type</span> <span class="o">&lt;=</span> <span class="n">IS_BOOL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>		<span class="k">return</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="n">_zval_dtor_func</span><span class="p">(</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_RELAY_CC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	</pre><span class="column-entry-yellow"> _zval_dtor_func will not be inlined into _zval_dtor(_zval_struct*) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_zval_dtor(_zval_struct*)</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_copy_ctor_func</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">zend_always_inline</span> <span class="kt">void</span> <span class="n">_zval_copy_ctor</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="k">if</span> <span class="p">(</span><span class="n">zvalue</span><span class="o">-&gt;</span><span class="n">type</span> <span class="o">&lt;=</span> <span class="n">IS_BOOL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>		<span class="k">return</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>	<span class="n">_zval_copy_ctor_func</span><span class="p">(</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_RELAY_CC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">int</span> <span class="nf">zval_copy_static_var</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">p</span> <span class="n">TSRMLS_DC</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_args</span><span class="p">,</span> <span class="kt">va_list</span> <span class="n">args</span><span class="p">,</span> <span class="n">zend_hash_key</span> <span class="o">*</span><span class="n">key</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">int</span> <span class="nf">zend_print_variable</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">var</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_ptr_dtor</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">zval_ptr</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_internal_dtor</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_internal_ptr_dtor</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">zvalue</span> <span class="n">ZEND_FILE_LINE_DC</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_dtor_wrapper</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_copy_ctor(zvalue) _zval_copy_ctor((zvalue) ZEND_FILE_LINE_CC)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_dtor(zvalue) _zval_dtor((zvalue) ZEND_FILE_LINE_CC)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_ptr_dtor(zval_ptr) _zval_ptr_dtor((zval_ptr) ZEND_FILE_LINE_CC)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_dtor(zvalue) _zval_internal_dtor((zvalue) ZEND_FILE_LINE_CC)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_ptr_dtor(zvalue) _zval_internal_ptr_dtor((zvalue) ZEND_FILE_LINE_CC)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_dtor_wrapper _zval_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if ZEND_DEBUG</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_copy_ctor_wrapper</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_ptr_dtor_wrapper</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">zval_ptr</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_internal_dtor_wrapper</span><span class="p">(</span><span class="n">zval</span> <span class="o">*</span><span class="n">zvalue</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">_zval_internal_ptr_dtor_wrapper</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">zvalue</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_copy_ctor_wrapper _zval_copy_ctor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_ptr_dtor_wrapper _zval_ptr_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_dtor_wrapper _zval_internal_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_ptr_dtor_wrapper _zval_internal_ptr_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_copy_ctor_wrapper _zval_copy_ctor_func</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_ptr_dtor_wrapper _zval_ptr_dtor</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_dtor_wrapper _zval_internal_dtor</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define zval_internal_ptr_dtor_wrapper _zval_internal_ptr_dtor</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">ZEND_API</span> <span class="kt">void</span> <span class="nf">zval_add_ref</span><span class="p">(</span><span class="n">zval</span> <span class="o">**</span><span class="n">p</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">END_EXTERN_C</span><span class="p">()</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZVAL_DESTRUCTOR (void (*)(void *)) zval_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZVAL_PTR_DTOR (void (*)(void *)) zval_ptr_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZVAL_INTERNAL_DTOR (void (*)(void *)) zval_internal_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZVAL_INTERNAL_PTR_DTOR (void (*)(void *)) zval_internal_ptr_dtor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ZVAL_COPY_CTOR (void (*)(void *)) zval_copy_ctor_wrapper</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Local</span> <span class="nl">variables</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">tab</span><span class="o">-</span><span class="nl">width</span><span class="p">:</span> <span class="mi">4</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">c</span><span class="o">-</span><span class="n">basic</span><span class="o">-</span><span class="nl">offset</span><span class="p">:</span> <span class="mi">4</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">indent</span><span class="o">-</span><span class="n">tabs</span><span class="o">-</span><span class="nl">mode</span><span class="p">:</span> <span class="n">t</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="nl">End</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>
