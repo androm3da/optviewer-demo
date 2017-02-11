@@ -7,6 +7,9 @@ optimization method couldn't be leveraged in given parts of your source.
 
 ![Build status](https://travis-ci.org/androm3da/optviewer-demo.svg?branch=master)
 
+## Output Examples
+* [CPython](https://androm3da.github.io/optviewer-demo/output_analysis/cpython/)
+
 # Usage
 
 ## Prep
@@ -60,6 +63,12 @@ you can use `opt-viewer` to see these in relation to your project.
 
 
 ## Generating output
+
+First, gather the necessary dependencies for opt-viewer:
+
+    virtualenv optviewer_env
+    source optviewer_envbin/activate
+    pip install pyyaml pygments
 
 Let's assume your `sample` project is in the same directory as
 the one where you unpacked/cloned `llvm`.  Then you should invoke `opt-viewer`
