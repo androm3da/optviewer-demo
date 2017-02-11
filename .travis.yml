@@ -1,15 +1,18 @@
 dist: trusty
 sudo: required
+global:
+    env:
+    - ENCRYPTION_LABEL: d87c07fd1a5b
+    - GENERATED_OUTPUT: "${HOME}/output_analysis/"
+
 before_install:
   - wget -nv -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
   - sudo apt-add-repository -y 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-4.0 main'
   - sudo apt-get update -qq
   - virtualenv optviewer
   - source optviewer/bin/activate ; pip install pyyaml pygments
+  - ./generate_analysis.sh ${GENERATED_OUTPUT}
 install:
   - sudo apt-get install -qq -y clang-4.0 binutils-gold
 script:
-  - cd thrift; ./bootstrap.sh &&  CXX=clang++-4.0 CC=clang-4.0 CXXFLAGS="-fsave-optimization-record" CFLAGS="-fsave-optimization-record" ./configure && make ; cd -
-  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir thrift/ $(find thrift -name '*.yaml') opt_analysis/
-  - cd cpython; CC=clang-4.0 CFLAGS="-fsave-optimization-record" ./configure --with-optimizations && make ; cd -
-  - source optviewer/bin/activate ; ./llvm/utils/opt-viewer/opt-viewer.py -source-dir cpython/ $(find cpython -name '*.yaml') opt_analysis/
+  - ./deploy.sh
