@@ -1,0 +1,1577 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Finding the optimal width of unicode characters in a buffer */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if !STRINGLIB_IS_UNICODE</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># error &quot;find_max_char.h is specific to Unicode&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Mask to quickly check whether a C &#39;long&#39; contains a</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">non</span><span class="o">-</span><span class="n">ASCII</span><span class="p">,</span> <span class="n">UTF8</span><span class="o">-</span><span class="n">encoded</span> <span class="kt">char</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if (SIZEOF_LONG == 8)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># define UCS1_ASCII_CHAR_MASK 0x8080808080808080UL</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#elif (SIZEOF_LONG == 4)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># define UCS1_ASCII_CHAR_MASK 0x80808080UL</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># error C &#39;long&#39; size should be either 4 or 8!</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if STRINGLIB_SIZEOF_CHAR == 1</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="n">Py_UCS4</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">STRINGLIB</span><span class="p">(</span><span class="n">find_max_char</span><span class="p">)(</span><span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">begin</span><span class="p">,</span> <span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">end</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="n">begin</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">aligned_end</span> <span class="o">=</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="n">_Py_ALIGN_DOWN</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">SIZEOF_LONG</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">_Py_IS_ALIGNED</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">SIZEOF_LONG</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="cm">/* Help register allocation */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">_p</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">while</span> <span class="p">(</span><span class="n">_p</span> <span class="o">&lt;</span> <span class="n">aligned_end</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L1387>_copy_characters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L1387>_copy_characters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2159>_PyUnicode_FromUCS1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2159>_PyUnicode_FromUCS1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L13677>_PyUnicodeWriter_WriteLatin1String</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L13677>_PyUnicodeWriter_WriteLatin1String</a></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">value</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="o">*</span><span class="p">)</span> <span class="n">_p</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="n">UCS1_ASCII_CHAR_MASK</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">return</span> <span class="mi">255</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">_p</span> <span class="o">+=</span> <span class="n">SIZEOF_LONG</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">p</span> <span class="o">=</span> <span class="n">_p</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="n">end</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="o">++</span> <span class="o">&amp;</span> <span class="mh">0x80</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L10594>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="mi">255</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">127</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef ASCII_CHAR_MASK</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else </span><span class="cm">/* STRINGLIB_SIZEOF_CHAR == 1 */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MASK_ASCII 0xFFFFFF80</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MASK_UCS1 0xFFFFFF00</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MASK_UCS2 0xFFFF0000</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MAX_CHAR_ASCII 0x7f</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MAX_CHAR_UCS1  0xff</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MAX_CHAR_UCS2  0xffff</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MAX_CHAR_UCS4  0x10ffff</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="n">Py_UCS4</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">STRINGLIB</span><span class="p">(</span><span class="n">find_max_char</span><span class="p">)(</span><span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">begin</span><span class="p">,</span> <span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">end</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if STRINGLIB_SIZEOF_CHAR == 2</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">Py_UCS4</span> <span class="n">mask_limit</span> <span class="o">=</span> <span class="n">MASK_UCS1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">Py_UCS4</span> <span class="n">max_char_limit</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#elif STRINGLIB_SIZEOF_CHAR == 4</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">Py_UCS4</span> <span class="n">mask_limit</span> <span class="o">=</span> <span class="n">MASK_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">Py_UCS4</span> <span class="n">max_char_limit</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS4</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#error Invalid STRINGLIB_SIZEOF_CHAR (must be 1, 2 or 4)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_UCS4</span> <span class="n">mask</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_ssize_t</span> <span class="n">n</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">begin</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">begin</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="n">STRINGLIB_CHAR</span> <span class="o">*</span><span class="n">unrolled_end</span> <span class="o">=</span> <span class="n">begin</span> <span class="o">+</span> <span class="n">_Py_SIZE_ROUND_DOWN</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_UCS4</span> <span class="n">max_char</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">max_char</span> <span class="o">=</span> <span class="n">MAX_CHAR_ASCII</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">mask</span> <span class="o">=</span> <span class="n">MASK_ASCII</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">unrolled_end</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">STRINGLIB_CHAR</span> <span class="n">bits</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">|</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">|</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L80>or</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">bits</span> <span class="o">&amp;</span> <span class="n">mask</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L81>zext</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">mask_limit</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2180>_PyUnicode_FromUCS2</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2180>_PyUnicode_FromUCS2</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2206>_PyUnicode_FromUCS4</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2206>_PyUnicode_FromUCS4</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="cm">/* Limit reached */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="k">return</span> <span class="n">max_char_limit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">MASK_ASCII</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">max_char</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">mask</span> <span class="o">=</span> <span class="n">MASK_UCS1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="cm">/* mask can&#39;t be MASK_UCS2 because of mask_limit above */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">assert</span><span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">MASK_UCS1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">max_char</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">mask</span> <span class="o">=</span> <span class="n">MASK_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="cm">/* We check the new mask on the same chars in the next iteration */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">p</span> <span class="o">+=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">mask</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L102>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_find_max_char</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_find_max_char.h.html#L102>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_find_max_char</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">mask_limit</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2180>_PyUnicode_FromUCS2</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2180>_PyUnicode_FromUCS2</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2206>_PyUnicode_FromUCS4</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2206>_PyUnicode_FromUCS4</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L2254>_PyUnicode_FindMaxChar</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10486>replace</a></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="cm">/* Limit reached */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="k">return</span> <span class="n">max_char_limit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">MASK_ASCII</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">max_char</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">mask</span> <span class="o">=</span> <span class="n">MASK_UCS1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="cm">/* mask can&#39;t be MASK_UCS2 because of mask_limit above */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">assert</span><span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">MASK_UCS1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">max_char</span> <span class="o">=</span> <span class="n">MAX_CHAR_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="n">mask</span> <span class="o">=</span> <span class="n">MASK_UCS2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="cm">/* We check the new mask on the same chars in the next iteration */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">max_char</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MASK_ASCII</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MASK_UCS1</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MASK_UCS2</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MAX_CHAR_ASCII</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MAX_CHAR_UCS1</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MAX_CHAR_UCS2</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef MAX_CHAR_UCS4</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* STRINGLIB_SIZEOF_CHAR == 1 */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

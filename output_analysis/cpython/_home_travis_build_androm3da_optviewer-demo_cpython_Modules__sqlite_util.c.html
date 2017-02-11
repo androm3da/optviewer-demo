@@ -1,0 +1,1668 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* util.c - various utility functions</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2005</span><span class="o">-</span><span class="mi">2010</span> <span class="n">Gerhard</span> <span class="n">H</span><span class="err">ä</span><span class="n">ring</span> <span class="o">&lt;</span><span class="n">gh</span><span class="err">@</span><span class="n">ghaering</span><span class="p">.</span><span class="n">de</span><span class="o">&gt;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">This</span> <span class="n">file</span> <span class="n">is</span> <span class="n">part</span> <span class="n">of</span> <span class="n">pysqlite</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">This</span> <span class="n">software</span> <span class="n">is</span> <span class="n">provided</span> <span class="err">&#39;</span><span class="n">as</span><span class="o">-</span><span class="n">is</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">without</span> <span class="n">any</span> <span class="n">express</span> <span class="n">or</span> <span class="n">implied</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">warranty</span><span class="p">.</span>  <span class="n">In</span> <span class="n">no</span> <span class="n">event</span> <span class="n">will</span> <span class="n">the</span> <span class="n">authors</span> <span class="n">be</span> <span class="n">held</span> <span class="n">liable</span> <span class="k">for</span> <span class="n">any</span> <span class="n">damages</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">arising</span> <span class="n">from</span> <span class="n">the</span> <span class="n">use</span> <span class="n">of</span> <span class="k">this</span> <span class="n">software</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Permission</span> <span class="n">is</span> <span class="n">granted</span> <span class="n">to</span> <span class="n">anyone</span> <span class="n">to</span> <span class="n">use</span> <span class="k">this</span> <span class="n">software</span> <span class="k">for</span> <span class="n">any</span> <span class="n">purpose</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">including</span> <span class="n">commercial</span> <span class="n">applications</span><span class="p">,</span> <span class="n">and</span> <span class="n">to</span> <span class="n">alter</span> <span class="n">it</span> <span class="n">and</span> <span class="n">redistribute</span> <span class="n">it</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">freely</span><span class="p">,</span> <span class="n">subject</span> <span class="n">to</span> <span class="n">the</span> <span class="n">following</span> <span class="nl">restrictions</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mf">1.</span> <span class="n">The</span> <span class="n">origin</span> <span class="n">of</span> <span class="k">this</span> <span class="n">software</span> <span class="n">must</span> <span class="n">not</span> <span class="n">be</span> <span class="n">misrepresented</span><span class="p">;</span> <span class="n">you</span> <span class="n">must</span> <span class="n">not</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">claim</span> <span class="n">that</span> <span class="n">you</span> <span class="n">wrote</span> <span class="n">the</span> <span class="n">original</span> <span class="n">software</span><span class="p">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">use</span> <span class="k">this</span> <span class="n">software</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">in</span> <span class="n">a</span> <span class="n">product</span><span class="p">,</span> <span class="n">an</span> <span class="n">acknowledgment</span> <span class="n">in</span> <span class="n">the</span> <span class="n">product</span> <span class="n">documentation</span> <span class="n">would</span> <span class="n">be</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">appreciated</span> <span class="n">but</span> <span class="n">is</span> <span class="n">not</span> <span class="n">required</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mf">2.</span> <span class="n">Altered</span> <span class="n">source</span> <span class="n">versions</span> <span class="n">must</span> <span class="n">be</span> <span class="n">plainly</span> <span class="n">marked</span> <span class="n">as</span> <span class="n">such</span><span class="p">,</span> <span class="n">and</span> <span class="n">must</span> <span class="n">not</span> <span class="n">be</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">misrepresented</span> <span class="n">as</span> <span class="n">being</span> <span class="n">the</span> <span class="n">original</span> <span class="n">software</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mf">3.</span> <span class="n">This</span> <span class="n">notice</span> <span class="n">may</span> <span class="n">not</span> <span class="n">be</span> <span class="n">removed</span> <span class="n">or</span> <span class="n">altered</span> <span class="n">from</span> <span class="n">any</span> <span class="n">source</span> <span class="n">distribution</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;module.h&quot;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;connection.h&quot;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">pysqlite_step</span><span class="p">(</span><span class="n">sqlite3_stmt</span><span class="o">*</span> <span class="n">statement</span><span class="p">,</span> <span class="n">pysqlite_Connection</span><span class="o">*</span> <span class="n">connection</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">rc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">statement</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* this is a workaround for SQLite 3.5 and later. it now apparently</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">returns</span> <span class="nb">NULL</span> <span class="k">for</span> <span class="s">&quot;no-operation&quot;</span> <span class="n">statements</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">rc</span> <span class="o">=</span> <span class="n">SQLITE_OK</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_BEGIN_ALLOW_THREADS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyEval_SaveThread will not be inlined into pysqlite_step because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">pysqlite_step</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">rc</span> <span class="o">=</span> <span class="n">sqlite3_step</span><span class="p">(</span><span class="n">statement</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> sqlite3_step will not be inlined into pysqlite_step because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">pysqlite_step</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_END_ALLOW_THREADS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyEval_RestoreThread will not be inlined into pysqlite_step because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">pysqlite_step</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/**</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Checks</span> <span class="n">the</span> <span class="n">SQLite</span> <span class="n">error</span> <span class="n">code</span> <span class="n">and</span> <span class="n">sets</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">DB</span><span class="o">-</span><span class="n">API</span> <span class="n">exception</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Returns</span> <span class="n">the</span> <span class="n">error</span> <span class="n">code</span> <span class="p">(</span><span class="mi">0</span> <span class="n">means</span> <span class="n">no</span> <span class="n">error</span> <span class="n">occurred</span><span class="p">).</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_pysqlite_seterror</span><span class="p">(</span><span class="n">sqlite3</span><span class="o">*</span> <span class="n">db</span><span class="p">,</span> <span class="n">sqlite3_stmt</span><span class="o">*</span> <span class="n">st</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">errorcode</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* SQLite often doesn&#39;t report anything useful, unless you reset the statement first */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">st</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">sqlite3_reset</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> sqlite3_reset will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">errorcode</span> <span class="o">=</span> <span class="n">sqlite3_errcode</span><span class="p">(</span><span class="n">db</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> sqlite3_errcode will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">switch</span> <span class="p">(</span><span class="n">errorcode</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_OK</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_Clear</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_Clear will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_INTERNAL</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_NOTFOUND</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_InternalError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_NOMEM</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">PyErr_NoMemory</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_ERROR</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_PERM</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_ABORT</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_BUSY</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_LOCKED</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_READONLY</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_INTERRUPT</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_IOERR</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_FULL</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_CANTOPEN</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_PROTOCOL</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_EMPTY</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_SCHEMA</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_OperationalError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                       </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_CORRUPT</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_DatabaseError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_TOOBIG</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_DataError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_CONSTRAINT</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_MISMATCH</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_IntegrityError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="nl">SQLITE_MISUSE</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_ProgrammingError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                       </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">default</span><span class="o">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">pysqlite_DatabaseError</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">db</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> sqlite3_errmsg will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_seterror because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_seterror</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">errorcode</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef WORDS_BIGENDIAN</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># define IS_LITTLE_ENDIAN 0</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># define IS_LITTLE_ENDIAN 1</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_pysqlite_long_from_int64</span><span class="p">(</span><span class="n">sqlite_int64</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># if SIZEOF_LONG_LONG &lt; 8</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">PY_LLONG_MAX</span> <span class="o">||</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">PY_LLONG_MIN</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="n">_PyLong_FromByteArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">value</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                                     <span class="n">IS_LITTLE_ENDIAN</span><span class="p">,</span> <span class="mi">1</span> <span class="cm">/* signed */</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># if SIZEOF_LONG &lt; SIZEOF_LONG_LONG</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">LONG_MAX</span> <span class="o">||</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">LONG_MIN</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nf">PyLong_FromLongLong</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">PyLong_FromLong</span><span class="p">(</span><span class="n">Py_SAFE_DOWNCAST</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">sqlite_int64</span><span class="p">,</span> <span class="kt">long</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> PyLong_FromLong will not be inlined into _pysqlite_long_from_int64 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_from_int64</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">sqlite_int64</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_pysqlite_long_as_int64</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span> <span class="n">py_val</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">overflow</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">long</span> <span class="kt">long</span> <span class="n">value</span> <span class="o">=</span> <span class="n">PyLong_AsLongLongAndOverflow</span><span class="p">(</span><span class="n">py_val</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">overflow</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> PyLong_AsLongLongAndOverflow will not be inlined into _pysqlite_long_as_int64 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_as_int64</td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">PyErr_Occurred</span><span class="p">())</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> PyErr_Occurred will not be inlined into _pysqlite_long_as_int64 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_as_int64</td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">overflow</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L133>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_as_int64</td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># if SIZEOF_LONG_LONG &gt; 8</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="o">-</span><span class="mh">0x8000000000000000LL</span> <span class="o">&lt;=</span> <span class="n">value</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mh">0x7FFFFFFFFFFFFFFFLL</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sqlite_int64</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">sqlite_int64</span> <span class="n">int64val</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">_PyLong_AsByteArray</span><span class="p">((</span><span class="n">PyLongObject</span> <span class="o">*</span><span class="p">)</span><span class="n">py_val</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                                <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">int64val</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">int64val</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                                <span class="n">IS_LITTLE_ENDIAN</span><span class="p">,</span> <span class="mi">1</span> <span class="cm">/* signed */</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="n">int64val</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_OverflowError</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into _pysqlite_long_as_int64 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_as_int64</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sqlite_util.c.html#L133>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_pysqlite_long_as_int64</td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="s">&quot;Python int too large to convert to SQLite INTEGER&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

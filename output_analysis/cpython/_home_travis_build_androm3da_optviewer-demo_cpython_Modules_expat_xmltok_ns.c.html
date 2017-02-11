@@ -1,0 +1,1294 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Copyright (c) 1998, 1999 Thai Open Source Software Center Ltd</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">See</span> <span class="n">the</span> <span class="n">file</span> <span class="n">COPYING</span> <span class="k">for</span> <span class="n">copying</span> <span class="n">permission</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This file is included! */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef XML_TOK_NS_C</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">XmlGetUtf8InternalEncoding</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">internal_utf8_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">XmlGetUtf16InternalEncoding</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if BYTEORDER == 1234</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">internal_little2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#elif BYTEORDER == 4321</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">internal_big2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">const</span> <span class="kt">short</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">n</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>          <span class="o">?</span> <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">internal_little2_encoding</span><span class="p">).</span><span class="n">enc</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>          <span class="o">:</span> <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">internal_big2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span> <span class="k">const</span> <span class="nf">NS</span><span class="p">(</span><span class="n">encodings</span><span class="p">)[]</span> <span class="o">=</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">latin1_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">ascii_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">utf8_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">big2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">big2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">little2_encoding</span><span class="p">).</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">&amp;</span><span class="n">ns</span><span class="p">(</span><span class="n">utf8_encoding</span><span class="p">).</span><span class="n">enc</span> <span class="cm">/* NO_ENC */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="n">PTRCALL</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">initScanProlog</span><span class="p">)(</span><span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span><span class="n">enc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">end</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                   <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">nextTokPtr</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="n">initScan</span><span class="p">(</span><span class="n">NS</span><span class="p">(</span><span class="n">encodings</span><span class="p">),</span> <span class="p">(</span><span class="k">const</span> <span class="n">INIT_ENCODING</span> <span class="o">*</span><span class="p">)</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> too costly to inline (cost=380, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">initScanProlog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> will not be inlined into initScanProlog&nbsp;</span></td>
+<td class="column-entry-yellow">initScanProlog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> too costly to inline (cost=380, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">initScanPrologNS</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> will not be inlined into initScanPrologNS&nbsp;</span></td>
+<td class="column-entry-yellow">initScanPrologNS</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                  <span class="n">XML_PROLOG_STATE</span><span class="p">,</span> <span class="n">ptr</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">nextTokPtr</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="n">PTRCALL</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">initScanContent</span><span class="p">)(</span><span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span><span class="n">enc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">end</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">nextTokPtr</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="n">initScan</span><span class="p">(</span><span class="n">NS</span><span class="p">(</span><span class="n">encodings</span><span class="p">),</span> <span class="p">(</span><span class="k">const</span> <span class="n">INIT_ENCODING</span> <span class="o">*</span><span class="p">)</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> too costly to inline (cost=400, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">initScanContent</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> will not be inlined into initScanContent&nbsp;</span></td>
+<td class="column-entry-yellow">initScanContent</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> too costly to inline (cost=400, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">initScanContentNS</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1503>initScan</a> will not be inlined into initScanContentNS&nbsp;</span></td>
+<td class="column-entry-yellow">initScanContentNS</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                  <span class="n">XML_CONTENT_STATE</span><span class="p">,</span> <span class="n">ptr</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">nextTokPtr</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">int</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">XmlInitEncoding</span><span class="p">)(</span><span class="n">INIT_ENCODING</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="k">const</span> <span class="n">ENCODING</span> <span class="o">**</span><span class="n">encPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">getEncodingIndex</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> too costly to inline (cost=515, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlInitEncoding</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> will not be inlined into PyExpat_XmlInitEncoding&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlInitEncoding</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> too costly to inline (cost=515, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlInitEncodingNS</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> will not be inlined into PyExpat_XmlInitEncodingNS&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlInitEncodingNS</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">UNKNOWN_ENC</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">SET_INIT_ENC_INDEX</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">p</span><span class="o">-&gt;</span><span class="n">initEnc</span><span class="p">.</span><span class="n">scanners</span><span class="p">[</span><span class="n">XML_PROLOG_STATE</span><span class="p">]</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">initScanProlog</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">p</span><span class="o">-&gt;</span><span class="n">initEnc</span><span class="p">.</span><span class="n">scanners</span><span class="p">[</span><span class="n">XML_CONTENT_STATE</span><span class="p">]</span> <span class="o">=</span> <span class="n">NS</span><span class="p">(</span><span class="n">initScanContent</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">p</span><span class="o">-&gt;</span><span class="n">initEnc</span><span class="p">.</span><span class="n">updatePosition</span> <span class="o">=</span> <span class="n">initUpdatePosition</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">p</span><span class="o">-&gt;</span><span class="n">encPtr</span> <span class="o">=</span> <span class="n">encPtr</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">*</span><span class="n">encPtr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">initEnc</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">findEncoding</span><span class="p">)(</span><span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span><span class="n">enc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">end</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define ENCODING_MAX 128</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">ENCODING_MAX</span><span class="p">];</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="kt">char</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">buf</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">XmlUtf8Convert</span><span class="p">(</span><span class="n">enc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="n">ENCODING_MAX</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">!=</span> <span class="n">end</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of store because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of store because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">   </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L76>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">   </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L76>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">streqci</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">KW_UTF_16</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">enc</span><span class="o">-&gt;</span><span class="n">minBytesPerChar</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L924>streqci</a> can be inlined into findEncoding with cost=50 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L924>streqci</a> inlined into findEncoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L81>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L924>streqci</a> can be inlined into findEncodingNS with cost=-14950 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L924>streqci</a> inlined into findEncodingNS&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L81>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">enc</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="n">i</span> <span class="o">=</span> <span class="n">getEncodingIndex</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> too costly to inline (cost=505, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> will not be inlined into findEncoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> too costly to inline (cost=505, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1463>getEncodingIndex</a> will not be inlined into findEncodingNS&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok_ns.c.html#L71>findEncodingNS</a></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">UNKNOWN_ENC</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="nf">NS</span><span class="p">(</span><span class="n">encodings</span><span class="p">)[</span><span class="n">i</span><span class="p">];</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">int</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">NS</span><span class="p">(</span><span class="n">XmlParseXmlDecl</span><span class="p">)(</span><span class="kt">int</span> <span class="n">isGeneralTextEntity</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="n">ENCODING</span> <span class="o">*</span><span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">end</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">badPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">versionPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">versionEndPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">encodingName</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="k">const</span> <span class="n">ENCODING</span> <span class="o">**</span><span class="n">encoding</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="kt">int</span> <span class="o">*</span><span class="n">standalone</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="n">doParseXmlDecl</span><span class="p">(</span><span class="n">NS</span><span class="p">(</span><span class="n">findEncoding</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1095>doParseXmlDecl</a> too costly to inline (cost=645, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlParseXmlDecl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1095>doParseXmlDecl</a> will not be inlined into PyExpat_XmlParseXmlDecl&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlParseXmlDecl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1095>doParseXmlDecl</a> too costly to inline (cost=645, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlParseXmlDeclNS</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_expat_xmltok.c.html#L1095>doParseXmlDecl</a> will not be inlined into PyExpat_XmlParseXmlDeclNS&nbsp;</span></td>
+<td class="column-entry-yellow">PyExpat_XmlParseXmlDeclNS</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">isGeneralTextEntity</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">enc</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">ptr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">end</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">badPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">versionPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">versionEndPtr</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">encodingName</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">encoding</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                        <span class="n">standalone</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* XML_TOK_NS_C */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

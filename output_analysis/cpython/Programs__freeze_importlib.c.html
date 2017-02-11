@@ -1,0 +1,1846 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This is built as a stand-alone executable by the Makefile, and helps turn</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">Lib</span><span class="o">/</span><span class="n">importlib</span><span class="o">/</span><span class="n">_bootstrap</span><span class="p">.</span><span class="n">py</span> <span class="n">into</span> <span class="n">a</span> <span class="n">frozen</span> <span class="n">module</span> <span class="n">in</span> <span class="n">Python</span><span class="o">/</span><span class="n">importlib</span><span class="p">.</span><span class="n">h</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Python.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;marshal.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/stat.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef MS_WINDOWS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* To avoid a circular dependency on frozen.o, we create our own structure</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">of</span> <span class="n">frozen</span> <span class="n">modules</span> <span class="n">instead</span><span class="p">,</span> <span class="n">left</span> <span class="n">deliberately</span> <span class="n">blank</span> <span class="n">so</span> <span class="n">as</span> <span class="n">to</span> <span class="n">avoid</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">unintentional</span> <span class="n">import</span> <span class="n">of</span> <span class="n">a</span> <span class="n">stale</span> <span class="n">version</span> <span class="n">of</span> <span class="n">_frozen_importlib</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">_frozen</span> <span class="n">_PyImport_FrozenModules</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span> <span class="cm">/* sentinel */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef MS_WINDOWS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* On Windows, this links with the regular pythonXY.dll, so this variable comes</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">from</span> <span class="n">frozen</span><span class="p">.</span><span class="n">obj</span><span class="p">.</span> <span class="n">In</span> <span class="n">the</span> <span class="n">Makefile</span><span class="p">,</span> <span class="n">frozen</span><span class="p">.</span><span class="n">o</span> <span class="n">is</span> <span class="n">not</span> <span class="n">linked</span> <span class="n">into</span> <span class="k">this</span> <span class="n">executable</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">so</span> <span class="n">we</span> <span class="n">define</span> <span class="n">the</span> <span class="n">variable</span> <span class="n">here</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="k">struct</span> <span class="n">_frozen</span> <span class="o">*</span><span class="n">PyImport_FrozenModules</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="n">header</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;/* Auto-generated by Programs/_freeze_importlib.c */&quot;</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">int</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">char</span> <span class="o">*</span><span class="n">inpath</span><span class="p">,</span> <span class="o">*</span><span class="n">outpath</span><span class="p">,</span> <span class="o">*</span><span class="n">code_name</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">FILE</span> <span class="o">*</span><span class="n">infile</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">outfile</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">struct</span> <span class="n">_Py_stat_struct</span> <span class="n">status</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">size_t</span> <span class="n">text_size</span><span class="p">,</span> <span class="n">data_size</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">char</span> <span class="o">*</span><span class="n">text</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">code</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">*</span><span class="n">marshalled</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">is_bootstrap</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyImport_FrozenModules</span> <span class="o">=</span> <span class="n">_PyImport_FrozenModules</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;need to specify input and output paths</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">inpath</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L44>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">outpath</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L44>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">infile</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">inpath</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> fopen64 will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">infile</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;cannot open &#39;%s&#39; for reading</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">inpath</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">_Py_fstat_noraise</span><span class="p">(</span><span class="n">fileno</span><span class="p">(</span><span class="n">infile</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">status</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> fileno will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> _Py_fstat_noraise will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;cannot fstat &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">inpath</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">text_size</span> <span class="o">=</span> <span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="n">status</span><span class="p">.</span><span class="n">st_size</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">text_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> malloc will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">text</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;could not allocate %ld bytes</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span> <span class="n">text_size</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">n</span> <span class="o">=</span> <span class="n">fread</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">text_size</span><span class="p">,</span> <span class="n">infile</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fread will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">fclose</span><span class="p">(</span><span class="n">infile</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> fclose will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">infile</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">text_size</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;read too short: got %ld instead of %ld bytes</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="p">(</span><span class="kt">long</span><span class="p">)</span> <span class="n">n</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span> <span class="n">text_size</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">text</span><span class="p">[</span><span class="n">text_size</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_NoUserSiteDirectory</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_NoSiteFlag</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_IgnoreEnvironmentFlag</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_FrozenFlag</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_SetProgramName</span><span class="p">(</span><span class="sa">L</span><span class="s">&quot;./_freeze_importlib&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_SetProgramName will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* Don&#39;t install importlib, since it could execute outdated bytecode. */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_InitializeEx_Private</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_InitializeEx_Private will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">strstr</span><span class="p">(</span><span class="n">inpath</span><span class="p">,</span> <span class="s">&quot;_external&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> strstr will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">is_bootstrap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">code_name</span> <span class="o">=</span> <span class="n">is_bootstrap</span> <span class="o">?</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="s">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span> <span class="o">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="s">&quot;&lt;frozen importlib._bootstrap_external&gt;&quot;</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">code</span> <span class="o">=</span> <span class="n">Py_CompileStringExFlags</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">code_name</span><span class="p">,</span> <span class="n">Py_file_input</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> Py_CompileStringExFlags will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">free</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> free will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">text</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">marshalled</span> <span class="o">=</span> <span class="n">PyMarshal_WriteObjectToString</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">Py_MARSHAL_VERSION</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> PyMarshal_WriteObjectToString will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_CLEAR</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">marshalled</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">assert</span><span class="p">(</span><span class="n">PyBytes_CheckExact</span><span class="p">(</span><span class="n">marshalled</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyBytes_AS_STRING</span><span class="p">(</span><span class="n">marshalled</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">data_size</span> <span class="o">=</span> <span class="n">PyBytes_GET_SIZE</span><span class="p">(</span><span class="n">marshalled</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* Open the file in text mode. The hg checkout should be using the eol extension,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">which</span> <span class="n">in</span> <span class="n">turn</span> <span class="n">should</span> <span class="n">cause</span> <span class="n">the</span> <span class="n">EOL</span> <span class="n">style</span> <span class="n">match</span> <span class="n">the</span> <span class="n">C</span> <span class="n">library</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">text</span> <span class="n">mode</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">outfile</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">outpath</span><span class="p">,</span> <span class="s">&quot;w&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> fopen64 will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">outfile</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;cannot open &#39;%s&#39; for writing</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">outpath</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">header</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">is_bootstrap</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;const unsigned char _Py_M__importlib[] = {</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                <span class="s">&quot;const unsigned char _Py_M__importlib_external[] = {</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">data_size</span><span class="p">;</span> <span class="n">n</span> <span class="o">+=</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="kt">size_t</span> <span class="n">i</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">Py_MIN</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">16</span><span class="p">,</span> <span class="n">data_size</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;    &quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;%d,&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: call instruction cannot be vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fputc will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">fprintf</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s">&quot;};</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_CLEAR</span><span class="p">(</span><span class="n">marshalled</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_Finalize</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Finalize will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">outfile</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">ferror</span><span class="p">(</span><span class="n">outfile</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> ferror will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;error when writing to &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">outpath</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L133>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">goto</span> <span class="n">error</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fclose</span><span class="p">(</span><span class="n">outfile</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fclose will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">error</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyErr_Print</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyErr_Print will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_Finalize</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Finalize will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fclose</span><span class="p">(</span><span class="n">infile</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fclose will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">fclose</span><span class="p">(</span><span class="n">outfile</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fclose will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">free</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> free will not be inlined into main because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">marshalled</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">marshalled</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Programs__freeze_importlib.c.html#L151>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,2777 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Implementation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Global</span> <span class="n">Interpreter</span> <span class="n">Lock</span> <span class="p">(</span><span class="n">GIL</span><span class="p">).</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* First some general settings */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* microseconds (the Python API uses seconds, though) */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define DEFAULT_INTERVAL 5000</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">gil_interval</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define INTERVAL (gil_interval &gt;= 1 ? gil_interval : 1)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Enable if you want to force the switching of threads at least every `gil_interval` */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">Notes</span> <span class="n">about</span> <span class="n">the</span> <span class="nl">implementation</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">-</span> <span class="n">The</span> <span class="n">GIL</span> <span class="n">is</span> <span class="n">just</span> <span class="n">a</span> <span class="n">boolean</span> <span class="n">variable</span> <span class="p">(</span><span class="n">gil_locked</span><span class="p">)</span> <span class="n">whose</span> <span class="n">access</span> <span class="n">is</span> <span class="k">protected</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">by</span> <span class="n">a</span> <span class="n">mutex</span> <span class="p">(</span><span class="n">gil_mutex</span><span class="p">),</span> <span class="n">and</span> <span class="n">whose</span> <span class="n">changes</span> <span class="n">are</span> <span class="n">signalled</span> <span class="n">by</span> <span class="n">a</span> <span class="n">condition</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">variable</span> <span class="p">(</span><span class="n">gil_cond</span><span class="p">).</span> <span class="n">gil_mutex</span> <span class="n">is</span> <span class="n">taken</span> <span class="k">for</span> <span class="kt">short</span> <span class="n">periods</span> <span class="n">of</span> <span class="n">time</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">and</span> <span class="n">therefore</span> <span class="n">mostly</span> <span class="n">uncontended</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">-</span> <span class="n">In</span> <span class="n">the</span> <span class="n">GIL</span><span class="o">-</span><span class="n">holding</span> <span class="kr">thread</span><span class="p">,</span> <span class="n">the</span> <span class="n">main</span> <span class="n">loop</span> <span class="p">(</span><span class="n">PyEval_EvalFrameEx</span><span class="p">)</span> <span class="n">must</span> <span class="n">be</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">able</span> <span class="n">to</span> <span class="n">release</span> <span class="n">the</span> <span class="n">GIL</span> <span class="n">on</span> <span class="n">demand</span> <span class="n">by</span> <span class="n">another</span> <span class="kr">thread</span><span class="p">.</span> <span class="n">A</span> <span class="k">volatile</span> <span class="n">boolean</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">variable</span> <span class="p">(</span><span class="n">gil_drop_request</span><span class="p">)</span> <span class="n">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">that</span> <span class="n">purpose</span><span class="p">,</span> <span class="n">which</span> <span class="n">is</span> <span class="n">checked</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">at</span> <span class="n">every</span> <span class="n">turn</span> <span class="n">of</span> <span class="n">the</span> <span class="n">eval</span> <span class="n">loop</span><span class="p">.</span> <span class="n">That</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">set</span> <span class="n">after</span> <span class="n">a</span> <span class="n">wait</span> <span class="n">of</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="err">`</span><span class="n">interval</span><span class="err">`</span> <span class="n">microseconds</span> <span class="n">on</span> <span class="err">`</span><span class="n">gil_cond</span><span class="err">`</span> <span class="n">has</span> <span class="n">timed</span> <span class="n">out</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>      <span class="p">[</span><span class="n">Actually</span><span class="p">,</span> <span class="n">another</span> <span class="k">volatile</span> <span class="n">boolean</span> <span class="n">variable</span> <span class="p">(</span><span class="n">eval_breaker</span><span class="p">)</span> <span class="n">is</span> <span class="n">used</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">which</span> <span class="n">ORs</span> <span class="n">several</span> <span class="n">conditions</span> <span class="n">into</span> <span class="n">one</span><span class="p">.</span> <span class="n">Volatile</span> <span class="n">booleans</span> <span class="n">are</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">sufficient</span> <span class="n">as</span> <span class="n">inter</span><span class="o">-</span><span class="kr">thread</span> <span class="n">signalling</span> <span class="n">means</span> <span class="n">since</span> <span class="n">Python</span> <span class="n">is</span> <span class="n">run</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">on</span> <span class="n">cache</span><span class="o">-</span><span class="n">coherent</span> <span class="n">architectures</span> <span class="n">only</span><span class="p">.]</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">-</span> <span class="n">A</span> <span class="kr">thread</span> <span class="n">wanting</span> <span class="n">to</span> <span class="n">take</span> <span class="n">the</span> <span class="n">GIL</span> <span class="n">will</span> <span class="n">first</span> <span class="n">let</span> <span class="n">pass</span> <span class="n">a</span> <span class="n">given</span> <span class="n">amount</span> <span class="n">of</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">time</span> <span class="p">(</span><span class="err">`</span><span class="n">interval</span><span class="err">`</span> <span class="n">microseconds</span><span class="p">)</span> <span class="n">before</span> <span class="n">setting</span> <span class="n">gil_drop_request</span><span class="p">.</span> <span class="n">This</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">encourages</span> <span class="n">a</span> <span class="n">defined</span> <span class="n">switching</span> <span class="n">period</span><span class="p">,</span> <span class="n">but</span> <span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">enforce</span> <span class="n">it</span> <span class="n">since</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">opcodes</span> <span class="n">can</span> <span class="n">take</span> <span class="n">an</span> <span class="n">arbitrary</span> <span class="n">time</span> <span class="n">to</span> <span class="n">execute</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">The</span> <span class="err">`</span><span class="n">interval</span><span class="err">`</span> <span class="n">value</span> <span class="n">is</span> <span class="n">available</span> <span class="k">for</span> <span class="n">the</span> <span class="n">user</span> <span class="n">to</span> <span class="n">read</span> <span class="n">and</span> <span class="n">modify</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="k">using</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">API</span> <span class="err">`</span><span class="n">sys</span><span class="p">.{</span><span class="n">get</span><span class="p">,</span><span class="n">set</span><span class="p">}</span><span class="n">switchinterval</span><span class="p">()</span><span class="err">`</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="o">-</span> <span class="n">When</span> <span class="n">a</span> <span class="kr">thread</span> <span class="n">releases</span> <span class="n">the</span> <span class="n">GIL</span> <span class="n">and</span> <span class="n">gil_drop_request</span> <span class="n">is</span> <span class="n">set</span><span class="p">,</span> <span class="n">that</span> <span class="kr">thread</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">ensures</span> <span class="n">that</span> <span class="n">another</span> <span class="n">GIL</span><span class="o">-</span><span class="n">awaiting</span> <span class="kr">thread</span> <span class="n">gets</span> <span class="n">scheduled</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">It</span> <span class="n">does</span> <span class="n">so</span> <span class="n">by</span> <span class="n">waiting</span> <span class="n">on</span> <span class="n">a</span> <span class="n">condition</span> <span class="n">variable</span> <span class="p">(</span><span class="n">switch_cond</span><span class="p">)</span> <span class="n">until</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">gil_last_holder</span> <span class="n">is</span> <span class="n">changed</span> <span class="n">to</span> <span class="n">something</span> <span class="k">else</span> <span class="n">than</span> <span class="n">its</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">own</span> <span class="kr">thread</span> <span class="n">state</span> <span class="n">pointer</span><span class="p">,</span> <span class="n">indicating</span> <span class="n">that</span> <span class="n">another</span> <span class="kr">thread</span> <span class="n">was</span> <span class="n">able</span> <span class="n">to</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">take</span> <span class="n">the</span> <span class="n">GIL</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">This</span> <span class="n">is</span> <span class="n">meant</span> <span class="n">to</span> <span class="n">prohibit</span> <span class="n">the</span> <span class="n">latency</span><span class="o">-</span><span class="n">adverse</span> <span class="n">behaviour</span> <span class="n">on</span> <span class="n">multi</span><span class="o">-</span><span class="n">core</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">machines</span> <span class="n">where</span> <span class="n">one</span> <span class="kr">thread</span> <span class="n">would</span> <span class="n">speculatively</span> <span class="n">release</span> <span class="n">the</span> <span class="n">GIL</span><span class="p">,</span> <span class="n">but</span> <span class="n">still</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">run</span> <span class="n">and</span> <span class="n">end</span> <span class="n">up</span> <span class="n">being</span> <span class="n">the</span> <span class="n">first</span> <span class="n">to</span> <span class="n">re</span><span class="o">-</span><span class="n">acquire</span> <span class="n">it</span><span class="p">,</span> <span class="n">making</span> <span class="n">the</span> <span class="s">&quot;timeslices&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">much</span> <span class="n">longer</span> <span class="n">than</span> <span class="n">expected</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="p">(</span><span class="nl">Note</span><span class="p">:</span> <span class="k">this</span> <span class="n">mechanism</span> <span class="n">is</span> <span class="n">enabled</span> <span class="n">with</span> <span class="n">FORCE_SWITCHING</span> <span class="n">above</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;condvar.h&quot;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef Py_HAVE_CONDVAR</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#error You need either a POSIX-compatible or a Windows system!</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MUTEX_T PyMUTEX_T</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MUTEX_INIT(mut) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyMUTEX_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyMUTEX_INIT(&quot;</span> <span class="err">#</span><span class="n">mut</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MUTEX_FINI(mut) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyMUTEX_FINI</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyMUTEX_FINI(&quot;</span> <span class="err">#</span><span class="n">mut</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MUTEX_LOCK(mut) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyMUTEX_LOCK</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyMUTEX_LOCK(&quot;</span> <span class="err">#</span><span class="n">mut</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define MUTEX_UNLOCK(mut) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyMUTEX_UNLOCK</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyMUTEX_UNLOCK(&quot;</span> <span class="err">#</span><span class="n">mut</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_T PyCOND_T</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_INIT(cond) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyCOND_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">cond</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyCOND_INIT(&quot;</span> <span class="err">#</span><span class="n">cond</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_FINI(cond) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyCOND_FINI</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">cond</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyCOND_FINI(&quot;</span> <span class="err">#</span><span class="n">cond</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_SIGNAL(cond) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyCOND_SIGNAL</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">cond</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyCOND_SIGNAL(&quot;</span> <span class="err">#</span><span class="n">cond</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_WAIT(cond, mut) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyCOND_WAIT</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">cond</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">)))</span> <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyCOND_WAIT(&quot;</span> <span class="err">#</span><span class="n">cond</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define COND_TIMED_WAIT(cond, mut, microseconds, timeout_result) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">PyCOND_TIMEDWAIT</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">cond</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">mut</span><span class="p">),</span> <span class="p">(</span><span class="n">microseconds</span><span class="p">));</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;PyCOND_WAIT(&quot;</span> <span class="err">#</span><span class="n">cond</span> <span class="s">&quot;) failed&quot;</span><span class="p">);</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="cm">/* 1 == timeout, 2 == impl. can&#39;t say, so assume timeout */</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">timeout_result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">else</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">timeout_result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Whether the GIL is already taken (-1 if uninitialized). This is atomic</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">because</span> <span class="n">it</span> <span class="n">can</span> <span class="n">be</span> <span class="n">read</span> <span class="n">without</span> <span class="n">any</span> <span class="n">lock</span> <span class="n">taken</span> <span class="n">in</span> <span class="n">ceval</span><span class="p">.</span><span class="n">c</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">_Py_atomic_int</span> <span class="n">gil_locked</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Number of GIL switches since the beginning. */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">gil_switch_number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Last PyThreadState holding / having held the GIL. This helps us know</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">whether</span> <span class="n">anyone</span> <span class="k">else</span> <span class="n">was</span> <span class="n">scheduled</span> <span class="n">after</span> <span class="n">we</span> <span class="n">dropped</span> <span class="n">the</span> <span class="n">GIL</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">_Py_atomic_address</span> <span class="n">gil_last_holder</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This condition variable allows one or several threads to wait until</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">the</span> <span class="n">GIL</span> <span class="n">is</span> <span class="n">released</span><span class="p">.</span> <span class="n">In</span> <span class="n">addition</span><span class="p">,</span> <span class="n">the</span> <span class="n">mutex</span> <span class="n">also</span> <span class="n">protects</span> <span class="n">the</span> <span class="n">above</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">variables</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">COND_T</span> <span class="n">gil_cond</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">MUTEX_T</span> <span class="n">gil_mutex</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This condition variable helps the GIL-releasing thread wait for</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">a</span> <span class="n">GIL</span><span class="o">-</span><span class="n">awaiting</span> <span class="kr">thread</span> <span class="n">to</span> <span class="n">be</span> <span class="n">scheduled</span> <span class="n">and</span> <span class="n">take</span> <span class="n">the</span> <span class="n">GIL</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">COND_T</span> <span class="n">switch_cond</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">MUTEX_T</span> <span class="n">switch_mutex</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span> <span class="n">gil_created</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_atomic_load_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="n">_Py_memory_order_acquire</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">create_gil</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_INIT</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_init will not be inlined into create_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">create_gil</td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_INIT</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_init will not be inlined into create_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">create_gil</td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_INIT</span><span class="p">(</span><span class="n">gil_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_init will not be inlined into create_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">create_gil</td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_INIT</span><span class="p">(</span><span class="n">switch_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_init will not be inlined into create_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">create_gil</td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_atomic_store_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_last_holder</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_ANNOTATE_RWLOCK_CREATE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_atomic_store_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_Py_memory_order_release</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">destroy_gil</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* some pthread-like implementations tie the mutex to the cond</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">and</span> <span class="n">must</span> <span class="n">have</span> <span class="n">the</span> <span class="n">cond</span> <span class="n">destroyed</span> <span class="n">first</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_FINI</span><span class="p">(</span><span class="n">gil_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_destroy will not be inlined into destroy_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">destroy_gil</td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_FINI</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_destroy will not be inlined into destroy_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">destroy_gil</td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_FINI</span><span class="p">(</span><span class="n">switch_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_destroy will not be inlined into destroy_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">destroy_gil</td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_FINI</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_destroy will not be inlined into destroy_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">destroy_gil</td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_atomic_store_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">_Py_memory_order_release</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_ANNOTATE_RWLOCK_DESTROY</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">recreate_gil</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_ANNOTATE_RWLOCK_DESTROY</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* XXX should we destroy the old OS resources here? */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">create_gil</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Python_ceval_gil.h.html#L136>create_gil</a> too costly to inline (cost=320, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">recreate_gil</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Python_ceval_gil.h.html#L136>create_gil</a> will not be inlined into recreate_gil&nbsp;</span></td>
+<td class="column-entry-yellow">recreate_gil</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Python_ceval_gil.h.html#L136>create_gil</a> too costly to inline (cost=320, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval.c.html#L295>PyEval_ReInitThreads</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Python_ceval_gil.h.html#L136>create_gil</a> will not be inlined into PyEval_ReInitThreads&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval.c.html#L295>PyEval_ReInitThreads</a></td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">drop_gil</span><span class="p">(</span><span class="n">PyThreadState</span> <span class="o">*</span><span class="n">tstate</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L173">173</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L174">174</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L175">175</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;drop_gil: GIL is not locked&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> Py_FatalError will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L176">176</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* tstate is allowed to be NULL (early interpreter init) */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L177">177</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">tstate</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L178">178</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* Sub-interpreter support: threads might have been switched</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L179">179</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>           <span class="n">under</span> <span class="n">our</span> <span class="n">feet</span> <span class="k">using</span> <span class="n">PyThreadState_Swap</span><span class="p">().</span> <span class="n">Fix</span> <span class="n">the</span> <span class="n">GIL</span> <span class="n">last</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L180">180</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>           <span class="n">holder</span> <span class="n">variable</span> <span class="n">so</span> <span class="n">that</span> <span class="n">our</span> <span class="n">heuristics</span> <span class="n">work</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L181">181</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">_Py_atomic_store_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_last_holder</span><span class="p">,</span> <span class="p">(</span><span class="kt">uintptr_t</span><span class="p">)</span><span class="n">tstate</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L182">182</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L183">183</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L184">184</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_LOCK</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_lock will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_ANNOTATE_RWLOCK_RELEASED</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="cm">/*is_write=*/</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_atomic_store_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L187">187</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_SIGNAL</span><span class="p">(</span><span class="n">gil_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_signal will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L188">188</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_UNLOCK</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_unlock will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L189">189</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L190">190</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L191">191</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_drop_request</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">tstate</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">MUTEX_LOCK</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> pthread_mutex_lock will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* Not switched yet =&gt; wait */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L194">194</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">((</span><span class="n">PyThreadState</span><span class="o">*</span><span class="p">)</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_last_holder</span><span class="p">)</span> <span class="o">==</span> <span class="n">tstate</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L195">195</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">RESET_GIL_DROP_REQUEST</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L196">196</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="cm">/* NOTE: if COND_WAIT does not atomically start waiting when</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L197">197</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>               <span class="n">releasing</span> <span class="n">the</span> <span class="n">mutex</span><span class="p">,</span> <span class="n">another</span> <span class="kr">thread</span> <span class="n">can</span> <span class="n">run</span> <span class="n">through</span><span class="p">,</span> <span class="n">take</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L198">198</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>               <span class="n">the</span> <span class="n">GIL</span> <span class="n">and</span> <span class="n">drop</span> <span class="n">it</span> <span class="n">again</span><span class="p">,</span> <span class="n">and</span> <span class="n">reset</span> <span class="n">the</span> <span class="n">condition</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L199">199</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>               <span class="n">before</span> <span class="n">we</span> <span class="n">even</span> <span class="n">had</span> <span class="n">a</span> <span class="n">chance</span> <span class="n">to</span> <span class="n">wait</span> <span class="k">for</span> <span class="n">it</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L200">200</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">COND_WAIT</span><span class="p">(</span><span class="n">switch_cond</span><span class="p">,</span> <span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> pthread_cond_wait will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L201">201</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L202">202</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">MUTEX_UNLOCK</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> pthread_mutex_unlock will not be inlined into drop_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">drop_gil</td>
+</tr>
+
+<tr>
+<td><a name="L203">203</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L204">204</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L205">205</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L206">206</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L207">207</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">take_gil</span><span class="p">(</span><span class="n">PyThreadState</span> <span class="o">*</span><span class="n">tstate</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L208">208</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L209">209</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">err</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L210">210</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">tstate</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L211">211</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;take_gil: NULL tstate&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> Py_FatalError will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L212">212</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L213">213</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">err</span> <span class="o">=</span> <span class="n">errno</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> __errno_location will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L214">214</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_LOCK</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_lock will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L215">215</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L216">216</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L217">217</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">_ready</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L218">218</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L219">219</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L220">220</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">timed_out</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L221">221</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">saved_switchnum</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L222">222</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L223">223</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">saved_switchnum</span> <span class="o">=</span> <span class="n">gil_switch_number</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_condvar.h.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L224">224</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">COND_TIMED_WAIT</span><span class="p">(</span><span class="n">gil_cond</span><span class="p">,</span> <span class="n">gil_mutex</span><span class="p">,</span> <span class="n">INTERVAL</span><span class="p">,</span> <span class="n">timed_out</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> Py_FatalError will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Python_condvar.h.html#L93>PyCOND_TIMEDWAIT</a> can be inlined into take_gil with cost=-14880 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Python_condvar.h.html#L93>PyCOND_TIMEDWAIT</a> inlined into take_gil&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_condvar.h.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L225">225</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* If we timed out and no switch occurred in the meantime, it is time</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L226">226</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>           <span class="n">to</span> <span class="n">ask</span> <span class="n">the</span> <span class="n">GIL</span><span class="o">-</span><span class="n">holding</span> <span class="kr">thread</span> <span class="n">to</span> <span class="n">drop</span> <span class="n">it</span><span class="p">.</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L227">227</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">timed_out</span> <span class="o">&amp;&amp;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L228">228</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L229">229</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">gil_switch_number</span> <span class="o">==</span> <span class="n">saved_switchnum</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Python_ceval_gil.h.html#L223>load</a> because it is clobbered by <a href=Python_condvar.h.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L230">230</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="n">SET_GIL_DROP_REQUEST</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L231">231</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L232">232</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L233">233</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">_ready</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L234">234</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L235">235</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* This mutex must be taken before modifying gil_last_holder (see drop_gil()). */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L236">236</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_LOCK</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_lock will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L237">237</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L238">238</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* We now hold the GIL */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L239">239</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_atomic_store_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L240">240</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_ANNOTATE_RWLOCK_ACQUIRED</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_locked</span><span class="p">,</span> <span class="cm">/*is_write=*/</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L241">241</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L242">242</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">tstate</span> <span class="o">!=</span> <span class="p">(</span><span class="n">PyThreadState</span><span class="o">*</span><span class="p">)</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_last_holder</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L243">243</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">_Py_atomic_store_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_last_holder</span><span class="p">,</span> <span class="p">(</span><span class="kt">uintptr_t</span><span class="p">)</span><span class="n">tstate</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L244">244</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">++</span><span class="n">gil_switch_number</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_ceval_gil.h.html#L236>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L245">245</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L246">246</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L247">247</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef FORCE_SWITCHING</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L248">248</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">COND_SIGNAL</span><span class="p">(</span><span class="n">switch_cond</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_cond_signal will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L249">249</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_UNLOCK</span><span class="p">(</span><span class="n">switch_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_unlock will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L250">250</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L251">251</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">_Py_atomic_load_relaxed</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gil_drop_request</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L252">252</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">RESET_GIL_DROP_REQUEST</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L253">253</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L254">254</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">tstate</span><span class="o">-&gt;</span><span class="n">async_exc</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_ceval_gil.h.html#L249>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L255">255</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">_PyEval_SignalAsyncExc</span><span class="p">();</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Python_ceval.c.html#L339>_PyEval_SignalAsyncExc</a> can be inlined into take_gil with cost=-20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Python_ceval.c.html#L339>_PyEval_SignalAsyncExc</a> inlined into take_gil&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L256">256</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L257">257</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L258">258</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">MUTEX_UNLOCK</span><span class="p">(</span><span class="n">gil_mutex</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> pthread_mutex_unlock will not be inlined into take_gil because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L259">259</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">errno</span> <span class="o">=</span> <span class="n">err</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L260">260</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L261">261</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L262">262</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">_PyEval_SetSwitchInterval</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">microseconds</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L263">263</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L264">264</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">gil_interval</span> <span class="o">=</span> <span class="n">microseconds</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L265">265</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L266">266</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L267">267</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">_PyEval_GetSwitchInterval</span><span class="p">()</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L268">268</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L269">269</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">gil_interval</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L270">270</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,1305 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if STRINGLIB_IS_UNICODE</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># error &quot;ctype.h only compatible with byte-wise strings&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;bytes_methods.h&quot;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_isspace</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_isspace</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_isspace will not be inlined into stringlib_isspace because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_isspace</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_isalpha</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_isalpha</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_isalpha will not be inlined into stringlib_isalpha because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_isalpha</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_isalnum</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_isalnum</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_isalnum will not be inlined into stringlib_isalnum because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_isalnum</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_isdigit</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_isdigit</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_isdigit will not be inlined into stringlib_isdigit because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_isdigit</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_islower</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_islower</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_islower will not be inlined into stringlib_islower because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_islower</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_isupper</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_isupper</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_isupper will not be inlined into stringlib_isupper because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_isupper</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_istitle</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_Py_bytes_istitle</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _Py_bytes_istitle will not be inlined into stringlib_istitle because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_istitle</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* functions that return a new object partially translated by ctype funcs: */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_lower</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span><span class="o">*</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">newobj</span> <span class="o">=</span> <span class="n">STRINGLIB_NEW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=260, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into stringlib_lower&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newobj</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_bytes_lower</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">newobj</span><span class="p">),</span> <span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_bytes_lower will not be inlined into stringlib_lower because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L56>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                 <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L56>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_upper</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span><span class="o">*</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">newobj</span> <span class="o">=</span> <span class="n">STRINGLIB_NEW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=260, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into stringlib_upper&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newobj</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_bytes_upper</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">newobj</span><span class="p">),</span> <span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_bytes_upper will not be inlined into stringlib_upper because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L68>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                 <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L68>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_title</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span><span class="o">*</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">newobj</span> <span class="o">=</span> <span class="n">STRINGLIB_NEW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=260, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into stringlib_title&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newobj</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_bytes_title</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">newobj</span><span class="p">),</span> <span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_bytes_title will not be inlined into stringlib_title because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L80>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                 <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L80>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_capitalize</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span><span class="o">*</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">newobj</span> <span class="o">=</span> <span class="n">STRINGLIB_NEW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=260, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into stringlib_capitalize&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newobj</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_bytes_capitalize</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">newobj</span><span class="p">),</span> <span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_bytes_capitalize will not be inlined into stringlib_capitalize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L92>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                      <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L92>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span><span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">stringlib_swapcase</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span><span class="o">*</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">newobj</span> <span class="o">=</span> <span class="n">STRINGLIB_NEW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=260, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into stringlib_swapcase&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">newobj</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">_Py_bytes_swapcase</span><span class="p">(</span><span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">newobj</span><span class="p">),</span> <span class="n">STRINGLIB_STR</span><span class="p">(</span><span class="n">self</span><span class="p">),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_bytes_swapcase will not be inlined into stringlib_swapcase because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L104>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="n">STRINGLIB_LEN</span><span class="p">(</span><span class="n">self</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L104>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">newobj</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

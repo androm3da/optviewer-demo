@@ -1,0 +1,1183 @@
++cd cpython
++CC=clang-4.0
++CFLAGS=-fsave-optimization-record
++./configure --with-optimizations
+configure: WARNING: unrecognized options: --with-optimizations
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for python3.6... no
+checking for python3... python3
+checking for --enable-universalsdk... no
+checking for --with-universal-archs... no
+checking MACHDEP... linux
+checking for --without-gcc... no
+checking for --with-icc... no
+checking for gcc... clang-4.0
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang-4.0 accepts -g... yes
+checking for clang-4.0 option to accept ISO C89... none needed
+checking how to run the C preprocessor... clang-4.0 -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for a sed that does not truncate output... /bin/sed
+checking for --with-cxx-main=<compiler>... no
+checking for c++... c++
+configure:
+
+  By default, distutils will build C++ extension modules with "c++".
+  If this is not intended, then set CXX on the configure command line.
+  
+checking for the platform triplet based on compiler characteristics... x86_64-linux-gnu
+checking for -Wl,--no-as-needed... yes
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for the Android API level... not Android
+checking for --with-suffix... 
+checking for case-insensitive build directory... no
+checking LIBRARY... libpython$(VERSION)$(ABIFLAGS).a
+checking LINKCC... $(PURIFY) $(MAINCC)
+checking for GNU ld... yes
+checking for inline... inline
+checking for --enable-shared... no
+checking for --enable-profiling... no
+checking LDLIBRARY... libpython$(VERSION)$(ABIFLAGS).a
+checking for ranlib... ranlib
+checking for ar... ar
+checking for readelf... readelf
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for --with-pydebug... no
+checking for --enable-optimizations... no
+checking for --with-lto... no
+checking target system type... x86_64-unknown-linux-gnu
+checking for -llvm-profdata... no
+checking for llvm-profdata... /usr/local/clang-3.5.0/bin/llvm-profdata
+checking for -Wextra... yes
+checking whether clang-4.0 accepts and needs -fno-strict-aliasing... no
+checking if we can turn off clang-4.0 unused result warning... yes
+checking if we can turn off clang-4.0 unused parameter warning... yes
+checking if we can turn off clang-4.0 missing field initializers warning... yes
+checking if we can turn on clang-4.0 mixed sign comparison warning... yes
+checking if we can turn on clang-4.0 unreachable code warning... yes
+checking whether pthreads are available without options... no
+checking whether clang-4.0 accepts -Kpthread... no
+checking whether clang-4.0 accepts -Kthread... no
+checking whether clang-4.0 accepts -pthread... yes
+checking whether c++ also accepts flags for thread support... yes
+checking for ANSI C header files... (cached) yes
+checking asm/types.h usability... yes
+checking asm/types.h presence... yes
+checking for asm/types.h... yes
+checking conio.h usability... no
+checking conio.h presence... no
+checking for conio.h... no
+checking direct.h usability... no
+checking direct.h presence... no
+checking for direct.h... no
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking io.h usability... no
+checking io.h presence... no
+checking for io.h... no
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking process.h usability... no
+checking process.h presence... no
+checking for process.h... no
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking sched.h usability... yes
+checking sched.h presence... yes
+checking for sched.h... yes
+checking shadow.h usability... yes
+checking shadow.h presence... yes
+checking for shadow.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stropts.h usability... yes
+checking stropts.h presence... yes
+checking for stropts.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/devpoll.h usability... no
+checking sys/devpoll.h presence... no
+checking for sys/devpoll.h... no
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking sys/audioio.h usability... no
+checking sys/audioio.h presence... no
+checking for sys/audioio.h... no
+checking sys/xattr.h usability... yes
+checking sys/xattr.h presence... yes
+checking for sys/xattr.h... yes
+checking sys/bsdtty.h usability... no
+checking sys/bsdtty.h presence... no
+checking for sys/bsdtty.h... no
+checking sys/event.h usability... no
+checking sys/event.h presence... no
+checking for sys/event.h... no
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/kern_control.h usability... no
+checking sys/kern_control.h presence... no
+checking for sys/kern_control.h... no
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking sys/lock.h usability... no
+checking sys/lock.h presence... no
+checking for sys/lock.h... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/modem.h usability... no
+checking sys/modem.h presence... no
+checking for sys/modem.h... no
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/sendfile.h usability... yes
+checking sys/sendfile.h presence... yes
+checking for sys/sendfile.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/sys_domain.h usability... no
+checking sys/sys_domain.h presence... no
+checking for sys/sys_domain.h... no
+checking sys/termio.h usability... no
+checking sys/termio.h presence... no
+checking for sys/termio.h... no
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking netpacket/packet.h usability... yes
+checking netpacket/packet.h presence... yes
+checking for netpacket/packet.h... yes
+checking sysexits.h usability... yes
+checking sysexits.h presence... yes
+checking for sysexits.h... yes
+checking bluetooth.h usability... no
+checking bluetooth.h presence... no
+checking for bluetooth.h... no
+checking linux/tipc.h usability... yes
+checking linux/tipc.h presence... yes
+checking for linux/tipc.h... yes
+checking linux/random.h usability... yes
+checking linux/random.h presence... yes
+checking for linux/random.h... yes
+checking spawn.h usability... yes
+checking spawn.h presence... yes
+checking for spawn.h... yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking alloca.h usability... yes
+checking alloca.h presence... yes
+checking for alloca.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking sys/endian.h usability... no
+checking sys/endian.h presence... no
+checking for sys/endian.h... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether sys/types.h defines makedev... yes
+checking bluetooth/bluetooth.h usability... no
+checking bluetooth/bluetooth.h presence... no
+checking for bluetooth/bluetooth.h... no
+checking for net/if.h... yes
+checking for linux/netlink.h... yes
+checking for linux/can.h... yes
+checking for linux/can/raw.h... yes
+checking for linux/can/bcm.h... yes
+checking for clock_t in time.h... yes
+checking for makedev... yes
+checking for le64toh... yes
+checking Solaris LFS bug... no
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking for ssize_t... yes
+checking for __uint128_t... yes
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of void *... 8
+checking size of short... 2
+checking size of float... 4
+checking size of double... 8
+checking size of fpos_t... 16
+checking size of size_t... 8
+checking size of pid_t... 4
+checking size of uintptr_t... 8
+checking for long double support... yes
+checking size of long double... 16
+checking size of _Bool... 1
+checking size of off_t... 8
+checking whether to enable large file support... no
+checking size of time_t... 8
+checking for pthread_t... yes
+checking size of pthread_t... 8
+checking for --enable-framework... no
+checking for dyld... no
+checking the extension of shared libraries... .so
+checking LDSHARED... $(CC) -shared
+checking CCSHARED... -fPIC
+checking LINKFORSHARED... -Xlinker -export-dynamic
+checking CFLAGSFORSHARED... 
+checking SHLIBS... $(LIBS)
+checking for sendfile in -lsendfile... no
+checking for dlopen in -ldl... yes
+checking for shl_load in -ldld... no
+checking for library containing sem_init... -lpthread
+checking for textdomain in -lintl... no
+checking aligned memory access is required... no
+checking for --with-hash-algorithm... default
+checking for --with-address-sanitizer... no
+checking for t_open in -lnsl... no
+checking for socket in -lsocket... no
+checking for --with-libs... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for --with-system-expat... no
+checking for --with-system-ffi... yes
+checking for --with-system-libmpdec... no
+checking for --enable-loadable-sqlite-extensions... no
+checking for --with-tcltk-includes... default
+checking for --with-tcltk-libs... default
+checking for --with-dbmliborder... 
+checking for --with-threads... yes
+checking if PTHREAD_SCOPE_SYSTEM is supported... yes
+checking for pthread_sigmask... yes
+checking for pthread_atfork... yes
+checking if --enable-ipv6 is specified... yes
+checking if RFC2553 API is available... yes
+checking ipv6 stack type... linux-glibc
+checking for CAN_RAW_FD_FRAMES... yes
+checking for --with-doc-strings... yes
+checking for --with-pymalloc... yes
+checking for --with-valgrind... no
+checking for --with-dtrace... no
+checking for dlopen... yes
+checking DYNLOADFILE... dynload_shlib.o
+checking MACHDEP_OBJS... none
+checking for alarm... yes
+checking for accept4... yes
+checking for setitimer... yes
+checking for getitimer... yes
+checking for bind_textdomain_codeset... yes
+checking for chown... yes
+checking for clock... yes
+checking for confstr... yes
+checking for ctermid... yes
+checking for dup3... yes
+checking for execv... yes
+checking for faccessat... yes
+checking for fchmod... yes
+checking for fchmodat... yes
+checking for fchown... yes
+checking for fchownat... yes
+checking for fexecve... yes
+checking for fdopendir... yes
+checking for fork... yes
+checking for fpathconf... yes
+checking for fstatat... yes
+checking for ftime... yes
+checking for ftruncate... yes
+checking for futimesat... yes
+checking for futimens... yes
+checking for futimes... yes
+checking for gai_strerror... yes
+checking for getentropy... no
+checking for getgrouplist... yes
+checking for getgroups... yes
+checking for getlogin... yes
+checking for getloadavg... yes
+checking for getpeername... yes
+checking for getpgid... yes
+checking for getpid... yes
+checking for getpriority... yes
+checking for getresuid... yes
+checking for getresgid... yes
+checking for getpwent... yes
+checking for getspnam... yes
+checking for getspent... yes
+checking for getsid... yes
+checking for getwd... yes
+checking for if_nameindex... yes
+checking for initgroups... yes
+checking for kill... yes
+checking for killpg... yes
+checking for lchmod... no
+checking for lchown... yes
+checking for lockf... yes
+checking for linkat... yes
+checking for lstat... yes
+checking for lutimes... yes
+checking for mmap... yes
+checking for memrchr... yes
+checking for mbrtowc... yes
+checking for mkdirat... yes
+checking for mkfifo... yes
+checking for mkfifoat... yes
+checking for mknod... yes
+checking for mknodat... yes
+checking for mktime... yes
+checking for mremap... yes
+checking for nice... yes
+checking for openat... yes
+checking for pathconf... yes
+checking for pause... yes
+checking for pipe2... yes
+checking for plock... no
+checking for poll... yes
+checking for posix_fallocate... yes
+checking for posix_fadvise... yes
+checking for pread... yes
+checking for pthread_init... no
+checking for pthread_kill... yes
+checking for putenv... yes
+checking for pwrite... yes
+checking for readlink... yes
+checking for readlinkat... yes
+checking for readv... yes
+checking for realpath... yes
+checking for renameat... yes
+checking for select... yes
+checking for sem_open... yes
+checking for sem_timedwait... yes
+checking for sem_getvalue... yes
+checking for sem_unlink... yes
+checking for sendfile... yes
+checking for setegid... yes
+checking for seteuid... yes
+checking for setgid... yes
+checking for sethostname... yes
+checking for setlocale... yes
+checking for setregid... yes
+checking for setreuid... yes
+checking for setresuid... yes
+checking for setresgid... yes
+checking for setsid... yes
+checking for setpgid... yes
+checking for setpgrp... yes
+checking for setpriority... yes
+checking for setuid... yes
+checking for setvbuf... yes
+checking for sched_get_priority_max... yes
+checking for sched_setaffinity... yes
+checking for sched_setscheduler... yes
+checking for sched_setparam... yes
+checking for sched_rr_get_interval... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for sigpending... yes
+checking for sigrelse... yes
+checking for sigtimedwait... yes
+checking for sigwait... yes
+checking for sigwaitinfo... yes
+checking for snprintf... yes
+checking for strftime... yes
+checking for strlcpy... no
+checking for symlinkat... yes
+checking for sync... yes
+checking for sysconf... yes
+checking for tcgetpgrp... yes
+checking for tcsetpgrp... yes
+checking for tempnam... yes
+checking for timegm... yes
+checking for times... yes
+checking for tmpfile... yes
+checking for tmpnam... yes
+checking for tmpnam_r... yes
+checking for truncate... yes
+checking for uname... yes
+checking for unlinkat... yes
+checking for unsetenv... yes
+checking for utimensat... yes
+checking for utimes... yes
+checking for waitid... yes
+checking for waitpid... yes
+checking for wait3... yes
+checking for wait4... yes
+checking for wcscoll... yes
+checking for wcsftime... yes
+checking for wcsxfrm... yes
+checking for wmemcmp... yes
+checking for writev... yes
+checking for _getpty... no
+checking whether dirfd is declared... yes
+checking for chroot... yes
+checking for link... yes
+checking for symlink... yes
+checking for fchdir... yes
+checking for fsync... yes
+checking for fdatasync... yes
+checking for epoll... yes
+checking for epoll_create1... yes
+checking for kqueue... no
+checking for prlimit... yes
+checking for ctermid_r... no
+checking for flock declaration... yes
+checking for flock... yes
+checking for getpagesize... yes
+checking for broken unsetenv... no
+checking for true... true
+checking for inet_aton in -lc... yes
+checking for chflags... no
+checking for lchflags... no
+checking for inflateCopy in -lz... yes
+checking for hstrerror... yes
+checking for inet_aton... yes
+checking for inet_pton... yes
+checking for setgroups... yes
+checking for openpty... no
+checking for openpty in -lutil... yes
+checking for forkpty... yes
+checking for memmove... yes
+checking for fseek64... no
+checking for fseeko... yes
+checking for fstatvfs... yes
+checking for ftell64... no
+checking for ftello... yes
+checking for statvfs... yes
+checking for dup2... yes
+checking for strdup... yes
+checking for getpgrp... yes
+checking for setpgrp... (cached) yes
+checking for gettimeofday... yes
+checking for clock_gettime... yes
+checking for clock_getres... yes
+checking for clock_settime... yes
+checking for major... yes
+checking for getaddrinfo... yes
+checking getaddrinfo bug... no
+checking for getnameinfo... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct stat.st_rdev... yes
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_flags... no
+checking for struct stat.st_gen... no
+checking for struct stat.st_birthtime... no
+checking for struct stat.st_blocks... yes
+checking for struct passwd.pw_gecos... yes
+checking for struct passwd.pw_passwd... yes
+checking for time.h that defines altzone... no
+checking whether sys/select.h and sys/time.h may both be included... yes
+checking for addrinfo... yes
+checking for sockaddr_storage... yes
+checking for sockaddr_alg... yes
+checking whether char is unsigned... no
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking for working signed char... yes
+checking for prototypes... yes
+checking for variable length prototypes and stdarg.h... yes
+checking for socketpair... yes
+checking if sockaddr has sa_len member... no
+checking for gethostbyname_r... yes
+checking gethostbyname_r with 6 args... yes
+checking for __fpu_control... yes
+checking for --with-fpectl... no
+checking for --with-libm=STRING... default LIBM="-lm"
+checking for --with-libc=STRING... default LIBC=""
+checking for x64 gcc inline assembler... yes
+checking whether C doubles are little-endian IEEE 754 binary64... yes
+checking whether C doubles are big-endian IEEE 754 binary64... no
+checking whether C doubles are ARM mixed-endian IEEE 754 binary64... no
+checking whether we can use gcc inline assembler to get and set x87 control word... yes
+checking whether we can use gcc inline assembler to get and set mc68881 fpcr... no
+checking for x87-style double rounding... no
+checking for acosh... yes
+checking for asinh... yes
+checking for atanh... yes
+checking for copysign... yes
+checking for erf... yes
+checking for erfc... yes
+checking for expm1... yes
+checking for finite... yes
+checking for gamma... yes
+checking for hypot... yes
+checking for lgamma... yes
+checking for log1p... yes
+checking for log2... yes
+checking for round... yes
+checking for tgamma... yes
+checking whether isinf is declared... yes
+checking whether isnan is declared... yes
+checking whether isfinite is declared... yes
+checking whether tanh preserves the sign of zero... yes
+checking whether log1p drops the sign of negative zero... no
+checking whether POSIX semaphores are enabled... yes
+checking for broken sem_getvalue... no
+checking whether RTLD_LAZY is declared... yes
+checking whether RTLD_NOW is declared... yes
+checking whether RTLD_GLOBAL is declared... yes
+checking whether RTLD_LOCAL is declared... yes
+checking whether RTLD_NODELETE is declared... yes
+checking whether RTLD_NOLOAD is declared... yes
+checking whether RTLD_DEEPBIND is declared... yes
+checking digit size for Python's longs... no value specified
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking size of wchar_t... 4
+checking for UCS-4 tcl... no
+checking whether wchar_t is signed... yes
+no usable wchar_t found
+checking whether byte ordering is bigendian... no
+checking ABIFLAGS... m
+checking SOABI... cpython-36m-x86_64-linux-gnu
+checking LDVERSION... $(VERSION)$(ABIFLAGS)
+checking whether right shift extends the sign bit... yes
+checking for getc_unlocked() and friends... yes
+checking how to link readline libs... -lreadline
+checking for rl_callback_handler_install in -lreadline... yes
+checking for rl_pre_input_hook in -lreadline... yes
+checking for rl_completion_display_matches_hook in -lreadline... yes
+checking for rl_resize_terminal in -lreadline... yes
+checking for rl_completion_matches in -lreadline... yes
+checking for append_history in -lreadline... yes
+checking for broken nice()... no
+checking for broken poll()... no
+checking for struct tm.tm_zone... (cached) yes
+checking for working tzset()... yes
+checking for tv_nsec in struct stat... yes
+checking for tv_nsec2 in struct stat... no
+checking curses.h usability... yes
+checking curses.h presence... yes
+checking for curses.h... yes
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking for term.h... yes
+checking whether mvwdelch is an expression... yes
+checking whether WINDOW has _flags... yes
+checking for is_term_resized... yes
+checking for resize_term... yes
+checking for resizeterm... yes
+configure: checking for device files
+checking for /dev/ptmx... yes
+checking for /dev/ptc... no
+checking for %zd printf() format support... yes
+checking for socklen_t... yes
+checking for broken mbstowcs... no
+checking for --with-computed-gotos... no value specified
+checking whether clang-4.0 -pthread supports computed gotos... yes
+checking for build directories... done
+checking for -O2... yes
+checking for glibc _FORTIFY_SOURCE/memmove bug... no
+checking for stdatomic.h... no
+checking for GCC >= 4.7 __atomic builtins... yes
+checking for ensurepip... upgrade
+checking if the dirent structure of a d_type field... yes
+checking for the Linux getrandom() syscall... no
+checking for the getrandom() function... no
+configure: creating ./config.status
+config.status: creating Makefile.pre
+config.status: creating Modules/Setup.config
+config.status: creating Misc/python.pc
+config.status: creating Misc/python-config.sh
+config.status: creating Modules/ld_so_aix
+config.status: creating pyconfig.h
+configure: WARNING: unrecognized options: --with-optimizations
+creating Modules/Setup
+creating Modules/Setup.local
+creating Makefile
+
+
+If you want a release build with all optimizations active (LTO, PGO, etc),
+please run ./configure --enable-optimizations
+
+
++make
+python3 ./Tools/scripts/generate_opcode_h.py ./Lib/opcode.py ./Include/opcode.h
+/bin/mkdir -p Include
+python3 ./Parser/asdl_c.py -h Include ./Parser/Python.asdl
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Programs/python.o ./Programs/python.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/acceler.o Parser/acceler.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/grammar1.o Parser/grammar1.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/listnode.o Parser/listnode.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/node.o Parser/node.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/parser.o Parser/parser.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/bitset.o Parser/bitset.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/metagrammar.o Parser/metagrammar.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/firstsets.o Parser/firstsets.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/grammar.o Parser/grammar.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/pgen.o Parser/pgen.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/myreadline.o Parser/myreadline.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/parsetok.o Parser/parsetok.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/tokenizer.o Parser/tokenizer.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/abstract.o Objects/abstract.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/accu.o Objects/accu.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/boolobject.o Objects/boolobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/bytes_methods.o Objects/bytes_methods.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/bytearrayobject.o Objects/bytearrayobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/bytesobject.o Objects/bytesobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/cellobject.o Objects/cellobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/classobject.o Objects/classobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/codeobject.o Objects/codeobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/complexobject.o Objects/complexobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/descrobject.o Objects/descrobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/enumobject.o Objects/enumobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/exceptions.o Objects/exceptions.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/genobject.o Objects/genobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/fileobject.o Objects/fileobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/floatobject.o Objects/floatobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/frameobject.o Objects/frameobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/funcobject.o Objects/funcobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/iterobject.o Objects/iterobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/listobject.o Objects/listobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/longobject.o Objects/longobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/dictobject.o Objects/dictobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/odictobject.o Objects/odictobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/memoryobject.o Objects/memoryobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/methodobject.o Objects/methodobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/moduleobject.o Objects/moduleobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/namespaceobject.o Objects/namespaceobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/object.o Objects/object.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/obmalloc.o Objects/obmalloc.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/capsule.o Objects/capsule.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/rangeobject.o Objects/rangeobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/setobject.o Objects/setobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/sliceobject.o Objects/sliceobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/structseq.o Objects/structseq.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/tupleobject.o Objects/tupleobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/typeobject.o Objects/typeobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/unicodeobject.o Objects/unicodeobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/unicodectype.o Objects/unicodectype.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Objects/weakrefobject.o Objects/weakrefobject.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/_warnings.o Python/_warnings.c
+/bin/mkdir -p Python
+python3 ./Parser/asdl_c.py -c Python ./Parser/Python.asdl
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/Python-ast.o Python/Python-ast.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/asdl.o Python/asdl.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/dynamic_annotations.o Python/dynamic_annotations.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/mysnprintf.o Python/mysnprintf.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pyctype.o Python/pyctype.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/tokenizer_pgen.o Parser/tokenizer_pgen.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/printgrammar.o Parser/printgrammar.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/parsetok_pgen.o Parser/parsetok_pgen.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Parser/pgenmain.o Parser/pgenmain.c
+clang-4.0 -pthread -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes   Parser/acceler.o Parser/grammar1.o Parser/listnode.o Parser/node.o Parser/parser.o Parser/bitset.o Parser/metagrammar.o Parser/firstsets.o Parser/grammar.o Parser/pgen.o Objects/obmalloc.o Python/dynamic_annotations.o Python/mysnprintf.o Python/pyctype.o Parser/tokenizer_pgen.o Parser/printgrammar.o Parser/parsetok_pgen.o Parser/pgenmain.o -lpthread -ldl  -lutil -o Parser/pgen
+Parser/pgen ./Grammar/Grammar Include/graminit.h Python/graminit.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/ast.o Python/ast.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/bltinmodule.o Python/bltinmodule.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/ceval.o Python/ceval.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/compile.o Python/compile.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/codecs.o Python/codecs.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/errors.o Python/errors.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/frozenmain.o Python/frozenmain.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/future.o Python/future.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/getargs.o Python/getargs.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/getcompiler.o Python/getcompiler.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/getcopyright.o Python/getcopyright.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -DPLATFORM='"linux"' -o Python/getplatform.o ./Python/getplatform.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/getversion.o Python/getversion.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/graminit.o Python/graminit.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/import.o Python/import.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -I. -o Python/importdl.o ./Python/importdl.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/marshal.o Python/marshal.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/modsupport.o Python/modsupport.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/mystrtoul.o Python/mystrtoul.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/peephole.o Python/peephole.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pyarena.o Python/pyarena.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pyfpe.o Python/pyfpe.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pyhash.o Python/pyhash.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pylifecycle.o Python/pylifecycle.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pymath.o Python/pymath.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pystate.o Python/pystate.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pythonrun.o Python/pythonrun.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pytime.o Python/pytime.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/random.o Python/random.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/structmember.o Python/structmember.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/symtable.o Python/symtable.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE \
+		-DABIFLAGS='"m"' \
+		-DMULTIARCH=\"x86_64-linux-gnu\" \
+		-o Python/sysmodule.o ./Python/sysmodule.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/traceback.o Python/traceback.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/getopt.o Python/getopt.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pystrcmp.o Python/pystrcmp.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pystrtod.o Python/pystrtod.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/pystrhex.o Python/pystrhex.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/dtoa.o Python/dtoa.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/formatter_unicode.o Python/formatter_unicode.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/fileutils.o Python/fileutils.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE \
+		-DSOABI='"cpython-36m-x86_64-linux-gnu"' \
+		-o Python/dynload_shlib.o ./Python/dynload_shlib.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/thread.o Python/thread.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Modules/config.o Modules/config.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -DPYTHONPATH='":"' \
+		-DPREFIX='"/usr/local"' \
+		-DEXEC_PREFIX='"/usr/local"' \
+		-DVERSION='"3.6"' \
+		-DVPATH='""' \
+		-o Modules/getpath.o ./Modules/getpath.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Modules/main.o Modules/main.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Modules/gcmodule.o Modules/gcmodule.c
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_threadmodule.c -o Modules/_threadmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/posixmodule.c -o Modules/posixmodule.o
+./Modules/posixmodule.c:10340:5: warning: code will never be executed [-Wunreachable-code]
+    Py_FatalError("abort() called from Python code didn't abort!");
+    ^~~~~~~~~~~~~
+1 warning generated.
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/errnomodule.c -o Modules/errnomodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/pwdmodule.c -o Modules/pwdmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_sre.c -o Modules/_sre.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_codecsmodule.c -o Modules/_codecsmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_weakref.c -o Modules/_weakref.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_functoolsmodule.c -o Modules/_functoolsmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_operator.c -o Modules/_operator.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_collectionsmodule.c -o Modules/_collectionsmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/itertoolsmodule.c -o Modules/itertoolsmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/atexitmodule.c -o Modules/atexitmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/signalmodule.c -o Modules/signalmodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_stat.c -o Modules/_stat.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/timemodule.c -o Modules/timemodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_localemodule.c -o Modules/_localemodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/_iomodule.c -o Modules/_iomodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/iobase.c -o Modules/iobase.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/fileio.c -o Modules/fileio.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/bytesio.c -o Modules/bytesio.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/bufferedio.c -o Modules/bufferedio.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/textio.c -o Modules/textio.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -I./Modules/_io -c ./Modules/_io/stringio.c -o Modules/stringio.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/zipimport.c -o Modules/zipimport.o
+./Modules/zipimport.c:1002:22: warning: code will never be executed [-Wunreachable-code]
+            for (i = 0; i < name_size; i++) {
+                     ^
+1 warning generated.
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/faulthandler.c -o Modules/faulthandler.o
+./Modules/faulthandler.c:988:5: warning: code will never be executed [-Wunreachable-code]
+    PyThread_release_lock(lock);
+    ^~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/_tracemalloc.c -o Modules/_tracemalloc.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/hashtable.c -o Modules/hashtable.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/symtablemodule.c -o Modules/symtablemodule.o
+clang-4.0 -pthread -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE  -c ./Modules/xxsubtype.c -o Modules/xxsubtype.o
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE \
+	      -DHGVERSION="\"`LC_ALL=C `\"" \
+	      -DHGTAG="\"`LC_ALL=C `\"" \
+	      -DHGBRANCH="\"`LC_ALL=C `\"" \
+	      -o Modules/getbuildinfo.o ./Modules/getbuildinfo.c
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Programs/_freeze_importlib.o Programs/_freeze_importlib.c
+clang-4.0 -pthread   -o Programs/_freeze_importlib Programs/_freeze_importlib.o Modules/getbuildinfo.o Parser/acceler.o Parser/grammar1.o Parser/listnode.o Parser/node.o Parser/parser.o Parser/bitset.o Parser/metagrammar.o Parser/firstsets.o Parser/grammar.o Parser/pgen.o Parser/myreadline.o Parser/parsetok.o Parser/tokenizer.o Objects/abstract.o Objects/accu.o Objects/boolobject.o Objects/bytes_methods.o Objects/bytearrayobject.o Objects/bytesobject.o Objects/cellobject.o Objects/classobject.o Objects/codeobject.o Objects/complexobject.o Objects/descrobject.o Objects/enumobject.o Objects/exceptions.o Objects/genobject.o Objects/fileobject.o Objects/floatobject.o Objects/frameobject.o Objects/funcobject.o Objects/iterobject.o Objects/listobject.o Objects/longobject.o Objects/dictobject.o Objects/odictobject.o Objects/memoryobject.o Objects/methodobject.o Objects/moduleobject.o Objects/namespaceobject.o Objects/object.o Objects/obmalloc.o Objects/capsule.o Objects/rangeobject.o Objects/setobject.o Objects/sliceobject.o Objects/structseq.o Objects/tupleobject.o Objects/typeobject.o Objects/unicodeobject.o Objects/unicodectype.o Objects/weakrefobject.o Python/_warnings.o Python/Python-ast.o Python/asdl.o Python/ast.o Python/bltinmodule.o Python/ceval.o Python/compile.o Python/codecs.o Python/dynamic_annotations.o Python/errors.o Python/frozenmain.o Python/future.o Python/getargs.o Python/getcompiler.o Python/getcopyright.o Python/getplatform.o Python/getversion.o Python/graminit.o Python/import.o Python/importdl.o Python/marshal.o Python/modsupport.o Python/mystrtoul.o Python/mysnprintf.o Python/peephole.o Python/pyarena.o Python/pyctype.o Python/pyfpe.o Python/pyhash.o Python/pylifecycle.o Python/pymath.o Python/pystate.o Python/pythonrun.o Python/pytime.o Python/random.o Python/structmember.o Python/symtable.o Python/sysmodule.o Python/traceback.o Python/getopt.o Python/pystrcmp.o Python/pystrtod.o Python/pystrhex.o Python/dtoa.o Python/formatter_unicode.o Python/fileutils.o Python/dynload_shlib.o   Python/thread.o  Modules/config.o Modules/getpath.o Modules/main.o Modules/gcmodule.o Modules/_threadmodule.o  Modules/posixmodule.o  Modules/errnomodule.o  Modules/pwdmodule.o  Modules/_sre.o  Modules/_codecsmodule.o  Modules/_weakref.o  Modules/_functoolsmodule.o  Modules/_operator.o  Modules/_collectionsmodule.o  Modules/itertoolsmodule.o  Modules/atexitmodule.o  Modules/signalmodule.o  Modules/_stat.o  Modules/timemodule.o  Modules/_localemodule.o  Modules/_iomodule.o Modules/iobase.o Modules/fileio.o Modules/bytesio.o Modules/bufferedio.o Modules/textio.o Modules/stringio.o  Modules/zipimport.o  Modules/faulthandler.o  Modules/_tracemalloc.o Modules/hashtable.o  Modules/symtablemodule.o  Modules/xxsubtype.o -lpthread -ldl  -lutil   -lm  
+./Programs/_freeze_importlib \
+	    ./Lib/importlib/_bootstrap.py Python/importlib.h
+./Programs/_freeze_importlib \
+	    ./Lib/importlib/_bootstrap_external.py Python/importlib_external.h
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Python/frozen.o Python/frozen.c
+rm -f libpython3.6m.a
+ar rc libpython3.6m.a Modules/getbuildinfo.o
+ar rc libpython3.6m.a Parser/acceler.o Parser/grammar1.o Parser/listnode.o Parser/node.o Parser/parser.o Parser/bitset.o Parser/metagrammar.o Parser/firstsets.o Parser/grammar.o Parser/pgen.o Parser/myreadline.o Parser/parsetok.o Parser/tokenizer.o
+ar rc libpython3.6m.a Objects/abstract.o Objects/accu.o Objects/boolobject.o Objects/bytes_methods.o Objects/bytearrayobject.o Objects/bytesobject.o Objects/cellobject.o Objects/classobject.o Objects/codeobject.o Objects/complexobject.o Objects/descrobject.o Objects/enumobject.o Objects/exceptions.o Objects/genobject.o Objects/fileobject.o Objects/floatobject.o Objects/frameobject.o Objects/funcobject.o Objects/iterobject.o Objects/listobject.o Objects/longobject.o Objects/dictobject.o Objects/odictobject.o Objects/memoryobject.o Objects/methodobject.o Objects/moduleobject.o Objects/namespaceobject.o Objects/object.o Objects/obmalloc.o Objects/capsule.o Objects/rangeobject.o Objects/setobject.o Objects/sliceobject.o Objects/structseq.o Objects/tupleobject.o Objects/typeobject.o Objects/unicodeobject.o Objects/unicodectype.o Objects/weakrefobject.o
+ar rc libpython3.6m.a Python/_warnings.o Python/Python-ast.o Python/asdl.o Python/ast.o Python/bltinmodule.o Python/ceval.o Python/compile.o Python/codecs.o Python/dynamic_annotations.o Python/errors.o Python/frozenmain.o Python/future.o Python/getargs.o Python/getcompiler.o Python/getcopyright.o Python/getplatform.o Python/getversion.o Python/graminit.o Python/import.o Python/importdl.o Python/marshal.o Python/modsupport.o Python/mystrtoul.o Python/mysnprintf.o Python/peephole.o Python/pyarena.o Python/pyctype.o Python/pyfpe.o Python/pyhash.o Python/pylifecycle.o Python/pymath.o Python/pystate.o Python/pythonrun.o Python/pytime.o Python/random.o Python/structmember.o Python/symtable.o Python/sysmodule.o Python/traceback.o Python/getopt.o Python/pystrcmp.o Python/pystrtod.o Python/pystrhex.o Python/dtoa.o Python/formatter_unicode.o Python/fileutils.o Python/dynload_shlib.o   Python/thread.o  Python/frozen.o
+ar rc libpython3.6m.a Modules/config.o Modules/getpath.o Modules/main.o Modules/gcmodule.o
+ar rc libpython3.6m.a Modules/_threadmodule.o  Modules/posixmodule.o  Modules/errnomodule.o  Modules/pwdmodule.o  Modules/_sre.o  Modules/_codecsmodule.o  Modules/_weakref.o  Modules/_functoolsmodule.o  Modules/_operator.o  Modules/_collectionsmodule.o  Modules/itertoolsmodule.o  Modules/atexitmodule.o  Modules/signalmodule.o  Modules/_stat.o  Modules/timemodule.o  Modules/_localemodule.o  Modules/_iomodule.o Modules/iobase.o Modules/fileio.o Modules/bytesio.o Modules/bufferedio.o Modules/textio.o Modules/stringio.o  Modules/zipimport.o  Modules/faulthandler.o  Modules/_tracemalloc.o Modules/hashtable.o  Modules/symtablemodule.o  Modules/xxsubtype.o
+ranlib libpython3.6m.a
+clang-4.0 -pthread   -Xlinker -export-dynamic -o python Programs/python.o libpython3.6m.a -lpthread -ldl  -lutil   -lm  
+./python -E -S -m sysconfig --generate-posix-vars ;\
+	if test $? -ne 0 ; then \
+		echo "generate-posix-vars failed" ; \
+		rm -f ./pybuilddir.txt ; \
+		exit 1 ; \
+	fi
+clang-4.0 -pthread -c -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Modules/_math.o Modules/_math.c
+running build
+running build_ext
+building '_struct' extension
+creating build/temp.linux-x86_64-3.6/home
+creating build/temp.linux-x86_64-3.6/home/travis
+creating build/temp.linux-x86_64-3.6/home/travis/build
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_struct.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_struct.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_struct.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_struct.cpython-36m-x86_64-linux-gnu.so
+building '_ctypes_test' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes_test.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes_test.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes_test.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lm -o build/lib.linux-x86_64-3.6/_ctypes_test.cpython-36m-x86_64-linux-gnu.so
+building 'array' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/arraymodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/arraymodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/arraymodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/array.cpython-36m-x86_64-linux-gnu.so
+building 'cmath' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cmathmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cmathmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cmathmodule.o Modules/_math.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lm -o build/lib.linux-x86_64-3.6/cmath.cpython-36m-x86_64-linux-gnu.so
+building 'math' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/mathmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/mathmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/mathmodule.o Modules/_math.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lm -o build/lib.linux-x86_64-3.6/math.cpython-36m-x86_64-linux-gnu.so
+building '_datetime' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_datetimemodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_datetimemodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_datetimemodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lm -o build/lib.linux-x86_64-3.6/_datetime.cpython-36m-x86_64-linux-gnu.so
+building '_random' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_randommodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_randommodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_randommodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_random.cpython-36m-x86_64-linux-gnu.so
+building '_bisect' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bisectmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bisectmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bisectmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_bisect.cpython-36m-x86_64-linux-gnu.so
+building '_heapq' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_heapqmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_heapqmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_heapqmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_heapq.cpython-36m-x86_64-linux-gnu.so
+building '_pickle' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_pickle.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_pickle.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_pickle.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_pickle.cpython-36m-x86_64-linux-gnu.so
+building '_json' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_json.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_json.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_json.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_json.cpython-36m-x86_64-linux-gnu.so
+building '_testcapi' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testcapimodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testcapimodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testcapimodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_testcapi.cpython-36m-x86_64-linux-gnu.so
+building '_testbuffer' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testbuffer.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testbuffer.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testbuffer.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_testbuffer.cpython-36m-x86_64-linux-gnu.so
+building '_testimportmultiple' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testimportmultiple.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testimportmultiple.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testimportmultiple.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_testimportmultiple.cpython-36m-x86_64-linux-gnu.so
+building '_testmultiphase' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testmultiphase.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testmultiphase.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_testmultiphase.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_testmultiphase.cpython-36m-x86_64-linux-gnu.so
+building '_lsprof' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lsprof.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lsprof.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/rotatingtree.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/rotatingtree.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lsprof.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/rotatingtree.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_lsprof.cpython-36m-x86_64-linux-gnu.so
+building 'unicodedata' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/unicodedata.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/unicodedata.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/unicodedata.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/unicodedata.cpython-36m-x86_64-linux-gnu.so
+building '_opcode' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_opcode.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_opcode.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_opcode.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_opcode.cpython-36m-x86_64-linux-gnu.so
+building '_asyncio' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_asynciomodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_asynciomodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_asynciomodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_asyncio.cpython-36m-x86_64-linux-gnu.so
+building 'fcntl' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/fcntlmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/fcntlmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/fcntlmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/fcntl.cpython-36m-x86_64-linux-gnu.so
+building 'grp' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/grpmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/grpmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/grpmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/grp.cpython-36m-x86_64-linux-gnu.so
+building 'spwd' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/spwdmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/spwdmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/spwdmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/spwd.cpython-36m-x86_64-linux-gnu.so
+building 'select' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/selectmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/selectmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/selectmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/select.cpython-36m-x86_64-linux-gnu.so
+building 'parser' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/parsermodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/parsermodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/parsermodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/parser.cpython-36m-x86_64-linux-gnu.so
+building 'mmap' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/mmapmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/mmapmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/mmapmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/mmap.cpython-36m-x86_64-linux-gnu.so
+building 'syslog' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/syslogmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/syslogmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/syslogmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/syslog.cpython-36m-x86_64-linux-gnu.so
+building 'audioop' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/audioop.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/audioop.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/audioop.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lm -o build/lib.linux-x86_64-3.6/audioop.cpython-36m-x86_64-linux-gnu.so
+building 'readline' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/readline.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/readline.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/readline.o -L/usr/lib/termcap -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lreadline -o build/lib.linux-x86_64-3.6/readline.cpython-36m-x86_64-linux-gnu.so
+building '_crypt' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cryptmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cryptmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cryptmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lcrypt -o build/lib.linux-x86_64-3.6/_crypt.cpython-36m-x86_64-linux-gnu.so
+building '_csv' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_csv.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_csv.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_csv.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_csv.cpython-36m-x86_64-linux-gnu.so
+building '_posixsubprocess' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_posixsubprocess.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_posixsubprocess.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_posixsubprocess.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+building '_socket' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/socketmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/socketmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/socketmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_socket.cpython-36m-x86_64-linux-gnu.so
+building '_ssl' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ssl.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ssl.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ssl.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lssl -lcrypto -o build/lib.linux-x86_64-3.6/_ssl.cpython-36m-x86_64-linux-gnu.so
+building '_hashlib' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_hashopenssl.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_hashopenssl.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_hashopenssl.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lssl -lcrypto -o build/lib.linux-x86_64-3.6/_hashlib.cpython-36m-x86_64-linux-gnu.so
+building '_sha256' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha256module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha256module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha256module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_sha256.cpython-36m-x86_64-linux-gnu.so
+building '_sha512' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha512module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha512module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha512module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_sha512.cpython-36m-x86_64-linux-gnu.so
+building '_md5' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/md5module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/md5module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/md5module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_md5.cpython-36m-x86_64-linux-gnu.so
+building '_sha1' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha1module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha1module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/sha1module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_sha1.cpython-36m-x86_64-linux-gnu.so
+building '_blake2' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DBLAKE2_USE_SSE=1 -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2module.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DBLAKE2_USE_SSE=1 -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2b_impl.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2b_impl.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DBLAKE2_USE_SSE=1 -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2s_impl.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2s_impl.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2module.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2b_impl.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_blake2/blake2s_impl.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_blake2.cpython-36m-x86_64-linux-gnu.so
+building '_sha3' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sha3
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sha3/sha3module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sha3/sha3module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sha3/sha3module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_sha3.cpython-36m-x86_64-linux-gnu.so
+building '_sqlite3' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cache.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cache.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/connection.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/connection.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cursor.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cursor.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/microprotocols.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/microprotocols.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/module.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/prepare_protocol.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/prepare_protocol.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/row.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/row.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/statement.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/statement.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DMODULE_NAME="sqlite3" -DSQLITE_OMIT_LOAD_EXTENSION=1 -IModules/_sqlite -I/usr/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/util.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/util.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cache.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/connection.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/cursor.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/microprotocols.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/module.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/prepare_protocol.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/row.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/statement.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_sqlite/util.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lsqlite3 -o build/lib.linux-x86_64-3.6/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+building '_dbm' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_GDBM_DASH_NDBM_H -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_dbmmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_dbmmodule.o
+/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_dbmmodule.c:120:9: warning: code will never be executed [-Wunreachable-code]
+        PyErr_SetString(DbmError, "");
+        ^~~~~~~~~~~~~~~
+/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_dbmmodule.c:165:9: warning: code will never be executed [-Wunreachable-code]
+        PyErr_SetString(DbmError, "");
+        ^~~~~~~~~~~~~~~
+2 warnings generated.
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_dbmmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lgdbm -lgdbm_compat -o build/lib.linux-x86_64-3.6/_dbm.cpython-36m-x86_64-linux-gnu.so
+building '_gdbm' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_gdbmmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_gdbmmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_gdbmmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lgdbm -o build/lib.linux-x86_64-3.6/_gdbm.cpython-36m-x86_64-linux-gnu.so
+building 'termios' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/termios.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/termios.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/termios.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/termios.cpython-36m-x86_64-linux-gnu.so
+building 'resource' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/resource.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/resource.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/resource.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/resource.cpython-36m-x86_64-linux-gnu.so
+building 'nis' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/nismodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/nismodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/nismodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lnsl -o build/lib.linux-x86_64-3.6/nis.cpython-36m-x86_64-linux-gnu.so
+building '_curses' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_NCURSESW=1 -I/usr/include/ncursesw -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cursesmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cursesmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_cursesmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lncursesw -o build/lib.linux-x86_64-3.6/_curses.cpython-36m-x86_64-linux-gnu.so
+building '_curses_panel' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_NCURSESW=1 -I/usr/include/ncursesw -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_curses_panel.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_curses_panel.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_curses_panel.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lpanelw -lncursesw -o build/lib.linux-x86_64-3.6/_curses_panel.cpython-36m-x86_64-linux-gnu.so
+building 'zlib' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/zlibmodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/zlibmodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/zlibmodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lz -o build/lib.linux-x86_64-3.6/zlib.cpython-36m-x86_64-linux-gnu.so
+building 'binascii' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/binascii.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/binascii.o -DUSE_ZLIB_CRC32
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/binascii.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lz -o build/lib.linux-x86_64-3.6/binascii.cpython-36m-x86_64-linux-gnu.so
+building '_bz2' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bz2module.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bz2module.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_bz2module.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lbz2 -o build/lib.linux-x86_64-3.6/_bz2.cpython-36m-x86_64-linux-gnu.so
+building '_lzma' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lzmamodule.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lzmamodule.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_lzmamodule.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -llzma -o build/lib.linux-x86_64-3.6/_lzma.cpython-36m-x86_64-linux-gnu.so
+building 'pyexpat' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_EXPAT_CONFIG_H=1 -DUSE_PYEXPAT_CAPI -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/pyexpat.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/pyexpat.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_EXPAT_CONFIG_H=1 -DUSE_PYEXPAT_CAPI -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlparse.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlparse.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_EXPAT_CONFIG_H=1 -DUSE_PYEXPAT_CAPI -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlrole.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlrole.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_EXPAT_CONFIG_H=1 -DUSE_PYEXPAT_CAPI -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmltok.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmltok.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/pyexpat.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlparse.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmlrole.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat/xmltok.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/pyexpat.cpython-36m-x86_64-linux-gnu.so
+building '_elementtree' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DHAVE_EXPAT_CONFIG_H=1 -DUSE_PYEXPAT_CAPI -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/expat -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_elementtree.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_elementtree.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_elementtree.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_elementtree.cpython-36m-x86_64-linux-gnu.so
+building '_multibytecodec' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/multibytecodec.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/multibytecodec.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/multibytecodec.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_multibytecodec.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_kr' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_kr.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_kr.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_kr.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_kr.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_jp' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_jp.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_jp.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_jp.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_jp.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_cn' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_cn.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_cn.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_cn.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_cn.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_tw' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_tw.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_tw.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_tw.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_tw.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_hk' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_hk.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_hk.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_hk.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_hk.cpython-36m-x86_64-linux-gnu.so
+building '_codecs_iso2022' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_iso2022.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_iso2022.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/cjkcodecs/_codecs_iso2022.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_codecs_iso2022.cpython-36m-x86_64-linux-gnu.so
+building '_decimal' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/_decimal.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/_decimal.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/basearith.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/basearith.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/constants.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/constants.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/context.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/context.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/convolute.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/convolute.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/crt.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/crt.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/difradix2.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/difradix2.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fnt.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fnt.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fourstep.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fourstep.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/io.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/io.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/memory.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/memory.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/mpdecimal.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/mpdecimal.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/numbertheory.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/numbertheory.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/sixstep.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/sixstep.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DCONFIG_64=1 -DASM=1 -I/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/transpose.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/transpose.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/_decimal.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/basearith.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/constants.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/context.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/convolute.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/crt.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/difradix2.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fnt.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/fourstep.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/io.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/memory.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/mpdecimal.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/numbertheory.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/sixstep.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_decimal/libmpdec/transpose.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_decimal.cpython-36m-x86_64-linux-gnu.so
+building '_multiprocessing' extension
+creating build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -IModules/_multiprocessing -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/multiprocessing.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/multiprocessing.o
+/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/multiprocessing.c:176:32: warning: code will never be executed [-Wunreachable-code]
+            py_sem_value_max = PyLong_FromLong(INT_MAX);
+                               ^~~~~~~~~~~~~~~
+/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/multiprocessing.c:175:36: note: silence by adding parentheses to mark code as explicitly dead
+        if ((int)(SEM_VALUE_MAX) < 0)
+                                   ^
+                                   /* DISABLES CODE */ ( )
+1 warning generated.
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -IModules/_multiprocessing -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/semaphore.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/semaphore.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/multiprocessing.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_multiprocessing/semaphore.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+building 'ossaudiodev' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/ossaudiodev.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/ossaudiodev.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/ossaudiodev.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/ossaudiodev.cpython-36m-x86_64-linux-gnu.so
+building '_tkinter' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DWITH_APPINIT=1 -I/usr/include/tcl8.6 -I/usr/X11/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_tkinter.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_tkinter.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DWITH_APPINIT=1 -I/usr/include/tcl8.6 -I/usr/X11/include -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/tkappinit.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/tkappinit.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_tkinter.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/tkappinit.o -L/usr/X11/lib -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -ltk8.6 -ltcl8.6 -lX11 -o build/lib.linux-x86_64-3.6/_tkinter.cpython-36m-x86_64-linux-gnu.so
+building 'xxlimited' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -DPy_LIMITED_API=0x03050000 -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/xxlimited.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/xxlimited.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/xxlimited.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-3.6/xxlimited.cpython-36m-x86_64-linux-gnu.so
+building '_ctypes' extension
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I/usr/include/x86_64-linux-gnu -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I/usr/include/x86_64-linux-gnu -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callbacks.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callbacks.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I/usr/include/x86_64-linux-gnu -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callproc.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callproc.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I/usr/include/x86_64-linux-gnu -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/stgdict.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/stgdict.o
+clang-4.0 -pthread -fPIC -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -I/usr/include/x86_64-linux-gnu -I./Include -I. -I/usr/include/x86_64-linux-gnu -I/usr/local/include -I/home/travis/build/androm3da/optviewer-demo/cpython/Include -I/home/travis/build/androm3da/optviewer-demo/cpython -c /home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/cfield.c -o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/cfield.o
+clang-4.0 -pthread -shared build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/_ctypes.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callbacks.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/callproc.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/stgdict.o build/temp.linux-x86_64-3.6/home/travis/build/androm3da/optviewer-demo/cpython/Modules/_ctypes/cfield.o -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -lffi -o build/lib.linux-x86_64-3.6/_ctypes.cpython-36m-x86_64-linux-gnu.so
+The following modules found by detect_modules() in setup.py, have been
+built by the Makefile instead, as configured by the Setup files:
+atexit                pwd                   time               
+running build_scripts
+creating build/scripts-3.6
+copying and adjusting /home/travis/build/androm3da/optviewer-demo/cpython/Tools/scripts/pydoc3 -> build/scripts-3.6
+copying and adjusting /home/travis/build/androm3da/optviewer-demo/cpython/Tools/scripts/idle3 -> build/scripts-3.6
+copying and adjusting /home/travis/build/androm3da/optviewer-demo/cpython/Tools/scripts/2to3 -> build/scripts-3.6
+copying and adjusting /home/travis/build/androm3da/optviewer-demo/cpython/Tools/scripts/pyvenv -> build/scripts-3.6
+changing mode of build/scripts-3.6/pydoc3 from 664 to 775
+changing mode of build/scripts-3.6/idle3 from 664 to 775
+changing mode of build/scripts-3.6/2to3 from 664 to 775
+changing mode of build/scripts-3.6/pyvenv from 664 to 775
+renaming build/scripts-3.6/pydoc3 to build/scripts-3.6/pydoc3.6
+renaming build/scripts-3.6/idle3 to build/scripts-3.6/idle3.6
+renaming build/scripts-3.6/2to3 to build/scripts-3.6/2to3-3.6
+renaming build/scripts-3.6/pyvenv to build/scripts-3.6/pyvenv-3.6
+/usr/bin/install -c -m 644 ./Tools/gdb/libpython.py python-gdb.py
+clang-4.0 -pthread -c -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fsave-optimization-record   -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers   -I. -I./Include    -DPy_BUILD_CORE -o Programs/_testembed.o ./Programs/_testembed.c
+clang-4.0 -pthread   -Xlinker -export-dynamic -o Programs/_testembed Programs/_testembed.o libpython3.6m.a -lpthread -ldl  -lutil   -lm  
+# Substitution happens here, as the completely-expanded BINDIR
+# is not available in configure
+sed -e "s,@EXENAME@,/usr/local/bin/python3.6m," < ./Misc/python-config.in >python-config.py
+# Replace makefile compat. variable references with shell script compat. ones;  -> 
+LC_ALL=C sed -e 's,\$(\([A-Za-z0-9_]*\)),\$\{\1\},g' < Misc/python-config.sh >python-config
+# On Darwin, always use the python version of the script, the shell
+# version doesn't use the compiler customizations that are provided
+# in python (_osx_support.py).
+if test `uname -s` = Darwin; then \
+		cp python-config.py python-config; \
+	fi
++cd -
+/home/travis/build/androm3da/optviewer-demo

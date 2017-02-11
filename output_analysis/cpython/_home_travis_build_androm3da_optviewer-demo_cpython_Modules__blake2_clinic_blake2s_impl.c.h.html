@@ -1,0 +1,1336 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">preserve</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">clinic</span> <span class="n">start</span> <span class="n">generated</span> <span class="n">code</span><span class="p">]</span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">py_blake2s_new__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;blake2s(string=None, *, digest_size=_blake2s.blake2s.MAX_DIGEST_SIZE,</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;        key=None, salt=None, person=None, fanout=1, depth=1,</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;        leaf_size=None, node_offset=None, node_depth=0, inner_size=0,</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;        last_node=False)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return a new BLAKE2s hash object.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">py_blake2s_new_impl</span><span class="p">(</span><span class="n">PyTypeObject</span> <span class="o">*</span><span class="n">type</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">digest_size</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="n">Py_buffer</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">Py_buffer</span> <span class="o">*</span><span class="n">salt</span><span class="p">,</span> <span class="n">Py_buffer</span> <span class="o">*</span><span class="n">person</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="kt">int</span> <span class="n">fanout</span><span class="p">,</span> <span class="kt">int</span> <span class="n">depth</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">leaf_size_obj</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="n">PyObject</span> <span class="o">*</span><span class="n">node_offset_obj</span><span class="p">,</span> <span class="kt">int</span> <span class="n">node_depth</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                    <span class="kt">int</span> <span class="n">inner_size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">last_node</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">py_blake2s_new</span><span class="p">(</span><span class="n">PyTypeObject</span> <span class="o">*</span><span class="n">type</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="k">const</span> <span class="n">_keywords</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="s">&quot;digest_size&quot;</span><span class="p">,</span> <span class="s">&quot;key&quot;</span><span class="p">,</span> <span class="s">&quot;salt&quot;</span><span class="p">,</span> <span class="s">&quot;person&quot;</span><span class="p">,</span> <span class="s">&quot;fanout&quot;</span><span class="p">,</span> <span class="s">&quot;depth&quot;</span><span class="p">,</span> <span class="s">&quot;leaf_size&quot;</span><span class="p">,</span> <span class="s">&quot;node_offset&quot;</span><span class="p">,</span> <span class="s">&quot;node_depth&quot;</span><span class="p">,</span> <span class="s">&quot;inner_size&quot;</span><span class="p">,</span> <span class="s">&quot;last_node&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="n">_PyArg_Parser</span> <span class="n">_parser</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;|O$iy*y*y*iiOOiip:blake2s&quot;</span><span class="p">,</span> <span class="n">_keywords</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">digest_size</span> <span class="o">=</span> <span class="n">BLAKE2S_OUTBYTES</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_buffer</span> <span class="n">key</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_buffer</span> <span class="n">salt</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_buffer</span> <span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">};</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">fanout</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">leaf_size_obj</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">node_offset_obj</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">node_depth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">inner_size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">last_node</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_PyArg_ParseTupleAndKeywordsFast</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">_parser</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> _PyArg_ParseTupleAndKeywordsFast will not be inlined into py_blake2s_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">digest_size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">salt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">person</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">fanout</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">depth</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">leaf_size_obj</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">node_offset_obj</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">node_depth</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">inner_size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">last_node</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">py_blake2s_new_impl</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">digest_size</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">salt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">person</span><span class="p">,</span> <span class="n">fanout</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">leaf_size_obj</span><span class="p">,</span> <span class="n">node_offset_obj</span><span class="p">,</span> <span class="n">node_depth</span><span class="p">,</span> <span class="n">inner_size</span><span class="p">,</span> <span class="n">last_node</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L98>py_blake2s_new_impl</a> can be inlined into py_blake2s_new with cost=-12945 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L98>py_blake2s_new_impl</a> inlined into py_blake2s_new&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L27>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L28>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L32>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                              </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L33>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L34>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L35>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                                                     </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L36>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                                                                 </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L37>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                                                                             </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L38>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* Cleanup for key */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">PyBuffer_Release</span><span class="p">(</span><span class="o">&amp;</span><span class="n">key</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> PyBuffer_Release will not be inlined into py_blake2s_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* Cleanup for salt */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">salt</span><span class="p">.</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">PyBuffer_Release</span><span class="p">(</span><span class="o">&amp;</span><span class="n">salt</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> PyBuffer_Release will not be inlined into py_blake2s_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* Cleanup for person */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L49>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>       <span class="n">PyBuffer_Release</span><span class="p">(</span><span class="o">&amp;</span><span class="n">person</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> PyBuffer_Release will not be inlined into py_blake2s_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_blake2s_blake2s_copy__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;copy($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return a copy of the hash object.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _BLAKE2S_BLAKE2S_COPY_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;copy&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_blake2s_blake2s_copy</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_blake2s_blake2s_copy__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_copy_impl</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_copy</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_blake2s_blake2s_copy_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L265>_blake2s_blake2s_copy_impl</a> can be inlined into _blake2s_blake2s_copy with cost=-14760 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L75>_blake2s_blake2s_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L265>_blake2s_blake2s_copy_impl</a> inlined into _blake2s_blake2s_copy&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L75>_blake2s_blake2s_copy</a></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_blake2s_blake2s_update__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;update($self, obj, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Update this hash object</span><span class="se">\&#39;</span><span class="s">s state with the provided string.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _BLAKE2S_BLAKE2S_UPDATE_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;update&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_blake2s_blake2s_update</span><span class="p">,</span> <span class="n">METH_O</span><span class="p">,</span> <span class="n">_blake2s_blake2s_update__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_blake2s_blake2s_digest__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;digest($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return the digest value as a string of binary data.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _BLAKE2S_BLAKE2S_DIGEST_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;digest&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_blake2s_blake2s_digest</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_blake2s_blake2s_digest__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_digest_impl</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_digest</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_blake2s_blake2s_digest_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L326>_blake2s_blake2s_digest_impl</a> can be inlined into _blake2s_blake2s_digest with cost=-14695 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L102>_blake2s_blake2s_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L326>_blake2s_blake2s_digest_impl</a> inlined into _blake2s_blake2s_digest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L102>_blake2s_blake2s_digest</a></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_blake2s_blake2s_hexdigest__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;hexdigest($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return the digest value as a string of hexadecimal digits.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _BLAKE2S_BLAKE2S_HEXDIGEST_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;hexdigest&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_blake2s_blake2s_hexdigest</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_blake2s_blake2s_hexdigest__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_hexdigest_impl</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_blake2s_blake2s_hexdigest</span><span class="p">(</span><span class="n">BLAKE2sObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_blake2s_blake2s_hexdigest_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L347>_blake2s_blake2s_hexdigest_impl</a> can be inlined into _blake2s_blake2s_hexdigest with cost=-14695 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L120>_blake2s_blake2s_hexdigest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L347>_blake2s_blake2s_hexdigest_impl</a> inlined into _blake2s_blake2s_hexdigest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L120>_blake2s_blake2s_hexdigest</a></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic end generated code: output=535ea7903f9ccf76 input=a9049054013a1b77]*/</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

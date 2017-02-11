@@ -1,0 +1,3609 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Portable</span> <span class="n">condition</span> <span class="n">variable</span> <span class="n">support</span> <span class="k">for</span> <span class="n">windows</span> <span class="n">and</span> <span class="n">pthreads</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Everything</span> <span class="n">is</span> <span class="kr">inline</span><span class="p">,</span> <span class="k">this</span> <span class="n">header</span> <span class="n">can</span> <span class="n">be</span> <span class="n">included</span> <span class="n">where</span> <span class="n">needed</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">APIs</span> <span class="n">generally</span> <span class="k">return</span> <span class="mi">0</span> <span class="n">on</span> <span class="n">success</span> <span class="n">and</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">on</span> <span class="n">error</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">and</span> <span class="n">the</span> <span class="n">caller</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">use</span> <span class="n">its</span> <span class="n">platform</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">error</span> <span class="n">mechanism</span> <span class="n">to</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">discover</span> <span class="n">the</span> <span class="n">error</span> <span class="p">(</span><span class="n">errno</span><span class="p">,</span> <span class="n">or</span> <span class="n">GetLastError</span><span class="p">())</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Note</span> <span class="n">that</span> <span class="n">some</span> <span class="n">implementations</span> <span class="n">cannot</span> <span class="n">distinguish</span> <span class="n">between</span> <span class="n">a</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">condition</span> <span class="n">variable</span> <span class="n">wait</span> <span class="n">time</span><span class="o">-</span><span class="n">out</span> <span class="n">and</span> <span class="n">successful</span> <span class="n">wait</span><span class="p">.</span> <span class="n">Most</span> <span class="n">often</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">the</span> <span class="n">difference</span> <span class="n">is</span> <span class="n">moot</span> <span class="n">anyway</span> <span class="n">since</span> <span class="n">the</span> <span class="n">wait</span> <span class="n">condition</span> <span class="n">must</span> <span class="n">be</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">re</span><span class="o">-</span><span class="n">checked</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">PyCOND_TIMEDWAIT</span><span class="p">,</span> <span class="n">in</span> <span class="n">addition</span> <span class="n">to</span> <span class="n">returning</span> <span class="n">negative</span> <span class="n">on</span> <span class="n">error</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">thus</span> <span class="n">returns</span> <span class="mi">0</span> <span class="n">on</span> <span class="n">regular</span> <span class="n">success</span><span class="p">,</span> <span class="mi">1</span> <span class="n">on</span> <span class="n">timeout</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">or</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">it</span> <span class="n">can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">tell</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">There</span> <span class="n">are</span> <span class="n">at</span> <span class="n">least</span> <span class="n">two</span> <span class="n">caveats</span> <span class="n">with</span> <span class="k">using</span> <span class="n">these</span> <span class="n">condition</span> <span class="n">variables</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">due</span> <span class="n">to</span> <span class="n">the</span> <span class="n">fact</span> <span class="n">that</span> <span class="n">they</span> <span class="n">may</span> <span class="n">be</span> <span class="n">emulated</span> <span class="n">with</span> <span class="n">Semaphores</span> <span class="n">on</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="nl">Windows</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="n">While</span> <span class="n">PyCOND_SIGNAL</span><span class="p">()</span> <span class="n">will</span> <span class="n">wake</span> <span class="n">up</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span> <span class="kr">thread</span><span class="p">,</span> <span class="n">we</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">cannot</span> <span class="n">currently</span> <span class="n">guarantee</span> <span class="n">that</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">threads</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">already</span> <span class="n">waiting</span> <span class="n">in</span> <span class="n">a</span> <span class="n">PyCOND_WAIT</span><span class="p">()</span> <span class="n">call</span><span class="p">.</span>  <span class="n">It</span> <span class="n">_could_</span> <span class="n">cause</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">the</span> <span class="n">wakeup</span> <span class="n">of</span> <span class="n">a</span> <span class="n">subsequent</span> <span class="kr">thread</span> <span class="n">to</span> <span class="k">try</span> <span class="n">a</span> <span class="n">PyCOND_WAIT</span><span class="p">(),</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">including</span> <span class="n">the</span> <span class="kr">thread</span> <span class="n">doing</span> <span class="n">the</span> <span class="n">PyCOND_SIGNAL</span><span class="p">()</span> <span class="n">itself</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">The</span> <span class="n">same</span> <span class="n">applies</span> <span class="n">to</span> <span class="n">PyCOND_BROADCAST</span><span class="p">(),</span> <span class="k">if</span> <span class="n">N</span> <span class="n">threads</span> <span class="n">are</span> <span class="n">waiting</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">then</span> <span class="n">at</span> <span class="n">least</span> <span class="n">N</span> <span class="n">threads</span> <span class="n">will</span> <span class="n">be</span> <span class="n">woken</span> <span class="n">up</span><span class="p">,</span> <span class="n">but</span> <span class="n">not</span> <span class="n">necessarily</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">those</span> <span class="n">already</span> <span class="n">waiting</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">For</span> <span class="k">this</span> <span class="n">reason</span><span class="p">,</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">make</span> <span class="n">the</span> <span class="n">scheduling</span> <span class="n">assumption</span> <span class="n">that</span> <span class="n">a</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">specific</span> <span class="n">other</span> <span class="kr">thread</span> <span class="n">will</span> <span class="n">get</span> <span class="n">the</span> <span class="n">wakeup</span> <span class="n">signal</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="n">The</span> <span class="n">_mutex_</span> <span class="n">must</span> <span class="n">be</span> <span class="n">held</span> <span class="n">when</span> <span class="n">calling</span> <span class="n">PyCOND_SIGNAL</span><span class="p">()</span> <span class="n">and</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">PyCOND_BROADCAST</span><span class="p">().</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">While</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">the</span> <span class="n">posix</span> <span class="n">standard</span> <span class="n">strongly</span> <span class="n">recommends</span> <span class="n">that</span> <span class="n">the</span> <span class="n">mutex</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">associated</span> <span class="n">with</span> <span class="n">the</span> <span class="n">condition</span> <span class="n">variable</span> <span class="n">is</span> <span class="n">held</span> <span class="n">when</span> <span class="n">a</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">pthread_cond_signal</span><span class="p">()</span> <span class="n">call</span> <span class="n">is</span> <span class="n">made</span><span class="p">,</span> <span class="k">this</span> <span class="n">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">hard</span> <span class="n">requirement</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">although</span> <span class="n">scheduling</span> <span class="n">will</span> <span class="n">not</span> <span class="n">be</span> <span class="s">&quot;reliable&quot;</span> <span class="k">if</span> <span class="n">it</span> <span class="n">isn</span><span class="err">&#39;</span><span class="n">t</span><span class="p">.</span>  <span class="n">Here</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">the</span> <span class="n">mutex</span> <span class="n">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">internal</span> <span class="n">synchronization</span> <span class="n">of</span> <span class="n">the</span> <span class="n">emulated</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>    <span class="n">Condition</span> <span class="n">Variable</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef _CONDVAR_H_</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _CONDVAR_H_</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef _POSIX_THREADS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This means pthreads are not implemented in libc headers, hence the macro</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">not</span> <span class="n">present</span> <span class="n">in</span> <span class="n">unistd</span><span class="p">.</span><span class="n">h</span><span class="p">.</span> <span class="n">But</span> <span class="n">they</span> <span class="n">still</span> <span class="n">can</span> <span class="n">be</span> <span class="n">implemented</span> <span class="n">as</span> <span class="n">an</span> <span class="n">external</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">library</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">gnu</span> <span class="n">pth</span> <span class="n">in</span> <span class="n">pthread</span> <span class="n">emulation</span><span class="p">)</span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># ifdef HAVE_PTHREAD_H</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#  include &lt;pthread.h&gt; </span><span class="cm">/* _POSIX_THREADS */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp"># endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef _POSIX_THREADS</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">POSIX</span> <span class="n">support</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define Py_HAVE_CONDVAR</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;pthread.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_ADD_MICROSECONDS(tv, interval) \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">do</span> <span class="p">{</span> <span class="cm">/* TODO: add overflow and truncation checks */</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">tv</span><span class="p">.</span><span class="n">tv_usec</span> <span class="o">+=</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span> <span class="n">interval</span><span class="p">;</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">tv</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">+=</span> <span class="n">tv</span><span class="p">.</span><span class="n">tv_usec</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">;</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">tv</span><span class="p">.</span><span class="n">tv_usec</span> <span class="o">%=</span> <span class="mi">1000000</span><span class="p">;</span> \
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* We assume all modern POSIX systems have gettimeofday() */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifdef GETTIMEOFDAY_NO_TZ</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_GETTIMEOFDAY(ptv) gettimeofday(ptv)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_GETTIMEOFDAY(ptv) gettimeofday(ptv, (struct timezone *)NULL)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* The following functions return 0 on success, nonzero on error */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyMUTEX_T pthread_mutex_t</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyMUTEX_INIT(mut)       pthread_mutex_init((mut), NULL)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyMUTEX_FINI(mut)       pthread_mutex_destroy(mut)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyMUTEX_LOCK(mut)       pthread_mutex_lock(mut)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyMUTEX_UNLOCK(mut)     pthread_mutex_unlock(mut)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_T pthread_cond_t</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_INIT(cond)       pthread_cond_init((cond), NULL)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_FINI(cond)       pthread_cond_destroy(cond)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_SIGNAL(cond)     pthread_cond_signal(cond)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_BROADCAST(cond)  pthread_cond_broadcast(cond)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define PyCOND_WAIT(cond, mut)  pthread_cond_wait((cond), (mut))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* return 0 for success, 1 on timeout, -1 on error */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_TIMEDWAIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cond</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">mut</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">us</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">r</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">struct</span> <span class="n">timespec</span> <span class="n">ts</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> hosting <a href=Python_condvar.h.html#L95>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">struct</span> <span class="n">timeval</span> <span class="n">deadline</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> hosting <a href=Python_condvar.h.html#L96>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyCOND_GETTIMEOFDAY</span><span class="p">(</span><span class="o">&amp;</span><span class="n">deadline</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> gettimeofday will not be inlined into PyCOND_TIMEDWAIT because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyCOND_TIMEDWAIT</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyCOND_ADD_MICROSECONDS</span><span class="p">(</span><span class="n">deadline</span><span class="p">,</span> <span class="n">us</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_condvar.h.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCOND_TIMEDWAIT</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> hosting <a href=Python_condvar.h.html#L99>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_condvar.h.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">ts</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">=</span> <span class="n">deadline</span><span class="p">.</span><span class="n">tv_sec</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> hosting <a href=Python_condvar.h.html#L100>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">ts</span><span class="p">.</span><span class="n">tv_nsec</span> <span class="o">=</span> <span class="n">deadline</span><span class="p">.</span><span class="n">tv_usec</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> hosting <a href=Python_condvar.h.html#L101>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_ceval_gil.h.html#L206>take_gil</a></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">r</span> <span class="o">=</span> <span class="n">pthread_cond_timedwait</span><span class="p">((</span><span class="n">cond</span><span class="p">),</span> <span class="p">(</span><span class="n">mut</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">ts</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> pthread_cond_timedwait will not be inlined into PyCOND_TIMEDWAIT because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyCOND_TIMEDWAIT</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">==</span> <span class="n">ETIMEDOUT</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#elif defined(NT_THREADS)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Windows</span> <span class="p">(</span><span class="n">XP</span><span class="p">,</span> <span class="mi">2003</span> <span class="n">server</span> <span class="n">and</span> <span class="n">later</span><span class="p">,</span> <span class="n">as</span> <span class="n">well</span> <span class="n">as</span> <span class="p">(</span><span class="n">hopefully</span><span class="p">)</span> <span class="n">CE</span><span class="p">)</span> <span class="n">support</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Emulated</span> <span class="n">condition</span> <span class="n">variables</span> <span class="n">ones</span> <span class="n">that</span> <span class="n">work</span> <span class="n">with</span> <span class="n">XP</span> <span class="n">and</span> <span class="n">later</span><span class="p">,</span> <span class="n">plus</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">example</span> <span class="n">native</span> <span class="n">support</span> <span class="n">on</span> <span class="n">VISTA</span> <span class="n">and</span> <span class="n">onwards</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define Py_HAVE_CONDVAR</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* include windows if it hasn&#39;t been done before */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define WIN32_LEAN_AND_MEAN</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* options */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* non-emulated condition variables are provided for those that want</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">to</span> <span class="n">target</span> <span class="n">Windows</span> <span class="n">Vista</span><span class="p">.</span>  <span class="n">Modify</span> <span class="k">this</span> <span class="n">macro</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">them</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#ifndef _PY_EMULATED_WIN_CV</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _PY_EMULATED_WIN_CV 1  </span><span class="cm">/* use emulated condition variables */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* fall back to emulation if not targeting Vista */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if !defined NTDDI_VISTA || NTDDI_VERSION &lt; NTDDI_VISTA</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#undef _PY_EMULATED_WIN_CV</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _PY_EMULATED_WIN_CV 1</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#if _PY_EMULATED_WIN_CV</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* The mutex is a CriticalSection object and</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">The</span> <span class="n">condition</span> <span class="n">variables</span> <span class="n">is</span> <span class="n">emulated</span> <span class="n">with</span> <span class="n">the</span> <span class="n">help</span> <span class="n">of</span> <span class="n">a</span> <span class="n">semaphore</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">Semaphores</span> <span class="n">are</span> <span class="n">available</span> <span class="n">on</span> <span class="n">Windows</span> <span class="n">XP</span> <span class="p">(</span><span class="mi">2003</span> <span class="n">server</span><span class="p">)</span> <span class="n">and</span> <span class="n">later</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">We</span> <span class="n">use</span> <span class="n">a</span> <span class="n">Semaphore</span> <span class="n">rather</span> <span class="n">than</span> <span class="n">an</span> <span class="k">auto</span><span class="o">-</span><span class="n">reset</span> <span class="n">event</span><span class="p">,</span> <span class="n">because</span> <span class="n">although</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">an</span> <span class="k">auto</span><span class="o">-</span><span class="n">resent</span> <span class="n">event</span> <span class="n">might</span> <span class="n">appear</span> <span class="n">to</span> <span class="n">solve</span> <span class="n">the</span> <span class="n">lost</span><span class="o">-</span><span class="n">wakeup</span> <span class="n">bug</span> <span class="p">(</span><span class="n">race</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">condition</span> <span class="n">between</span> <span class="n">releasing</span> <span class="n">the</span> <span class="n">outer</span> <span class="n">lock</span> <span class="n">and</span> <span class="n">waiting</span><span class="p">)</span> <span class="n">because</span> <span class="n">it</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">maintains</span> <span class="n">state</span> <span class="n">even</span> <span class="n">though</span> <span class="n">a</span> <span class="n">wait</span> <span class="n">hasn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">happened</span><span class="p">,</span> <span class="n">there</span> <span class="n">is</span> <span class="n">still</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">a</span> <span class="n">lost</span> <span class="n">wakeup</span> <span class="n">problem</span> <span class="k">if</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="kr">thread</span> <span class="n">are</span> <span class="n">interrupted</span> <span class="n">in</span> <span class="n">the</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">critical</span> <span class="n">place</span><span class="p">.</span>  <span class="n">A</span> <span class="n">semaphore</span> <span class="n">solves</span> <span class="n">that</span><span class="p">,</span> <span class="n">because</span> <span class="n">its</span> <span class="n">state</span> <span class="n">is</span> <span class="n">counted</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">not</span> <span class="n">Boolean</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">Because</span> <span class="n">it</span> <span class="n">is</span> <span class="n">ok</span> <span class="n">to</span> <span class="n">signal</span> <span class="n">a</span> <span class="n">condition</span> <span class="n">variable</span> <span class="n">with</span> <span class="n">no</span> <span class="n">one</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">waiting</span><span class="p">,</span> <span class="n">we</span> <span class="n">need</span> <span class="n">to</span> <span class="n">keep</span> <span class="n">track</span> <span class="n">of</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">waiting</span> <span class="n">threads</span><span class="p">.</span>  <span class="n">Otherwise</span><span class="p">,</span> <span class="n">the</span> <span class="n">semaphore</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">state</span> <span class="n">could</span> <span class="n">rise</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">without</span> <span class="n">bound</span><span class="p">.</span>  <span class="n">This</span> <span class="n">also</span> <span class="n">helps</span> <span class="n">reduce</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="s">&quot;spurious wakeups&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">that</span> <span class="n">would</span> <span class="n">otherwise</span> <span class="n">happen</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">This</span> <span class="n">implementation</span> <span class="n">still</span> <span class="n">has</span> <span class="n">the</span> <span class="n">problem</span> <span class="n">that</span> <span class="n">the</span> <span class="n">threads</span> <span class="n">woken</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">with</span> <span class="n">a</span> <span class="s">&quot;signal&quot;</span> <span class="n">aren</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">necessarily</span> <span class="n">those</span> <span class="n">that</span> <span class="n">are</span> <span class="n">already</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">waiting</span><span class="p">.</span>  <span class="n">It</span> <span class="n">corresponds</span> <span class="n">to</span> <span class="n">listing</span> <span class="mi">2</span> <span class="nl">in</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="nl">http</span><span class="p">:</span><span class="c1">//birrell.org/andrew/papers/ImplementingCVs.pdf</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">Generic</span> <span class="n">emulations</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pthread_cond_</span><span class="o">*</span> <span class="n">API</span> <span class="k">using</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">earlier</span> <span class="n">Win32</span> <span class="n">functions</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="n">on</span> <span class="n">the</span> <span class="n">Web</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">The</span> <span class="n">following</span> <span class="n">read</span> <span class="n">can</span> <span class="n">be</span> <span class="n">give</span> <span class="n">background</span> <span class="n">information</span> <span class="n">to</span> <span class="n">these</span> <span class="n">issues</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="n">but</span> <span class="n">the</span> <span class="n">implementations</span> <span class="n">are</span> <span class="n">all</span> <span class="n">broken</span> <span class="n">in</span> <span class="n">some</span> <span class="n">way</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>   <span class="nl">http</span><span class="p">:</span><span class="c1">//www.cse.wustl.edu/~schmidt/win32-cv-1.html</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="n">CRITICAL_SECTION</span> <span class="n">PyMUTEX_T</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L173">173</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L174">174</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_INIT</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L175">175</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L176">176</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">InitializeCriticalSection</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L177">177</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L178">178</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L179">179</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L180">180</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L181">181</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_FINI</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L182">182</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L183">183</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">DeleteCriticalSection</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L184">184</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L187">187</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L188">188</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_LOCK</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L189">189</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L190">190</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">EnterCriticalSection</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L191">191</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L194">194</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L195">195</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_UNLOCK</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L196">196</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L197">197</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">LeaveCriticalSection</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L198">198</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L199">199</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L200">200</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L201">201</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* The ConditionVariable object.  From XP onwards it is easily emulated with</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L202">202</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">a</span> <span class="n">Semaphore</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L203">203</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L204">204</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L205">205</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_PyCOND_T</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L206">206</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L207">207</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">HANDLE</span> <span class="n">sem</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L208">208</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">waiting</span><span class="p">;</span> <span class="cm">/* to allow PyCOND_SIGNAL to be a no-op */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L209">209</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span> <span class="n">PyCOND_T</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L210">210</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L211">211</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L212">212</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_INIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L213">213</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L214">214</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* A semaphore with a &quot;large&quot; max value,  The positive value</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L215">215</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">is</span> <span class="n">only</span> <span class="n">needed</span> <span class="n">to</span> <span class="k">catch</span> <span class="n">those</span> <span class="s">&quot;lost wakeup&quot;</span> <span class="n">events</span> <span class="n">and</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L216">216</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">race</span> <span class="n">conditions</span> <span class="n">when</span> <span class="n">a</span> <span class="n">timed</span> <span class="n">wait</span> <span class="n">elapses</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L217">217</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L218">218</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span> <span class="o">=</span> <span class="n">CreateSemaphore</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L219">219</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L220">220</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L221">221</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L222">222</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L223">223</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L224">224</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L225">225</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L226">226</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_FINI</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L227">227</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L228">228</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">CloseHandle</span><span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L229">229</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L230">230</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L231">231</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* this implementation can detect a timeout.  Returns 1 on timeout,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L232">232</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mi">0</span> <span class="n">otherwise</span> <span class="p">(</span><span class="n">and</span> <span class="o">-</span><span class="mi">1</span> <span class="n">on</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L233">233</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L234">234</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L235">235</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_PyCOND_WAIT_MS</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">,</span> <span class="n">DWORD</span> <span class="n">ms</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L236">236</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L237">237</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">DWORD</span> <span class="n">wait</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L238">238</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span><span class="o">++</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L239">239</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyMUTEX_UNLOCK</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L240">240</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* &quot;lost wakeup bug&quot; would occur if the caller were interrupted here,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L241">241</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">but</span> <span class="n">we</span> <span class="n">are</span> <span class="n">safe</span> <span class="n">because</span> <span class="n">we</span> <span class="n">are</span> <span class="k">using</span> <span class="n">a</span> <span class="n">semaphore</span> <span class="n">which</span> <span class="n">has</span> <span class="n">an</span> <span class="n">internal</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L242">242</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">count</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L243">243</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L244">244</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">wait</span> <span class="o">=</span> <span class="n">WaitForSingleObjectEx</span><span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span><span class="p">,</span> <span class="n">ms</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L245">245</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyMUTEX_LOCK</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L246">246</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">wait</span> <span class="o">!=</span> <span class="n">WAIT_OBJECT_0</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L247">247</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">--</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L248">248</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* Here we have a benign race condition with PyCOND_SIGNAL.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L249">249</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">When</span> <span class="n">failure</span> <span class="n">occurs</span> <span class="n">or</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">it</span> <span class="n">is</span> <span class="n">possible</span> <span class="n">that</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L250">250</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">PyCOND_SIGNAL</span> <span class="n">also</span> <span class="n">decrements</span> <span class="k">this</span> <span class="n">value</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L251">251</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">and</span> <span class="n">signals</span> <span class="n">releases</span> <span class="n">the</span> <span class="n">mutex</span><span class="p">.</span>  <span class="n">This</span> <span class="n">is</span> <span class="n">benign</span> <span class="n">because</span> <span class="n">it</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L252">252</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">just</span> <span class="n">means</span> <span class="n">an</span> <span class="n">extra</span> <span class="n">spurious</span> <span class="n">wakeup</span> <span class="k">for</span> <span class="n">a</span> <span class="n">waiting</span> <span class="kr">thread</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L253">253</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="p">(</span><span class="err">&#39;</span><span class="n">waiting</span><span class="err">&#39;</span> <span class="n">corresponds</span> <span class="n">to</span> <span class="n">the</span> <span class="n">semaphore</span><span class="err">&#39;</span><span class="n">s</span> <span class="s">&quot;negative&quot;</span> <span class="n">count</span> <span class="n">and</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L254">254</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">we</span> <span class="n">may</span> <span class="n">end</span> <span class="n">up</span> <span class="n">with</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="p">(</span><span class="n">waiting</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">sem</span><span class="p">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">).</span>  <span class="n">When</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L255">255</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">a</span> <span class="k">new</span> <span class="kr">thread</span> <span class="n">comes</span> <span class="n">along</span><span class="p">,</span> <span class="n">it</span> <span class="n">will</span> <span class="n">pass</span> <span class="n">right</span> <span class="n">throuhgh</span><span class="p">,</span> <span class="n">having</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L256">256</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">adjusted</span> <span class="n">it</span> <span class="n">to</span> <span class="p">(</span><span class="n">waiting</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">sem</span><span class="p">.</span><span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">).</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L257">257</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L258">258</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L259">259</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">wait</span> <span class="o">==</span> <span class="n">WAIT_FAILED</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L260">260</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L261">261</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* return 0 on success, 1 on timeout */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L262">262</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">wait</span> <span class="o">!=</span> <span class="n">WAIT_OBJECT_0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L263">263</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L264">264</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L265">265</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L266">266</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_WAIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L267">267</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L268">268</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">_PyCOND_WAIT_MS</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L269">269</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">result</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">result</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L270">270</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L271">271</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L272">272</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L273">273</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_TIMEDWAIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">us</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L274">274</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L275">275</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_PyCOND_WAIT_MS</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="p">(</span><span class="n">DWORD</span><span class="p">)(</span><span class="n">us</span><span class="o">/</span><span class="mi">1000</span><span class="p">));</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L276">276</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L277">277</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L278">278</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L279">279</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_SIGNAL</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L280">280</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L281">281</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="cm">/* this test allows PyCOND_SIGNAL to be a no-op unless required</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L282">282</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">to</span> <span class="n">wake</span> <span class="n">someone</span> <span class="n">up</span><span class="p">,</span> <span class="n">thus</span> <span class="n">preventing</span> <span class="n">an</span> <span class="n">unbounded</span> <span class="n">increase</span> <span class="n">of</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L283">283</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">the</span> <span class="n">semaphore</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">internal</span> <span class="n">counter</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L284">284</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L285">285</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L286">286</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="cm">/* notifying thread decreases the cv-&gt;waiting count so that</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L287">287</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">a</span> <span class="n">delay</span> <span class="n">between</span> <span class="n">notify</span> <span class="n">and</span> <span class="n">actual</span> <span class="n">wakeup</span> <span class="n">of</span> <span class="n">the</span> <span class="n">target</span> <span class="kr">thread</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L288">288</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="o">*</span> <span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">cause</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span> <span class="n">extra</span> <span class="n">ReleaseSemaphore</span> <span class="n">calls</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L289">289</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>         <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L290">290</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span><span class="o">--</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L291">291</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nf">ReleaseSemaphore</span><span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L292">292</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L293">293</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L294">294</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L295">295</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L296">296</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L297">297</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_BROADCAST</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L298">298</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L299">299</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">waiting</span> <span class="o">=</span> <span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L300">300</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">waiting</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L301">301</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="n">cv</span><span class="o">-&gt;</span><span class="n">waiting</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L302">302</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nf">ReleaseSemaphore</span><span class="p">(</span><span class="n">cv</span><span class="o">-&gt;</span><span class="n">sem</span><span class="p">,</span> <span class="n">waiting</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L303">303</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L304">304</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L305">305</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L306">306</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L307">307</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L308">308</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L309">309</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Use native Win7 primitives if build target is Win7 or higher */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L310">310</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L311">311</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* SRWLOCK is faster and better than CriticalSection */</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L312">312</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="n">SRWLOCK</span> <span class="n">PyMUTEX_T</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L313">313</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L314">314</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L315">315</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_INIT</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L316">316</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L317">317</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">InitializeSRWLock</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L318">318</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L319">319</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L320">320</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L321">321</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L322">322</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_FINI</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L323">323</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L324">324</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L325">325</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L326">326</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L327">327</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L328">328</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_LOCK</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L329">329</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L330">330</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">AcquireSRWLockExclusive</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L331">331</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L332">332</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L333">333</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L334">334</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L335">335</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyMUTEX_UNLOCK</span><span class="p">(</span><span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L336">336</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L337">337</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">ReleaseSRWLockExclusive</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L338">338</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L339">339</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L340">340</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L341">341</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L342">342</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="n">CONDITION_VARIABLE</span>  <span class="n">PyCOND_T</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L343">343</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L344">344</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L345">345</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_INIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L346">346</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L347">347</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">InitializeConditionVariable</span><span class="p">(</span><span class="n">cv</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L348">348</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L349">349</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L350">350</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L351">351</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_FINI</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L352">352</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L353">353</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L354">354</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L355">355</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L356">356</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L357">357</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_WAIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L358">358</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L359">359</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">SleepConditionVariableSRW</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="n">INFINITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L360">360</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L361">361</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L362">362</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This implementation makes no distinction about timeouts.  Signal</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L363">363</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="mi">2</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">we</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">know</span><span class="p">.</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L364">364</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L365">365</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L366">366</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_TIMEDWAIT</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">,</span> <span class="n">PyMUTEX_T</span> <span class="o">*</span><span class="n">cs</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">us</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L367">367</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L368">368</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">SleepConditionVariableSRW</span><span class="p">(</span><span class="n">cv</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="p">(</span><span class="n">DWORD</span><span class="p">)(</span><span class="n">us</span><span class="o">/</span><span class="mi">1000</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">2</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L369">369</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L370">370</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L371">371</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L372">372</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_SIGNAL</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L373">373</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L374">374</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">WakeConditionVariable</span><span class="p">(</span><span class="n">cv</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L375">375</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L376">376</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L377">377</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L378">378</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L379">379</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyCOND_BROADCAST</span><span class="p">(</span><span class="n">PyCOND_T</span> <span class="o">*</span><span class="n">cv</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L380">380</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L381">381</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="n">WakeAllConditionVariable</span><span class="p">(</span><span class="n">cv</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L382">382</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L383">383</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L384">384</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L385">385</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L386">386</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* _PY_EMULATED_WIN_CV */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L387">387</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L388">388</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* _POSIX_THREADS, NT_THREADS */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L389">389</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L390">390</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* _CONDVAR_H_ */</span><span class="cp"></span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

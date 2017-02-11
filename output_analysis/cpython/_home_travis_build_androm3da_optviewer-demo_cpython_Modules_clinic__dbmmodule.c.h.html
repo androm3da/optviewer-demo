@@ -1,0 +1,1491 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">preserve</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">clinic</span> <span class="n">start</span> <span class="n">generated</span> <span class="n">code</span><span class="p">]</span><span class="err">*/</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_dbm_dbm_close__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;close($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Close the database.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _DBM_DBM_CLOSE_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;close&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_dbm_dbm_close</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_dbm_dbm_close__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_close_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_close</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_dbm_dbm_close_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L186>_dbm_dbm_close_impl</a> can be inlined into _dbm_dbm_close with cost=-14990 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L17>_dbm_dbm_close</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L186>_dbm_dbm_close_impl</a> inlined into _dbm_dbm_close&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L17>_dbm_dbm_close</a></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_dbm_dbm_keys__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;keys($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return a list of all keys in the database.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _DBM_DBM_KEYS_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;keys&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_dbm_dbm_keys</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_dbm_dbm_keys__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_keys_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_keys</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_dbm_dbm_keys_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L203>_dbm_dbm_keys_impl</a> can be inlined into _dbm_dbm_keys with cost=-14625 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L203>_dbm_dbm_keys_impl</a> inlined into _dbm_dbm_keys&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_dbm_dbm_get__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;get($self, key, default=b</span><span class="se">\&#39;\&#39;</span><span class="s">, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return the value for key if present, otherwise default.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _DBM_DBM_GET_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;get&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_dbm_dbm_get</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">_dbm_dbm_get__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_get_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                  <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_get</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;s#|O:get&quot;</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> _PyArg_ParseTuple_SizeT will not be inlined into _dbm_dbm_get because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key_length</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_dbm_dbm_get_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">key_length</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L289>_dbm_dbm_get_impl</a> can be inlined into _dbm_dbm_get with cost=-14895 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L289>_dbm_dbm_get_impl</a> inlined into _dbm_dbm_get&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L60>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L62>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L62>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L62>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L54>_dbm_dbm_get</a></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_dbm_dbm_setdefault__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;setdefault($self, key, default=b</span><span class="se">\&#39;\&#39;</span><span class="s">, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return the value for key if present, otherwise default.</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;If key is not in the database, it is inserted with default as the value.&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define _DBM_DBM_SETDEFAULT_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;setdefault&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_dbm_dbm_setdefault</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">_dbm_dbm_setdefault__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_setdefault_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                         <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>                         <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">_dbm_dbm_setdefault</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;s#|O:setdefault&quot;</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> _PyArg_ParseTuple_SizeT will not be inlined into _dbm_dbm_setdefault because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key_length</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_dbm_dbm_setdefault_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">key_length</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L319>_dbm_dbm_setdefault_impl</a> can be inlined into _dbm_dbm_setdefault with cost=-14540 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L319>_dbm_dbm_setdefault_impl</a> inlined into _dbm_dbm_setdefault&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L94>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">dbmopen__doc__</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;open($module, filename, flags=</span><span class="se">\&#39;</span><span class="s">r</span><span class="se">\&#39;</span><span class="s">, mode=0o666, /)</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;Return a database object.</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;  filename</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;    The filename to open.</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;  flags</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;    How to open the file.  </span><span class="se">\&quot;</span><span class="s">r</span><span class="se">\&quot;</span><span class="s"> for reading, </span><span class="se">\&quot;</span><span class="s">w</span><span class="se">\&quot;</span><span class="s"> for writing, etc.</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;  mode</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;    If creating a new file, the mode bits for the new file</span><span class="se">\n</span><span class="s">&quot;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="s">&quot;    (e.g. os.O_RDWR).&quot;</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#define DBMOPEN_METHODDEF    \</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;open&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">dbmopen</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">dbmopen__doc__</span><span class="p">},</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">dbmopen_impl</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>             <span class="kt">int</span> <span class="n">mode</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="n">dbmopen</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">filename</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span> <span class="o">=</span> <span class="s">&quot;r&quot;</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">438</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;s|si:open&quot;</span><span class="p">,</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> _PyArg_ParseTuple_SizeT will not be inlined into dbmopen because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">filename</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flags</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mode</span><span class="p">))</span> <span class="p">{</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">dbmopen_impl</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L436>dbmopen_impl</a> can be inlined into dbmopen with cost=-14700 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L436>dbmopen_impl</a> inlined into dbmopen&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L132>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L133>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+</td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic end generated code: output=99adf966ef0475ff input=a9049054013a1b77]*/</span>
+</pre></div>
+</td>
+</tr>
+
+</table>
+</body>
+</html>
