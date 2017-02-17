@@ -67,7 +67,7 @@ you can use `opt-viewer` to see these in relation to your project.
 First, gather the necessary dependencies for opt-viewer:
 
     virtualenv optviewer_env
-    source optviewer_envbin/activate
+    source optviewer_env/bin/activate
     pip install pyyaml pygments
 
 Let's assume your `sample` project is in the same directory as
