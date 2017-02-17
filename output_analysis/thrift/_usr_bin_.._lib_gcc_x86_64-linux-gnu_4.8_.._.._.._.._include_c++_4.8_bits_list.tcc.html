@@ -636,12 +636,132 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type %"struct.std::_List_node"* not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2405>invoke</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L220>t_perl_generator::init_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type %"struct.std::_List_node"* not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2405>invoke</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L193>t_perl_generator::get_namespace_out_dir()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L193>t_perl_generator::get_namespace_out_dir()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type %"struct.std::_List_node"* not eliminated because it is clobbered by <a href=src_thrift_generate_t_gv_generator.cc.html#L60>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_gv_generator.cc.html#L49>t_gv_generator::t_gv_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type %"struct.std::_List_node"* not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_atomicity.h.html#L49>atomicrmw</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L48>t_delphi_generator::~t_delphi_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type %"struct.std::_List_node"* not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L53>t_delphi_generator::t_delphi_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
 <td><div class="highlight"><pre><span></span>      <span class="k">while</span> <span class="p">(</span><span class="n">__cur</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">_M_impl</span><span class="p">.</span><span class="n">_M_node</span><span class="p">)</span>
 </pre></div>
 </td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L220>t_perl_generator::init_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L193>t_perl_generator::get_namespace_out_dir()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_gv_generator.cc.html#L44>t_gv_generator::~t_gv_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_gv_generator.cc.html#L44>t_gv_generator::~t_gv_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_gv_generator.cc.html#L49>t_gv_generator::t_gv_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L48>t_delphi_generator::~t_delphi_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L48>t_delphi_generator::~t_delphi_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L53>t_delphi_generator::t_delphi_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_delphi_generator.cc.html#L53>t_delphi_generator::t_delphi_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -693,64 +813,64 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_get_Node_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_get_Node_allocator()</a> can be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_get_Node_allocator()</a> will not be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::destroy&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::destroy&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> will not be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_get_Node_allocator()</a> inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_get_Node_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::destroy&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> can be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear() with cost=55 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_get_Node_allocator()</a> will not be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::destroy&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::destroy&lt;std::_List_node&lt;t_typedef*&gt; &gt;(std::_List_node&lt;t_typedef*&gt;*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_get_Node_allocator()</a> can be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::destroy&lt;std::_List_node&lt;t_typedef*&gt; &gt;(std::_List_node&lt;t_typedef*&gt;*)</a> will not be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L345>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_get_Node_allocator()</a> inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::destroy&lt;std::_List_node&lt;t_typedef*&gt; &gt;(std::_List_node&lt;t_typedef*&gt;*)</a> can be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear() with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L124>void __gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::destroy&lt;std::_List_node&lt;t_typedef*&gt; &gt;(std::_List_node&lt;t_typedef*&gt;*)</a> inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
 </tr>
 
 <tr>
@@ -793,32 +913,32 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_put_node(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_put_node(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> can be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear() with cost=-5 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_put_node(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> will not be inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_put_node(std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;*)</a> inlined into std::_List_base&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_put_node(std::_List_node&lt;t_typedef*&gt;*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_put_node(std::_List_node&lt;t_typedef*&gt;*)</a> can be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear() with cost=-5 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_put_node(std::_List_node&lt;t_typedef*&gt;*)</a> will not be inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
-<td class="column-entry-yellow">std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L338>std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_put_node(std::_List_node&lt;t_typedef*&gt;*)</a> inlined into std::_List_base&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_clear()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L65>std::_List_base<t_typedef*, std::allocator<t_typedef*> >::_M_clear()</a></td>
 </tr>
 
 <tr>
@@ -1113,16 +1233,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L141>std::_List_iterator&lt;t_typedef*&gt;::_List_iterator(std::__detail::_List_node_base*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L141>std::_List_iterator&lt;t_typedef*&gt;::_List_iterator(std::__detail::_List_node_base*)</a> can be inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L108>std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L141>std::_List_iterator&lt;t_typedef*&gt;::_List_iterator(std::__detail::_List_node_base*)</a> will not be inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L141>std::_List_iterator&lt;t_typedef*&gt;::_List_iterator(std::__detail::_List_node_base*)</a> inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L108>std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</a></td>
 </tr>
 
 <tr>
@@ -1138,16 +1258,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L1569>std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_erase(std::_List_iterator&lt;t_typedef*&gt;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L1569>std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_erase(std::_List_iterator&lt;t_typedef*&gt;)</a> can be inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;) with cost=30 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L108>std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L1569>std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_erase(std::_List_iterator&lt;t_typedef*&gt;)</a> will not be inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_list.h.html#L1569>std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::_M_erase(std::_List_iterator&lt;t_typedef*&gt;)</a> inlined into std::list&lt;t_typedef*, std::allocator&lt;t_typedef*&gt; &gt;::erase(std::_List_iterator&lt;t_typedef*&gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_list.tcc.html#L108>std::list<t_typedef*, std::allocator<t_typedef*> >::erase(std::_List_iterator<t_typedef*>)</a></td>
 </tr>
 
 <tr>

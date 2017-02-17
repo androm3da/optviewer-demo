@@ -2133,16 +2133,216 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2571>bool std::operator&lt; &lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2571>bool std::operator&lt; &lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> can be inlined into std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::operator()(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) const with cost=75 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L233>std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2571>bool std::operator&lt; &lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> will not be inlined into std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::operator()(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) const&nbsp;</span></td>
-<td class="column-entry-yellow">std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L2571>bool std::operator&lt; &lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> inlined into std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::operator()(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) const&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L233>std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::operator()(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1137>std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_lower_bound(std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*, std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*, char const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1314>std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(char const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1412>std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, char const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1412>std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, char const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L1089>store</a> because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1673>invoke</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1666>std::_Rb_tree_iterator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<char&&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::piecewise_construct_t const&, std::tuple<char&&>&&, std::tuple<>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 10&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._src_thrift_generate_t_generator.h.html#L38>t_generator::t_generator(t_program*)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 60&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_html_generator.cc.html#L53>t_html_generator::t_html_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1131>invoke</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_html_generator.cc.html#L53>t_html_generator::t_html_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 36&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_perl_generator.cc.html#L49>t_perl_generator::t_perl_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 123&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_gv_generator.cc.html#L99>t_gv_generator::init_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1153>std::_Rb_tree<char, std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<char>, std::allocator<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_lower_bound(std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const*, std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const*, char const&) const</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_generator.cc.html#L77>t_generator::escape_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 39&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_js_generator.cc.html#L52>t_js_generator::t_js_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1314>std::_Rb_tree<t_type*, t_type*, std::_Identity<t_type*>, std::less<t_type*>, std::allocator<t_type*> >::_M_get_insert_unique_pos(t_type* const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1372>std::pair<std::_Rb_tree_iterator<t_type*>, bool> std::_Rb_tree<t_type*, t_type*, std::_Identity<t_type*>, std::less<t_type*>, std::allocator<t_type*> >::_M_insert_unique<t_type*>(t_type*&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 36&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_php_generator.cc.html#L52>t_php_generator::t_php_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1137>std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int> >::_M_lower_bound(std::_Rb_tree_node<int>*, std::_Rb_tree_node<int>*, int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1314>std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int> >::_M_get_insert_unique_pos(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1372>std::pair<std::_Rb_tree_iterator<int>, bool> std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int> >::_M_insert_unique<int const&>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1137>std::_Rb_tree<t_const_value*, std::pair<t_const_value* const, t_const_value*>, std::_Select1st<std::pair<t_const_value* const, t_const_value*> >, std::less<t_const_value*>, std::allocator<std::pair<t_const_value* const, t_const_value*> > >::_M_lower_bound(std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> >*, std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> >*, t_const_value* const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1314>std::_Rb_tree<t_const_value*, std::pair<t_const_value* const, t_const_value*>, std::_Select1st<std::pair<t_const_value* const, t_const_value*> >, std::less<t_const_value*>, std::allocator<std::pair<t_const_value* const, t_const_value*> > >::_M_get_insert_unique_pos(t_const_value* const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %class.t_const_value* eliminated in favor of <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_function.h.html#L235>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1412>std::_Rb_tree<t_const_value*, std::pair<t_const_value* const, t_const_value*>, std::_Select1st<std::pair<t_const_value* const, t_const_value*> >, std::less<t_const_value*>, std::allocator<std::pair<t_const_value* const, t_const_value*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<t_const_value* const, t_const_value*> >, t_const_value* const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1412>std::_Rb_tree<t_const_value*, std::pair<t_const_value* const, t_const_value*>, std::_Select1st<std::pair<t_const_value* const, t_const_value*> >, std::less<t_const_value*>, std::allocator<std::pair<t_const_value* const, t_const_value*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<t_const_value* const, t_const_value*> >, t_const_value* const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %class.t_const_value* not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1673>invoke</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_tree.h.html#L1666>std::_Rb_tree_iterator<std::pair<t_const_value* const, t_const_value*> > std::_Rb_tree<t_const_value*, std::pair<t_const_value* const, t_const_value*>, std::_Select1st<std::pair<t_const_value* const, t_const_value*> >, std::less<t_const_value*>, std::allocator<std::pair<t_const_value* const, t_const_value*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<t_const_value* const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<t_const_value* const, t_const_value*> >, std::piecewise_construct_t const&, std::tuple<t_const_value* const&>&&, std::tuple<>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %class.t_const_value* eliminated in favor of &nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._thrift_parse_t_const_value.h.html#L89>t_const_value::add_map(t_const_value*, t_const_value*)</a></td>
 </tr>
 
 <tr>

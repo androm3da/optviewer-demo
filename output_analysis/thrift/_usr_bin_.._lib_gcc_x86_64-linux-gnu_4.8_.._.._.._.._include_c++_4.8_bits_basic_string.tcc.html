@@ -1169,49 +1169,113 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                             </pre><span class="column-entry-yellow"> std::allocator&lt;char&gt;::allocator() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L113>std::allocator&lt;char&gt;::allocator()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> std::allocator&lt;char&gt;::~allocator() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L113>std::allocator&lt;char&gt;::allocator()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L813>bool __gnu_cxx::operator==&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-40 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L813>bool __gnu_cxx::operator==&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L121>std::allocator&lt;char&gt;::~allocator()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L121>std::allocator&lt;char&gt;::~allocator()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L813>bool __gnu_cxx::operator==&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L813>bool __gnu_cxx::operator==&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L113>std::allocator&lt;char&gt;::allocator()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L113>std::allocator&lt;char&gt;::allocator()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L121>std::allocator&lt;char&gt;::~allocator()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L121>std::allocator&lt;char&gt;::~allocator()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-40 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L134>bool std::operator==&lt;char&gt;(std::allocator&lt;char&gt; const&amp;, std::allocator&lt;char&gt; const&amp;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1226,17 +1290,65 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_empty_rep() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                        </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L427>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_empty_rep()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-30 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L427>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_empty_rep()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L427>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_empty_rep()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-30 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L427>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_empty_rep()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1270,32 +1382,48 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L156>bool __gnu_cxx::__is_null_pointer&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L151>bool __gnu_cxx::__is_null_pointer&lt;char&gt;(char*)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-30 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L156>bool __gnu_cxx::__is_null_pointer&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L151>bool __gnu_cxx::__is_null_pointer&lt;char&gt;(char*)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	                                                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L825>bool __gnu_cxx::operator!=&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	                                                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L825>bool __gnu_cxx::operator!=&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                                                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L825>bool __gnu_cxx::operator!=&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                                                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L825>bool __gnu_cxx::operator!=&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L156>bool __gnu_cxx::__is_null_pointer&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_type_traits.h.html#L156>bool __gnu_cxx::__is_null_pointer&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1311,8 +1439,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> std::__throw_logic_error(char const*) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> std::__throw_logic_error(char const*) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1337,16 +1473,32 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::difference_type std::distance&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;char*&gt;::difference_type std::distance&lt;char*&gt;(char*, char*)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::difference_type std::distance&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;char*&gt;::difference_type std::distance&lt;char*&gt;(char*, char*)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::difference_type std::distance&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_funcs.h.html#L115>std::iterator_traits&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::difference_type std::distance&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1380,8 +1532,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_S_create(unsigned long, unsigned long, std::allocator&lt;char&gt; const&amp;) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_S_create(unsigned long, unsigned long, std::allocator&lt;char&gt; const&amp;) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1406,16 +1566,40 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	                       </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	                                                    </pre><span class="column-entry-yellow"> __cxa_begin_catch will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_copy_chars(char*, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L400>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_copy_chars(char*, char*, char*)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L400>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_copy_chars(char*, char*, char*)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1423,7 +1607,39 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	                                                    </pre><span class="column-entry-yellow"> __cxa_begin_catch will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L392>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_copy_chars(char*, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L392>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_copy_chars(char*, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	                       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1457,8 +1673,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_destroy(std::allocator&lt;char&gt; const&amp;) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_destroy(std::allocator&lt;char&gt; const&amp;) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1474,8 +1698,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> __cxa_rethrow will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	    </pre><span class="column-entry-yellow"> __cxa_rethrow will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1491,8 +1723,8 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __cxa_end_catch will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __cxa_end_catch will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1500,7 +1732,31 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __clang_call_terminate should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __clang_call_terminate will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __cxa_end_catch will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __clang_call_terminate should never be inlined (cost=never)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1508,7 +1764,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> __clang_call_terminate will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1523,9 +1779,33 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	     </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_set_length_and_sharable(unsigned long) will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	     </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L208>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_set_length_and_sharable(unsigned long)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-5 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	     </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L208>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_set_length_and_sharable(unsigned long)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	     </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L208>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_set_length_and_sharable(unsigned long)</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-5 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	     </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L208>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_set_length_and_sharable(unsigned long)</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -1540,9 +1820,33 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata() will not be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> can be inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L223>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Rep::_M_refdata()</a> inlined into char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L124>char* std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_construct<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&, std::forward_iterator_tag)</a></td>
 </tr>
 
 <tr>
@@ -2286,25 +2590,65 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Alloc_hider::_Alloc_hider(char*, std::allocator&lt;char&gt; const&amp;) will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;) with cost=120 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<char*>(char*, char*, std::allocator<char> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;)</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<char*>(char*, char*, std::allocator<char> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L275>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Alloc_hider::_Alloc_hider(char*, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<char*>(char*, char*, std::allocator<char> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)</a> will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L275>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Alloc_hider::_Alloc_hider(char*, std::allocator&lt;char&gt; const&amp;)</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;char*&gt;(char*, char*, std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<char*>(char*, char*, std::allocator<char> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;) with cost=75 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L1744>char* std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_S_construct&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L275>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Alloc_hider::_Alloc_hider(char*, std::allocator&lt;char&gt; const&amp;)</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L275>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::_Alloc_hider::_Alloc_hider(char*, std::allocator&lt;char&gt; const&amp;)</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string&lt;__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;(__gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, __gnu_cxx::__normal_iterator&lt;char*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L228>std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(__gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<char> const&)</a></td>
 </tr>
 
 <tr>
@@ -6532,16 +6876,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_char_traits.h.html#L259>std::char_traits&lt;char&gt;::length(char const*)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_char_traits.h.html#L259>std::char_traits&lt;char&gt;::length(char const*)</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) with cost=0 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_char_traits.h.html#L259>std::char_traits&lt;char&gt;::length(char const*)</a> will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_char_traits.h.html#L259>std::char_traits&lt;char&gt;::length(char const*)</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -6556,9 +6900,17 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string() will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L439>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string()</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) with cost=-30 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L439>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string()</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -6574,16 +6926,24 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::size() const will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::reserve(unsigned long) will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::reserve(unsigned long) will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L716>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::size() const</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) with cost=-25 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L716>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::size() const</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -6600,7 +6960,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::append(char const*, unsigned long) will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -6617,7 +6977,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::append(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -6641,9 +7001,17 @@
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string() will not be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow">std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L539>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</a> can be inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) with cost=60 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.h.html#L539>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::~basic_string()</a> inlined into std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; std::operator+&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;(char const*, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_basic_string.tcc.html#L692>std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>

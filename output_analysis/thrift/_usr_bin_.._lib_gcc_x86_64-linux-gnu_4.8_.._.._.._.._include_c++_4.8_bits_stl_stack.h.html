@@ -882,23 +882,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::~deque()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::~stack()</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::~deque()</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::~stack() with cost=90 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L94>std::stack<bool, std::deque<bool, std::allocator<bool> > >::~stack()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::~deque()</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::~stack()&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::~stack()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::~deque()</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::~stack()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L94>std::stack<bool, std::deque<bool, std::allocator<bool> > >::~stack()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> should never be inlined (cost=never)&nbsp;</span></td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> too costly to inline (cost=305, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~stack()</td>
 </tr>
 
@@ -908,6 +908,54 @@
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~stack()&nbsp;</span></td>
 <td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~stack()</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> too costly to inline (cost=305, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L80>t_xml_generator::~t_xml_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> will not be inlined into t_xml_generator::~t_xml_generator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L80>t_xml_generator::~t_xml_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> too costly to inline (cost=305, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L80>t_xml_generator::~t_xml_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> will not be inlined into t_xml_generator::~t_xml_generator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L80>t_xml_generator::~t_xml_generator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> too costly to inline (cost=305, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L58>t_xml_generator::t_xml_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L918>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~deque()</a> will not be inlined into t_xml_generator::t_xml_generator(t_program*, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_xml_generator.cc.html#L58>t_xml_generator::t_xml_generator(t_program*, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -1301,64 +1349,64 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;)</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;)</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::deque(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::deque(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&gt;(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;)</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::deque(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;) with cost=150 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;)</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::deque(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::stack(std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<bool, std::deque<bool, std::allocator<bool> > >::stack(std::deque<bool, std::allocator<bool> >&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::deque(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;)</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::deque(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;::type&amp;&amp; std::move&lt;std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&gt;(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;)</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::deque(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;) with cost=150 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L856>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::deque(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::stack(std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L137>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::stack(std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&&)</a></td>
 </tr>
 
 <tr>
@@ -1482,16 +1530,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1143>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::size() const</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::size() const</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1143>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::size() const</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::size() const with cost=40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L150>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::size() const</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1143>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::size() const</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::size() const&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::size() const</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1143>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::size() const</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::size() const&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L150>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::size() const</a></td>
 </tr>
 
 <tr>
@@ -1588,32 +1636,32 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::back()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::top()</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::back()</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::top() with cost=-5 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L158>std::stack<bool, std::deque<bool, std::allocator<bool> > >::top()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::back()</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::top()&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::top()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::back()</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::top()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L158>std::stack<bool, std::deque<bool, std::allocator<bool> > >::top()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::back()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::top()</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::back()</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::top() with cost=-5 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L158>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::top()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::back()</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::top()&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::top()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	         </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1330>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::back()</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::top()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L158>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::top()</a></td>
 </tr>
 
 <tr>
@@ -1845,16 +1893,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1391>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::push_back(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::push(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1391>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::push_back(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::push(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;) with cost=70 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L185>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::push(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1391>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::push_back(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::push(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::push(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1391>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::push_back(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::push(std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L185>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::push(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)</a></td>
 </tr>
 
 <tr>
@@ -1906,32 +1954,80 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;bool&amp;&gt;::type&amp;&amp; std::move&lt;bool&amp;&gt;(bool&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;bool&amp;&gt;::type&amp;&amp; std::move&lt;bool&amp;&gt;(bool&amp;)</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L190>std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;bool&amp;&gt;::type&amp;&amp; std::move&lt;bool&amp;&gt;(bool&amp;)</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L102>std::remove_reference&lt;bool&amp;&gt;::type&amp;&amp; std::move&lt;bool&amp;&gt;(bool&amp;)</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L190>std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1405>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::push_back(bool&amp;&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1405>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::push_back(bool&amp;&amp;)</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;) with cost=170 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L190>std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1405>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::push_back(bool&amp;&amp;)</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1405>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::push_back(bool&amp;&amp;)</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::push(bool&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L190>std::stack<bool, std::deque<bool, std::allocator<bool> > >::push(bool&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L449>t_json_generator::write_const_value(t_const_value*, bool)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L327>t_json_generator::generate_program()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L532>t_json_generator::generate_enum(t_enum*)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L562>t_json_generator::generate_struct(t_struct*)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L616>t_json_generator::generate_function(t_function*)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L192>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=src_thrift_generate_t_json_generator.cc.html#L589>t_json_generator::generate_service(t_service*)</a></td>
 </tr>
 
 <tr>
@@ -2145,32 +2241,32 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::pop_back()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::pop()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::pop_back()</a> can be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::pop() with cost=50 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L211>std::stack<bool, std::deque<bool, std::allocator<bool> > >::pop()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::pop_back()</a> will not be inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::pop()&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<bool, std::deque<bool, std::allocator<bool> > >::pop()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;bool, std::allocator&lt;bool&gt; &gt;::pop_back()</a> inlined into std::stack&lt;bool, std::deque&lt;bool, std::allocator&lt;bool&gt; &gt; &gt;::pop()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L211>std::stack<bool, std::deque<bool, std::allocator<bool> > >::pop()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::pop_back()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::pop()</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::pop_back()</a> can be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::pop() with cost=245 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L211>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::pop()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::pop_back()</a> will not be inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::pop()&nbsp;</span></td>
-<td class="column-entry-yellow">std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::pop()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">	  </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_deque.h.html#L1443>std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::pop_back()</a> inlined into std::stack&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::deque&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::pop()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_stack.h.html#L211>std::stack<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::deque<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::pop()</a></td>
 </tr>
 
 <tr>

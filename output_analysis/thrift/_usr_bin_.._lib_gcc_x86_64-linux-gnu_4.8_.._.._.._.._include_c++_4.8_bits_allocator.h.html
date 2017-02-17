@@ -1035,480 +1035,496 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;char&gt;::new_allocator()</a> can be inlined into std::allocator&lt;char&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<char>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;char&gt;::new_allocator()</a> inlined into std::allocator&lt;char&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<char>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_field*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_program*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<member_mapping_scope>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;member_mapping_scope&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<member_mapping_scope>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<t_typedef*> >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<t_typedef*> >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_enum*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_field*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_field*>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<t_type*> >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<t_type*> >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_field*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_field*>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;bool&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<int> >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<int> >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_typedef*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_const*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_program*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_program*>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_struct*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_service*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_program*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_program*>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_const_value*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::new_allocator()</a> can be inlined into std::allocator&lt;member_mapping_scope&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<member_mapping_scope>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_enum_value*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::new_allocator()</a> inlined into std::allocator&lt;member_mapping_scope&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<member_mapping_scope>::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::allocator()</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_List_node<t_typedef*> >::allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;t_function*&gt;::allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_List_node<t_typedef*> >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_enum*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_enum*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_enum*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_enum*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<t_type*> >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<t_type*> >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator()</a> can be inlined into std::allocator&lt;bool&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<bool>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator()</a> inlined into std::allocator&lt;bool&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<bool>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<int> >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<int> >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_typedef*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_typedef*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_typedef*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_typedef*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_const*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_const*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_const*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_const*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_struct*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_struct*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_struct*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_struct*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_service*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_service*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_service*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_service*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator()</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_const_value*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_const_value*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_const_value*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_const_value*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_enum_value*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_enum_value*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_enum_value*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_enum_value*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;t_function*&gt;::allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_function*>::allocator()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">      </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator()</a> inlined into std::allocator&lt;t_function*&gt;::allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L111>std::allocator<t_function*>::allocator()</a></td>
 </tr>
 
 <tr>
@@ -1542,240 +1558,256 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > > const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;char&gt;::new_allocator(__gnu_cxx::new_allocator&lt;char&gt; const&amp;)</a> can be inlined into std::allocator&lt;char&gt;::allocator(std::allocator&lt;char&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<char>::allocator(std::allocator<char> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > > const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;char&gt;::new_allocator(__gnu_cxx::new_allocator&lt;char&gt; const&amp;)</a> inlined into std::allocator&lt;char&gt;::allocator(std::allocator&lt;char&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<char>::allocator(std::allocator<char> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_function*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::allocator(std::allocator<t_function*> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_function*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_function*&gt;::allocator(std::allocator&lt;t_function*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::allocator(std::allocator<t_function*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum_value*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::allocator(std::allocator<t_enum_value*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum_value*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_enum_value*&gt;::allocator(std::allocator&lt;t_enum_value*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::allocator(std::allocator<t_enum_value*> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_service*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::allocator(std::allocator<t_service*> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_service*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_service*&gt;::allocator(std::allocator&lt;t_service*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::allocator(std::allocator<t_service*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::allocator(std::allocator<t_enum*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_enum*&gt;::allocator(std::allocator&lt;t_enum*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::allocator(std::allocator<t_enum*> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_typedef*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::allocator(std::allocator<t_typedef*> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_function*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_function*&gt;::allocator(std::allocator&lt;t_function*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_function*>::allocator(std::allocator<t_function*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_typedef*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_typedef*&gt;::allocator(std::allocator&lt;t_typedef*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::allocator(std::allocator<t_typedef*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_struct*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::allocator(std::allocator<t_struct*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_struct*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_struct*&gt;::allocator(std::allocator&lt;t_struct*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::allocator(std::allocator<t_struct*> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_function*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_function*&gt; const&amp;)</a> inlined into std::allocator&lt;t_function*&gt;::allocator(std::allocator&lt;t_function*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_function*>::allocator(std::allocator<t_function*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::allocator(std::allocator<t_const*> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum_value*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_enum_value*&gt;::allocator(std::allocator&lt;t_enum_value*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_enum_value*>::allocator(std::allocator<t_enum_value*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_const*&gt;::allocator(std::allocator&lt;t_const*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::allocator(std::allocator<t_const*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_program*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::allocator(std::allocator<t_program*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_program*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_program*&gt;::allocator(std::allocator&lt;t_program*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::allocator(std::allocator<t_program*> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum_value*&gt; const&amp;)</a> inlined into std::allocator&lt;t_enum_value*&gt;::allocator(std::allocator&lt;t_enum_value*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_enum_value*>::allocator(std::allocator<t_enum_value*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const_value*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::allocator(std::allocator<t_const_value*> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_service*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_service*&gt;::allocator(std::allocator&lt;t_service*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_service*>::allocator(std::allocator<t_service*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const_value*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_const_value*&gt;::allocator(std::allocator&lt;t_const_value*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::allocator(std::allocator<t_const_value*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_field*&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::allocator(std::allocator<t_field*> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_field*&gt; const&amp;)</a> will not be inlined into std::allocator&lt;t_field*&gt;::allocator(std::allocator&lt;t_field*&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::allocator(std::allocator<t_field*> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_service*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_service*&gt; const&amp;)</a> inlined into std::allocator&lt;t_service*&gt;::allocator(std::allocator&lt;t_service*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_service*>::allocator(std::allocator<t_service*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_enum*&gt;::allocator(std::allocator&lt;t_enum*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_enum*>::allocator(std::allocator<t_enum*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> will not be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator(__gnu_cxx::new_allocator&lt;bool&gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::allocator(std::allocator<bool> const&)</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator(__gnu_cxx::new_allocator&lt;bool&gt; const&amp;)</a> will not be inlined into std::allocator&lt;bool&gt;::allocator(std::allocator&lt;bool&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::allocator(std::allocator<bool> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_enum*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_enum*&gt; const&amp;)</a> inlined into std::allocator&lt;t_enum*&gt;::allocator(std::allocator&lt;t_enum*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_enum*>::allocator(std::allocator<t_enum*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > > const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_typedef*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_typedef*&gt;::allocator(std::allocator&lt;t_typedef*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_typedef*>::allocator(std::allocator<t_typedef*> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > > const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_typedef*&gt; const&amp;)</a> inlined into std::allocator&lt;t_typedef*&gt;::allocator(std::allocator&lt;t_typedef*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_typedef*>::allocator(std::allocator<t_typedef*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_struct*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_struct*&gt;::allocator(std::allocator&lt;t_struct*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_struct*>::allocator(std::allocator<t_struct*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_struct*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_struct*&gt; const&amp;)</a> inlined into std::allocator&lt;t_struct*&gt;::allocator(std::allocator&lt;t_struct*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_struct*>::allocator(std::allocator<t_struct*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_const*&gt;::allocator(std::allocator&lt;t_const*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_const*>::allocator(std::allocator<t_const*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const*&gt; const&amp;)</a> inlined into std::allocator&lt;t_const*&gt;::allocator(std::allocator&lt;t_const*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_const*>::allocator(std::allocator<t_const*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_program*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_program*&gt;::allocator(std::allocator&lt;t_program*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_program*>::allocator(std::allocator<t_program*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_program*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_program*&gt; const&amp;)</a> inlined into std::allocator&lt;t_program*&gt;::allocator(std::allocator&lt;t_program*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_program*>::allocator(std::allocator<t_program*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const_value*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_const_value*&gt;::allocator(std::allocator&lt;t_const_value*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_const_value*>::allocator(std::allocator<t_const_value*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_const_value*&gt; const&amp;)</a> inlined into std::allocator&lt;t_const_value*&gt;::allocator(std::allocator&lt;t_const_value*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_const_value*>::allocator(std::allocator<t_const_value*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_field*&gt; const&amp;)</a> can be inlined into std::allocator&lt;t_field*&gt;::allocator(std::allocator&lt;t_field*&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_field*>::allocator(std::allocator<t_field*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;t_field*&gt;::new_allocator(__gnu_cxx::new_allocator&lt;t_field*&gt; const&amp;)</a> inlined into std::allocator&lt;t_field*&gt;::allocator(std::allocator&lt;t_field*&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<t_field*>::allocator(std::allocator<t_field*> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> can be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)</a> inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::allocator(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocator(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator(__gnu_cxx::new_allocator&lt;bool&gt; const&amp;)</a> can be inlined into std::allocator&lt;bool&gt;::allocator(std::allocator&lt;bool&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<bool>::allocator(std::allocator<bool> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;bool&gt;::new_allocator(__gnu_cxx::new_allocator&lt;bool&gt; const&amp;)</a> inlined into std::allocator&lt;bool&gt;::allocator(std::allocator&lt;bool&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<bool>::allocator(std::allocator<bool> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)</a> can be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L81>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::new_allocator(__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)</a> inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::allocator(std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L114>std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::allocator(std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > > const&)</a></td>
 </tr>
 
 <tr>
@@ -1809,32 +1841,32 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool*>::allocator<bool>(std::allocator<bool> const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;bool*&gt;::allocator&lt;bool&gt;(std::allocator&lt;bool&gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L117>std::allocator<bool*>::allocator<bool>(std::allocator<bool> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;bool*&gt;::allocator&lt;bool&gt;(std::allocator&lt;bool&gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool*>::allocator<bool>(std::allocator<bool> const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;bool*&gt;::new_allocator()</a> inlined into std::allocator&lt;bool*&gt;::allocator&lt;bool&gt;(std::allocator&lt;bool&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L117>std::allocator<bool*>::allocator<bool>(std::allocator<bool> const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::new_allocator()</a> can be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L117>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::new_allocator()</a> will not be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L79>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::new_allocator()</a> inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;(std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L117>std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&)</a></td>
 </tr>
 
 <tr>
@@ -1859,512 +1891,16 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::~allocator()</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;char&gt;::~new_allocator()</a> can be inlined into std::allocator&lt;char&gt;::~allocator() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L119>std::allocator<char>::~allocator()</a></td>
 </tr>
 
 <tr>
 <td></td>
 <td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_enum*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_enum*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;t_const_value* const, t_const_value*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<t_const_value* const, t_const_value*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_struct*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_struct*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_function*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_function*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_service*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_service*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_const*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_const*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_function*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_function*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_function*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_function*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;char const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<char const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_enum_value*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_enum_value*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum_value*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_field*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_field*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_field*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_field*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_service*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_service*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_service*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_service*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_enum*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_enum*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_enum*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_enum*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_typedef*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_typedef*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_typedef*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_struct*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_struct*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_struct*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_struct*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_const*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_const*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_const*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_program*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_program*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_program*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_program*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;t_const_value*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;t_const_value*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<t_const_value*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, int&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, int> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_List_node&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<member_mapping_scope>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;member_mapping_scope&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;member_mapping_scope&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<member_mapping_scope>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<t_typedef*> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_List_node&lt;t_typedef*&gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_List_node<t_typedef*> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_generator_factory*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_generator_factory*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<t_type*> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;t_type*&gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<t_type*> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;bool*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;bool*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;bool*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;bool&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;bool&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;bool&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<bool>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;*&gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*>::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<int> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;int&gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<int> >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, std::less&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-white">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::~new_allocator()</a> should never be inlined (cost=never)&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::~allocator()</td>
-</tr>
-
-<tr>
-<td></td>
-<td></td>
-<td class="column-entry-red">inline</td>
-<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::~new_allocator()</a> will not be inlined into std::allocator&lt;std::_Rb_tree_node&lt;std::pair&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const, t_type*&gt; &gt; &gt;::~allocator()&nbsp;</span></td>
-<td class="column-entry-yellow">std::allocator<std::_Rb_tree_node<std::pair<std::basic_string<char, std::char_traits<char>, std::allocator<char> > const, t_type*> > >::~allocator()</td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_ext_new_allocator.h.html#L86>__gnu_cxx::new_allocator&lt;char&gt;::~new_allocator()</a> inlined into std::allocator&lt;char&gt;::~allocator()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_allocator.h.html#L119>std::allocator<char>::~allocator()</a></td>
 </tr>
 
 <tr>
