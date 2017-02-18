@@ -18,108 +18,84 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Return the full version string. */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Return the full version string. */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;patchlevel.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;patchlevel.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">Py_GetVersion</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">Py_GetVersion</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>	<span class="k">static</span> <span class="kt">char</span> <span class="n">version</span><span class="p">[</span><span class="mi">250</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>	<span class="k">static</span> <span class="kt">char</span> <span class="n">version</span><span class="p">[</span><span class="mi">250</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>	<span class="n">PyOS_snprintf</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">version</span><span class="p">),</span> <span class="s">&quot;%.80s (%.80s) %.80s&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>	<span class="n">PyOS_snprintf</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">version</span><span class="p">),</span> <span class="s">&quot;%.80s (%.80s) %.80s&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -134,9 +110,7 @@
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>		      <span class="n">PY_VERSION</span><span class="p">,</span> <span class="n">Py_GetBuildInfo</span><span class="p">(),</span> <span class="n">Py_GetCompiler</span><span class="p">());</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>		      <span class="n">PY_VERSION</span><span class="p">,</span> <span class="n">Py_GetBuildInfo</span><span class="p">(),</span> <span class="n">Py_GetCompiler</span><span class="p">());</span></pre></div></td>
 </tr>
 
 <tr>
@@ -159,18 +133,28 @@
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>	<span class="k">return</span> <span class="n">version</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>	<span class="k">return</span> <span class="n">version</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

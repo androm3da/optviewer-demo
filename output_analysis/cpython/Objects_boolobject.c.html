@@ -18,162 +18,126 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Boolean type, a subtype of int */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Boolean type, a subtype of int */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;longintrepr.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;longintrepr.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* We define bool_repr to return &quot;False&quot; or &quot;True&quot; */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* We define bool_repr to return &quot;False&quot; or &quot;True&quot; */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">false_str</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">false_str</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">true_str</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">true_str</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">bool_repr</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">bool_repr</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span> <span class="o">=</span> <span class="n">true_str</span> <span class="o">?</span> <span class="nl">true_str</span> <span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span> <span class="o">=</span> <span class="n">true_str</span> <span class="o">?</span> <span class="nl">true_str</span> <span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">(</span><span class="n">true_str</span> <span class="o">=</span> <span class="n">PyUnicode_InternFromString</span><span class="p">(</span><span class="s">&quot;True&quot;</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">(</span><span class="n">true_str</span> <span class="o">=</span> <span class="n">PyUnicode_InternFromString</span><span class="p">(</span><span class="s">&quot;True&quot;</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -188,27 +152,21 @@
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span> <span class="o">=</span> <span class="n">false_str</span> <span class="o">?</span> <span class="nl">false_str</span> <span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span> <span class="o">=</span> <span class="n">false_str</span> <span class="o">?</span> <span class="nl">false_str</span> <span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">(</span><span class="n">false_str</span> <span class="o">=</span> <span class="n">PyUnicode_InternFromString</span><span class="p">(</span><span class="s">&quot;False&quot;</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">(</span><span class="n">false_str</span> <span class="o">=</span> <span class="n">PyUnicode_InternFromString</span><span class="p">(</span><span class="s">&quot;False&quot;</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -223,252 +181,196 @@
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_XINCREF</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_XINCREF</span><span class="p">(</span><span class="n">s</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">s</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">s</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Function to return a bool from a C long */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Function to return a bool from a C long */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyObject</span> <span class="o">*</span><span class="n">PyBool_FromLong</span><span class="p">(</span><span class="kt">long</span> <span class="n">ok</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyObject</span> <span class="o">*</span><span class="nf">PyBool_FromLong</span><span class="p">(</span><span class="kt">long</span> <span class="n">ok</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">result</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">result</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">ok</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">ok</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">result</span> <span class="o">=</span> <span class="n">Py_True</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">result</span> <span class="o">=</span> <span class="n">Py_True</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">result</span> <span class="o">=</span> <span class="n">Py_False</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">result</span> <span class="o">=</span> <span class="n">Py_False</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">result</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">result</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* We define bool_new to always return either Py_True or Py_False */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* We define bool_new to always return either Py_True or Py_False */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">bool_new</span><span class="p">(</span><span class="n">PyTypeObject</span> <span class="o">*</span><span class="n">type</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">kwds</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">bool_new</span><span class="p">(</span><span class="n">PyTypeObject</span> <span class="o">*</span><span class="n">type</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">kwds</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="kt">char</span> <span class="o">*</span><span class="n">kwlist</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="kt">char</span> <span class="o">*</span><span class="n">kwlist</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">Py_False</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">Py_False</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">long</span> <span class="n">ok</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">ok</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTupleAndKeywords</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">,</span> <span class="s">&quot;|O:bool&quot;</span><span class="p">,</span> <span class="n">kwlist</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTupleAndKeywords</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">,</span> <span class="s">&quot;|O:bool&quot;</span><span class="p">,</span> <span class="n">kwlist</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -483,18 +385,14 @@
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ok</span> <span class="o">=</span> <span class="n">PyObject_IsTrue</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ok</span> <span class="o">=</span> <span class="n">PyObject_IsTrue</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -517,27 +415,21 @@
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">ok</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">ok</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">PyBool_FromLong</span><span class="p">(</span><span class="n">ok</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyBool_FromLong</span><span class="p">(</span><span class="n">ok</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -560,90 +452,70 @@
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Arithmetic operations redefined to return bool if both args are bool. */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Arithmetic operations redefined to return bool if both args are bool. */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">bool_and</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">bool_and</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_and</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_and</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -666,72 +538,56 @@
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">bool_or</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">bool_or</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_or</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_or</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -754,72 +610,56 @@
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">bool_xor</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">bool_xor</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">PyBool_Check</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_xor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">PyLong_Type</span><span class="p">.</span><span class="n">tp_as_number</span><span class="o">-&gt;</span><span class="n">nb_xor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">^</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyBool_FromLong</span><span class="p">((</span><span class="n">a</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">)</span> <span class="o">^</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="n">Py_True</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -842,936 +682,742 @@
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Doc string */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Doc string */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">bool_doc</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">bool_doc</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;bool(x) -&gt; bool</span><span class="se">\n</span><span class="s">\</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;bool(x) -&gt; bool</span><span class="se">\n</span><span class="s">\</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="err">\</span><span class="n">n</span>\
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="se">\n</span><span class="s">\</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">Returns</span> <span class="n">True</span> <span class="n">when</span> <span class="n">the</span> <span class="n">argument</span> <span class="n">x</span> <span class="n">is</span> <span class="nb">true</span><span class="p">,</span> <span class="n">False</span> <span class="n">otherwise</span><span class="p">.</span><span class="err">\</span><span class="n">n</span>\
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">Returns True when the argument x is true, False otherwise.</span><span class="se">\n</span><span class="s">\</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">builtins</span> <span class="n">True</span> <span class="n">and</span> <span class="n">False</span> <span class="n">are</span> <span class="n">the</span> <span class="n">only</span> <span class="n">two</span> <span class="n">instances</span> <span class="n">of</span> <span class="n">the</span> <span class="k">class</span> <span class="nc">bool</span><span class="p">.</span><span class="err">\</span><span class="n">n</span>\
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">The builtins True and False are the only two instances of the class bool.</span><span class="se">\n</span><span class="s">\</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">The</span> <span class="k">class</span> <span class="nc">bool</span> <span class="n">is</span> <span class="n">a</span> <span class="n">subclass</span> <span class="n">of</span> <span class="n">the</span> <span class="k">class</span> <span class="nc">int</span><span class="p">,</span> <span class="n">and</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">subclassed</span><span class="p">.</span><span class="s">&quot;);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">The class bool is a subclass of the class int, and cannot be subclassed.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Arithmetic methods -- only so we can override &amp;, |, ^. */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Arithmetic methods -- only so we can override &amp;, |, ^. */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyNumberMethods</span> <span class="n">bool_as_number</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyNumberMethods</span> <span class="n">bool_as_number</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_add */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_add */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_subtract */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_subtract */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_multiply */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_multiply */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_remainder */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_remainder */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_divmod */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_divmod */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_power */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_power */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_negative */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_negative */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_positive */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_positive */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_absolute */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_absolute */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_bool */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_bool */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_invert */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_invert */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L106">106</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_lshift */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_lshift */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L107">107</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_rshift */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_rshift */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_and</span><span class="p">,</span>                   <span class="cm">/* nb_and */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_and</span><span class="p">,</span>                   <span class="cm">/* nb_and */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L109">109</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_xor</span><span class="p">,</span>                   <span class="cm">/* nb_xor */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_xor</span><span class="p">,</span>                   <span class="cm">/* nb_xor */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L110">110</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_or</span><span class="p">,</span>                    <span class="cm">/* nb_or */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_or</span><span class="p">,</span>                    <span class="cm">/* nb_or */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L111">111</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_int */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_int */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_reserved */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_reserved */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L113">113</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_float */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_float */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L114">114</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_add */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_add */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L115">115</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_subtract */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_subtract */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L116">116</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_multiply */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_multiply */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_remainder */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_remainder */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L118">118</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_power */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_power */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L119">119</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_lshift */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_lshift */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L120">120</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_rshift */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_rshift */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L121">121</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_and */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_and */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L122">122</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_xor */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_xor */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L123">123</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_or */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_or */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L124">124</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_floor_divide */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_floor_divide */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L125">125</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_true_divide */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_true_divide */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L126">126</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_floor_divide */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_floor_divide */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L127">127</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_true_divide */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_inplace_true_divide */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L128">128</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_index */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                          <span class="cm">/* nb_index */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L129">129</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L130">130</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L131">131</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* The type object for bool.  Note that this cannot be subclassed! */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* The type object for bool.  Note that this cannot be subclassed! */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L132">132</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L133">133</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyTypeObject</span> <span class="n">PyBool_Type</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyTypeObject</span> <span class="n">PyBool_Type</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L134">134</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L135">135</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="s">&quot;bool&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="s">&quot;bool&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L136">136</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">_longobject</span><span class="p">),</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">_longobject</span><span class="p">),</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L137">137</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L138">138</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dealloc */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dealloc */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L139">139</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_print */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_print */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L140">140</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getattr */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getattr */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L141">141</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_setattr */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_setattr */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L142">142</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_reserved */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_reserved */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L143">143</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_repr</span><span class="p">,</span>                                  <span class="cm">/* tp_repr */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_repr</span><span class="p">,</span>                                  <span class="cm">/* tp_repr */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L144">144</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="o">&amp;</span><span class="n">bool_as_number</span><span class="p">,</span>                            <span class="cm">/* tp_as_number */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="o">&amp;</span><span class="n">bool_as_number</span><span class="p">,</span>                            <span class="cm">/* tp_as_number */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L145">145</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_sequence */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_sequence */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L146">146</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_mapping */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_mapping */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L147">147</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_hash */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_hash */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L148">148</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_call */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_call */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L149">149</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_repr</span><span class="p">,</span>                                  <span class="cm">/* tp_str */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_repr</span><span class="p">,</span>                                  <span class="cm">/* tp_str */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L150">150</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getattro */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getattro */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L151">151</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_setattro */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_setattro */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L152">152</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_buffer */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_as_buffer */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L153">153</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_TPFLAGS_DEFAULT</span><span class="p">,</span>                         <span class="cm">/* tp_flags */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_TPFLAGS_DEFAULT</span><span class="p">,</span>                         <span class="cm">/* tp_flags */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L154">154</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_doc</span><span class="p">,</span>                                   <span class="cm">/* tp_doc */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_doc</span><span class="p">,</span>                                   <span class="cm">/* tp_doc */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L155">155</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_traverse */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_traverse */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L156">156</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_clear */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_clear */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L157">157</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_richcompare */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_richcompare */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L158">158</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_weaklistoffset */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_weaklistoffset */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L159">159</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_iter */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_iter */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L160">160</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_iternext */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_iternext */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L161">161</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_methods */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_methods */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L162">162</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_members */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_members */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L163">163</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getset */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_getset */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L164">164</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="o">&amp;</span><span class="n">PyLong_Type</span><span class="p">,</span>                               <span class="cm">/* tp_base */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="o">&amp;</span><span class="n">PyLong_Type</span><span class="p">,</span>                               <span class="cm">/* tp_base */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L165">165</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dict */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dict */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L166">166</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_descr_get */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_descr_get */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L167">167</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_descr_set */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_descr_set */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L168">168</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dictoffset */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_dictoffset */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L169">169</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_init */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_init */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L170">170</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_alloc */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="mi">0</span><span class="p">,</span>                                          <span class="cm">/* tp_alloc */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L171">171</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bool_new</span><span class="p">,</span>                                   <span class="cm">/* tp_new */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bool_new</span><span class="p">,</span>                                   <span class="cm">/* tp_new */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L172">172</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L173">173</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L174">174</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* The objects representing bool values False and True */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* The objects representing bool values False and True */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L175">175</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L176">176</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">_longobject</span> <span class="n">_Py_FalseStruct</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">_longobject</span> <span class="n">_Py_FalseStruct</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L177">177</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBool_Type</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBool_Type</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L178">178</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span> <span class="mi">0</span> <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">{</span> <span class="mi">0</span> <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L179">179</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L180">180</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L181">181</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">_longobject</span> <span class="n">_Py_TrueStruct</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">_longobject</span> <span class="n">_Py_TrueStruct</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L182">182</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBool_Type</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBool_Type</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L183">183</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span> <span class="mi">1</span> <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">{</span> <span class="mi">1</span> <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L184">184</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

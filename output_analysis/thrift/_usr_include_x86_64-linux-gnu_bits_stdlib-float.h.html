@@ -18,252 +18,196 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Floating-point inline functions for stdlib.h.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Floating-point inline functions for stdlib.h.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">Copyright</span> <span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">2014</span> <span class="n">Free</span> <span class="n">Software</span> <span class="n">Foundation</span><span class="p">,</span> <span class="n">Inc</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   Copyright (C) 2012-2014 Free Software Foundation, Inc.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">This</span> <span class="n">file</span> <span class="n">is</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GNU</span> <span class="n">C</span> <span class="n">Library</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   This file is part of the GNU C Library.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">The</span> <span class="n">GNU</span> <span class="n">C</span> <span class="n">Library</span> <span class="n">is</span> <span class="n">free</span> <span class="n">software</span><span class="p">;</span> <span class="n">you</span> <span class="n">can</span> <span class="n">redistribute</span> <span class="n">it</span> <span class="n">and</span><span class="o">/</span><span class="n">or</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   The GNU C Library is free software; you can redistribute it and/or</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">modify</span> <span class="n">it</span> <span class="n">under</span> <span class="n">the</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GNU</span> <span class="n">Lesser</span> <span class="n">General</span> <span class="n">Public</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   modify it under the terms of the GNU Lesser General Public</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">License</span> <span class="n">as</span> <span class="n">published</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Free</span> <span class="n">Software</span> <span class="n">Foundation</span><span class="p">;</span> <span class="n">either</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   License as published by the Free Software Foundation; either</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">version</span> <span class="mf">2.1</span> <span class="n">of</span> <span class="n">the</span> <span class="n">License</span><span class="p">,</span> <span class="n">or</span> <span class="p">(</span><span class="n">at</span> <span class="n">your</span> <span class="n">option</span><span class="p">)</span> <span class="n">any</span> <span class="n">later</span> <span class="n">version</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   version 2.1 of the License, or (at your option) any later version.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">The</span> <span class="n">GNU</span> <span class="n">C</span> <span class="n">Library</span> <span class="n">is</span> <span class="n">distributed</span> <span class="n">in</span> <span class="n">the</span> <span class="n">hope</span> <span class="n">that</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">useful</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   The GNU C Library is distributed in the hope that it will be useful,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">but</span> <span class="n">WITHOUT</span> <span class="n">ANY</span> <span class="n">WARRANTY</span><span class="p">;</span> <span class="n">without</span> <span class="n">even</span> <span class="n">the</span> <span class="n">implied</span> <span class="n">warranty</span> <span class="n">of</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">MERCHANTABILITY</span> <span class="n">or</span> <span class="n">FITNESS</span> <span class="n">FOR</span> <span class="n">A</span> <span class="n">PARTICULAR</span> <span class="n">PURPOSE</span><span class="p">.</span>  <span class="n">See</span> <span class="n">the</span> <span class="n">GNU</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">Lesser</span> <span class="n">General</span> <span class="n">Public</span> <span class="n">License</span> <span class="k">for</span> <span class="n">more</span> <span class="n">details</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   Lesser General Public License for more details.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">You</span> <span class="n">should</span> <span class="n">have</span> <span class="n">received</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GNU</span> <span class="n">Lesser</span> <span class="n">General</span> <span class="n">Public</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   You should have received a copy of the GNU Lesser General Public</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">License</span> <span class="n">along</span> <span class="n">with</span> <span class="n">the</span> <span class="n">GNU</span> <span class="n">C</span> <span class="n">Library</span><span class="p">;</span> <span class="k">if</span> <span class="n">not</span><span class="p">,</span> <span class="n">see</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   License along with the GNU C Library; if not, see</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">&lt;</span><span class="nl">http</span><span class="p">:</span><span class="c1">//www.gnu.org/licenses/&gt;.  */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   &lt;http://www.gnu.org/licenses/&gt;.  */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef _STDLIB_H</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef _STDLIB_H</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp"># error &quot;Never use &lt;bits/stdlib-float.h&gt; directly; include &lt;stdlib.h&gt; instead.&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp"># error &quot;Never use &lt;bits/stdlib-float.h&gt; directly; include &lt;stdlib.h&gt; instead.&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef __USE_EXTERN_INLINES</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef __USE_EXTERN_INLINES</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">__BEGIN_NAMESPACE_STD</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">__BEGIN_NAMESPACE_STD</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">__extern_inline</span> <span class="kt">double</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">__extern_inline</span> <span class="kt">double</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">__NTH</span> <span class="p">(</span><span class="n">atof</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">__nptr</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">__NTH</span> <span class="p">(</span><span class="n">atof</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">__nptr</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">return</span> <span class="nf">strtod</span> <span class="p">(</span><span class="n">__nptr</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">return</span> <span class="n">strtod</span> <span class="p">(</span><span class="n">__nptr</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -278,27 +222,35 @@
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">__END_NAMESPACE_STD</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">__END_NAMESPACE_STD</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* Optimizing and Inlining.  */</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif </span><span class="cm">/* Optimizing and Inlining.  */</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

@@ -18,180 +18,140 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Computation of FIRST stets */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Computation of FIRST stets */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;pgenheaders.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;pgenheaders.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;grammar.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;grammar.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;token.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;token.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">extern</span> <span class="kt">int</span> <span class="n">Py_DebugFlag</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">extern</span> <span class="kt">int</span> <span class="n">Py_DebugFlag</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Forward */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Forward */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">calcfirstset</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">calcfirstset</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">addfirstsets</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">addfirstsets</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Adding FIRST sets ...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Adding FIRST sets ...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -206,9 +166,7 @@
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -247,9 +205,7 @@
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">d</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">d</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">[</span><span class="n">i</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
@@ -280,18 +236,14 @@
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">calcfirstset</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">calcfirstset</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -322,180 +274,140 @@
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">calcfirstset</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">calcfirstset</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">arc</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">arc</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">nsyms</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">nsyms</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="o">*</span><span class="n">sym</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="o">*</span><span class="n">sym</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">nbits</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">nbits</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="n">bitset</span> <span class="n">dummy</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="n">bitset</span> <span class="n">dummy</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">bitset</span> <span class="n">result</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">bitset</span> <span class="n">result</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">type</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">type</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">label</span> <span class="o">*</span><span class="n">l0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">label</span> <span class="o">*</span><span class="n">l0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Calculate FIRST set for &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Calculate FIRST set for &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -510,18 +422,14 @@
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">dummy</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">dummy</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -536,9 +444,7 @@
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">dummy</span> <span class="o">=</span> <span class="n">newbitset</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">dummy</span> <span class="o">=</span> <span class="n">newbitset</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -553,9 +459,7 @@
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="n">dummy</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="n">dummy</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -578,9 +482,7 @@
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Left-recursion for &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Left-recursion for &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -611,36 +513,28 @@
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Re-calculating FIRST set for &#39;%s&#39; ???</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Re-calculating FIRST set for &#39;%s&#39; ???</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -663,9 +557,7 @@
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -680,18 +572,14 @@
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -714,18 +602,14 @@
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">l0</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_label</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">l0</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_label</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -740,9 +624,7 @@
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">nbits</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">nbits</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -757,9 +639,7 @@
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">result</span> <span class="o">=</span> <span class="n">newbitset</span><span class="p">(</span><span class="n">nbits</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">result</span> <span class="o">=</span> <span class="n">newbitset</span><span class="p">(</span><span class="n">nbits</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -774,18 +654,14 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">sym</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">PyObject_MALLOC</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">sym</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">PyObject_MALLOC</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -800,18 +676,14 @@
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">sym</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">sym</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;no mem for new sym in calcfirstset&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;no mem for new sym in calcfirstset&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -826,18 +698,14 @@
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">nsyms</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">nsyms</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">sym</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">findlabel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_type</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="nb">NULL</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">sym</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">findlabel</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_type</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -860,18 +728,14 @@
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">s</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">[</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_initial</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">s</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">[</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">d_initial</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
@@ -894,9 +758,7 @@
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_narcs</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_narcs</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -919,9 +781,7 @@
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">a</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_arc</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">a</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_arc</span><span class="p">[</span><span class="n">i</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
@@ -952,9 +812,7 @@
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nsyms</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nsyms</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -977,9 +835,7 @@
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">sym</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">sym</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1010,36 +866,28 @@
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">nsyms</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* New label */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">nsyms</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* New label */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">sym</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">PyObject_REALLOC</span><span class="p">(</span><span class="n">sym</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">sym</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">PyObject_REALLOC</span><span class="p">(</span><span class="n">sym</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1054,27 +902,21 @@
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                                    <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nsyms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                                    <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">nsyms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">sym</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">sym</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">Py_FatalError</span><span class="p">(</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">Py_FatalError</span><span class="p">(</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1089,18 +931,14 @@
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="s">&quot;no mem to resize sym in calcfirstset&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="s">&quot;no mem to resize sym in calcfirstset&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">sym</span><span class="p">[</span><span class="n">nsyms</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">sym</span><span class="p">[</span><span class="n">nsyms</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1115,9 +953,7 @@
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">type</span> <span class="o">=</span> <span class="n">l0</span><span class="p">[</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">].</span><span class="n">lb_type</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">type</span> <span class="o">=</span> <span class="n">l0</span><span class="p">[</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">].</span><span class="n">lb_type</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1132,18 +968,14 @@
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">ISNONTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">ISNONTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">d1</span> <span class="o">=</span> <span class="n">PyGrammar_FindDFA</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">type</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">d1</span> <span class="o">=</span> <span class="n">PyGrammar_FindDFA</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">type</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1158,9 +990,7 @@
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">if</span> <span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="n">dummy</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">if</span> <span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="n">dummy</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1191,9 +1021,7 @@
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1224,18 +1052,14 @@
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="s">&quot;Left-recursion below &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="s">&quot;Left-recursion below &#39;%s&#39;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1266,36 +1090,28 @@
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">else</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">else</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">if</span> <span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">if</span> <span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">calcfirstset</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">calcfirstset</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1318,9 +1134,7 @@
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">mergebitset</span><span class="p">(</span><span class="n">result</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">mergebitset</span><span class="p">(</span><span class="n">result</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1335,9 +1149,7 @@
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                                <span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span><span class="p">,</span> <span class="n">nbits</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                                <span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span><span class="p">,</span> <span class="n">nbits</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1360,36 +1172,28 @@
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">ISTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ISTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">addbit</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">addbit</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1404,45 +1208,35 @@
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_first</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_DebugFlag</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1457,9 +1251,7 @@
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;FIRST set for &#39;%s&#39;: {&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;FIRST set for &#39;%s&#39;: {&quot;</span><span class="p">,</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_name</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1482,9 +1274,7 @@
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nbits</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nbits</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1507,18 +1297,14 @@
 <td><a name="L106">106</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">testbit</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">testbit</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L107">107</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %s&quot;</span><span class="p">,</span> <span class="n">PyGrammar_LabelRepr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">l0</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %s&quot;</span><span class="p">,</span> <span class="n">PyGrammar_LabelRepr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">l0</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1549,18 +1335,14 @@
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L109">109</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; }</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; }</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1575,27 +1357,21 @@
 <td><a name="L110">110</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L111">111</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">sym</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">sym</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1610,9 +1386,21 @@
 <td><a name="L113">113</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

@@ -18,270 +18,210 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Parser accelerator module */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Parser accelerator module */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* The parser as originally conceived had disappointing performance.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* The parser as originally conceived had disappointing performance.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">This</span> <span class="n">module</span> <span class="n">does</span> <span class="n">some</span> <span class="n">precomputation</span> <span class="n">that</span> <span class="n">speeds</span> <span class="n">up</span> <span class="n">the</span> <span class="n">selection</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   This module does some precomputation that speeds up the selection</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">of</span> <span class="n">a</span> <span class="n">DFA</span> <span class="n">based</span> <span class="n">upon</span> <span class="n">a</span> <span class="n">token</span><span class="p">,</span> <span class="n">turning</span> <span class="n">a</span> <span class="n">search</span> <span class="n">through</span> <span class="n">an</span> <span class="n">array</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   of a DFA based upon a token, turning a search through an array</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">into</span> <span class="n">a</span> <span class="n">simple</span> <span class="n">indexing</span> <span class="n">operation</span><span class="p">.</span>  <span class="n">The</span> <span class="n">parser</span> <span class="n">now</span> <span class="n">cannot</span> <span class="n">work</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   into a simple indexing operation.  The parser now cannot work</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">without</span> <span class="n">the</span> <span class="n">accelerators</span> <span class="n">installed</span><span class="p">.</span>  <span class="n">Note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">accelerators</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   without the accelerators installed.  Note that the accelerators</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">are</span> <span class="n">installed</span> <span class="n">dynamically</span> <span class="n">when</span> <span class="n">the</span> <span class="n">parser</span> <span class="n">is</span> <span class="n">initialized</span><span class="p">,</span> <span class="n">they</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   are installed dynamically when the parser is initialized, they</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">are</span> <span class="n">not</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="k">static</span> <span class="n">data</span> <span class="n">structure</span> <span class="n">written</span> <span class="n">on</span> <span class="n">graminit</span><span class="p">.[</span><span class="n">ch</span><span class="p">]</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   are not part of the static data structure written on graminit.[ch]</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">by</span> <span class="n">the</span> <span class="n">parser</span> <span class="n">generator</span><span class="p">.</span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   by the parser generator. */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;pgenheaders.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;pgenheaders.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;grammar.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;grammar.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;node.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;node.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;token.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;token.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;parser.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;parser.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Forward references */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Forward references */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">fixdfa</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">fixdfa</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">fixstate</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">fixstate</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyGrammar_AddAccelerators</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">PyGrammar_AddAccelerators</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fixdfa</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fixdfa</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -304,135 +244,105 @@
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_accel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_accel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyGrammar_RemoveAccelerators</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">PyGrammar_RemoveAccelerators</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_accel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_accel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_dfa</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ndfas</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="kt">int</span> <span class="n">j</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_nstates</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">,</span> <span class="n">s</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_nstates</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">,</span> <span class="n">s</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -471,18 +381,14 @@
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -505,108 +411,84 @@
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">fixdfa</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">fixdfa</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">dfa</span> <span class="o">*</span><span class="n">d</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">j</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">s</span> <span class="o">=</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_state</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_nstates</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">,</span> <span class="n">s</span><span class="o">++</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">d_nstates</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">,</span> <span class="n">s</span><span class="o">++</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -645,9 +527,7 @@
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fixstate</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fixstate</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -670,81 +550,63 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">fixstate</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">fixstate</span><span class="p">(</span><span class="n">grammar</span> <span class="o">*</span><span class="n">g</span><span class="p">,</span> <span class="n">state</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">arc</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">arc</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">k</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="o">*</span><span class="n">accel</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="o">*</span><span class="n">accel</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -791,18 +653,14 @@
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accept</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accept</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">accel</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyObject_MALLOC</span><span class="p">(</span><span class="n">nl</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">accel</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyObject_MALLOC</span><span class="p">(</span><span class="n">nl</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -817,18 +675,14 @@
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">accel</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">accel</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;no mem to build parser accelerators</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;no mem to build parser accelerators</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -867,9 +721,7 @@
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -884,36 +736,28 @@
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">a</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_arc</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">a</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_arc</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -944,9 +788,7 @@
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_narcs</span><span class="p">;</span> <span class="o">--</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_narcs</span><span class="p">;</span> <span class="o">--</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -977,18 +819,14 @@
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">lbl</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="kt">int</span> <span class="n">lbl</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_lbl</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">label</span> <span class="o">*</span><span class="n">l</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_label</span><span class="p">[</span><span class="n">lbl</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">label</span> <span class="o">*</span><span class="n">l</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_label</span><span class="p">[</span><span class="n">lbl</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1051,27 +889,21 @@
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">type</span> <span class="o">=</span> <span class="n">l</span><span class="o">-&gt;</span><span class="n">lb_type</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="kt">int</span> <span class="n">type</span> <span class="o">=</span> <span class="n">l</span><span class="o">-&gt;</span><span class="n">lb_type</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX too many states!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX too many states!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1086,36 +918,28 @@
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">ISNONTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">ISNONTERMINAL</span><span class="p">(</span><span class="n">type</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">dfa</span> <span class="o">*</span><span class="n">d1</span> <span class="o">=</span> <span class="n">PyGrammar_FindDFA</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">type</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">dfa</span> <span class="o">*</span><span class="n">d1</span> <span class="o">=</span> <span class="n">PyGrammar_FindDFA</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">type</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1130,27 +954,21 @@
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="kt">int</span> <span class="n">ibit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="kt">int</span> <span class="n">ibit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">-</span> <span class="n">NT_OFFSET</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">-</span> <span class="n">NT_OFFSET</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX too high nonterminal number!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX too high nonterminal number!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1165,27 +983,21 @@
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">for</span> <span class="p">(</span><span class="n">ibit</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ibit</span> <span class="o">&lt;</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span> <span class="n">ibit</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">for</span> <span class="p">(</span><span class="n">ibit</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ibit</span> <span class="o">&lt;</span> <span class="n">g</span><span class="o">-&gt;</span><span class="n">g_ll</span><span class="p">.</span><span class="n">ll_nlabels</span><span class="p">;</span> <span class="n">ibit</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1256,9 +1068,7 @@
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">if</span> <span class="p">(</span><span class="n">testbit</span><span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span><span class="p">,</span> <span class="n">ibit</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">if</span> <span class="p">(</span><span class="n">testbit</span><span class="p">(</span><span class="n">d1</span><span class="o">-&gt;</span><span class="n">d_first</span><span class="p">,</span> <span class="n">ibit</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1321,9 +1131,7 @@
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">if</span> <span class="p">(</span><span class="n">accel</span><span class="p">[</span><span class="n">ibit</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">if</span> <span class="p">(</span><span class="n">accel</span><span class="p">[</span><span class="n">ibit</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1362,9 +1170,7 @@
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX ambiguity!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;XXX ambiguity!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1379,9 +1185,7 @@
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">accel</span><span class="p">[</span><span class="n">ibit</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">)</span> <span class="o">|</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">accel</span><span class="p">[</span><span class="n">ibit</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">)</span> <span class="o">|</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1460,9 +1264,7 @@
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="p">((</span><span class="n">type</span> <span class="o">-</span> <span class="n">NT_OFFSET</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="p">((</span><span class="n">type</span> <span class="o">-</span> <span class="n">NT_OFFSET</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1477,81 +1279,63 @@
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">lbl</span> <span class="o">==</span> <span class="n">EMPTY</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">lbl</span> <span class="o">==</span> <span class="n">EMPTY</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accept</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accept</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">lbl</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">lbl</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">lbl</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">lbl</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L106">106</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">accel</span><span class="p">[</span><span class="n">lbl</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">accel</span><span class="p">[</span><span class="n">lbl</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">a_arrow</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L107">107</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">nl</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">accel</span><span class="p">[</span><span class="n">nl</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="n">nl</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">accel</span><span class="p">[</span><span class="n">nl</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1582,18 +1366,14 @@
 <td><a name="L109">109</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">nl</span><span class="o">--</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">nl</span><span class="o">--</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L110">110</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span> <span class="o">&amp;&amp;</span> <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span> <span class="o">&amp;&amp;</span> <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1640,36 +1420,28 @@
 <td><a name="L111">111</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">k</span><span class="o">++</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">k</span><span class="o">++</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L113">113</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L114">114</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyObject_MALLOC</span><span class="p">((</span><span class="n">nl</span><span class="o">-</span><span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyObject_MALLOC</span><span class="p">((</span><span class="n">nl</span><span class="o">-</span><span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1684,18 +1456,14 @@
 <td><a name="L115">115</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L116">116</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;no mem to add parser accelerators</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;no mem to add parser accelerators</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1734,9 +1502,7 @@
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1751,36 +1517,28 @@
 <td><a name="L118">118</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L119">119</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_lower</span> <span class="o">=</span> <span class="n">k</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_lower</span> <span class="o">=</span> <span class="n">k</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L120">120</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_upper</span> <span class="o">=</span> <span class="n">nl</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_upper</span> <span class="o">=</span> <span class="n">nl</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L121">121</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">nl</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1811,9 +1569,7 @@
 <td><a name="L122">122</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">s</span><span class="o">-&gt;</span><span class="n">s_accel</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">accel</span><span class="p">[</span><span class="n">k</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1828,18 +1584,14 @@
 <td><a name="L123">123</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L124">124</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">accel</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject_FREE</span><span class="p">(</span><span class="n">accel</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1854,9 +1606,21 @@
 <td><a name="L125">125</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

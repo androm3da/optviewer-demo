@@ -18,387 +18,301 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">preserve</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">preserve</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">clinic</span> <span class="n">start</span> <span class="n">generated</span> <span class="n">code</span><span class="p">]</span><span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">[clinic start generated code]*/</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">curses_window_addch__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">curses_window_addch__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;addch([y, x,] ch, [attr])</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;addch([y, x,] ch, [attr])</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Paint character ch at (y, x) with attributes attr.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Paint character ch at (y, x) with attributes attr.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;  y</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;  y</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;    Y-coordinate.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;    Y-coordinate.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;  x</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;  x</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;    X-coordinate.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;    X-coordinate.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;  ch</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;  ch</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;    Character to add.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;    Character to add.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;  attr</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;  attr</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;    Attributes for the character.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;    Attributes for the character.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Paint character ch at (y, x) with attributes attr,</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Paint character ch at (y, x) with attributes attr,</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;overwriting any character previously painted at that location.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;overwriting any character previously painted at that location.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;By default, the character position and attributes are the</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;By default, the character position and attributes are the</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;current settings for the window object.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;current settings for the window object.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define CURSES_WINDOW_ADDCH_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define CURSES_WINDOW_ADDCH_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;addch&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">curses_window_addch</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">curses_window_addch__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;addch&quot;, (PyCFunction)curses_window_addch, METH_VARARGS, curses_window_addch__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">curses_window_addch_impl</span><span class="p">(</span><span class="n">PyCursesWindowObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="kt">int</span> <span class="n">group_left_1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">curses_window_addch_impl</span><span class="p">(</span><span class="n">PyCursesWindowObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="kt">int</span> <span class="n">group_left_1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                         <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="kt">int</span> <span class="n">group_right_1</span><span class="p">,</span> <span class="kt">long</span> <span class="n">attr</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                         <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">ch</span><span class="p">,</span> <span class="kt">int</span> <span class="n">group_right_1</span><span class="p">,</span> <span class="kt">long</span> <span class="n">attr</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">curses_window_addch</span><span class="p">(</span><span class="n">PyCursesWindowObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">curses_window_addch</span><span class="p">(</span><span class="n">PyCursesWindowObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">ch</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">ch</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">long</span> <span class="n">attr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">attr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">switch</span> <span class="p">(</span><span class="n">PyTuple_GET_SIZE</span><span class="p">(</span><span class="n">args</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">switch</span> <span class="p">(</span><span class="n">PyTuple_GET_SIZE</span><span class="p">(</span><span class="n">args</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;O:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;O:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -413,45 +327,35 @@
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;Ol:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;Ol:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -466,54 +370,42 @@
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;iiO:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;iiO:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -528,54 +420,42 @@
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">4</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;iiOl:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;iiOl:addch&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -590,63 +470,49 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">group_right_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">group_left_1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">default</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">default</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_TypeError</span><span class="p">,</span> <span class="s">&quot;curses.window.addch requires 1 to 4 arguments&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_TypeError</span><span class="p">,</span> <span class="s">&quot;curses.window.addch requires 1 to 4 arguments&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -661,27 +527,21 @@
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">curses_window_addch_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">group_left_1</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">group_right_1</span><span class="p">,</span> <span class="n">attr</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">curses_window_addch_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">group_left_1</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">group_right_1</span><span class="p">,</span> <span class="n">attr</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -736,45 +596,49 @@
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nl">exit</span><span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic end generated code: output=13ffc5f8d79cbfbf input=a9049054013a1b77]*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/*[clinic end generated code: output=13ffc5f8d79cbfbf input=a9049054013a1b77]*/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

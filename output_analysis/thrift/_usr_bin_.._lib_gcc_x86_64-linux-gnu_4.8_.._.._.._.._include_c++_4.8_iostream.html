@@ -18,666 +18,518 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// Standard iostream objects -*- C++ -*-</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="c1">// Standard iostream objects -*- C++ -*-</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// Copyright (C) 1997-2013 Free Software Foundation, Inc.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// Copyright (C) 1997-2013 Free Software Foundation, Inc.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">//</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">//</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// This file is part of the GNU ISO C++ Library.  This library is free</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// This file is part of the GNU ISO C++ Library.  This library is free</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// software; you can redistribute it and/or modify it under the</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// software; you can redistribute it and/or modify it under the</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// terms of the GNU General Public License as published by the</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// terms of the GNU General Public License as published by the</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// Free Software Foundation; either version 3, or (at your option)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// Free Software Foundation; either version 3, or (at your option)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// any later version.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// any later version.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// This library is distributed in the hope that it will be useful,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// This library is distributed in the hope that it will be useful,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// GNU General Public License for more details.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// GNU General Public License for more details.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// Under Section 7 of GPL version 3, you are granted additional</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// Under Section 7 of GPL version 3, you are granted additional</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// permissions described in the GCC Runtime Library Exception, version</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// permissions described in the GCC Runtime Library Exception, version</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// 3.1, as published by the Free Software Foundation.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// 3.1, as published by the Free Software Foundation.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// You should have received a copy of the GNU General Public License and</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// You should have received a copy of the GNU General Public License and</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// a copy of the GCC Runtime Library Exception along with this program;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// a copy of the GCC Runtime Library Exception along with this program;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// &lt;http://www.gnu.org/licenses/&gt;.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// &lt;http://www.gnu.org/licenses/&gt;.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/** @file include/iostream</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/** @file include/iostream</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>  <span class="n">This</span> <span class="n">is</span> <span class="n">a</span> <span class="n">Standard</span> <span class="n">C</span><span class="o">++</span> <span class="n">Library</span> <span class="n">header</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *  This is a Standard C++ Library header.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">//</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">//</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">// ISO C++ 14882: 27.3  Standard iostream objects</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">// ISO C++ 14882: 27.3  Standard iostream objects</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="c1">//</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="c1">//</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef _GLIBCXX_IOSTREAM</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef _GLIBCXX_IOSTREAM</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GLIBCXX_IOSTREAM 1</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GLIBCXX_IOSTREAM 1</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#pragma GCC system_header</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#pragma GCC system_header</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bits/c++config.h&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;bits/c++config.h&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ostream&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;ostream&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;istream&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;istream&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">std</span> <span class="n">_GLIBCXX_VISIBILITY</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">std</span> <span class="nf">_GLIBCXX_VISIBILITY</span><span class="p">(</span><span class="k">default</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_GLIBCXX_BEGIN_NAMESPACE_VERSION</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">_GLIBCXX_BEGIN_NAMESPACE_VERSION</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="cm">/**</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="err">@</span><span class="n">name</span> <span class="n">Standard</span> <span class="n">Stream</span> <span class="n">Objects</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  @name Standard Stream Objects</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">The</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">iostream</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">header</span> <span class="n">declares</span> <span class="n">the</span> <span class="n">eight</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">standard</span> <span class="n">stream</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  The &amp;lt;iostream&amp;gt; header declares the eight &lt;em&gt;standard stream</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">objects</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">.</span>  <span class="n">For</span> <span class="n">other</span> <span class="n">declarations</span><span class="p">,</span> <span class="n">see</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  objects&lt;/em&gt;.  For other declarations, see</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="nl">http</span><span class="p">:</span><span class="c1">//gcc.gnu.org/onlinedocs/libstdc++/manual/io.html</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">and</span> <span class="n">the</span> <span class="err">@</span><span class="n">link</span> <span class="n">iosfwd</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">forward</span> <span class="n">declarations</span> <span class="err">@</span><span class="n">endlink</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  and the @link iosfwd I/O forward declarations @endlink</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">They</span> <span class="n">are</span> <span class="n">required</span> <span class="n">by</span> <span class="k">default</span> <span class="n">to</span> <span class="n">cooperate</span> <span class="n">with</span> <span class="n">the</span> <span class="n">global</span> <span class="n">C</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  They are required by default to cooperate with the global C</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">library</span><span class="err">&#39;</span><span class="n">s</span> <span class="err">@</span><span class="n">c</span> <span class="kt">FILE</span> <span class="n">streams</span><span class="p">,</span> <span class="n">and</span> <span class="n">to</span> <span class="n">be</span> <span class="n">available</span> <span class="n">during</span> <span class="n">program</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  library&#39;s @c FILE streams, and to be available during program</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">startup</span> <span class="n">and</span> <span class="n">termination</span><span class="p">.</span> <span class="n">For</span> <span class="n">more</span> <span class="n">information</span><span class="p">,</span> <span class="n">see</span> <span class="n">the</span> <span class="n">section</span> <span class="n">of</span> <span class="n">the</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  startup and termination. For more information, see the section of the</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="o">*</span>  <span class="n">manual</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">above</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   *  manual linked to above.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="c1">//@{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="c1">//@{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">istream</span> <span class="n">cin</span><span class="p">;</span>		<span class="c1">/// Linked to standard input</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">istream</span> <span class="n">cin</span><span class="p">;</span>		<span class="c1">/// Linked to standard input</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">cout</span><span class="p">;</span>		<span class="c1">/// Linked to standard output</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">cout</span><span class="p">;</span>		<span class="c1">/// Linked to standard output</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">cerr</span><span class="p">;</span>		<span class="c1">/// Linked to standard error (unbuffered)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">cerr</span><span class="p">;</span>		<span class="c1">/// Linked to standard error (unbuffered)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">clog</span><span class="p">;</span>		<span class="c1">/// Linked to standard error (buffered)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">ostream</span> <span class="n">clog</span><span class="p">;</span>		<span class="c1">/// Linked to standard error (buffered)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef _GLIBCXX_USE_WCHAR_T</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef _GLIBCXX_USE_WCHAR_T</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">wistream</span> <span class="n">wcin</span><span class="p">;</span>		<span class="c1">/// Linked to standard input</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">wistream</span> <span class="n">wcin</span><span class="p">;</span>		<span class="c1">/// Linked to standard input</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wcout</span><span class="p">;</span>	<span class="c1">/// Linked to standard output</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wcout</span><span class="p">;</span>	<span class="c1">/// Linked to standard output</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wcerr</span><span class="p">;</span>	<span class="c1">/// Linked to standard error (unbuffered)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wcerr</span><span class="p">;</span>	<span class="c1">/// Linked to standard error (unbuffered)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wclog</span><span class="p">;</span>	<span class="c1">/// Linked to standard error (buffered)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">extern</span> <span class="n">wostream</span> <span class="n">wclog</span><span class="p">;</span>	<span class="c1">/// Linked to standard error (buffered)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="c1">//@}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="c1">//@}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="c1">// For construction of filebuffers for cout, cin, cerr, clog et. al.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="c1">// For construction of filebuffers for cout, cin, cerr, clog et. al.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="k">static</span> <span class="n">ios_base</span><span class="o">::</span><span class="n">Init</span> <span class="n">__ioinit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="k">static</span> <span class="n">ios_base</span><span class="o">::</span><span class="n">Init</span> <span class="n">__ioinit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -692,45 +544,49 @@
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_GLIBCXX_END_NAMESPACE_VERSION</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">_GLIBCXX_END_NAMESPACE_VERSION</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span> <span class="c1">// namespace</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span> <span class="c1">// namespace</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif </span><span class="cm">/* _GLIBCXX_IOSTREAM */</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif </span><span class="cm">/* _GLIBCXX_IOSTREAM */</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

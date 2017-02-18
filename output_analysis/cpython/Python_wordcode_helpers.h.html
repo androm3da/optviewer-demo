@@ -18,144 +18,112 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* This file contains code shared by the compiler and the peephole</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* This file contains code shared by the compiler and the peephole</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">optimizer</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   optimizer.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef WORDS_BIGENDIAN</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef WORDS_BIGENDIAN</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#  define PACKOPARG(opcode, oparg) ((_Py_CODEUNIT)(((opcode) &lt;&lt; 8) | (oparg)))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#  define PACKOPARG(opcode, oparg) ((_Py_CODEUNIT)(((opcode) &lt;&lt; 8) | (oparg)))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#  define PACKOPARG(opcode, oparg) ((_Py_CODEUNIT)(((oparg) &lt;&lt; 8) | (opcode)))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#  define PACKOPARG(opcode, oparg) ((_Py_CODEUNIT)(((oparg) &lt;&lt; 8) | (opcode)))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Minimum number of code units necessary to encode instruction with</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Minimum number of code units necessary to encode instruction with</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">EXTENDED_ARGs</span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   EXTENDED_ARGs */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">int</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">instrsize</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">oparg</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">instrsize</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">oparg</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xff</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xff</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
@@ -170,225 +138,189 @@
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xffff</span> <span class="o">?</span> <span class="mi">2</span> <span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xffff</span> <span class="o">?</span> <span class="mi">2</span> <span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xffffff</span> <span class="o">?</span> <span class="mi">3</span> <span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">oparg</span> <span class="o">&lt;=</span> <span class="mh">0xffffff</span> <span class="o">?</span> <span class="mi">3</span> <span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="mi">4</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="mi">4</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Spits out op/oparg pair using ilen bytes. codestr should be pointed at the</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Spits out op/oparg pair using ilen bytes. codestr should be pointed at the</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>   <span class="n">desired</span> <span class="n">location</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">EXTENDED_ARG</span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">   desired location of the first EXTENDED_ARG */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">write_op_arg</span><span class="p">(</span><span class="n">_Py_CODEUNIT</span> <span class="o">*</span><span class="n">codestr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">opcode</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">write_op_arg</span><span class="p">(</span><span class="n">_Py_CODEUNIT</span> <span class="o">*</span><span class="n">codestr</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">opcode</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">oparg</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ilen</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">oparg</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ilen</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">switch</span> <span class="p">(</span><span class="n">ilen</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">switch</span> <span class="p">(</span><span class="n">ilen</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">4</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">EXTENDED_ARG</span><span class="p">,</span> <span class="p">(</span><span class="n">oparg</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">opcode</span><span class="p">,</span> <span class="n">oparg</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="o">*</span><span class="n">codestr</span><span class="o">++</span> <span class="o">=</span> <span class="n">PACKOPARG</span><span class="p">(</span><span class="n">opcode</span><span class="p">,</span> <span class="n">oparg</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">default</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">default</span><span class="o">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

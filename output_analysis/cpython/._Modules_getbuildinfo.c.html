@@ -18,405 +18,315 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef DONT_HAVE_STDIO_H</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef DONT_HAVE_STDIO_H</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef DATE</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef DATE</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef __DATE__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef __DATE__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define DATE __DATE__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define DATE __DATE__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define DATE &quot;xx/xx/xx&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define DATE &quot;xx/xx/xx&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef TIME</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef TIME</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef __TIME__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef __TIME__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define TIME __TIME__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define TIME __TIME__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define TIME &quot;xx:xx:xx&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define TIME &quot;xx:xx:xx&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* XXX Only unix build process has been tested */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* XXX Only unix build process has been tested */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef HGVERSION</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef HGVERSION</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define HGVERSION &quot;&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define HGVERSION &quot;&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef HGTAG</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef HGTAG</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define HGTAG &quot;&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define HGTAG &quot;&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifndef HGBRANCH</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifndef HGBRANCH</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define HGBRANCH &quot;&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define HGBRANCH &quot;&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">Py_GetBuildInfo</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">Py_GetBuildInfo</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="kt">char</span> <span class="n">buildinfo</span><span class="p">[</span><span class="mi">50</span> <span class="o">+</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGVERSION</span><span class="p">)</span> <span class="o">+</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="kt">char</span> <span class="n">buildinfo</span><span class="p">[</span><span class="mi">50</span> <span class="o">+</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGVERSION</span><span class="p">)</span> <span class="o">+</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                          <span class="p">((</span><span class="k">sizeof</span><span class="p">(</span><span class="n">HGTAG</span><span class="p">)</span> <span class="o">&gt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGBRANCH</span><span class="p">))</span> <span class="o">?</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                          <span class="p">((</span><span class="k">sizeof</span><span class="p">(</span><span class="n">HGTAG</span><span class="p">)</span> <span class="o">&gt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGBRANCH</span><span class="p">))</span> <span class="o">?</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                           <span class="k">sizeof</span><span class="p">(</span><span class="n">HGTAG</span><span class="p">)</span> <span class="o">:</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGBRANCH</span><span class="p">))];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                           <span class="k">sizeof</span><span class="p">(</span><span class="n">HGTAG</span><span class="p">)</span> <span class="o">:</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">HGBRANCH</span><span class="p">))];</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">revision</span> <span class="o">=</span> <span class="n">_Py_hgversion</span><span class="p">();</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">revision</span> <span class="o">=</span> <span class="n">_Py_hgversion</span><span class="p">();</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">sep</span> <span class="o">=</span> <span class="o">*</span><span class="n">revision</span> <span class="o">?</span> <span class="s">&quot;:&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">sep</span> <span class="o">=</span> <span class="o">*</span><span class="n">revision</span> <span class="o">?</span> <span class="s">&quot;:&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hgid</span> <span class="o">=</span> <span class="n">_Py_hgidentifier</span><span class="p">();</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hgid</span> <span class="o">=</span> <span class="n">_Py_hgidentifier</span><span class="p">();</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="n">hgid</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="n">hgid</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">hgid</span> <span class="o">=</span> <span class="s">&quot;default&quot;</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">hgid</span> <span class="o">=</span> <span class="s">&quot;default&quot;</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyOS_snprintf</span><span class="p">(</span><span class="n">buildinfo</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buildinfo</span><span class="p">),</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyOS_snprintf</span><span class="p">(</span><span class="n">buildinfo</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buildinfo</span><span class="p">),</span></pre></div></td>
 </tr>
 
 <tr>
@@ -431,198 +341,168 @@
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                  <span class="s">&quot;%s%s%s, %.20s, %.9s&quot;</span><span class="p">,</span> <span class="n">hgid</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                  <span class="s">&quot;%s%s%s, %.20s, %.9s&quot;</span><span class="p">,</span> <span class="n">hgid</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">revision</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                  <span class="n">DATE</span><span class="p">,</span> <span class="n">TIME</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                  <span class="n">DATE</span><span class="p">,</span> <span class="n">TIME</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">buildinfo</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">buildinfo</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_Py_hgversion</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_Py_hgversion</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">HGVERSION</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">HGVERSION</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_Py_hgidentifier</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_Py_hgidentifier</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hgtag</span><span class="p">,</span> <span class="o">*</span><span class="n">hgid</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hgtag</span><span class="p">,</span> <span class="o">*</span><span class="n">hgid</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">hgtag</span> <span class="o">=</span> <span class="n">HGTAG</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">hgtag</span> <span class="o">=</span> <span class="n">HGTAG</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">((</span><span class="o">*</span><span class="n">hgtag</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">strcmp</span><span class="p">(</span><span class="n">hgtag</span><span class="p">,</span> <span class="s">&quot;tip&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">((</span><span class="o">*</span><span class="n">hgtag</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">strcmp</span><span class="p">(</span><span class="n">hgtag</span><span class="p">,</span> <span class="s">&quot;tip&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">hgid</span> <span class="o">=</span> <span class="n">hgtag</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">hgid</span> <span class="o">=</span> <span class="n">hgtag</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">hgid</span> <span class="o">=</span> <span class="n">HGBRANCH</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">hgid</span> <span class="o">=</span> <span class="n">HGBRANCH</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">hgid</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">hgid</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

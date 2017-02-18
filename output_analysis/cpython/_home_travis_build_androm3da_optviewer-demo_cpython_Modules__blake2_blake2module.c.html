@@ -18,540 +18,420 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Written</span> <span class="n">in</span> <span class="mi">2013</span> <span class="n">by</span> <span class="n">Dmitry</span> <span class="n">Chestnykh</span> <span class="o">&lt;</span><span class="n">dmitry</span><span class="err">@</span><span class="n">codingrobots</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * Written in 2013 by Dmitry Chestnykh &lt;dmitry@codingrobots.com&gt;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Modified</span> <span class="k">for</span> <span class="n">CPython</span> <span class="n">by</span> <span class="n">Christian</span> <span class="n">Heimes</span> <span class="o">&lt;</span><span class="n">christian</span><span class="err">@</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">&gt;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * Modified for CPython by Christian Heimes &lt;christian@python.org&gt;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">To</span> <span class="n">the</span> <span class="n">extent</span> <span class="n">possible</span> <span class="n">under</span> <span class="n">law</span><span class="p">,</span> <span class="n">the</span> <span class="n">author</span> <span class="n">have</span> <span class="n">dedicated</span> <span class="n">all</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * To the extent possible under law, the author have dedicated all</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">copyright</span> <span class="n">and</span> <span class="n">related</span> <span class="n">and</span> <span class="n">neighboring</span> <span class="n">rights</span> <span class="n">to</span> <span class="k">this</span> <span class="n">software</span> <span class="n">to</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * copyright and related and neighboring rights to this software to</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">the</span> <span class="k">public</span> <span class="n">domain</span> <span class="n">worldwide</span><span class="p">.</span> <span class="n">This</span> <span class="n">software</span> <span class="n">is</span> <span class="n">distributed</span> <span class="n">without</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * the public domain worldwide. This software is distributed without</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">any</span> <span class="n">warranty</span><span class="p">.</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//creativecommons.org/publicdomain/zero/1.0/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * any warranty. http://creativecommons.org/publicdomain/zero/1.0/</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;impl/blake2.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;impl/blake2.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">extern</span> <span class="n">PyTypeObject</span> <span class="n">PyBlake2_BLAKE2bType</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">extern</span> <span class="n">PyTypeObject</span> <span class="n">PyBlake2_BLAKE2bType</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">extern</span> <span class="n">PyTypeObject</span> <span class="n">PyBlake2_BLAKE2sType</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">extern</span> <span class="n">PyTypeObject</span> <span class="n">PyBlake2_BLAKE2sType</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">blake2mod__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">blake2mod__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;_blake2b provides BLAKE2b for hashlib</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;_blake2b provides BLAKE2b for hashlib</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">struct</span> <span class="n">PyMethodDef</span> <span class="n">blake2mod_functions</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">struct</span> <span class="n">PyMethodDef</span> <span class="n">blake2mod_functions</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">struct</span> <span class="n">PyModuleDef</span> <span class="n">blake2_module</span> <span class="o">=</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">struct</span> <span class="n">PyModuleDef</span> <span class="n">blake2_module</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModuleDef_HEAD_INIT</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModuleDef_HEAD_INIT</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="s">&quot;_blake2&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="s">&quot;_blake2&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">blake2mod__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">blake2mod__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="o">-</span><span class="mi">1</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">blake2mod_functions</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">blake2mod_functions</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="nb">NULL</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="nb">NULL</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="nb">NULL</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="nb">NULL</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define ADD_INT(d, name, value) do { \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define ADD_INT(d, name, value) do { \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">PyLong_FromLong</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    PyObject *x = PyLong_FromLong(value); \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    if (!x) { \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">        Py_DECREF(m); \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">        return NULL; \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    } \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyDict_SetItemString</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    if (PyDict_SetItemString(d, name, x) &lt; 0) { \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">m</span><span class="p">);</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">        Py_DECREF(m); \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">        return NULL; \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    } \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> \
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    Py_DECREF(x); \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">} while(0)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyMODINIT_FUNC</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyMODINIT_FUNC</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyInit__blake2</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">PyInit__blake2</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">d</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">m</span> <span class="o">=</span> <span class="n">PyModule_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blake2_module</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">m</span> <span class="o">=</span> <span class="n">PyModule_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blake2_module</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -566,54 +446,42 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* BLAKE2b */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* BLAKE2b */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_TYPE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_TYPE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyType_Ready</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyType_Ready</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -628,36 +496,28 @@
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -672,9 +532,7 @@
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;blake2b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;blake2b&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2bType</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -689,18 +547,14 @@
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span> <span class="o">=</span> <span class="n">PyBlake2_BLAKE2bType</span><span class="p">.</span><span class="n">tp_dict</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span> <span class="o">=</span> <span class="n">PyBlake2_BLAKE2bType</span><span class="p">.</span><span class="n">tp_dict</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -715,9 +569,7 @@
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_SALTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_SALTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -740,9 +592,7 @@
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_PERSONALBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_PERSONALBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -765,9 +615,7 @@
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_KEYBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_KEYBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -790,9 +638,7 @@
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_OUTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_OUTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -815,18 +661,14 @@
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_SALTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_SALTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -841,9 +683,7 @@
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_PERSONALBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_PERSONALBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -858,9 +698,7 @@
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_KEYBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_KEYBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -875,9 +713,7 @@
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_OUTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2B_MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2B_OUTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -892,36 +728,28 @@
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* BLAKE2s */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* BLAKE2s */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_TYPE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_TYPE</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">)</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">PyType_Type</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyType_Ready</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyType_Ready</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -936,36 +764,28 @@
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -980,9 +800,7 @@
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;blake2s&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;blake2s&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">PyBlake2_BLAKE2sType</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -997,18 +815,14 @@
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">d</span> <span class="o">=</span> <span class="n">PyBlake2_BLAKE2sType</span><span class="p">.</span><span class="n">tp_dict</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">d</span> <span class="o">=</span> <span class="n">PyBlake2_BLAKE2sType</span><span class="p">.</span><span class="n">tp_dict</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1023,9 +837,7 @@
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_SALTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_SALTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1048,9 +860,7 @@
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_PERSONALBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_PERSONALBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1073,9 +883,7 @@
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_KEYBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_KEYBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1098,9 +906,7 @@
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_OUTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">ADD_INT</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s">&quot;MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_OUTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1123,18 +929,14 @@
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_SALTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_SALT_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_SALTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1149,9 +951,7 @@
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_PERSONALBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_PERSON_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_PERSONALBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1166,9 +966,7 @@
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_KEYBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_MAX_KEY_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_KEYBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1183,9 +981,7 @@
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_OUTBYTES</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntConstant</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;BLAKE2S_MAX_DIGEST_SIZE&quot;</span><span class="p">,</span> <span class="n">BLAKE2S_OUTBYTES</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1200,27 +996,35 @@
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">m</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">m</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

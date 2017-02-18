@@ -18,252 +18,196 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Minimal main program -- everything is loaded from the library */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Minimal main program -- everything is loaded from the library */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;locale.h&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;locale.h&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef __FreeBSD__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef __FreeBSD__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;fenv.h&gt;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;fenv.h&gt;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef MS_WINDOWS</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef MS_WINDOWS</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="kt">int</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="kt">int</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">wmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">wmain</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">Py_Main</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">Py_Main</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="kt">int</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="kt">int</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* We need a second copy, as Python might modify the first one. */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* We need a second copy, as Python might modify the first one. */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy2</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy2</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">res</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">res</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">char</span> <span class="o">*</span><span class="n">oldloc</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">char</span> <span class="o">*</span><span class="n">oldloc</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* Force malloc() allocator to bootstrap Python */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* Force malloc() allocator to bootstrap Python */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">_PyMem_SetupAllocators</span><span class="p">(</span><span class="s">&quot;malloc&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">_PyMem_SetupAllocators</span><span class="p">(</span><span class="s">&quot;malloc&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -271,25 +215,21 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> _PyMem_SetupAllocators will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">argv_copy</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span> <span class="o">**</span><span class="p">)</span><span class="n">PyMem_RawMalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">argc</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">argv_copy</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span> <span class="o">**</span><span class="p">)</span><span class="n">PyMem_RawMalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">argc</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -297,16 +237,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> PyMem_RawMalloc will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">argv_copy2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span> <span class="o">**</span><span class="p">)</span><span class="n">PyMem_RawMalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">argc</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">argv_copy2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span> <span class="o">**</span><span class="p">)</span><span class="n">PyMem_RawMalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">argc</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -314,25 +252,21 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> PyMem_RawMalloc will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">argv_copy</span> <span class="o">||</span> <span class="o">!</span><span class="n">argv_copy2</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">argv_copy</span> <span class="o">||</span> <span class="o">!</span><span class="n">argv_copy2</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;out of memory</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;out of memory</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -340,7 +274,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -348,124 +282,98 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs_python.c.html#L31>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* 754 requires that FP exceptions run in &quot;no stop&quot; mode by default,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* 754 requires that FP exceptions run in &quot;no stop&quot; mode by default,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">and</span> <span class="n">until</span> <span class="n">C</span> <span class="n">vendors</span> <span class="n">implement</span> <span class="n">C99</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">ways</span> <span class="n">to</span> <span class="n">control</span> <span class="n">FP</span> <span class="n">exceptions</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">     * and until C vendors implement C99&#39;s ways to control FP exceptions,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">Python</span> <span class="n">requires</span> <span class="n">non</span><span class="o">-</span><span class="n">stop</span> <span class="n">mode</span><span class="p">.</span>  <span class="n">Alas</span><span class="p">,</span> <span class="n">some</span> <span class="n">platforms</span> <span class="n">enable</span> <span class="n">FP</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">     * Python requires non-stop mode.  Alas, some platforms enable FP</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>     <span class="o">*</span> <span class="n">exceptions</span> <span class="n">by</span> <span class="k">default</span><span class="p">.</span>  <span class="n">Here</span> <span class="n">we</span> <span class="n">disable</span> <span class="n">them</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">     * exceptions by default.  Here we disable them.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>     <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">     */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#ifdef __FreeBSD__</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#ifdef __FreeBSD__</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">fedisableexcept</span><span class="p">(</span><span class="n">FE_OVERFLOW</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">fedisableexcept</span><span class="p">(</span><span class="n">FE_OVERFLOW</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">oldloc</span> <span class="o">=</span> <span class="n">_PyMem_RawStrdup</span><span class="p">(</span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">));</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">oldloc</span> <span class="o">=</span> <span class="n">_PyMem_RawStrdup</span><span class="p">(</span><span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">));</span></pre></div></td>
 </tr>
 
 <tr>
@@ -473,7 +381,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> setlocale will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -481,25 +389,21 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> _PyMem_RawStrdup will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">oldloc</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">oldloc</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;out of memory</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;out of memory</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -507,7 +411,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> fwrite will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -515,43 +419,35 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs_python.c.html#L46>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -559,16 +455,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> setlocale will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -576,7 +470,7 @@
 <td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -584,16 +478,14 @@
 <td></td>
 <td class="column-entry-red">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Py_DecodeLocale</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">NULL</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Py_DecodeLocale</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -601,7 +493,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> Py_DecodeLocale will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -609,25 +501,21 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Programs_python.c.html#L52>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">oldloc</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">oldloc</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -635,16 +523,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyMem_RawFree will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Fatal Python error: &quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;Fatal Python error: &quot;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -652,7 +538,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> fprintf will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -660,88 +546,70 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs_python.c.html#L56>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                            <span class="s">&quot;unable to decode the command line argument #%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                            <span class="s">&quot;unable to decode the command line argument #%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                            <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                            <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">argv_copy2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">argv_copy2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">argv_copy</span><span class="p">[</span><span class="n">i</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">argv_copy2</span><span class="p">[</span><span class="n">argc</span><span class="p">]</span> <span class="o">=</span> <span class="n">argv_copy</span><span class="p">[</span><span class="n">argc</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">argv_copy2</span><span class="p">[</span><span class="n">argc</span><span class="p">]</span> <span class="o">=</span> <span class="n">argv_copy</span><span class="p">[</span><span class="n">argc</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="n">oldloc</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">setlocale</span><span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="n">oldloc</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -749,16 +617,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> setlocale will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">oldloc</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">oldloc</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -766,25 +632,21 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyMem_RawFree will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">res</span> <span class="o">=</span> <span class="n">Py_Main</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv_copy</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">res</span> <span class="o">=</span> <span class="n">Py_Main</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv_copy</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -792,43 +654,35 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> Py_Main will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="cm">/* Force again malloc() allocator to release memory blocks allocated</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="cm">/* Force again malloc() allocator to release memory blocks allocated</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>       <span class="n">before</span> <span class="n">Py_Main</span><span class="p">()</span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">       before Py_Main() */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">_PyMem_SetupAllocators</span><span class="p">(</span><span class="s">&quot;malloc&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">_PyMem_SetupAllocators</span><span class="p">(</span><span class="s">&quot;malloc&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -836,25 +690,21 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> _PyMem_SetupAllocators will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -862,7 +712,7 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=._Programs_python.c.html#L75>zext</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -870,16 +720,14 @@
 <td></td>
 <td class="column-entry-red">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy2</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy2</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -887,7 +735,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyMem_RawFree will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
@@ -895,25 +743,21 @@
 <td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> loop not vectorized: call instruction cannot be vectorized&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -921,16 +765,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyMem_RawFree will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyMem_RawFree</span><span class="p">(</span><span class="n">argv_copy2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -938,34 +780,42 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyMem_RawFree will not be inlined into main because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L127>main</a></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
 </tr>
 
 <tr>
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">res</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#endif</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

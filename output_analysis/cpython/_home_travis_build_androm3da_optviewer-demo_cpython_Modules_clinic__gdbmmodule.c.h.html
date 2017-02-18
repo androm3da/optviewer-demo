@@ -18,216 +18,168 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">preserve</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">preserve</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">clinic</span> <span class="n">start</span> <span class="n">generated</span> <span class="n">code</span><span class="p">]</span><span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">[clinic start generated code]*/</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_get__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_get__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;get($self, key, default=None, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;get($self, key, default=None, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Get the value for key, or default if not present.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Get the value for key, or default if not present.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_GET_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_GET_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;get&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_get</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_get__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;get&quot;, (PyCFunction)_gdbm_gdbm_get, METH_VARARGS, _gdbm_gdbm_get__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_get_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_get_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_get</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_get</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="n">Py_None</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="n">Py_None</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_UnpackTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;get&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_UnpackTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;get&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -242,45 +194,35 @@
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_get_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_get_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -319,234 +261,182 @@
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nl">exit</span><span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_setdefault__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_setdefault__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;setdefault($self, key, default=None, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;setdefault($self, key, default=None, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Get value for key, or set it to default and return default if not present.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Get value for key, or set it to default and return default if not present.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_SETDEFAULT_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_SETDEFAULT_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;setdefault&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_setdefault</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_setdefault__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;setdefault&quot;, (PyCFunction)_gdbm_gdbm_setdefault, METH_VARARGS, _gdbm_gdbm_setdefault__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_setdefault_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_setdefault_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                           <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                           <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_setdefault</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_setdefault</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="n">Py_None</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">default_value</span> <span class="o">=</span> <span class="n">Py_None</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_UnpackTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;setdefault&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_UnpackTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;setdefault&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -561,45 +451,35 @@
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">default_value</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_setdefault_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_setdefault_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default_value</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -638,189 +518,147 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nl">exit</span><span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_close__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_close__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;close($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;close($self, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Close the database.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Close the database.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_CLOSE_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_CLOSE_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;close&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_close</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_close__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;close&quot;, (PyCFunction)_gdbm_gdbm_close, METH_NOARGS, _gdbm_gdbm_close__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_close_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_close_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_close</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_close</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_gdbm_gdbm_close_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">_gdbm_gdbm_close_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -843,162 +681,126 @@
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_keys__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_keys__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;keys($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;keys($self, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Get a list of all keys in the database.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Get a list of all keys in the database.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_KEYS_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_KEYS_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;keys&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_keys</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_keys__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;keys&quot;, (PyCFunction)_gdbm_gdbm_keys, METH_NOARGS, _gdbm_gdbm_keys__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_keys_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_keys_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_keys</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_keys</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_gdbm_gdbm_keys_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">_gdbm_gdbm_keys_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1021,198 +823,154 @@
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_firstkey__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_firstkey__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;firstkey($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;firstkey($self, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L106">106</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Return the starting key for the traversal.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Return the starting key for the traversal.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L107">107</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;It</span><span class="se">\&#39;</span><span class="s">s possible to loop over every key in the database using this method</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;It</span><span class="se">\&#39;</span><span class="s">s possible to loop over every key in the database using this method</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L109">109</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;and the nextkey() method.  The traversal is ordered by GDBM</span><span class="se">\&#39;</span><span class="s">s internal</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;and the nextkey() method.  The traversal is ordered by GDBM</span><span class="se">\&#39;</span><span class="s">s internal</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L110">110</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;hash values, and won</span><span class="se">\&#39;</span><span class="s">t be sorted by the key values.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;hash values, and won</span><span class="se">\&#39;</span><span class="s">t be sorted by the key values.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L111">111</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_FIRSTKEY_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_FIRSTKEY_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L113">113</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;firstkey&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_firstkey</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_firstkey__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;firstkey&quot;, (PyCFunction)_gdbm_gdbm_firstkey, METH_NOARGS, _gdbm_gdbm_firstkey__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L114">114</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L115">115</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L116">116</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_firstkey_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_firstkey_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L118">118</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L119">119</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_firstkey</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_firstkey</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L120">120</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L121">121</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_gdbm_gdbm_firstkey_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">_gdbm_gdbm_firstkey_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1235,279 +993,217 @@
 <td><a name="L122">122</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L123">123</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L124">124</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_nextkey__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_nextkey__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L125">125</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;nextkey($self, key, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;nextkey($self, key, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L126">126</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L127">127</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L128">128</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Returns the key that follows key in the traversal.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Returns the key that follows key in the traversal.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L129">129</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L130">130</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;The following code prints every key in the database db, without having</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;The following code prints every key in the database db, without having</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L131">131</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;to create a list in memory that contains them all:</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;to create a list in memory that contains them all:</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L132">132</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L133">133</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;      k = db.firstkey()</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;      k = db.firstkey()</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L134">134</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;      while k != None:</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;      while k != None:</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L135">135</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;          print(k)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;          print(k)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L136">136</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;          k = db.nextkey(k)&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;          k = db.nextkey(k)&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L137">137</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L138">138</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_NEXTKEY_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_NEXTKEY_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L139">139</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;nextkey&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_nextkey</span><span class="p">,</span> <span class="n">METH_O</span><span class="p">,</span> <span class="n">_gdbm_gdbm_nextkey__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;nextkey&quot;, (PyCFunction)_gdbm_gdbm_nextkey, METH_O, _gdbm_gdbm_nextkey__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L140">140</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L141">141</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L142">142</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_nextkey_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_nextkey_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L143">143</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L144">144</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L145">145</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L146">146</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_nextkey</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_nextkey</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L147">147</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L148">148</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L149">149</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">key</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L150">150</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">Py_ssize_clean_t</span> <span class="n">key_length</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L151">151</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L152">152</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_Parse</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s">&quot;s#:nextkey&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key_length</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_Parse</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="s">&quot;s#:nextkey&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">key_length</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1522,27 +1218,21 @@
 <td><a name="L153">153</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L154">154</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L155">155</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_nextkey_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">key_length</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">_gdbm_gdbm_nextkey_impl</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">key_length</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1581,243 +1271,189 @@
 <td><a name="L156">156</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L157">157</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nl">exit</span><span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L158">158</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L159">159</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L160">160</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L161">161</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_reorganize__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_reorganize__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L162">162</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;reorganize($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;reorganize($self, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L163">163</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L164">164</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L165">165</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Reorganize the database.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Reorganize the database.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L166">166</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L167">167</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;If you have carried out a lot of deletions and would like to shrink</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;If you have carried out a lot of deletions and would like to shrink</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L168">168</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;the space used by the GDBM file, this routine will reorganize the</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;the space used by the GDBM file, this routine will reorganize the</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L169">169</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;database.  GDBM will not shorten the length of a database file except</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;database.  GDBM will not shorten the length of a database file except</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L170">170</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;by using this reorganization; otherwise, deleted file space will be</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;by using this reorganization; otherwise, deleted file space will be</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L171">171</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;kept and reused as new (key,value) pairs are added.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;kept and reused as new (key,value) pairs are added.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L172">172</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L173">173</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_REORGANIZE_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_REORGANIZE_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L174">174</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;reorganize&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_reorganize</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_reorganize__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;reorganize&quot;, (PyCFunction)_gdbm_gdbm_reorganize, METH_NOARGS, _gdbm_gdbm_reorganize__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L175">175</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L176">176</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L177">177</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_reorganize_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_reorganize_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L178">178</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L179">179</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L180">180</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_reorganize</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_reorganize</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L181">181</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L182">182</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_gdbm_gdbm_reorganize_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">_gdbm_gdbm_reorganize_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1840,189 +1476,147 @@
 <td><a name="L183">183</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L184">184</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L185">185</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_sync__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">_gdbm_gdbm_sync__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L186">186</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;sync($self, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;sync($self, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L187">187</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L188">188</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L189">189</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Flush the database to the disk file.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Flush the database to the disk file.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L190">190</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L191">191</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;When the database has been opened in fast mode, this method forces</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;When the database has been opened in fast mode, this method forces</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L192">192</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;any unwritten data to be written to the disk.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;any unwritten data to be written to the disk.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L193">193</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L194">194</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define _GDBM_GDBM_SYNC_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define _GDBM_GDBM_SYNC_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L195">195</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;sync&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">_gdbm_gdbm_sync</span><span class="p">,</span> <span class="n">METH_NOARGS</span><span class="p">,</span> <span class="n">_gdbm_gdbm_sync__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;sync&quot;, (PyCFunction)_gdbm_gdbm_sync, METH_NOARGS, _gdbm_gdbm_sync__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L196">196</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L197">197</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L198">198</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_sync_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_sync_impl</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L199">199</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L200">200</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L201">201</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">_gdbm_gdbm_sync</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">_gdbm_gdbm_sync</span><span class="p">(</span><span class="n">dbmobject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">Py_UNUSED</span><span class="p">(</span><span class="n">ignored</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L202">202</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L203">203</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="nf">_gdbm_gdbm_sync_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">_gdbm_gdbm_sync_impl</span><span class="p">(</span><span class="n">self</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2045,396 +1639,308 @@
 <td><a name="L204">204</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L205">205</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L206">206</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">dbmopen__doc__</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">PyDoc_STRVAR</span><span class="p">(</span><span class="n">dbmopen__doc__</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L207">207</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;open($module, filename, flags=</span><span class="se">\&#39;</span><span class="s">r</span><span class="se">\&#39;</span><span class="s">, mode=0o666, /)</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;open($module, filename, flags=</span><span class="se">\&#39;</span><span class="s">r</span><span class="se">\&#39;</span><span class="s">, mode=0o666, /)</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L208">208</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;--</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L209">209</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L210">210</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Open a dbm database and return a dbm object.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Open a dbm database and return a dbm object.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L211">211</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L212">212</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;The filename argument is the name of the database file.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;The filename argument is the name of the database file.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L213">213</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L214">214</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;The optional flags argument can be </span><span class="se">\&#39;</span><span class="s">r</span><span class="se">\&#39;</span><span class="s"> (to open an existing database</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;The optional flags argument can be </span><span class="se">\&#39;</span><span class="s">r</span><span class="se">\&#39;</span><span class="s"> (to open an existing database</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L215">215</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;for reading only -- default), </span><span class="se">\&#39;</span><span class="s">w</span><span class="se">\&#39;</span><span class="s"> (to open an existing database for</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;for reading only -- default), </span><span class="se">\&#39;</span><span class="s">w</span><span class="se">\&#39;</span><span class="s"> (to open an existing database for</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L216">216</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;reading and writing), </span><span class="se">\&#39;</span><span class="s">c</span><span class="se">\&#39;</span><span class="s"> (which creates the database if it doesn</span><span class="se">\&#39;</span><span class="s">t</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;reading and writing), </span><span class="se">\&#39;</span><span class="s">c</span><span class="se">\&#39;</span><span class="s"> (which creates the database if it doesn</span><span class="se">\&#39;</span><span class="s">t</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L217">217</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;exist), or </span><span class="se">\&#39;</span><span class="s">n</span><span class="se">\&#39;</span><span class="s"> (which always creates a new empty database).</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;exist), or </span><span class="se">\&#39;</span><span class="s">n</span><span class="se">\&#39;</span><span class="s"> (which always creates a new empty database).</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L218">218</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L219">219</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;Some versions of gdbm support additional flags which must be</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;Some versions of gdbm support additional flags which must be</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L220">220</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;appended to one of the flags described above.  The module constant</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;appended to one of the flags described above.  The module constant</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L221">221</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\&#39;</span><span class="s">open_flags</span><span class="se">\&#39;</span><span class="s"> is a string of valid additional flags.  The </span><span class="se">\&#39;</span><span class="s">f</span><span class="se">\&#39;</span><span class="s"> flag</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\&#39;</span><span class="s">open_flags</span><span class="se">\&#39;</span><span class="s"> is a string of valid additional flags.  The </span><span class="se">\&#39;</span><span class="s">f</span><span class="se">\&#39;</span><span class="s"> flag</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L222">222</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;opens the database in fast mode; altered data will not automatically</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;opens the database in fast mode; altered data will not automatically</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L223">223</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;be written to the disk after every change.  This results in faster</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;be written to the disk after every change.  This results in faster</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L224">224</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;writes to the database, but may result in an inconsistent database</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;writes to the database, but may result in an inconsistent database</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L225">225</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;if the program crashes while the database is still open.  Use the</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;if the program crashes while the database is still open.  Use the</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L226">226</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;sync() method to force any unwritten data to be written to the disk.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;sync() method to force any unwritten data to be written to the disk.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L227">227</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;The </span><span class="se">\&#39;</span><span class="s">s</span><span class="se">\&#39;</span><span class="s"> flag causes all database operations to be synchronized to</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;The </span><span class="se">\&#39;</span><span class="s">s</span><span class="se">\&#39;</span><span class="s"> flag causes all database operations to be synchronized to</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L228">228</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;disk.  The </span><span class="se">\&#39;</span><span class="s">u</span><span class="se">\&#39;</span><span class="s"> flag disables locking of the database file.</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;disk.  The </span><span class="se">\&#39;</span><span class="s">u</span><span class="se">\&#39;</span><span class="s"> flag disables locking of the database file.</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L229">229</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L230">230</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;The optional mode argument is the Unix mode of the file, used only</span><span class="se">\n</span><span class="s">&quot;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;The optional mode argument is the Unix mode of the file, used only</span><span class="se">\n</span><span class="s">&quot;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L231">231</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="s">&quot;when the database has to be created.  It defaults to octal 0o666.&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="s">&quot;when the database has to be created.  It defaults to octal 0o666.&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L232">232</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L233">233</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define DBMOPEN_METHODDEF    \</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define DBMOPEN_METHODDEF    \</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L234">234</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s">&quot;open&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">dbmopen</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="n">dbmopen__doc__</span><span class="p">},</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">    {&quot;open&quot;, (PyCFunction)dbmopen, METH_VARARGS, dbmopen__doc__},</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L235">235</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L236">236</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L237">237</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">dbmopen_impl</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">dbmopen_impl</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L238">238</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L239">239</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L240">240</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">dbmopen</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nf">dbmopen</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">module</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L241">241</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L242">242</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">return_value</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L243">243</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L244">244</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span> <span class="o">=</span> <span class="s">&quot;r&quot;</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">flags</span> <span class="o">=</span> <span class="s">&quot;r&quot;</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L245">245</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="kt">int</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">438</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">438</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L246">246</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L247">247</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;s|si:open&quot;</span><span class="p">,</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;s|si:open&quot;</span><span class="p">,</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2449,36 +1955,28 @@
 <td><a name="L248">248</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flags</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mode</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">flags</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mode</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L249">249</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">exit</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L250">250</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L251">251</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">dbmopen_impl</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">return_value</span> <span class="o">=</span> <span class="n">dbmopen_impl</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">flags</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2525,45 +2023,49 @@
 <td><a name="L252">252</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L253">253</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="nl">exit</span><span class="p">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="nl">exit</span><span class="p">:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L254">254</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">return_value</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L255">255</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L256">256</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*[clinic end generated code: output=ed0f5d4e3d79b80c input=a9049054013a1b77]*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/*[clinic end generated code: output=ed0f5d4e3d79b80c input=a9049054013a1b77]*/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L257">257</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L258">258</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

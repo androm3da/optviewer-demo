@@ -18,108 +18,84 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Fast unicode equal function optimized for dictobject.c and setobject.c */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/* Fast unicode equal function optimized for dictobject.c and setobject.c */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/* Return 1 if two unicode objects are equal, 0 if not.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/* Return 1 if two unicode objects are equal, 0 if not.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">unicode_eq</span><span class="p">()</span> <span class="n">is</span> <span class="n">called</span> <span class="n">when</span> <span class="n">the</span> <span class="n">hash</span> <span class="n">of</span> <span class="n">two</span> <span class="n">unicode</span> <span class="n">objects</span> <span class="n">is</span> <span class="n">equal</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * unicode_eq() is called when the hash of two unicode objects is equal.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">Py_LOCAL_INLINE</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">unicode_eq</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">aa</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">bb</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">unicode_eq</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">aa</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">bb</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="p">)</span><span class="n">aa</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="p">)</span><span class="n">aa</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="p">)</span><span class="n">bb</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyUnicodeObject</span> <span class="o">*</span><span class="p">)</span><span class="n">bb</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_READY</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">PyUnicode_READY</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_READY</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">PyUnicode_READY</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -294,45 +270,35 @@
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">assert</span><span class="p">(</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;unicode_eq ready fail&quot;</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">assert</span><span class="p">(</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;unicode_eq ready fail&quot;</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">!=</span> <span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">!=</span> <span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -467,36 +433,28 @@
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">!=</span> <span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">!=</span> <span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -607,18 +565,14 @@
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="n">memcmp</span><span class="p">(</span><span class="n">PyUnicode_1BYTE_DATA</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">PyUnicode_1BYTE_DATA</span><span class="p">(</span><span class="n">b</span><span class="p">),</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="nf">memcmp</span><span class="p">(</span><span class="n">PyUnicode_1BYTE_DATA</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">PyUnicode_1BYTE_DATA</span><span class="p">(</span><span class="n">b</span><span class="p">),</span></pre></div></td>
 </tr>
 
 <tr>
@@ -761,9 +715,7 @@
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                  <span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                  <span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">PyUnicode_KIND</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -786,9 +738,21 @@
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

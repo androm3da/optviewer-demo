@@ -18,207 +18,161 @@
 <td><a name="L1">1</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L2">2</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">_codecs_hk</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span> <span class="n">Codecs</span> <span class="n">collection</span> <span class="k">for</span> <span class="n">encodings</span> <span class="n">from</span> <span class="n">Hong</span> <span class="n">Kong</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * _codecs_hk.c: Codecs collection for encodings from Hong Kong</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L3">3</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L4">4</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">Written</span> <span class="n">by</span> <span class="n">Hye</span><span class="o">-</span><span class="n">Shik</span> <span class="n">Chang</span> <span class="o">&lt;</span><span class="n">perky</span><span class="err">@</span><span class="n">FreeBSD</span><span class="p">.</span><span class="n">org</span><span class="o">&gt;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * Written by Hye-Shik Chang &lt;perky@FreeBSD.org&gt;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L5">5</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L6">6</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L7">7</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define USING_IMPORTED_MAPS</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define USING_IMPORTED_MAPS</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L8">8</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L9">9</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cjkcodecs.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;cjkcodecs.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L10">10</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;mappings_hk.h&quot;</span><span class="cp"></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;mappings_hk.h&quot;</span><span class="cp"></span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L11">11</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L12">12</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">BIG5HKSCS</span> <span class="n">codec</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * BIG5HKSCS codec</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L14">14</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L15">15</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L16">16</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">encode_map</span> <span class="o">*</span><span class="n">big5_encmap</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">const</span> <span class="n">encode_map</span> <span class="o">*</span><span class="n">big5_encmap</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L17">17</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">decode_map</span> <span class="o">*</span><span class="n">big5_decmap</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">const</span> <span class="n">decode_map</span> <span class="o">*</span><span class="n">big5_decmap</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L18">18</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L19">19</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">CODEC_INIT</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">CODEC_INIT</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L20">20</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L21">21</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">static</span> <span class="kt">int</span> <span class="n">initialized</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="kt">int</span> <span class="n">initialized</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L22">22</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">initialized</span> <span class="o">&amp;&amp;</span> <span class="n">IMPORT_MAP</span><span class="p">(</span><span class="n">tw</span><span class="p">,</span> <span class="n">big5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">big5_encmap</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">big5_decmap</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">initialized</span> <span class="o">&amp;&amp;</span> <span class="n">IMPORT_MAP</span><span class="p">(</span><span class="n">tw</span><span class="p">,</span> <span class="n">big5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">big5_encmap</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">big5_decmap</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -241,162 +195,126 @@
 <td><a name="L24">24</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L25">25</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="n">initialized</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="n">initialized</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L26">26</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L27">27</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L28">28</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L29">29</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cm">/*</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L30">30</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">There</span> <span class="n">are</span> <span class="n">four</span> <span class="n">possible</span> <span class="n">pair</span> <span class="n">unicode</span> <span class="o">-&gt;</span> <span class="n">big5hkscs</span> <span class="n">maps</span> <span class="n">as</span> <span class="n">in</span> <span class="n">HKSCS</span> <span class="mi">2004</span><span class="o">:</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * There are four possible pair unicode -&gt; big5hkscs maps as in HKSCS 2004:</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L31">31</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>  <span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">CA</span> <span class="n">U</span><span class="o">+</span><span class="mo">0304</span> <span class="o">-&gt;</span> <span class="mi">8862</span>  <span class="p">(</span><span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">CA</span> <span class="n">alone</span> <span class="n">is</span> <span class="n">mapped</span> <span class="n">to</span> <span class="mi">8866</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *  U+00CA U+0304 -&gt; 8862  (U+00CA alone is mapped to 8866)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L32">32</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>  <span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">CA</span> <span class="n">U</span><span class="o">+</span><span class="mo">030</span><span class="n">C</span> <span class="o">-&gt;</span> <span class="mi">8864</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *  U+00CA U+030C -&gt; 8864</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L33">33</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>  <span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">EA</span> <span class="n">U</span><span class="o">+</span><span class="mo">0304</span> <span class="o">-&gt;</span> <span class="mi">88</span><span class="n">a3</span>  <span class="p">(</span><span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">EA</span> <span class="n">alone</span> <span class="n">is</span> <span class="n">mapped</span> <span class="n">to</span> <span class="mi">88</span><span class="n">a7</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *  U+00EA U+0304 -&gt; 88a3  (U+00EA alone is mapped to 88a7)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L34">34</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span>  <span class="n">U</span><span class="o">+</span><span class="mo">00</span><span class="n">EA</span> <span class="n">U</span><span class="o">+</span><span class="mo">030</span><span class="n">C</span> <span class="o">-&gt;</span> <span class="mi">88</span><span class="n">a5</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> *  U+00EA U+030C -&gt; 88a5</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L35">35</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="o">*</span> <span class="n">These</span> <span class="n">are</span> <span class="n">handled</span> <span class="n">by</span> <span class="n">not</span> <span class="n">mapping</span> <span class="n">tables</span> <span class="n">but</span> <span class="n">a</span> <span class="n">hand</span><span class="o">-</span><span class="n">written</span> <span class="n">code</span><span class="p">.</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> * These are handled by not mapping tables but a hand-written code.</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L36">36</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span> <span class="err">*/</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L37">37</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">DBCHAR</span> <span class="n">big5hkscs_pairenc_table</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x8862</span><span class="p">,</span> <span class="mh">0x8864</span><span class="p">,</span> <span class="mh">0x88a3</span><span class="p">,</span> <span class="mh">0x88a5</span><span class="p">};</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">const</span> <span class="n">DBCHAR</span> <span class="n">big5hkscs_pairenc_table</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mh">0x8862</span><span class="p">,</span> <span class="mh">0x8864</span><span class="p">,</span> <span class="mh">0x88a3</span><span class="p">,</span> <span class="mh">0x88a5</span><span class="p">};</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L38">38</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L39">39</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">ENCODER</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">ENCODER</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L41">41</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="n">inlen</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="n">inlen</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -435,9 +353,7 @@
 <td><a name="L42">42</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_UCS4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INCHAR1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INCHAR1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -452,54 +368,42 @@
 <td><a name="L43">43</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">DBCHAR</span> <span class="n">code</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">DBCHAR</span> <span class="n">code</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L44">44</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_ssize_t</span> <span class="n">insize</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">Py_ssize_t</span> <span class="n">insize</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L45">45</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L46">46</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L47">47</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L48">48</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="o">**</span><span class="n">outbuf</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">c</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="o">**</span><span class="n">outbuf</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">c</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -514,9 +418,7 @@
 <td><a name="L49">49</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -531,99 +433,77 @@
 <td><a name="L50">50</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L51">51</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L53">53</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">insize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">insize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L55">55</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x10000</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x10000</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5hkscs_bmp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5hkscs_bmp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L58">58</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">if</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="n">MULTIC</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">if</span> <span class="p">(</span><span class="n">code</span> <span class="o">==</span> <span class="n">MULTIC</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">Py_UCS4</span> <span class="n">c2</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">Py_UCS4</span> <span class="n">c2</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -646,9 +526,7 @@
 <td><a name="L61">61</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">c2</span> <span class="o">=</span> <span class="n">INCHAR2</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">c2</span> <span class="o">=</span> <span class="n">INCHAR2</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -663,36 +541,28 @@
 <td><a name="L62">62</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">c2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">c2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L65">65</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -715,72 +585,56 @@
 <td><a name="L66">66</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="p">((</span><span class="n">c</span> <span class="o">&amp;</span> <span class="mh">0xffdf</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x00ca</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="p">((</span><span class="n">c</span> <span class="o">&amp;</span> <span class="mh">0xffdf</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x00ca</span><span class="p">)</span> <span class="o">&amp;&amp;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L67">67</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="p">((</span><span class="n">c2</span> <span class="o">&amp;</span> <span class="mh">0xfff7</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x0304</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="p">((</span><span class="n">c2</span> <span class="o">&amp;</span> <span class="mh">0xfff7</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x0304</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L68">68</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">code</span> <span class="o">=</span> <span class="n">big5hkscs_pairenc_table</span><span class="p">[</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">code</span> <span class="o">=</span> <span class="n">big5hkscs_pairenc_table</span><span class="p">[</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                            <span class="p">((</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                            <span class="p">((</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                             <span class="p">(</span><span class="n">c2</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">3</span><span class="p">];</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                             <span class="p">(</span><span class="n">c2</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">3</span><span class="p">];</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="n">insize</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="n">insize</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L72">72</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L73">73</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">inlen</span> <span class="o">-</span> <span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -795,9 +649,7 @@
 <td><a name="L74">74</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                             <span class="o">!</span><span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="n">MBENC_FLUSH</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                             <span class="o">!</span><span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="n">MBENC_FLUSH</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -812,90 +664,70 @@
 <td><a name="L75">75</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="k">return</span> <span class="n">MBERR_TOOFEW</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="k">return</span> <span class="n">MBERR_TOOFEW</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L76">76</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">else</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">else</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mh">0xca</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mh">0xca</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L78">78</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                            <span class="n">code</span> <span class="o">=</span> <span class="mh">0x8866</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                            <span class="n">code</span> <span class="o">=</span> <span class="mh">0x8866</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L79">79</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                        <span class="k">else</span> <span class="cm">/* c == 0xea */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                        <span class="k">else</span> <span class="cm">/* c == 0xea */</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L80">80</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                            <span class="n">code</span> <span class="o">=</span> <span class="mh">0x88a7</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                            <span class="n">code</span> <span class="o">=</span> <span class="mh">0x88a7</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L82">82</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L83">83</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -910,144 +742,112 @@
 <td><a name="L85">85</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L86">86</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L87">87</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L88">88</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x20000</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x20000</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L90">90</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="n">insize</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="n">insize</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L91">91</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x30000</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x30000</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L92">92</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5hkscs_nonbmp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="mh">0xffff</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5hkscs_nonbmp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="mh">0xffff</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L94">94</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L95">95</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">return</span> <span class="n">insize</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">return</span> <span class="n">insize</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L97">97</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">return</span> <span class="n">insize</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="n">insize</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L99">99</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L100">100</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">OUTBYTE1</span><span class="p">(</span><span class="n">code</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE1</span><span class="p">(</span><span class="n">code</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1062,9 +862,7 @@
 <td><a name="L101">101</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">OUTBYTE2</span><span class="p">(</span><span class="n">code</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE2</span><span class="p">(</span><span class="n">code</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1087,9 +885,7 @@
 <td><a name="L102">102</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">NEXT</span><span class="p">(</span><span class="n">insize</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">NEXT</span><span class="p">(</span><span class="n">insize</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1104,90 +900,70 @@
 <td><a name="L103">103</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L106">106</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L107">107</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="cp">#define BH2S(c1, c2) (((c1) - 0x87) * (0xfe - 0x40 + 1) + ((c2) - 0x40))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="cp">#define BH2S(c1, c2) (((c1) - 0x87) * (0xfe - 0x40 + 1) + ((c2) - 0x40))</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L109">109</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L110">110</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">DECODER</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">DECODER</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L111">111</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">while</span> <span class="p">(</span><span class="n">inleft</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="n">inleft</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1210,9 +986,7 @@
 <td><a name="L113">113</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INBYTE1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INBYTE1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1243,36 +1017,28 @@
 <td><a name="L114">114</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">Py_UCS4</span> <span class="n">decoded</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">decoded</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L115">115</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L116">116</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">c</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1287,9 +1053,7 @@
 <td><a name="L118">118</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1312,63 +1076,49 @@
 <td><a name="L119">119</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L120">120</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L121">121</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L122">122</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">REQUIRE_INBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_INBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L123">123</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L124">124</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="mh">0xc6</span> <span class="o">&gt;</span> <span class="n">c</span> <span class="o">||</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mh">0xc8</span> <span class="o">||</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0xc7</span> <span class="o">&amp;&amp;</span> <span class="n">INBYTE2</span> <span class="o">&lt;</span> <span class="mh">0xa1</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="mh">0xc6</span> <span class="o">&gt;</span> <span class="n">c</span> <span class="o">||</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mh">0xc8</span> <span class="o">||</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0xc7</span> <span class="o">&amp;&amp;</span> <span class="n">INBYTE2</span> <span class="o">&lt;</span> <span class="mh">0xa1</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L125">125</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1399,9 +1149,7 @@
 <td><a name="L126">126</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1416,9 +1164,7 @@
 <td><a name="L127">127</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1441,45 +1187,35 @@
 <td><a name="L128">128</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L129">129</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L130">130</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L131">131</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L132">132</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1502,216 +1238,168 @@
 <td><a name="L133">133</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L134">134</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">BH2S</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">BH2S</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L135">135</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hintbase</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">hintbase</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L136">136</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L137">137</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">assert</span><span class="p">(</span><span class="mh">0x87</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="mh">0xfe</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">assert</span><span class="p">(</span><span class="mh">0x87</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="mh">0xfe</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L138">138</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="n">assert</span><span class="p">(</span><span class="mh">0x40</span> <span class="o">&lt;=</span> <span class="n">INBYTE2</span> <span class="o">&amp;&amp;</span> <span class="n">INBYTE2</span> <span class="o">&lt;=</span> <span class="mh">0xfe</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="n">assert</span><span class="p">(</span><span class="mh">0x40</span> <span class="o">&lt;=</span> <span class="n">INBYTE2</span> <span class="o">&amp;&amp;</span> <span class="n">INBYTE2</span> <span class="o">&lt;=</span> <span class="mh">0xfe</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L139">139</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L140">140</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0x87</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0xfe</span><span class="p">))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0x87</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xa0</span><span class="p">,</span> <span class="mh">0xfe</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L141">141</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L142">142</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0x87</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0x87</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L143">143</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L144">144</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc6</span><span class="p">,</span><span class="mh">0xa1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc8</span><span class="p">,</span><span class="mh">0xfe</span><span class="p">)){</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc6</span><span class="p">,</span><span class="mh">0xa1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc8</span><span class="p">,</span><span class="mh">0xfe</span><span class="p">)){</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L145">145</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_12130</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_12130</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L146">146</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc6</span><span class="p">,</span> <span class="mh">0xa1</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xc6</span><span class="p">,</span> <span class="mh">0xa1</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L147">147</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L148">148</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0xf9</span><span class="p">,</span><span class="mh">0xd6</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xfe</span><span class="p">,</span><span class="mh">0xfe</span><span class="p">)){</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">BH2S</span><span class="p">(</span><span class="mh">0xf9</span><span class="p">,</span><span class="mh">0xd6</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">s</span> <span class="o">&amp;&amp;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xfe</span><span class="p">,</span><span class="mh">0xfe</span><span class="p">)){</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L149">149</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_21924</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">hintbase</span> <span class="o">=</span> <span class="n">big5hkscs_phint_21924</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L150">150</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xf9</span><span class="p">,</span> <span class="mh">0xd6</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">s</span> <span class="o">-=</span> <span class="n">BH2S</span><span class="p">(</span><span class="mh">0xf9</span><span class="p">,</span> <span class="mh">0xd6</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L151">151</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L152">152</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L153">153</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="k">return</span> <span class="n">MBERR_INTERNAL</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="k">return</span> <span class="n">MBERR_INTERNAL</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L154">154</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L155">155</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">hintbase</span><span class="p">[</span><span class="n">s</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">s</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="p">)))</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">(</span><span class="n">hintbase</span><span class="p">[</span><span class="n">s</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">]</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">s</span> <span class="o">&amp;</span> <span class="mi">7</span><span class="p">)))</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L156">156</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span> <span class="o">|</span> <span class="mh">0x20000</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span> <span class="o">|</span> <span class="mh">0x20000</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1726,36 +1414,28 @@
 <td><a name="L157">157</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L158">158</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L159">159</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">else</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L160">160</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1770,54 +1450,42 @@
 <td><a name="L161">161</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>                    <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>                    <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L162">162</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L163">163</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>            <span class="k">continue</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L164">164</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L165">165</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L166">166</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">switch</span> <span class="p">((</span><span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">INBYTE2</span><span class="p">)</span> <span class="p">{</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">switch</span> <span class="p">((</span><span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="n">INBYTE2</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1848,9 +1516,7 @@
 <td><a name="L167">167</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mh">0x8862</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ca</span><span class="p">,</span> <span class="mh">0x0304</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mh">0x8862</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ca</span><span class="p">,</span> <span class="mh">0x0304</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1897,9 +1563,7 @@
 <td><a name="L168">168</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mh">0x8864</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ca</span><span class="p">,</span> <span class="mh">0x030c</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mh">0x8864</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ca</span><span class="p">,</span> <span class="mh">0x030c</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1946,9 +1610,7 @@
 <td><a name="L169">169</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mh">0x88a3</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ea</span><span class="p">,</span> <span class="mh">0x0304</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mh">0x88a3</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ea</span><span class="p">,</span> <span class="mh">0x0304</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -1995,9 +1657,7 @@
 <td><a name="L170">170</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">case</span> <span class="mh">0x88a5</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ea</span><span class="p">,</span> <span class="mh">0x030c</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">case</span> <span class="mh">0x88a5</span><span class="o">:</span> <span class="n">OUTCHAR2</span><span class="p">(</span><span class="mh">0x00ea</span><span class="p">,</span> <span class="mh">0x030c</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2044,36 +1704,28 @@
 <td><a name="L171">171</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="k">default</span><span class="o">:</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="k">default</span><span class="o">:</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L172">172</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L173">173</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L174">174</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>        <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="cm">/* all decoded code points are pairs, above. */</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>        <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="cm">/* all decoded code points are pairs, above. */</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2096,153 +1748,119 @@
 <td><a name="L175">175</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L176">176</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L177">177</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L178">178</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="p">}</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L179">179</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L180">180</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L181">181</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">BEGIN_MAPPINGS_LIST</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">BEGIN_MAPPINGS_LIST</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L182">182</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="n">MAPPING_DECONLY</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="n">MAPPING_DECONLY</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L183">183</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="n">MAPPING_ENCONLY</span><span class="p">(</span><span class="n">big5hkscs_bmp</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="n">MAPPING_ENCONLY</span><span class="p">(</span><span class="n">big5hkscs_bmp</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L184">184</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="n">MAPPING_ENCONLY</span><span class="p">(</span><span class="n">big5hkscs_nonbmp</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="n">MAPPING_ENCONLY</span><span class="p">(</span><span class="n">big5hkscs_nonbmp</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L185">185</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">END_MAPPINGS_LIST</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">END_MAPPINGS_LIST</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L186">186</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L187">187</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">BEGIN_CODECS_LIST</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">BEGIN_CODECS_LIST</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L188">188</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>  <span class="n">CODEC_STATELESS_WINIT</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre>  <span class="n">CODEC_STATELESS_WINIT</span><span class="p">(</span><span class="n">big5hkscs</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L189">189</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">END_CODECS_LIST</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">END_CODECS_LIST</span></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L190">190</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 <tr>
 <td><a name="L191">191</a></td>
 <td></td>
 <td></td>
-<td><div class="highlight"><pre><span></span><span class="n">I_AM_A_MODULE_FOR</span><span class="p">(</span><span class="n">hk</span><span class="p">)</span>
-</pre></div>
-</td>
+<td><div class="highlight"><pre><span class="n">I_AM_A_MODULE_FOR</span><span class="p">(</span><span class="n">hk</span><span class="p">)</span></pre></div></td>
 </tr>
 
 <tr>
@@ -2267,6 +1885,20 @@
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs_cjkcodecs.h.html#L305>register_maps</a> inlined into PyInit__codecs_hk&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_hk.c.html#L189>PyInit__codecs_hk</a></td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
 </tr>
 
 </table>

@@ -1010,12 +1010,12 @@ mvn.init:
 [artifact:dependencies] Downloading: org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar from repository central at http://repo1.maven.org/maven2
 [artifact:dependencies] Downloading: commons-codec/commons-codec/1.9/commons-codec-1.9.jar from repository central at http://repo1.maven.org/maven2
 [artifact:dependencies] Downloading: org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar from repository central at http://repo1.maven.org/maven2
-[artifact:dependencies] Downloading: commons-logging/commons-logging/1.2/commons-logging-1.2.jar from repository central at http://repo1.maven.org/maven2
 [artifact:dependencies] Transferring 103K from central
+[artifact:dependencies] Downloading: commons-logging/commons-logging/1.2/commons-logging-1.2.jar from repository central at http://repo1.maven.org/maven2
 [artifact:dependencies] Transferring 31K from central
 [artifact:dependencies] Transferring 258K from central
-[artifact:dependencies] Transferring 704K from central
 [artifact:dependencies] Transferring 60K from central
+[artifact:dependencies] Transferring 704K from central
 [artifact:dependencies] Downloading: org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar from repository central at http://repo1.maven.org/maven2
 [artifact:dependencies] Transferring 315K from central
      [copy] Copying 6 files to /home/travis/build/androm3da/optviewer-demo/thrift/lib/java/build/lib
@@ -1295,7 +1295,7 @@ dist:
       [jar] Building jar: /home/travis/build/androm3da/optviewer-demo/thrift/lib/java/build/libthrift-1.0.0.jar
 
 BUILD SUCCESSFUL
-Total time: 5 seconds
+Total time: 6 seconds
 make[3]: Leaving directory `/home/travis/build/androm3da/optviewer-demo/thrift/lib/java'
 Making all in js
 make[3]: Entering directory `/home/travis/build/androm3da/optviewer-demo/thrift/lib/js'
@@ -1436,27 +1436,27 @@ Compiled src/thrift_protocol.erl
 Compiled src/thrift_transport.erl
 Compiled src/thrift_buffered_transport.erl
 Compiled src/thrift_client.erl
-Compiled src/thrift_sslsocket_transport.erl
-Compiled src/thrift_service.erl
 Compiled src/thrift_server.erl
+Compiled src/thrift_service.erl
+Compiled src/thrift_sslsocket_transport.erl
 src/thrift_json_protocol.erl:59: Warning: this clause cannot match because a previous clause at line 57 always matches
 Compiled src/thrift_json_protocol.erl
 Compiled src/thrift_socket_server.erl
 Compiled src/thrift_multiplexed_protocol.erl
-Compiled src/thrift_framed_transport.erl
 Compiled src/thrift_http_transport.erl
-Compiled src/thrift_file_transport.erl
 Compiled src/thrift_binary_protocol.erl
-Compiled src/thrift_reconnecting_client.erl
+Compiled src/thrift_framed_transport.erl
+Compiled src/thrift_file_transport.erl
 Compiled src/thrift_transport_state_test.erl
+Compiled src/thrift_reconnecting_client.erl
 Compiled src/thrift_disk_log_transport.erl
 Compiled src/thrift_socket_transport.erl
 Compiled src/thrift_compact_protocol.erl
 Compiled src/thrift_client_util.erl
 Compiled src/thrift_multiplexed_map_wrapper.erl
-Compiled src/thrift_processor.erl
 Compiled src/thrift_membuffer_transport.erl
 Compiled src/thrift_memory_buffer.erl
+Compiled src/thrift_processor.erl
 Compiled src/thrift_base64_transport.erl
 Compiled src/thrift_json_parser.erl
 make[3]: Leaving directory `/home/travis/build/androm3da/optviewer-demo/thrift/lib/erl'
@@ -1827,7 +1827,7 @@ Receiving...
 Received 12854K total.
 Extracting tar contents (via spawned process)
 Removing /home/travis/build/androm3da/optviewer-demo/thrift/node_modules/run-browser/node_modules/phantomjs/lib/phantom
-Copying extracted folder /tmp/phantomjs/phantomjs-1.9.8-linux-x86_64.tar.bz2-extract-1487294762845/phantomjs-1.9.8-linux-x86_64 -> /home/travis/build/androm3da/optviewer-demo/thrift/node_modules/run-browser/node_modules/phantomjs/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-1.9.8-linux-x86_64.tar.bz2-extract-1487432852341/phantomjs-1.9.8-linux-x86_64 -> /home/travis/build/androm3da/optviewer-demo/thrift/node_modules/run-browser/node_modules/phantomjs/lib/phantom
 Writing location.js file
 Done. Phantomjs binary available at /home/travis/build/androm3da/optviewer-demo/thrift/node_modules/run-browser/node_modules/phantomjs/lib/phantom/bin/phantomjs
 commander@2.1.0 ../../node_modules/commander
@@ -1855,8 +1855,8 @@ tape@3.5.0 ../../node_modules/tape
 connect@2.7.11 ../../node_modules/connect
 ├── fresh@0.1.0
 ├── qs@0.6.5
-├── cookie-signature@1.0.1
 ├── pause@0.0.1
+├── cookie-signature@1.0.1
 ├── buffer-crc32@0.2.1
 ├── bytes@0.2.0
 ├── cookie@0.0.5
@@ -1886,12 +1886,12 @@ run-browser@2.0.2 ../../node_modules/run-browser
 ├── minimist@0.0.8
 ├── glob@3.2.11 (inherits@2.0.3, minimatch@0.3.0)
 ├── global@4.3.1 (process@0.5.2, min-document@2.19.0)
-├── through2-spy@1.2.0 (xtend@3.0.0, through2@0.5.1)
 ├── xhr@1.17.1 (once@1.1.1, parse-headers@2.0.1)
+├── through2-spy@1.2.0 (xtend@3.0.0, through2@0.5.1)
 ├── jsonstream2@1.1.1 (type-component@0.0.1, jsonparse@0.0.6, through2@0.6.5)
 ├── tap-finished@0.0.1 (through@2.3.8, tap-parser@0.2.1)
 ├── browserify-istanbul@0.1.5 (through@2.3.8, minimatch@0.2.14, istanbul@0.2.16)
-├── browserify@3.46.1 (inherits@2.0.3, https-browserify@0.0.1, tty-browserify@0.0.0, constants-browserify@0.0.1, path-browserify@0.0.0, builtins@0.0.7, process@0.7.0, defined@0.0.0, duplexer@0.1.1, os-browserify@0.1.2, commondir@0.0.1, punycode@1.2.4, xtend@3.0.0, stream-combiner@0.0.4, shell-quote@0.0.1, assert@1.1.2, subarg@0.0.1, deep-equal@0.1.2, domain-browser@1.1.7, shallow-copy@0.0.1, console-browserify@1.0.3, querystring-es3@0.2.0, string_decoder@0.0.1, events@1.0.2, timers-browserify@1.0.3, stream-browserify@0.1.3, parents@0.0.3, vm-browserify@0.0.4, util@0.10.3, url@0.10.3, concat-stream@1.4.10, resolve@0.6.3, through2@0.4.2, JSONStream@0.7.4, browser-resolve@1.2.4, deps-sort@0.1.2, browserify-zlib@0.1.4, syntax-error@1.1.6, buffer@2.1.13, http-browserify@1.3.2, derequire@0.8.0, umd@2.0.0, browser-pack@2.0.1, insert-module-globals@6.0.0, crypto-browserify@1.0.9, module-deps@2.0.6)
+├── browserify@3.46.1 (inherits@2.0.3, https-browserify@0.0.1, tty-browserify@0.0.0, constants-browserify@0.0.1, path-browserify@0.0.0, builtins@0.0.7, process@0.7.0, defined@0.0.0, duplexer@0.1.1, os-browserify@0.1.2, commondir@0.0.1, punycode@1.2.4, xtend@3.0.0, stream-combiner@0.0.4, assert@1.1.2, shell-quote@0.0.1, subarg@0.0.1, deep-equal@0.1.2, domain-browser@1.1.7, shallow-copy@0.0.1, console-browserify@1.0.3, querystring-es3@0.2.0, string_decoder@0.0.1, events@1.0.2, timers-browserify@1.0.3, stream-browserify@0.1.3, parents@0.0.3, vm-browserify@0.0.4, util@0.10.3, url@0.10.3, concat-stream@1.4.10, resolve@0.6.3, through2@0.4.2, browser-resolve@1.2.4, JSONStream@0.7.4, deps-sort@0.1.2, browserify-zlib@0.1.4, syntax-error@1.1.6, buffer@2.1.13, http-browserify@1.3.2, derequire@0.8.0, browser-pack@2.0.1, umd@2.0.0, insert-module-globals@6.0.0, crypto-browserify@1.0.9, module-deps@2.0.6)
 └── phantomjs@1.9.20 (progress@1.1.8, kew@0.7.0, which@1.2.12, request-progress@2.0.1, hasha@2.2.0, extract-zip@1.5.0, fs-extra@0.26.7, request@2.67.0)
 make[3]: Leaving directory `/home/travis/build/androm3da/optviewer-demo/thrift/lib/nodejs'
 make[3]: Entering directory `/home/travis/build/androm3da/optviewer-demo/thrift/lib'
@@ -2839,7 +2839,7 @@ compile:
     [javac] Note: Recompile with -Xlint:unchecked for details.
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 make[3]: Leaving directory `/home/travis/build/androm3da/optviewer-demo/thrift/tutorial/java'
 Making all in js
 make[3]: Entering directory `/home/travis/build/androm3da/optviewer-demo/thrift/tutorial/js'
@@ -2936,7 +2936,7 @@ compile:
     [javac] 25 warnings
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 make[3]: Leaving directory `/home/travis/build/androm3da/optviewer-demo/thrift/tutorial/js'
 Making all in py
 make[3]: Entering directory `/home/travis/build/androm3da/optviewer-demo/thrift/tutorial/py'
