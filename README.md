@@ -9,6 +9,7 @@ optimization method couldn't be leveraged in given parts of your source.
 
 ## Output Examples
 * [CPython](https://androm3da.github.io/optviewer-demo/output_analysis/cpython/)
+* [KFR](https://androm3da.github.io/optviewer-demo/output_analysis/kfr/) DSP lib ([repo](https://github.com/kfrlib/kfr/), [website](https://www.kfrlib.com/))
 
 # Usage
 
