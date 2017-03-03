@@ -195,6 +195,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Python_future.c.html#L22>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">future_check_features</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">future_check_features</td>
@@ -976,6 +984,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct.asdl_seq* not eliminated in favor of <a href=Python_future.c.html#L69>load</a> because it is clobbered by <a href=Python_future.c.html#L24>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_future.c.html#L60>future_parse</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_future.c.html#L60>future_parse</a></td>
@@ -1264,7 +1280,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Python_future.c.html#L92>load</a> because it is clobbered by <a href=Python_future.c.html#L24>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_future.c.html#L60>future_parse</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Python_future.c.html#L92>load</a> because it is clobbered by <a href=Python_future.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_future.c.html#L128>PyFuture_FromASTObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Python_future.c.html#L92>load</a> because it is clobbered by <a href=Python_future.c.html#L24>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_future.c.html#L128>PyFuture_FromASTObject</a></td>
 </tr>
 
@@ -1652,6 +1684,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_future.c.html#L158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyFuture_FromAST</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_future.c.html#L158>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyFuture_FromAST</td>
 </tr>
 

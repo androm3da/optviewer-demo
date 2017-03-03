@@ -285,6 +285,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1629>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
@@ -451,7 +459,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_getbytevalue</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -467,6 +491,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
@@ -475,7 +507,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -533,6 +581,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_getbytevalue</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_getbytevalue</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
@@ -550,7 +614,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
 </tr>
 
@@ -566,7 +662,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -852,6 +980,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L604>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -1245,6 +1397,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L132>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_FromStringAndSize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L132>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyByteArray_FromStringAndSize</td>
 </tr>
 
@@ -1989,6 +2149,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L167>PyByteArray_Resize</a></td>
+</tr>
+
+<tr>
 <td><a name="L227">227</a></td>
 <td></td>
 <td></td>
@@ -2271,6 +2439,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L255>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
 <td><a name="L257">257</a></td>
 <td></td>
 <td></td>
@@ -2289,7 +2465,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L254>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L255>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L254>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyByteArray_Concat</td>
 </tr>
 
@@ -2517,6 +2709,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L252>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L252>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L252>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L267>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
 <td><a name="L275">275</a></td>
 <td></td>
 <td></td>
@@ -2543,6 +2759,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L253>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L275>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L253>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L256>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L253>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L253>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyByteArray_Concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L253>store</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L267>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyByteArray_Concat</td>
 </tr>
 
@@ -2900,6 +3148,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_iconcat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L306>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_iconcat</td>
 </tr>
@@ -3177,6 +3433,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytearrayobject.c.html#L336>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repeat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_repeat</td>
@@ -3210,7 +3474,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L329>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repeat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L336>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repeat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L329>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_repeat</td>
 </tr>
 
@@ -3409,6 +3689,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_irepeat</td>
+</tr>
+
+<tr>
 <td><a name="L359">359</a></td>
 <td></td>
 <td></td>
@@ -3508,6 +3796,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L364>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_irepeat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_irepeat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L360>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_irepeat</td>
 </tr>
 
@@ -3742,6 +4046,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L394">394</a></td>
 <td></td>
 <td></td>
@@ -3795,6 +4107,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L387>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L397">397</a></td>
 <td></td>
 <td></td>
@@ -3828,6 +4148,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L389>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
 </tr>
 
@@ -3997,6 +4325,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L403>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L403>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
 </tr>
@@ -4111,6 +4447,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L420>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L425">425</a></td>
 <td></td>
 <td></td>
@@ -4138,6 +4482,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L409>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L420>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L427>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L383>bytearray_subscript</a></td>
 </tr>
 
@@ -4752,6 +5104,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L442>bytearray_setslice_linear</a></td>
+</tr>
+
+<tr>
 <td><a name="L496">496</a></td>
 <td></td>
 <td></td>
@@ -4872,6 +5232,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L446>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L442>bytearray_setslice_linear</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L503>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L442>bytearray_setslice_linear</a></td>
 </tr>
 
@@ -5150,6 +5518,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L540>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L525>bytearray_setslice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L540>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L525>bytearray_setslice</a></td>
 </tr>
 
@@ -5655,6 +6031,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L573>bytearray_setitem</a></td>
+</tr>
+
+<tr>
 <td><a name="L593">593</a></td>
 <td></td>
 <td></td>
@@ -5805,6 +6221,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L601>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L611">611</a></td>
 <td></td>
 <td></td>
@@ -5854,6 +6278,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L604>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L604>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L604>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -6336,6 +6768,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L662>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L664">664</a></td>
 <td></td>
 <td></td>
@@ -6379,6 +6819,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L669">669</a></td>
 <td></td>
 <td></td>
@@ -6418,6 +6882,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
@@ -6426,7 +6898,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -6456,6 +6944,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
@@ -6466,6 +6962,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -6542,7 +7046,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -6648,6 +7168,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L688">688</a></td>
 <td></td>
 <td></td>
@@ -6699,6 +7227,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L693">693</a></td>
 <td></td>
 <td></td>
@@ -6731,6 +7267,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -6855,6 +7399,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L601>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L601>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L703>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -7099,6 +7659,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L725">725</a></td>
 <td></td>
 <td></td>
@@ -7118,6 +7686,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L604>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -7190,6 +7782,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_bytearrayobject.c.html#L724>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
@@ -7239,6 +7839,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L674>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L604>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L606>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L650>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L633>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L596>bytearray_ass_subscript</a></td>
 </tr>
 
@@ -7720,6 +8352,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L782>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L784">784</a></td>
 <td></td>
 <td></td>
@@ -7745,6 +8385,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L783>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L783>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L783>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L782>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -7939,6 +8603,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L800>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L805">805</a></td>
 <td></td>
 <td></td>
@@ -8005,6 +8677,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L808>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L811">811</a></td>
 <td></td>
 <td></td>
@@ -8051,6 +8731,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of <a href=Objects_bytearrayobject.c.html#L761>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* eliminated in favor of <a href=Objects_bytearrayobject.c.html#L770>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -8156,6 +8844,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L822>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L822>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -8516,6 +9212,78 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L860">860</a></td>
 <td></td>
 <td></td>
@@ -8586,7 +9354,87 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L749>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -8633,6 +9481,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -8721,6 +9609,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L866>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L871">871</a></td>
 <td></td>
 <td></td>
@@ -8753,6 +9665,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L849>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L852>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L852>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L849>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -8796,6 +9732,94 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L859>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L850>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L850>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L46>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L738>bytearray_init</a></td>
 </tr>
 
@@ -9098,6 +10122,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L909>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repr</td>
+</tr>
+
+<tr>
 <td><a name="L918">918</a></td>
 <td></td>
 <td></td>
@@ -9239,6 +10271,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L930>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L930>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_repr</td>
 </tr>
 
@@ -9416,6 +10456,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L950>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repr</td>
+</tr>
+
+<tr>
 <td><a name="L952">952</a></td>
 <td></td>
 <td></td>
@@ -9435,6 +10483,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L951>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L951>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L951>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_repr</td>
 </tr>
 
@@ -9826,6 +10882,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L991>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L998">998</a></td>
 <td></td>
 <td></td>
@@ -9845,6 +10909,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L993>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L991>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_richcompare</td>
 </tr>
 
@@ -9888,6 +10960,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L998>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L993>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L991>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_richcompare</td>
 </tr>
 
@@ -10489,6 +11577,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1061>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1064>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_dealloc</td>
 </tr>
 
@@ -11885,7 +12981,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1205>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1205>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1218>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -11961,7 +13081,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -11984,7 +13120,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L1229>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -12075,7 +13227,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1240>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1240>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -12281,6 +13449,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytearrayobject.c.html#L1254>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
 <td><a name="L1255">1255</a></td>
 <td></td>
 <td></td>
@@ -12329,7 +13505,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1259>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1259>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -12426,7 +13618,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_translate_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1263>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L60>bytearray_translate</a></td>
 </tr>
 
@@ -13545,6 +14753,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
 <td><a name="L1399">1399</a></td>
 <td></td>
 <td></td>
@@ -13563,6 +14779,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
 
@@ -13592,6 +14816,110 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L17>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L33>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L34>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L34>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L55>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L55>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L55>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L34>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L33>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L17>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
 
@@ -13860,6 +15188,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
 <td><a name="L1436">1436</a></td>
 <td></td>
 <td></td>
@@ -13878,6 +15214,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
 
@@ -13907,6 +15251,110 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L72>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L89>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L110>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L72>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
 
@@ -14217,7 +15665,7 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_split.h.html#L291>stringlib_rsplit</a> can be inlined into bytearray_rsplit_impl with cost=-13640 (threshold=325)&nbsp;</span></td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_split.h.html#L291>stringlib_rsplit</a> can be inlined into bytearray_rsplit_impl with cost=-13650 (threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1454>bytearray_rsplit_impl</a></td>
 </tr>
 
@@ -14822,7 +16270,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1538>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_insert_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L1530>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1538>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L318>bytearray_insert</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1538>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L318>bytearray_insert</a></td>
 </tr>
 
@@ -15183,7 +16647,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1576>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_append_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L1569>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1576>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L350>bytearray_append</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1576>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L350>bytearray_append</a></td>
 </tr>
 
@@ -15525,6 +17005,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1616>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1619">1619</a></td>
 <td></td>
 <td></td>
@@ -15591,6 +17079,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1622>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1625">1625</a></td>
 <td></td>
 <td></td>
@@ -15616,6 +17112,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1622>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1622>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -15696,6 +17200,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1632">1632</a></td>
 <td></td>
 <td></td>
@@ -15711,6 +17239,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1631>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1631>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1633">1633</a></td>
 <td></td>
 <td></td>
@@ -15722,6 +17282,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1632>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1632>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1632>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1631>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L42>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -15758,6 +17358,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1636>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L37>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1636>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -15805,6 +17413,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1637>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1637>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1636>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1643">1643</a></td>
 <td></td>
 <td></td>
@@ -15816,6 +17448,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1642>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1642>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1642>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1637>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1636>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -15915,6 +17579,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1653">1653</a></td>
 <td></td>
 <td></td>
@@ -15926,6 +17598,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1652>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1651>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -15983,8 +17679,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytearrayobject.c.html#L1658>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L1627>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1651>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -16014,6 +17726,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1629>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1629>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -16066,6 +17786,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1664>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1664>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -16137,6 +17865,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1669>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
 <td><a name="L1671">1671</a></td>
 <td></td>
 <td></td>
@@ -16184,6 +17920,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1673>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1670>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1595>bytearray_extend</a></td>
 </tr>
 
@@ -17453,7 +19197,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1800>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1788>bytearray_strip_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1800>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L455>bytearray_strip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L461>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L455>bytearray_strip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L461>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L455>bytearray_strip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1800>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L455>bytearray_strip</a></td>
 </tr>
 
@@ -17868,7 +19644,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1829>bytearray_lstrip_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L486>bytearray_lstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L492>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L486>bytearray_lstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L492>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L486>bytearray_lstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1841>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L486>bytearray_lstrip</a></td>
 </tr>
 
@@ -18246,7 +20054,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1879>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1867>bytearray_rstrip_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1879>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L517>bytearray_rstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L523>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L517>bytearray_rstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L523>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L517>bytearray_rstrip</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1879>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L517>bytearray_rstrip</a></td>
 </tr>
 
@@ -18931,6 +20771,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_clinic_bytearrayobject.c.h.html#L611>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L603>bytearray_splitlines</a></td>
+</tr>
+
+<tr>
 <td><a name="L1965">1965</a></td>
 <td></td>
 <td></td>
@@ -19126,7 +20974,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1988>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_fromhex_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1988>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L636>bytearray_fromhex</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L1988>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L636>bytearray_fromhex</a></td>
 </tr>
 
@@ -19444,7 +21308,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_typeobject.c.html#L4302>_common_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_typeobject.c.html#L4302>_common_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_typeobject.c.html#L4302>_common_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
 </tr>
 
@@ -19460,6 +21372,30 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L663>bytearray_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L663>bytearray_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L663>bytearray_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
 </tr>
@@ -19468,7 +21404,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2015>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2017>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
 </tr>
 
@@ -19565,6 +21549,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2027>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_typeobject.c.html#L4302>_common_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2027>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2029>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2050>bytearray_reduce_impl</a></td>
 </tr>
 
@@ -19581,6 +21581,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2029>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L663>bytearray_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2029>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2027>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L2066>bytearray_reduce_ex_impl</a></td>
 </tr>
 
@@ -19589,6 +21605,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2029>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2027>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L681>bytearray_reduce_ex</a></td>
 </tr>
 
@@ -20776,6 +22800,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2185>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_mod</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2185>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_mod</td>
 </tr>
 
@@ -21971,6 +24003,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct.PyByteArrayObject* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2337>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearrayiter_setstate</td>
+</tr>
+
+<tr>
 <td><a name="L2341">2341</a></td>
 <td></td>
 <td></td>
@@ -22024,6 +24064,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2337>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearrayiter_setstate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2338>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearrayiter_setstate</td>
 </tr>
 
@@ -22513,6 +24561,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_iter</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2410>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">bytearray_iter</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_bytearrayobject.c.html#L2410>load</a> because it is clobbered by <a href=Objects_bytearrayobject.c.html#L2410>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">bytearray_iter</td>
 </tr>
 

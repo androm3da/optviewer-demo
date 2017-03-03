@@ -2532,6 +2532,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L325>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_capitalize</td>
+</tr>
+
+<tr>
 <td><a name="L324">324</a></td>
 <td></td>
 <td></td>
@@ -3064,6 +3072,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L386>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_maketrans</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_bytes_maketrans</td>
@@ -3128,7 +3144,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L384>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_maketrans</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L386>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_maketrans</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L384>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_bytes_maketrans</td>
 </tr>
 
@@ -3698,6 +3730,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parse_args_finds_byte</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L431>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parse_args_finds_byte</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L431>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L465>find_internal</a></td>
 </tr>
@@ -3706,7 +3754,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L465>find_internal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L429>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L465>find_internal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L431>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L605>_Py_bytes_count</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L605>_Py_bytes_count</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L429>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L605>_Py_bytes_count</a></td>
 </tr>
 
@@ -4112,6 +4192,14 @@
 <td></td>
 <td></td>
 <td><div class="highlight"><pre>    <span class="n">ADJUST_INDICES</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytes_methods.c.html#L473>store</a> because it is clobbered by <a href=Objects_bytes_methods.c.html#L420>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L465>find_internal</a></td>
 </tr>
 
 <tr>
@@ -5382,6 +5470,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_bytes_methods.c.html#L612>store</a> because it is clobbered by <a href=Objects_bytes_methods.c.html#L420>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L605>_Py_bytes_count</a></td>
+</tr>
+
+<tr>
 <td><a name="L634">634</a></td>
 <td></td>
 <td></td>
@@ -5710,6 +5806,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L648>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L645>_Py_bytes_contains</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytes_methods.c.html#L649>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytes_methods.c.html#L645>_Py_bytes_contains</a></td>
 </tr>
 
@@ -6300,6 +6404,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytes_methods.c.html#L733>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_tailmatch</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_bytes_tailmatch</td>
@@ -6365,6 +6477,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytes_methods.c.html#L734>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_bytes_tailmatch</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> hosting <a href=Objects_bytes_methods.c.html#L734>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_bytes_tailmatch</td>
 </tr>
 

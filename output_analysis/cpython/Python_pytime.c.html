@@ -280,6 +280,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L159>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L149>_PyTime_ObjectToTime_t</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L104>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L97>_PyTime_DoubleToDenominator</a></td>
 </tr>
@@ -289,6 +297,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Python_pytime.c.html#L50>load</a> because it is clobbered by <a href=Python_pytime.c.html#L50>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L130>_PyTime_ObjectToDenominator</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L104>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L130>_PyTime_ObjectToDenominator</a></td>
 </tr>
 
@@ -1890,6 +1906,30 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L298>_PyTime_FromObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L298>_PyTime_FromObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L303>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L298>_PyTime_FromObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L567>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L524>pygettimeofday</a></td>
 </tr>
@@ -1914,6 +1954,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L721>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L633>pymonotonic</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
 </tr>
@@ -1922,7 +1970,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L721>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L754>_PyTime_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pytime.c.html#L567>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L754>_PyTime_Init</a></td>
 </tr>
 
@@ -2222,6 +2286,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L633>pymonotonic</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L733>_PyTime_GetMonotonicClock</a></td>
 </tr>
 
@@ -2237,7 +2309,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L567>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L754>_PyTime_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L754>_PyTime_Init</a></td>
 </tr>
 
@@ -2340,6 +2428,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L524>pygettimeofday</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L567>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L613>_PyTime_GetSystemClock</a></td>
 </tr>
@@ -2356,7 +2452,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L627>_PyTime_GetSystemClockWithInfo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L633>pymonotonic</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L721>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L633>pymonotonic</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L200>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L633>pymonotonic</a></td>
 </tr>
 
@@ -2373,6 +2493,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L708>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pytime.c.html#L721>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pytime.c.html#L748>_PyTime_GetMonotonicClockWithInfo</a></td>
 </tr>
 

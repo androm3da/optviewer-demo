@@ -1,0 +1,81 @@
++mkdir kfr_build
++cd kfr_build
++cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang-4.0 -DCMAKE_CXX_COMPILER=clang++-4.0 '-DCMAKE_C_FLAGS=-O3 -fsave-optimization-record' '-DCMAKE_CXX_FLAGS=-O3 -fsave-optimization-record' ../kfr
+-- The CXX compiler identification is Clang 4.0.0
+-- Check for working CXX compiler: /usr/bin/clang++-4.0
+-- Check for working CXX compiler: /usr/bin/clang++-4.0 -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- C++ compiler: Clang 4.0.0 /usr/bin/clang++-4.0 
+-- Found MPFR: /usr/include  
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_C_COMPILER
+    CMAKE_C_FLAGS
+
+
+-- Build files have been written to: /home/travis/build/androm3da/optviewer-demo/kfr_build
++make -j4
+Scanning dependencies of target dft
+Scanning dependencies of target biquads
+Scanning dependencies of target sample_rate_conversion
+Scanning dependencies of target fir
+[  6%] [ 12%] Building CXX object examples/CMakeFiles/biquads.dir/biquads.cpp.o
+[ 18%] Building CXX object examples/CMakeFiles/dft.dir/dft.cpp.o
+[ 25%] Building CXX object examples/CMakeFiles/fir.dir/fir.cpp.o
+Building CXX object examples/CMakeFiles/sample_rate_conversion.dir/sample_rate_conversion.cpp.o
+Linking CXX executable ../bin/biquads
+[ 25%] Built target biquads
+Scanning dependencies of target window
+[ 31%] Building CXX object examples/CMakeFiles/window.dir/window.cpp.o
+Linking CXX executable ../bin/fir
+[ 31%] Built target fir
+Scanning dependencies of target base_test
+Linking CXX executable ../bin/sample_rate_conversion
+[ 37%] Building CXX object tests/CMakeFiles/base_test.dir/base_test.cpp.o
+[ 37%] Built target sample_rate_conversion
+Scanning dependencies of target complex_test
+[ 43%] Building CXX object tests/CMakeFiles/complex_test.dir/complex_test.cpp.o
+Linking CXX executable ../bin/window
+[ 43%] Built target window
+Scanning dependencies of target dft_test
+[ 50%] Building CXX object tests/CMakeFiles/dft_test.dir/dft_test.cpp.o
+Linking CXX executable ../bin/dft
+[ 50%] Built target dft
+Scanning dependencies of target dsp_test
+[ 56%] Building CXX object tests/CMakeFiles/dsp_test.dir/dsp_test.cpp.o
+Linking CXX executable ../bin/complex_test
+[ 56%] Built target complex_test
+Scanning dependencies of target empty_test
+[ 62%] Building CXX object tests/CMakeFiles/empty_test.dir/empty_test.cpp.o
+Linking CXX executable ../bin/empty_test
+[ 62%] Built target empty_test
+Scanning dependencies of target expression_test
+[ 68%] Building CXX object tests/CMakeFiles/expression_test.dir/expression_test.cpp.o
+Linking CXX executable ../bin/base_test
+[ 68%] Built target base_test
+Scanning dependencies of target intrinsic_test
+[ 75%] Building CXX object tests/CMakeFiles/intrinsic_test.dir/intrinsic_test.cpp.o
+Linking CXX executable ../bin/dsp_test
+[ 75%] Built target dsp_test
+Scanning dependencies of target multiarch
+[ 81%] Building CXX object tests/CMakeFiles/multiarch.dir/multiarch.cpp.o
+Linking CXX executable ../bin/expression_test
+[ 81%] Built target expression_test
+[ 87%] Building CXX object tests/CMakeFiles/multiarch.dir/multiarch_fir_sse2.cpp.o
+[ 93%] Building CXX object tests/CMakeFiles/multiarch.dir/multiarch_fir_avx.cpp.o
+Scanning dependencies of target transcendental_test
+[100%] Building CXX object tests/CMakeFiles/transcendental_test.dir/transcendental_test.cpp.o
+Linking CXX executable ../bin/multiarch
+[100%] Built target multiarch
+Linking CXX executable ../bin/transcendental_test
+[100%] Built target transcendental_test
+Linking CXX executable ../bin/dft_test
+[100%] Built target dft_test
+Linking CXX executable ../bin/intrinsic_test
+[100%] Built target intrinsic_test

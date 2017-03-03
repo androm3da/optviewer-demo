@@ -1693,6 +1693,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L386>SHA1Type_update</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
@@ -1703,6 +1711,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L199>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L506>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L199>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L221>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
 </tr>
 
@@ -1719,6 +1735,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L199>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L506>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L199>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L221>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
 </tr>
 
@@ -2604,6 +2628,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L283>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L283>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">sha1_done</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L283>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">sha1_done</td>
+</tr>
+
+<tr>
 <td><a name="L284">284</a></td>
 <td></td>
 <td></td>
@@ -3482,8 +3522,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyObject_GetBuffer will not be inlined into SHA1Type_update because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L386>SHA1Type_update</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyBuffer_Release will not be inlined into SHA1Type_update because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L386>SHA1Type_update</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L391>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L386>SHA1Type_update</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L391>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L386>SHA1Type_update</a></td>
 </tr>
 
@@ -4305,6 +4369,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyObject_GetBuffer will not be inlined into _sha1_sha1_impl because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyBuffer_Release will not be inlined into _sha1_sha1_impl because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L496>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
@@ -4314,7 +4394,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L496>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L496>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L496>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
 </tr>
 
@@ -4455,7 +4559,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L506>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L489>_sha1_sha1_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L506>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_sha1module.c.html#L506>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic_sha1module.c.h.html#L80>_sha1_sha1</a></td>
 </tr>
 

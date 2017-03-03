@@ -1580,6 +1580,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                        </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L160>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L96>py_blake2s_new_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                        </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L160>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                        </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_blake2s_impl.c.html#L172>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_clinic_blake2s_impl.c.h.html#L21>py_blake2s_new</a></td>
 </tr>
 
@@ -1642,6 +1658,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> completely unrolled loop with 1 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L189>PyBlake2_blake2s_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> the cost-model indicates that interleaving is not beneficial&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L210>PyBlake2_blake2s_init_key</a></td>
@@ -1666,6 +1690,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> completely unrolled loop with 1 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L210>PyBlake2_blake2s_init_key</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> the cost-model indicates that interleaving is not beneficial&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L366>PyBlake2_blake2s</a></td>
@@ -1684,6 +1716,14 @@
 <td></td>
 <td class="column-entry-green">loop-unroll</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> completely unrolled loop with 15 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L366>PyBlake2_blake2s</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> completely unrolled loop with 1 iterations&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L366>PyBlake2_blake2s</a></td>
 </tr>
 
@@ -2623,6 +2663,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L289">289</a></td>
 <td></td>
 <td></td>
@@ -2642,6 +2746,70 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 
@@ -2669,6 +2837,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L291">291</a></td>
 <td></td>
 <td></td>
@@ -2688,6 +2920,70 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 
@@ -2715,6 +3011,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L293">293</a></td>
 <td></td>
 <td></td>
@@ -2734,6 +3094,70 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 
@@ -2761,6 +3185,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L295">295</a></td>
 <td></td>
 <td></td>
@@ -2780,6 +3268,70 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 
@@ -2807,6 +3359,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L297">297</a></td>
 <td></td>
 <td></td>
@@ -2826,6 +3442,70 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_slli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_srli_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_add_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_set_epi32 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 
@@ -2853,6 +3533,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
 <td><a name="L299">299</a></td>
 <td></td>
 <td></td>
@@ -2872,6 +3568,22 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_storeu_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">  </pre><span class="column-entry-yellow"> _mm_xor_si128 inlined into PyBlake2_blake2s_compress&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__blake2_impl_blake2s.c.html#L245>PyBlake2_blake2s_compress</a></td>
 </tr>
 

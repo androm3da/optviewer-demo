@@ -185,6 +185,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L37>PyParser_ParseStringFlagsFilename</a> can be inlined into PyParser_ParseString with cost=135 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L19>PyParser_ParseString</a></td>
+</tr>
+
+<tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
@@ -246,6 +254,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L37>PyParser_ParseStringFlagsFilename</a> inlined into PyParser_ParseStringFlags&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L26>PyParser_ParseStringFlags</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L37>PyParser_ParseStringFlagsFilename</a> can be inlined into PyParser_ParseStringFlags with cost=190 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L26>PyParser_ParseStringFlags</a></td>
 </tr>
 
@@ -332,6 +348,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L74>PyParser_ParseStringFlagsFilenameEx</a> inlined into PyParser_ParseStringFlagsFilename&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L74>PyParser_ParseStringFlagsFilenameEx</a> can be inlined into PyParser_ParseStringFlagsFilename with cost=185 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
 </tr>
 
@@ -436,6 +460,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L362>initerr</a> can be inlined into PyParser_ParseStringObject with cost=-5 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L45>PyParser_ParseStringObject</a></td>
+</tr>
+
+<tr>
 <td><a name="L52">52</a></td>
 <td></td>
 <td></td>
@@ -461,6 +493,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L368>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L45>PyParser_ParseStringObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L375>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L45>PyParser_ParseStringObject</a></td>
 </tr>
 
@@ -586,7 +626,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L57>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L45>PyParser_ParseStringObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Parser_parsetok.c.html#L372>store</a> because it is clobbered by <a href=Parser_parsetok.c.html#L55>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Parser_parsetok.c.html#L372>store</a> because it is clobbered by <a href=Parser_parsetok.c.html#L57>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
 </tr>
 
@@ -657,6 +713,14 @@
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L186>parsetok</a> will not be inlined into PyParser_ParseStringFlagsFilenameEx&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L72>PyParser_ParseStringFlagsFilenameEx</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L186>parsetok</a> too costly to inline (cost=680, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
 </tr>
 
 <tr>
@@ -954,7 +1018,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L72>PyParser_ParseStringFlagsFilenameEx</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L59>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L59>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L35>PyParser_ParseStringFlagsFilename</a></td>
 </tr>
 
@@ -1055,6 +1151,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L109>PyParser_ParseFileFlags</a> inlined into PyParser_ParseFile&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L97>PyParser_ParseFile</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L109>PyParser_ParseFileFlags</a> can be inlined into PyParser_ParseFile with cost=85 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L97>PyParser_ParseFile</a></td>
 </tr>
 
@@ -1280,6 +1384,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L362>initerr</a> inlined into PyParser_ParseFileObject&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L118>PyParser_ParseFileObject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L362>initerr</a> can be inlined into PyParser_ParseFileObject with cost=-15005 (threshold=375)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L118>PyParser_ParseFileObject</a></td>
 </tr>
 
@@ -1613,6 +1725,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Parser_parsetok.c.html#L120>PyParser_ParseFileObject</a> can be inlined into PyParser_ParseFileFlagsEx with cost=75 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L140>PyParser_ParseFileFlagsEx</a></td>
+</tr>
+
+<tr>
 <td><a name="L155">155</a></td>
 <td></td>
 <td></td>
@@ -1638,6 +1758,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L140>PyParser_ParseFileFlagsEx</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L126>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L140>PyParser_ParseFileFlagsEx</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L140>PyParser_ParseFileFlagsEx</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L126>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Parser_parsetok.c.html#L140>PyParser_ParseFileFlagsEx</a></td>
 </tr>
 
@@ -2852,6 +2996,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._node* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._node* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L248>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._node* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L229>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._node* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L208>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._node* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
 <td><a name="L276">276</a></td>
 <td></td>
 <td></td>
@@ -2919,6 +3103,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L267>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L248>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L229>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L208>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L263>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">parsetok</td>
 </tr>
 
@@ -3163,6 +3387,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L267>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L248>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L229>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L208>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parsetok</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Parser_parsetok.c.html#L296>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">parsetok</td>
 </tr>
 

@@ -999,6 +999,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L129">129</a></td>
 <td></td>
 <td></td>
@@ -1136,6 +1144,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_sliceobject.c.html#L138>load</a> because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L149>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
 </tr>
@@ -1144,7 +1168,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_sliceobject.c.html#L138>load</a> because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L271>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L261>slice_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L261>slice_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L261>slice_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_sliceobject.c.html#L138>load</a> because it is clobbered by <a href=Objects_sliceobject.c.html#L138>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L261>slice_new</a></td>
 </tr>
 
@@ -1264,6 +1336,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L149>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L152">152</a></td>
 <td></td>
 <td></td>
@@ -1323,6 +1403,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L132>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L149>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L157">157</a></td>
 <td></td>
 <td></td>
@@ -1334,6 +1438,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L156>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L156>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L156>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L149>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L122>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L142>_PySlice_FromIndices</a></td>
 </tr>
 
@@ -1531,6 +1667,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L177>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndices</td>
+</tr>
+
+<tr>
 <td><a name="L181">181</a></td>
 <td></td>
 <td></td>
@@ -1542,6 +1686,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_sliceobject.c.html#L168>store</a> because it is clobbered by <a href=Objects_sliceobject.c.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndices</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_sliceobject.c.html#L168>store</a> because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow">PySlice_GetIndices</td>
 </tr>
 
@@ -1619,6 +1771,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndices</td>
+</tr>
+
+<tr>
 <td><a name="L189">189</a></td>
 <td></td>
 <td></td>
@@ -1630,6 +1790,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_sliceobject.c.html#L168>store</a> because it is clobbered by <a href=Objects_sliceobject.c.html#L184>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndices</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_sliceobject.c.html#L168>store</a> because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow">PySlice_GetIndices</td>
 </tr>
 
@@ -2030,6 +2198,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L231>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L229>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
 <td><a name="L234">234</a></td>
 <td></td>
 <td></td>
@@ -2055,6 +2239,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L207>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L229>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PySlice_GetIndicesEx</td>
 </tr>
 
@@ -2155,6 +2347,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L242>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L240>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
 <td><a name="L245">245</a></td>
 <td></td>
 <td></td>
@@ -2186,6 +2394,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L242>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L240>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_sliceobject.c.html#L247>phi</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PySlice_GetIndicesEx</td>
@@ -2196,6 +2428,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L241>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L242>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L240>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PySlice_GetIndicesEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow">PySlice_GetIndicesEx</td>
 </tr>
 
@@ -2640,6 +2896,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L296">296</a></td>
 <td></td>
 <td></td>
@@ -2651,6 +2915,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.PySliceObject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.PySliceObject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.PySliceObject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L293>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">slice_dealloc</td>
 </tr>
 
@@ -2894,6 +3174,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L372>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L413>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L418>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L408>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L403>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -3413,6 +3733,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L387">387</a></td>
 <td></td>
 <td></td>
@@ -3537,6 +3865,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L397>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L399">399</a></td>
 <td></td>
 <td></td>
@@ -3627,6 +3963,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L407>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L403>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -3725,6 +4069,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L413>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L419">419</a></td>
 <td></td>
 <td></td>
@@ -3778,6 +4130,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L403>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L408>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L418>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L413>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L372>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -3906,6 +4298,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L436>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L438">438</a></td>
 <td></td>
 <td></td>
@@ -3996,6 +4396,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L446>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L442>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -4094,6 +4502,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L452>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L458">458</a></td>
 <td></td>
 <td></td>
@@ -4165,6 +4581,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L447>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L447>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L457>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L457>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L452>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L427>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L465>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L467">467</a></td>
 <td></td>
 <td></td>
@@ -4176,6 +4648,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L466>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L466>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L466>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L465>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -4244,6 +4740,126 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L473>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L322>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L452>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L325>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L442>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L437>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L473>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L471>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
 <td><a name="L476">476</a></td>
 <td></td>
 <td></td>
@@ -4255,6 +4871,150 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L473>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L473>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L322>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L452>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L325>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L442>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L437>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L475>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L473>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L471>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L472>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L474>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L475>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_sliceobject.c.html#L338>_PySlice_GetLongIndices</a></td>
 </tr>
 
@@ -4446,6 +5206,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L495>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_indices</td>
+</tr>
+
+<tr>
 <td><a name="L498">498</a></td>
 <td></td>
 <td></td>
@@ -4501,6 +5269,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L501>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_indices</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L501>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">slice_indices</td>
 </tr>
 
@@ -5010,6 +5786,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L563>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L566">566</a></td>
 <td></td>
 <td></td>
@@ -5214,6 +5998,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L583>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L586">586</a></td>
 <td></td>
 <td></td>
@@ -5225,6 +6017,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L585>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L585>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L585>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L580>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">slice_richcompare</td>
 </tr>
 
@@ -5311,6 +6127,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L594>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">slice_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_sliceobject.c.html#L595>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">slice_traverse</td>
 </tr>
 

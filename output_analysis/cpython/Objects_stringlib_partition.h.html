@@ -193,6 +193,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L12882>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_bytearrayobject.c.html#L101>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
@@ -425,6 +433,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs1lib_fastsearch</a> too costly to inline (cost=350, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs1lib_fastsearch</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs2lib_fastsearch</a> too costly to inline (cost=420, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs2lib_fastsearch</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs4lib_fastsearch</a> too costly to inline (cost=400, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs4lib_fastsearch</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>fastsearch</a> too costly to inline (cost=350, threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
@@ -584,7 +640,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L33>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L33>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L33>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
 
@@ -706,7 +778,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
 </tr>
 
@@ -722,7 +810,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L63>bytes_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
 </tr>
 
@@ -738,7 +842,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs1lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs2lib_partition</td>
 </tr>
 
@@ -754,7 +874,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L21>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L38>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
 </tr>
 
@@ -784,6 +920,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L40>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>load</a> because it is clobbered by <a href=Objects_stringlib_partition.h.html#L41>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
 </tr>
@@ -792,7 +936,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L40>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>load</a> because it is clobbered by <a href=Objects_stringlib_partition.h.html#L41>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L63>bytes_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L40>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L63>bytes_partition</a></td>
 </tr>
 
@@ -808,7 +968,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>add</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs1lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>add</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs1lib_partition</td>
 </tr>
 
@@ -824,7 +1000,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>add</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_partition.h.html#L40>add</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs4lib_partition</td>
 </tr>
 
@@ -1002,6 +1194,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
@@ -1057,6 +1297,30 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1960>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L48>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs1lib_partition</td>
 </tr>
@@ -1082,6 +1346,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L48>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1960>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1953>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
 </tr>
 
@@ -1246,6 +1542,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> will not be inlined into PyUnicode_Partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_partition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
@@ -1331,7 +1675,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>stringlib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1805>bytes_partition_impl</a></td>
 </tr>
 
@@ -1347,7 +1707,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L63>bytes_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L10>asciilib_partition</a></td>
 </tr>
 
@@ -1363,7 +1739,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs1lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs2lib_partition</td>
 </tr>
 
@@ -1379,6 +1771,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_partition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
 </tr>
@@ -1387,7 +1787,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12854>PyUnicode_Partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L54>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1387>bytearray_partition</a></td>
 </tr>
 
@@ -1563,6 +1979,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L770>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L12940>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
 </tr>
 
@@ -1802,6 +2226,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs1lib_fastsearch</a> too costly to inline (cost=355, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs1lib_fastsearch</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs2lib_fastsearch</a> too costly to inline (cost=415, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs2lib_fastsearch</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs4lib_fastsearch</a> too costly to inline (cost=395, threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>ucs4lib_fastsearch</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_fastsearch.h.html#L133>fastsearch</a> too costly to inline (cost=355, threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
@@ -1961,7 +2433,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L88>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
 
@@ -2363,6 +2851,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_rpartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
@@ -2418,6 +2954,30 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1960>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>asciilib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>asciilib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>asciilib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L103>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs1lib_rpartition</td>
 </tr>
@@ -2443,6 +3003,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1960>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L1953>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
 </tr>
 
@@ -2607,6 +3199,54 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2182>_PyUnicode_FromUCS2</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_unicodeobject.c.html#L2208>_PyUnicode_FromUCS4</a> will not be inlined into PyUnicode_RPartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_rpartition&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
@@ -2692,7 +3332,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>stringlib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1832>bytes_rpartition_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1832>bytes_rpartition_impl</a></td>
 </tr>
 
@@ -2708,7 +3364,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L102>bytes_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>asciilib_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_partition.h.html#L65>asciilib_rpartition</a></td>
 </tr>
 
@@ -2724,7 +3396,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs1lib_rpartition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs2lib_rpartition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">ucs2lib_rpartition</td>
 </tr>
 
@@ -2740,6 +3428,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">ucs4lib_rpartition</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
 </tr>
@@ -2748,7 +3444,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L12912>PyUnicode_RPartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_partition.h.html#L109>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1424>bytearray_rpartition</a></td>
 </tr>
 

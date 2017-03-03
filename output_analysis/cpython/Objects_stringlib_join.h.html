@@ -237,6 +237,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
@@ -245,7 +253,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -269,6 +293,22 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> inlined into stringlib_bytes_join&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> can be inlined into stringlib_bytes_join with cost=30 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> inlined into stringlib_bytes_join&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
 </tr>
 
@@ -312,7 +352,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
 
@@ -438,6 +494,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
 
@@ -446,6 +550,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -613,8 +741,56 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_join.h.html#L60>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
 </tr>
 
@@ -637,6 +813,46 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
@@ -647,6 +863,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L22>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L43>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -876,6 +1132,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
@@ -884,7 +1148,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -957,6 +1237,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
@@ -965,7 +1253,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -1038,6 +1342,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
@@ -1046,7 +1358,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L68>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -1136,6 +1464,22 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_bytes_join&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -1194,7 +1538,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 
@@ -1550,6 +1910,110 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L124>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_join.h.html#L7>stringlib_bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L124>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
 </tr>
@@ -1558,7 +2022,215 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L124>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L1890>bytes_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L124>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L69>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L78>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L85>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_join.h.html#L124>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1942>bytearray_join</a></td>
 </tr>
 

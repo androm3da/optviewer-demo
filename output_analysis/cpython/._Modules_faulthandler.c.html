@@ -1228,6 +1228,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L160>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
 <td><a name="L164">164</a></td>
 <td></td>
 <td></td>
@@ -1386,6 +1394,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L171>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L176>load</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L177>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
 <td><a name="L182">182</a></td>
 <td></td>
 <td></td>
@@ -1419,6 +1443,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L181>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L171>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L177>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">faulthandler_get_fileno</td>
 </tr>
 
@@ -1484,6 +1524,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_get_fileno</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L189>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">faulthandler_get_fileno</td>
 </tr>
 
@@ -2840,6 +2888,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_write_noraise will not be inlined into faulthandler_fatal_error because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L320>faulthandler_fatal_error</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L344>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L320>faulthandler_fatal_error</a></td>
@@ -3639,7 +3695,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L443>load</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L438>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_enable</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L438>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L443>load</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L438>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
 </tr>
 
@@ -4106,6 +4178,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L474>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
 <td><a name="L494">494</a></td>
 <td></td>
 <td></td>
@@ -4117,6 +4197,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L205>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
 </tr>
 
@@ -4183,6 +4271,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L449>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L490>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L205>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L491>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L491>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L469>faulthandler_py_enable</a></td>
 </tr>
 
@@ -4684,6 +4804,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L566>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_thread</td>
+</tr>
+
+<tr>
 <td><a name="L556">556</a></td>
 <td></td>
 <td></td>
@@ -4703,6 +4831,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_thread</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L566>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">faulthandler_thread</td>
 </tr>
 
@@ -5001,6 +5137,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L566>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_thread</td>
+</tr>
+
+<tr>
 <td><a name="L575">575</a></td>
 <td></td>
 <td></td>
@@ -5177,6 +5321,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L588>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cancel_dump_traceback_later</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L588>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cancel_dump_traceback_later</td>
+</tr>
+
+<tr>
 <td><a name="L591">591</a></td>
 <td></td>
 <td></td>
@@ -5188,6 +5348,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L588>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cancel_dump_traceback_later</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L590>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">cancel_dump_traceback_later</td>
 </tr>
 
@@ -5945,6 +6113,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L668>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
 <td><a name="L671">671</a></td>
 <td></td>
 <td></td>
@@ -5997,6 +6173,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L631>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L671>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
 <td><a name="L675">675</a></td>
 <td></td>
 <td></td>
@@ -6012,6 +6196,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L668>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
 <td><a name="L676">676</a></td>
 <td></td>
 <td></td>
@@ -6023,6 +6215,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L634>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L668>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L634>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L671>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
 </tr>
 
@@ -6074,6 +6274,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L668>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L671>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
 </tr>
 
@@ -6134,6 +6342,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L671>load</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L684>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L684>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L684>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L625>faulthandler_dump_traceback_later</a></td>
 </tr>
 
@@ -6773,6 +6997,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L745>faulthandler_user</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L236>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L745>faulthandler_user</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L246>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L745>faulthandler_user</a></td>
 </tr>
 
@@ -7547,6 +7787,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L819>load</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L831>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
 <td><a name="L837">837</a></td>
 <td></td>
 <td></td>
@@ -7588,6 +7836,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L807>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L807>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L831>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
 </tr>
 
@@ -7679,6 +7935,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L805>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules_faulthandler.c.html#L805>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L831>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
 <td><a name="L849">849</a></td>
 <td></td>
 <td></td>
@@ -7716,6 +7988,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L806>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L806>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L831>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L806>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L849>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
 <td><a name="L852">852</a></td>
 <td></td>
 <td></td>
@@ -7731,6 +8027,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L807>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L807>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L831>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L807>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L849>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
 <td><a name="L853">853</a></td>
 <td></td>
 <td></td>
@@ -7742,6 +8062,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L849>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L834>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
 </tr>
 
@@ -7771,6 +8115,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L848>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L728>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L834>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L849>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L849>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L800>faulthandler_register_py</a></td>
 </tr>
 
@@ -7892,6 +8276,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_unregister</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_unregister</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1334>_PyFaulthandler_Fini</a></td>
 </tr>
@@ -7900,7 +8300,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1334>_PyFaulthandler_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1334>_PyFaulthandler_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L875>faulthandler_unregister_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L875>faulthandler_unregister_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L866>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L875>faulthandler_unregister_py</a></td>
 </tr>
 
@@ -8871,6 +9303,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L958>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L962>faulthandler_sigsegv</a></td>
+</tr>
+
+<tr>
 <td><a name="L977">977</a></td>
 <td></td>
 <td></td>
@@ -9617,6 +10057,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules_faulthandler.c.html#L1050>store</a> because it is clobbered by <a href=._Modules_faulthandler.c.html#L913>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1046>faulthandler_fatal_error_py</a></td>
+</tr>
+
+<tr>
 <td><a name="L1055">1055</a></td>
 <td></td>
 <td></td>
@@ -9695,6 +10143,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L915>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1046>faulthandler_fatal_error_py</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L913>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1046>faulthandler_fatal_error_py</a></td>
 </tr>
 
@@ -10313,6 +10769,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1122>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1127>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">faulthandler_traverse</td>
 </tr>
 
@@ -11454,7 +11918,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1283>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_env_options</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1283>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1283>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
 </tr>
 
@@ -11556,7 +12036,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1293>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_env_options</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1293>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1293>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
 </tr>
 
@@ -11594,6 +12090,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_env_options</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_env_options</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1293>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">faulthandler_env_options</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1293>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1294>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1300>_PyFaulthandler_Init</a></td>
 </tr>
 
@@ -12182,6 +12726,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.user_signal_t* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1350>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1334>_PyFaulthandler_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.user_signal_t* not eliminated because it is clobbered by <a href=._Modules_faulthandler.c.html#L1346>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_faulthandler.c.html#L1334>_PyFaulthandler_Fini</a></td>
 </tr>
 

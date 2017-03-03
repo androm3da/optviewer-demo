@@ -992,6 +992,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
 </tr>
 
@@ -1120,7 +1128,47 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L119>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L130>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L130>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
 </tr>
 
@@ -1136,6 +1184,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L130>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L481>tuplerepeat</a></td>
 </tr>
@@ -1144,7 +1208,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L481>tuplerepeat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L130>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L481>tuplerepeat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L130>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L130>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
 </tr>
 
@@ -1649,6 +1745,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L190>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
+</tr>
+
+<tr>
 <td><a name="L191">191</a></td>
 <td></td>
 <td></td>
@@ -1696,6 +1800,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L195>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
 </tr>
 
@@ -1761,6 +1873,30 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L202>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTuple_MaybeUntrack</td>
 </tr>
 
@@ -1949,6 +2085,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L224>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_Pack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_Pack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L224>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyTuple_Pack</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L215>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyTuple_Pack</td>
 </tr>
 
@@ -2169,6 +2329,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L243>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
 <td><a name="L247">247</a></td>
 <td></td>
 <td></td>
@@ -2180,6 +2348,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L243>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupledealloc</td>
 </tr>
 
@@ -2202,6 +2378,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L243>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupledealloc</td>
 </tr>
 
@@ -2263,6 +2447,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
 <td><a name="L257">257</a></td>
 <td></td>
 <td></td>
@@ -2287,8 +2479,40 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _PyTrash_thread_deposit_object will not be inlined into tupledealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L250>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L256>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L256>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupledealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L251>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupledealloc</td>
 </tr>
 
@@ -2704,6 +2928,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L291>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
 <td><a name="L304">304</a></td>
 <td></td>
 <td></td>
@@ -2734,6 +2982,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
 <td><a name="L306">306</a></td>
 <td></td>
 <td></td>
@@ -2753,6 +3009,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L305>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_tupleobject.c.html#L303>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L305>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tuplerepr</td>
 </tr>
 
@@ -2804,6 +3068,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerepr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L310>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tuplerepr</td>
 </tr>
 
@@ -3538,6 +3810,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_tupleobject.c.html#L710>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L710>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_tupleobject.c.html#L710>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L711>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
 </tr>
 
@@ -4745,6 +5025,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L510>icmp</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L481>tuplerepeat</a></td>
+</tr>
+
+<tr>
 <td><a name="L511">511</a></td>
 <td></td>
 <td></td>
@@ -5024,6 +5312,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_tupleobject.c.html#L521>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupleindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L539>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupleindex</td>
 </tr>
@@ -5072,6 +5368,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L539>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupleindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L524>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupleindex</td>
 </tr>
 
@@ -5138,6 +5442,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupleindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L539>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupleindex</td>
 </tr>
 
@@ -5644,6 +5956,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L603>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerichcompare</td>
+</tr>
+
+<tr>
 <td><a name="L604">604</a></td>
 <td></td>
 <td></td>
@@ -5655,6 +5975,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L604>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuplerichcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L604>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tuplerichcompare</td>
 </tr>
 
@@ -6349,7 +6677,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* (%struct._typeobject*, i64)* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L663>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* (%struct._typeobject*, i64)* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* (%struct._typeobject*, i64)* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* (%struct._typeobject*, i64)* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L663>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* (%struct._typeobject*, i64)* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L657>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
 </tr>
 
@@ -6417,7 +6777,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L681>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L681>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L681>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
 </tr>
 
@@ -6447,7 +6823,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L683>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L683>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L683>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
 </tr>
 
@@ -6477,7 +6869,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L683>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L666>tuple_subtype_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L682>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L683>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L649>tuple_new</a></td>
 </tr>
 
@@ -6705,6 +7145,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L711>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L710>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
 </tr>
 
@@ -7043,6 +7491,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_tupleobject.c.html#L729>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L739>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L747>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_tupleobject.c.html#L706>tuplesubscript</a></td>
 </tr>
 
@@ -8116,6 +8572,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_tupleobject.c.html#L877>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_Resize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L877>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTuple_Resize</td>
@@ -8256,6 +8720,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L888>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_Resize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L879>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_Resize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L890>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_Resize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L891>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTuple_Resize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L891>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L891>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTuple_Resize</td>
 </tr>
 
@@ -9217,6 +9713,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L1003>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupleiter_setstate</td>
+</tr>
+
+<tr>
 <td><a name="L1007">1007</a></td>
 <td></td>
 <td></td>
@@ -9270,6 +9774,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L1003>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tupleiter_setstate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L1004>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tupleiter_setstate</td>
 </tr>
 
@@ -9737,6 +10249,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L1068>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuple_iter</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_tupleobject.c.html#L1074>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tuple_iter</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_tupleobject.c.html#L1074>load</a> because it is clobbered by <a href=Objects_tupleobject.c.html#L1074>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tuple_iter</td>
 </tr>
 

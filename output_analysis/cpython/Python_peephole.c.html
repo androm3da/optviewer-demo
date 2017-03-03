@@ -578,6 +578,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> completely unrolled loop with 2 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -904,6 +912,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i16 eliminated in favor of <a href=Python_peephole.c.html#L101>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -912,8 +928,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -929,6 +969,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -955,6 +1019,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
@@ -973,6 +1061,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -1745,6 +1857,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L198>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L181>fold_tuple_on_constants</a></td>
+</tr>
+
+<tr>
 <td><a name="L199">199</a></td>
 <td></td>
 <td></td>
@@ -1806,7 +1926,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L181>fold_tuple_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -1870,6 +2006,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L181>fold_tuple_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L211>getelementptr</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -1888,6 +2032,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -1925,7 +2077,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L181>fold_tuple_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -2178,6 +2346,230 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -2639,6 +3031,230 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L289">289</a></td>
 <td></td>
 <td></td>
@@ -2699,6 +3315,102 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L254>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L257>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L266>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L269>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L272>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L275>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L281>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -2709,6 +3421,102 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L248>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L254>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L257>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L263>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L266>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L269>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L272>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L275>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L281>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L284>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -2864,7 +3672,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -2930,7 +3754,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L233>fold_binops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -3117,6 +3957,230 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L331">331</a></td>
 <td></td>
 <td></td>
@@ -3270,6 +4334,230 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L346">346</a></td>
 <td></td>
 <td></td>
@@ -3330,6 +4618,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L338>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L322>fold_unaryops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L341>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L322>fold_unaryops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -3340,6 +4644,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L335>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L338>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L341>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -3427,7 +4747,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L322>fold_unaryops_on_constants</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -3893,7 +5229,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L399>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L368>markblocks</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L378>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L399>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -4460,6 +5812,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into PyCode_Optimize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L476">476</a></td>
 <td></td>
 <td></td>
@@ -4941,6 +6301,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into PyCode_Optimize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=Python_peephole.c.html#L111>get_arg</a> can be inlined into PyCode_Optimize with cost=155 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -4965,6 +6333,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L524>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -4975,6 +6351,230 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -5318,6 +6918,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into PyCode_Optimize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> <a href=Python_peephole.c.html#L111>get_arg</a> can be inlined into PyCode_Optimize with cost=155 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -5336,6 +6944,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L555>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L555>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -5791,6 +7407,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into PyCode_Optimize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=Python_peephole.c.html#L111>get_arg</a> can be inlined into PyCode_Optimize with cost=-14845 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -5809,6 +7433,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L602>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L602>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -5997,6 +7629,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> PyErr_NoMemory will not be inlined into PyCode_Optimize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=Python_peephole.c.html#L111>get_arg</a> can be inlined into PyCode_Optimize with cost=155 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
@@ -6015,6 +7655,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L620>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Python_peephole.c.html#L620>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -7036,6 +8684,246 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L664>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L502>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
 <td><a name="L724">724</a></td>
 <td></td>
 <td></td>
@@ -7105,6 +8993,262 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L359>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L664>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L502>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L722>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -7197,6 +9341,254 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L664>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L502>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i16 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L736>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 
@@ -7621,6 +10013,254 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L442>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L359>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L363>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L360>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L315>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L306>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L288>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L213>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L204>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L620>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L524>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_peephole.c.html#L736>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_peephole.c.html#L425>PyCode_Optimize</a></td>
 </tr>
 

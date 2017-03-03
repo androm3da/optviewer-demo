@@ -1921,7 +1921,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">decode_ascii_surrogateescape</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_fileutils.c.html#L273>Py_DecodeLocale</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_fileutils.c.html#L273>Py_DecodeLocale</a></td>
 </tr>
 
@@ -3102,6 +3118,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> unrolled loop by a factor of 4 with run-time trip count&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_fileutils.c.html#L273>Py_DecodeLocale</a></td>
+</tr>
+
+<tr>
 <td><a name="L386">386</a></td>
 <td></td>
 <td></td>
@@ -3113,6 +3137,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L359>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_fileutils.c.html#L273>Py_DecodeLocale</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L386>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_fileutils.c.html#L273>Py_DecodeLocale</a></td>
 </tr>
 
@@ -3845,6 +3877,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_fileutils.c.html#L424>Py_EncodeLocale</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L465>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_fileutils.c.html#L424>Py_EncodeLocale</a></td>
 </tr>
 
@@ -5738,6 +5778,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_include_x86_64-linux-gnu_sys_stat.h.html#L504>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_fileutils.c.html#L708>_Py_stat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_usr_include_x86_64-linux-gnu_sys_stat.h.html#L504>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_fileutils.c.html#L708>_Py_stat</a></td>
 </tr>
 
@@ -9123,6 +9171,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1128>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_fopen_obj</td>
+</tr>
+
+<tr>
 <td><a name="L1133">1133</a></td>
 <td></td>
 <td></td>
@@ -9177,6 +9233,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1132>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_fopen_obj</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_fopen_obj</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1128>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_fopen_obj</td>
 </tr>
 
@@ -10490,6 +10562,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_write_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_fileutils.c.html#L1272>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_write_impl</td>
 </tr>
 

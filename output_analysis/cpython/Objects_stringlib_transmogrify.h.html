@@ -433,6 +433,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=360, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=375, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L2246>bytes_replace_impl</a></td>
 </tr>
@@ -465,6 +473,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=360, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L2246>bytes_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=375, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
 </tr>
@@ -474,6 +490,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> will not be inlined into bytes_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytesobject.c.html#L100>PyBytes_FromStringAndSize</a> too costly to inline (cost=360, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
 </tr>
 
@@ -520,9 +544,73 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">return_self</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into return_self&nbsp;</span></td>
+<td class="column-entry-yellow">return_self</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into pad&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_center&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L163>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_ljust&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
 </tr>
 
 <tr>
@@ -536,9 +624,41 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_delete_single_character&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L317>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_delete_substring&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
 </tr>
 
 <tr>
@@ -552,9 +672,41 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_single_character_in_place&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L414>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_substring_in_place&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
 </tr>
 
 <tr>
@@ -568,6 +720,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_single_character&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L514>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
@@ -576,9 +744,41 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_substring&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L578>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
 <tr>
@@ -594,6 +794,46 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L578>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L514>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L463>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L414>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L363>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L318>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -656,9 +896,41 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_rjust&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L145>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=300, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_zfill&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
 <tr>
@@ -823,6 +1095,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L30>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L30>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_expandtabs</td>
 </tr>
 
@@ -1080,6 +1360,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_expandtabs&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
@@ -1123,6 +1419,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
@@ -1153,6 +1457,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
 <td><a name="L71">71</a></td>
 <td></td>
 <td></td>
@@ -1164,6 +1476,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L81>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_expandtabs</td>
 </tr>
 
@@ -1187,6 +1515,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L28>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L81>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L28>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_expandtabs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L28>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L63>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_expandtabs</td>
 </tr>
 
@@ -1463,6 +1807,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into pad with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
@@ -1564,6 +1916,86 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into pad&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_center&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_ljust&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_rjust&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_zfill&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
 <td><a name="L108">108</a></td>
 <td></td>
 <td></td>
@@ -1596,7 +2028,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
 
@@ -1612,7 +2060,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
@@ -1635,7 +2099,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
 
@@ -1651,6 +2163,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
 </tr>
@@ -1659,7 +2179,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
@@ -1682,7 +2250,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L166>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L166>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
 
@@ -1698,6 +2314,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L148>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
 </tr>
@@ -1706,7 +2330,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L148>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L187>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L187>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
@@ -1729,7 +2401,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L107>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L166>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L166>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
 
@@ -1753,7 +2441,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L148>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L187>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L187>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L107>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
@@ -1807,6 +2511,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_unicodeobject.c.html#L10164>pad</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L111>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
@@ -1815,7 +2527,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L111>load</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
 </tr>
 
@@ -1979,6 +2707,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_ljust with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
 <td><a name="L133">133</a></td>
 <td></td>
 <td></td>
@@ -2020,6 +2756,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L126>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L128>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L95>pad</a> can be inlined into stringlib_ljust with cost=200 (threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L122>stringlib_ljust</a></td>
 </tr>
 
@@ -2162,6 +2906,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_rjust with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
 <td><a name="L150">150</a></td>
 <td></td>
 <td></td>
@@ -2203,6 +2955,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L143>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L145>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L95>pad</a> can be inlined into stringlib_rjust with cost=185 (threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L139>stringlib_rjust</a></td>
 </tr>
 
@@ -2352,6 +3112,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_center with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
 <td><a name="L168">168</a></td>
 <td></td>
 <td></td>
@@ -2414,6 +3182,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Objects_stringlib_transmogrify.h.html#L161>store</a> because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L95>pad</a> can be inlined into stringlib_center with cost=240 (threshold=325)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L156>stringlib_center</a></td>
 </tr>
 
@@ -2563,6 +3339,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_zfill with cost=-14975 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
 <td><a name="L189">189</a></td>
 <td></td>
 <td></td>
@@ -2614,6 +3398,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L95>pad</a> can be inlined into stringlib_zfill with cost=-14815 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
 <td><a name="L194">194</a></td>
 <td></td>
 <td></td>
@@ -2653,6 +3445,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L111>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L176>stringlib_zfill</a></td>
 </tr>
 
@@ -3295,6 +4095,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_interleave&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -3369,7 +4201,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -3385,7 +4233,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -3408,7 +4272,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -3424,7 +4304,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L268>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -3552,6 +4448,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L278>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -3567,7 +4479,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L2246>bytes_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L278>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
 </tr>
 
@@ -3583,7 +4511,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L278>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -3766,6 +4710,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_replace_interleave</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L289>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -3781,7 +4741,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L289>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytesobject.c.html#L2246>bytes_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L289>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytesobject.c.h.html#L372>bytes_replace</a></td>
 </tr>
 
@@ -3797,7 +4773,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L289>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L294>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L289>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -4141,6 +5133,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_delete_single_character with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
 <td><a name="L323">323</a></td>
 <td></td>
 <td></td>
@@ -4251,6 +5251,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_delete_single_character&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -4318,7 +5350,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L308>stringlib_replace_delete_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -4334,7 +5382,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L328>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -4692,6 +5756,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_delete_substring with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
+</tr>
+
+<tr>
 <td><a name="L372">372</a></td>
 <td></td>
 <td></td>
@@ -4802,6 +5874,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_delete_substring&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -4869,7 +5973,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L353>stringlib_replace_delete_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -4885,7 +6005,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L377>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -5250,6 +6386,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_single_character_in_place with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
 <td><a name="L422">422</a></td>
 <td></td>
 <td></td>
@@ -5346,6 +6490,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_single_character_in_place&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -5413,7 +6589,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L405>stringlib_replace_single_character_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -5429,7 +6621,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L425>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -5808,6 +7016,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_substring_in_place with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
+</tr>
+
+<tr>
 <td><a name="L472">472</a></td>
 <td></td>
 <td></td>
@@ -5904,6 +7120,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_substring_in_place&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -5971,7 +7219,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L453>stringlib_replace_substring_in_place</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -5987,7 +7251,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L475>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -6367,6 +7647,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_single_character with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
 <td><a name="L521">521</a></td>
 <td></td>
 <td></td>
@@ -6543,6 +7831,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_single_character&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -6610,7 +7930,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L505>stringlib_replace_single_character</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -6626,7 +7962,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L532>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -7068,6 +8420,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace_substring with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
 <td><a name="L588">588</a></td>
 <td></td>
 <td></td>
@@ -7244,6 +8604,38 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace_substring&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
 </tr>
 
@@ -7311,7 +8703,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L569>stringlib_replace_substring</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -7327,7 +8735,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_bytearrayobject.c.html#L1320>bytearray_replace_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_transmogrify.h.html#L599>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_clinic_bytearrayobject.c.h.html#L142>bytearray_replace</a></td>
 </tr>
 
@@ -7698,6 +9122,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L646">646</a></td>
 <td></td>
 <td></td>
@@ -7763,6 +9195,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L653">653</a></td>
 <td></td>
 <td></td>
@@ -7810,6 +9250,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L240>stringlib_replace_interleave</a> inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L240>stringlib_replace_interleave</a> can be inlined into stringlib_replace with cost=-14635 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -7895,6 +9343,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L10>return_self</a> can be inlined into stringlib_replace with cost=25 (threshold=325)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L665">665</a></td>
 <td></td>
 <td></td>
@@ -7953,6 +9409,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L310>stringlib_replace_delete_single_character</a> can be inlined into stringlib_replace with cost=-14655 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L671">671</a></td>
 <td></td>
 <td></td>
@@ -7986,6 +9450,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L355>stringlib_replace_delete_substring</a> inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L355>stringlib_replace_delete_substring</a> can be inlined into stringlib_replace with cost=-14630 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -8069,6 +9541,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L407>stringlib_replace_single_character_in_place</a> can be inlined into stringlib_replace with cost=-14730 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L683">683</a></td>
 <td></td>
 <td></td>
@@ -8102,6 +9582,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L455>stringlib_replace_substring_in_place</a> inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L455>stringlib_replace_substring_in_place</a> can be inlined into stringlib_replace with cost=-14665 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 
@@ -8171,6 +9659,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L507>stringlib_replace_single_character</a> can be inlined into stringlib_replace with cost=-14565 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
 <td><a name="L693">693</a></td>
 <td></td>
 <td></td>
@@ -8211,6 +9707,14 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L571>stringlib_replace_substring</a> inlined into stringlib_replace&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> <a href=Objects_stringlib_transmogrify.h.html#L571>stringlib_replace_substring</a> can be inlined into stringlib_replace with cost=-14525 (threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_transmogrify.h.html#L638>stringlib_replace</a></td>
 </tr>
 

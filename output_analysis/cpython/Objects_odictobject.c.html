@@ -3831,6 +3831,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type %struct._dictkeysobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L559>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L560>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type %struct._dictkeysobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L559>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L566>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type %struct._dictkeysobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L594>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L599>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L588>_odict_get_index</a></td>
 </tr>
@@ -4324,6 +4340,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L560>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L566>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L576>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L530>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L552>_odict_resize</a></td>
 </tr>
 
@@ -5551,6 +5591,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L665>_odict_add_new_node</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L675>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L665>_odict_add_new_node</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L665>_odict_add_new_node</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L675>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L675>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
 </tr>
 
@@ -5617,7 +5705,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L542>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L665>_odict_add_new_node</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L542>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L542>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
 </tr>
 
@@ -5690,7 +5794,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L686>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L665>_odict_add_new_node</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L686>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L686>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1729>_PyODict_SetItem_KnownHash</a></td>
 </tr>
 
@@ -5990,7 +6110,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1755>PyODict_DelItem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
 </tr>
 
@@ -6007,6 +6143,22 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1325>odict_move_to_end</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L542>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1325>odict_move_to_end</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1325>odict_move_to_end</a></td>
 </tr>
 
@@ -6044,7 +6196,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1755>PyODict_DelItem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
 </tr>
 
@@ -6601,6 +6769,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L768>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_odict_clear_node</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L768>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_odict_clear_node</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1755>PyODict_DelItem</a></td>
 </tr>
@@ -6609,7 +6793,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1755>PyODict_DelItem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L767>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
 </tr>
 
@@ -6733,6 +6933,30 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1453>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1448>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1451>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L530>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1232>odict_clear</a></td>
 </tr>
@@ -6741,7 +6965,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1232>odict_clear</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1569>odict_tp_clear</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1235>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1569>odict_tp_clear</a></td>
 </tr>
 
@@ -8118,6 +8358,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_sizeof</td>
+</tr>
+
+<tr>
 <td><a name="L946">946</a></td>
 <td></td>
 <td></td>
@@ -8376,6 +8624,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L970>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L976">976</a></td>
 <td></td>
 <td></td>
@@ -8506,6 +8762,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L988>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L990">990</a></td>
 <td></td>
 <td></td>
@@ -8550,6 +8814,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L988>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L994">994</a></td>
 <td></td>
 <td></td>
@@ -8561,6 +8833,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L993>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L993>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_reduce</td>
 </tr>
 
@@ -8590,6 +8870,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L970>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L970>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_reduce</td>
 </tr>
 
@@ -9550,6 +9838,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L769>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1094>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L756>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
 <td><a name="L1106">1106</a></td>
 <td></td>
 <td></td>
@@ -9620,6 +9932,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
 </tr>
 
@@ -9750,6 +10070,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1124>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1124>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1083>_odict_popkey_hash</a></td>
 </tr>
 
@@ -10360,6 +10688,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1190>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_popitem</td>
+</tr>
+
+<tr>
 <td><a name="L1192">1192</a></td>
 <td></td>
 <td></td>
@@ -10371,6 +10707,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1191>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_popitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_popitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_popitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1190>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_popitem</td>
 </tr>
 
@@ -10976,6 +11336,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L1256>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
 <td><a name="L1264">1264</a></td>
 <td></td>
 <td></td>
@@ -11171,6 +11539,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._odictnode* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1286>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
@@ -11273,6 +11649,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
 <td><a name="L1287">1287</a></td>
 <td></td>
 <td></td>
@@ -11333,6 +11717,94 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1286>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1286>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1280>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1272>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1269>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1268>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1269>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1272>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1286>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1280>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
 </tr>
 
@@ -12042,6 +12514,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L542>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1325>odict_move_to_end</a></td>
+</tr>
+
+<tr>
 <td><a name="L1366">1366</a></td>
 <td></td>
 <td></td>
@@ -12683,6 +13163,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1448>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
 <td><a name="L1453">1453</a></td>
 <td></td>
 <td></td>
@@ -12785,6 +13273,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L783>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
 <td><a name="L1463">1463</a></td>
 <td></td>
 <td></td>
@@ -12803,6 +13299,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type void (%struct._object*)* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L783>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type void (%struct._object*)* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L786>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
 </tr>
 
@@ -12846,8 +13350,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _PyTrash_thread_deposit_object will not be inlined into odict_dealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1465>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1464>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1443>odict_dealloc</a></td>
 </tr>
 
@@ -13334,6 +13854,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> hosting <a href=Objects_odictobject.c.html#L1515>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">odict_repr</td>
@@ -13381,6 +13909,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1517>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1517>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_repr</td>
 </tr>
 
@@ -13446,6 +13982,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1517>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1521>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1497>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_repr</td>
 </tr>
 
@@ -13533,6 +14085,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1533>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1533>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_repr</td>
 </tr>
 
@@ -13791,6 +14351,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 (%struct._object*, i32 (%struct._object*, i8*)*, i8*)* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1560>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 (%struct._object*, i32 (%struct._object*, i8*)*, i8*)* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1559>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 (%struct._object*, i32 (%struct._object*, i8*)*, i8*)* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1562>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odict_traverse</td>
 </tr>
 
@@ -14159,6 +14735,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1595>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1584>odict_richcompare</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1598>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1584>odict_richcompare</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1598>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1584>odict_richcompare</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1595>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1584>odict_richcompare</a></td>
 </tr>
 
@@ -14559,6 +15159,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1644>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_init</td>
+</tr>
+
+<tr>
 <td><a name="L1649">1649</a></td>
 <td></td>
 <td></td>
@@ -14751,6 +15359,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odict_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1722>PyODict_New</a></td>
 </tr>
@@ -14759,7 +15375,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1722>PyODict_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1666>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1250>odict_copy</a></td>
 </tr>
 
@@ -15818,6 +16450,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1787>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L1790">1790</a></td>
 <td></td>
 <td></td>
@@ -15829,6 +16469,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1787>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1788>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_dealloc</td>
 </tr>
 
@@ -15923,6 +16571,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1798>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1799>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_traverse</td>
 </tr>
 
@@ -16278,6 +16934,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1815>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1834>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1806>odictiter_nextkey</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1815>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1834>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1815>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1835>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
 </tr>
 
@@ -16673,6 +17345,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1877>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1877>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1876>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
 <td><a name="L1879">1879</a></td>
 <td></td>
 <td></td>
@@ -16742,6 +17438,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1881>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1874>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
 </tr>
 
@@ -16905,6 +17609,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1900>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
 <td><a name="L1903">1903</a></td>
 <td></td>
 <td></td>
@@ -16916,6 +17628,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1902>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1902>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1902>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1900>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
 </tr>
 
@@ -16998,6 +17734,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1876>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1878>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1902>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1900>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1903>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
 <td><a name="L1914">1914</a></td>
 <td></td>
 <td></td>
@@ -17009,6 +17785,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1877>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1876>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1878>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1902>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1900>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1903>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_odictobject.c.html#L1874>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L1913>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_odictobject.c.html#L1860>odictiter_iternext</a></td>
 </tr>
 
@@ -17223,6 +18047,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1935>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1937">1937</a></td>
 <td></td>
 <td></td>
@@ -17234,6 +18066,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1936>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1936>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1935>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_reduce</td>
 </tr>
 
@@ -17339,6 +18195,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1947>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1949">1949</a></td>
 <td></td>
 <td></td>
@@ -17386,6 +18250,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1951>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L1951>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_reduce</td>
 </tr>
 
@@ -17828,6 +18700,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2009>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
 <td><a name="L2012">2012</a></td>
 <td></td>
 <td></td>
@@ -17913,6 +18793,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2009>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
 <td><a name="L2023">2023</a></td>
 <td></td>
 <td></td>
@@ -17924,6 +18812,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2004>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2009>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_new</td>
 </tr>
 
@@ -17946,6 +18842,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2004>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2009>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2021>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_new</td>
 </tr>
 
@@ -17976,6 +18888,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2004>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2009>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2027>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">odictiter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_odictobject.c.html#L2027>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2027>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">odictiter_new</td>
 </tr>
 
@@ -20239,6 +21175,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
 <td><a name="L2313">2313</a></td>
 <td></td>
 <td></td>
@@ -20266,6 +21210,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2312>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2310>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_add_pairs</td>
 </tr>
 
@@ -20364,6 +21316,126 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2304>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2313>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2320>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2290>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2297>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2305>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2305>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2297>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2290>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2320>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2313>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2304>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2296>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
 <td><a name="L2324">2324</a></td>
 <td></td>
 <td></td>
@@ -20375,6 +21447,86 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2305>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2297>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2290>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2320>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2313>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2304>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2296>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_add_pairs</td>
 </tr>
 
@@ -20394,6 +21546,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2296>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2290>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2297>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
 <td><a name="L2326">2326</a></td>
 <td></td>
 <td></td>
@@ -20405,6 +21621,110 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2325>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2325>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2296>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2304>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2290>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2297>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2305>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2325>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_add_pairs</td>
 </tr>
 
@@ -20449,6 +21769,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2287>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2327>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2327>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_add_pairs</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2287>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_add_pairs</td>
 </tr>
 
@@ -20730,6 +22074,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2362>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2366">2366</a></td>
 <td></td>
 <td></td>
@@ -20778,6 +22130,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2368>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2368>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 
@@ -20862,6 +22222,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2375>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2378">2378</a></td>
 <td></td>
 <td></td>
@@ -20906,6 +22274,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2380>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2382">2382</a></td>
 <td></td>
 <td></td>
@@ -20924,6 +22300,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2381>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2381>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2381>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2380>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 
@@ -21025,6 +22425,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2391">2391</a></td>
 <td></td>
 <td></td>
@@ -21068,6 +22476,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2390>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2390>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2390>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2396">2396</a></td>
 <td></td>
 <td></td>
@@ -21090,6 +22538,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2395>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2386>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2395>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2390>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2386>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2398">2398</a></td>
 <td></td>
 <td></td>
@@ -21101,6 +22605,62 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2397>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2397>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2397>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2395>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2390>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2386>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 
@@ -21223,6 +22783,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2407>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2409">2409</a></td>
 <td></td>
 <td></td>
@@ -21271,6 +22855,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2411>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2411>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 
@@ -21337,6 +22929,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2417>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_odictobject.c.html#L2359>load</a> because it is clobbered by <a href=Objects_odictobject.c.html#L2417>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 
@@ -21479,6 +23079,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2431>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
 <td><a name="L2433">2433</a></td>
 <td></td>
 <td></td>
@@ -21518,6 +23126,78 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2426>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2418>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2418>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2369>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2369>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2412>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2412>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mutablemapping_update</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_odictobject.c.html#L2432>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">mutablemapping_update</td>
 </tr>
 

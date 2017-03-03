@@ -236,6 +236,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L611>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L834>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
@@ -244,7 +260,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -500,8 +540,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L61>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L61>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -525,7 +581,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L857>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L861>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2532>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -1496,6 +1600,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyList_New</td>
+</tr>
+
+<tr>
 <td><a name="L176">176</a></td>
 <td></td>
 <td></td>
@@ -1566,6 +1678,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyList_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyList_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L181>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyList_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L509>list_repeat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L509>list_repeat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L181>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L509>list_repeat</a></td>
 </tr>
 
@@ -1582,6 +1734,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L181>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2801>listiter_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2801>listiter_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L181>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2801>listiter_reduce</a></td>
 </tr>
 
@@ -1590,6 +1782,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2946>listreviter_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2946>listreviter_reduce</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L181>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L181>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2946>listreviter_reduce</a></td>
 </tr>
 
@@ -3192,7 +3400,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L328>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_dealloc</td>
 </tr>
 
@@ -3235,8 +3459,40 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _PyTrash_thread_deposit_object will not be inlined into list_dealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L328>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L333>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L333>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L331>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_dealloc</td>
 </tr>
 
@@ -3510,6 +3766,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L356>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L380>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L356>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L376>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow">list_repr</td>
@@ -3598,6 +3870,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L376>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L365>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
 <td><a name="L370">370</a></td>
 <td></td>
 <td></td>
@@ -3644,6 +3940,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L376>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L365>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L369>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
 <td><a name="L372">372</a></td>
 <td></td>
 <td></td>
@@ -3663,6 +3991,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L371>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L369>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L371>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_repr</td>
 </tr>
 
@@ -3714,6 +4050,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L376>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L376>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_repr</td>
 </tr>
 
@@ -4141,6 +4485,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2411>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L419">419</a></td>
 <td></td>
 <td></td>
@@ -4223,6 +4575,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L2410>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2411>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L2410>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L419>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L425">425</a></td>
 <td></td>
 <td></td>
@@ -4248,6 +4616,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2410>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2411>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
 </tr>
 
@@ -5197,6 +5573,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L487>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_concat</td>
+</tr>
+
+<tr>
 <td><a name="L499">499</a></td>
 <td></td>
 <td></td>
@@ -5699,6 +6083,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L540>icmp</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L509>list_repeat</a></td>
+</tr>
+
+<tr>
 <td><a name="L541">541</a></td>
 <td></td>
 <td></td>
@@ -5794,6 +6186,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L631>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L611>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
 </tr>
 
@@ -6327,6 +6727,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L607>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
 <td><a name="L609">609</a></td>
 <td></td>
 <td></td>
@@ -6388,6 +6796,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L611>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L611>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
 </tr>
 
@@ -6954,6 +7370,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L646>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L611>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L70>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
 <td><a name="L670">670</a></td>
 <td></td>
 <td></td>
@@ -7060,6 +7508,182 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L678>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L642>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L655>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L665>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L646>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L670>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L674>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L678>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L642>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L655>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L665>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L646>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L671>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L674>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L578>list_ass_slice</a></td>
 </tr>
 
@@ -7492,6 +8116,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L723>icmp</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L694>list_inplace_repeat</a></td>
+</tr>
+
+<tr>
 <td><a name="L724">724</a></td>
 <td></td>
 <td></td>
@@ -7554,6 +8186,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L725>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L694>list_inplace_repeat</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L63>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L694>list_inplace_repeat</a></td>
 </tr>
 
@@ -7646,6 +8286,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L2462>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2463>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L738">738</a></td>
 <td></td>
 <td></td>
@@ -7728,6 +8376,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2463>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L744">744</a></td>
 <td></td>
 <td></td>
@@ -7746,7 +8402,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L744>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_ass_item</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2462>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2463>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L743>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L744>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -8292,6 +8980,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L804">804</a></td>
 <td></td>
 <td></td>
@@ -8303,6 +8999,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L803>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L803>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -8363,6 +9067,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -8438,6 +9166,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L70>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L818">818</a></td>
 <td></td>
 <td></td>
@@ -8499,6 +9251,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L821">821</a></td>
 <td></td>
 <td></td>
@@ -8535,6 +9295,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L797>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L817>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L822>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L825">825</a></td>
 <td></td>
 <td></td>
@@ -8546,6 +9330,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L824>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L824>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -8655,6 +9447,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L834>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L834>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -9085,6 +9885,54 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L289>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L298>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L289>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L875">875</a></td>
 <td></td>
 <td></td>
@@ -9145,7 +9993,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L839>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L861>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L861>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L859>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -9209,6 +10073,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L861>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L859>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L861>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
 <td><a name="L887">887</a></td>
 <td></td>
 <td></td>
@@ -9220,6 +10124,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L886>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L886>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -9249,6 +10161,86 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L874>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L874>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L860>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L860>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L874>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L298>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L831>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L289>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L781>listextend</a></td>
 </tr>
 
@@ -9419,6 +10411,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L905>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_inplace_concat</td>
+</tr>
+
+<tr>
 <td><a name="L909">909</a></td>
 <td></td>
 <td></td>
@@ -9430,6 +10430,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L908>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_inplace_concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L908>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_inplace_concat</td>
 </tr>
 
@@ -9806,6 +10814,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L943>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L913>listpop</a></td>
+</tr>
+
+<tr>
 <td><a name="L946">946</a></td>
 <td></td>
 <td></td>
@@ -10166,6 +11182,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
 </tr>
@@ -10174,7 +11198,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -10303,6 +11343,102 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1562>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1585>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1562>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1585>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -10439,6 +11575,102 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1665>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1700>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1718>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1665>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1023>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1025>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1700>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1718>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -11071,7 +12303,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1099>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">binarysort</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1107>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1099>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -11310,6 +12558,22 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L1101>ptrtoint</a>&nbsp;</span></td>
+<td class="column-entry-yellow">binarysort</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L1101>sub</a>&nbsp;</span></td>
+<td class="column-entry-yellow">binarysort</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L1101>ashr</a>&nbsp;</span></td>
 <td class="column-entry-yellow">binarysort</td>
 </tr>
 
@@ -11684,6 +12948,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2026>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1434>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L961>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L1148">1148</a></td>
 <td></td>
 <td></td>
@@ -11740,7 +13036,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">count_run</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -11836,7 +13148,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">count_run</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -14040,6 +15368,94 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2059>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1434>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L961>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L1448">1448</a></td>
 <td></td>
 <td></td>
@@ -14605,6 +16021,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1015>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
@@ -14615,6 +16047,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -14710,6 +16150,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -14826,6 +16282,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
@@ -14836,6 +16300,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L998>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -15152,6 +16624,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L998>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
 </tr>
@@ -15177,6 +16657,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L998>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -15432,6 +16920,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1494>merge_lo</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=Objects_listobject.c.html#L1191>gallop_left</a> too costly to inline (cost=305, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
@@ -15450,6 +16946,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L996>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L998>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -16023,6 +17527,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated in favor of <a href=Objects_listobject.c.html#L1015>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
@@ -16033,6 +17553,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -16180,6 +17708,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1014>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1016>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -16296,6 +17840,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
@@ -16306,6 +17858,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1006>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -16629,6 +18189,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=Objects_listobject.c.html#L1282>gallop_right</a> too costly to inline (cost=445, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
@@ -16647,6 +18215,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1006>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -16867,6 +18443,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1626>merge_hi</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=Objects_listobject.c.html#L1191>gallop_left</a> too costly to inline (cost=445, threshold=250)&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
@@ -16885,6 +18469,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1004>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1006>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1764>merge_at</a></td>
 </tr>
 
@@ -17982,6 +19574,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1835>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">merge_collapse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
@@ -17992,6 +19592,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1435>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1435>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -19357,7 +20965,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L1923>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1952>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -19567,6 +21191,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1931>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1973>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -19893,6 +21533,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1435>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1435>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1435>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L2027">2027</a></td>
 <td></td>
 <td></td>
@@ -20165,6 +21829,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2026>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L2051">2051</a></td>
 <td></td>
 <td></td>
@@ -20216,6 +21944,86 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1973>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L2056">2056</a></td>
 <td></td>
 <td></td>
@@ -20260,6 +22068,118 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1973>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L961>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1099>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1107>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L2060">2060</a></td>
 <td></td>
 <td></td>
@@ -20292,6 +22212,102 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1931>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1973>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_listobject.c.html#L1922>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2059>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -20378,6 +22394,150 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1979>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1973>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1977>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L961>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1099>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1107>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2059>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1448>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
 <td><a name="L2070">2070</a></td>
 <td></td>
 <td></td>
@@ -20389,6 +22549,126 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1967>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1979>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1973>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1977>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1965>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1158>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1084>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1845>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1869>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2052>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2059>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1448>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -20505,6 +22785,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2080>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1973>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1977>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1979>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L1967>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L1911>listsort</a></td>
 </tr>
 
@@ -20649,6 +22961,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2095>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyList_Sort</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2095>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyList_Sort</td>
 </tr>
 
@@ -21329,6 +23649,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2152>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2155>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2170>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">listindex</td>
 </tr>
@@ -21405,6 +23733,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2155>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L2170>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listindex</td>
+</tr>
+
+<tr>
 <td><a name="L2171">2171</a></td>
 <td></td>
 <td></td>
@@ -21467,6 +23811,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2155>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listindex</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2170>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">listindex</td>
 </tr>
 
@@ -22294,6 +24646,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L2251>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">list_richcompare</td>
@@ -22319,6 +24679,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L2252>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                             </pre><span class="column-entry-yellow"> hosting <a href=Objects_listobject.c.html#L2252>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">list_richcompare</td>
 </tr>
 
@@ -22892,6 +25260,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_listobject.c.html#L2299>store</a> because it is clobbered by <a href=Objects_listobject.c.html#L2302>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2296>list_init</a></td>
+</tr>
+
+<tr>
 <td><a name="L2316">2316</a></td>
 <td></td>
 <td></td>
@@ -22940,6 +25316,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2316>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2296>list_init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2316>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2296>list_init</a></td>
 </tr>
 
@@ -23641,6 +26025,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2410>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2415">2415</a></td>
 <td></td>
 <td></td>
@@ -23969,6 +26361,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2443>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2405>list_subscript</a></td>
@@ -24209,6 +26609,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2463>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2462>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -24755,6 +27163,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2516>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2517">2517</a></td>
 <td></td>
 <td></td>
@@ -24839,6 +27255,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2521">2521</a></td>
 <td></td>
 <td></td>
@@ -24865,6 +27289,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2472>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -24965,6 +27397,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2493>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2531">2531</a></td>
 <td></td>
 <td></td>
@@ -24983,6 +27423,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25116,6 +27564,38 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2493>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2542>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2493>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2542>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: control flow cannot be substituted for a select&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
@@ -25141,6 +27621,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L70>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2503>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2532>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25368,6 +27888,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L454>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2568">2568</a></td>
 <td></td>
 <td></td>
@@ -25387,6 +27923,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2560>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L455>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L446>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25437,6 +27989,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2568>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2568>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25541,6 +28101,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2587">2587</a></td>
 <td></td>
 <td></td>
@@ -25607,6 +28175,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._object** not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
 <td><a name="L2593">2593</a></td>
 <td></td>
 <td></td>
@@ -25634,6 +28210,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_listobject.c.html#L2567>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2597>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25760,6 +28344,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2602>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: control flow cannot be substituted for a select&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
@@ -25785,6 +28377,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2598>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -25829,6 +28429,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2605>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_listobject.c.html#L2592>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2605>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_listobject.c.html#L2458>list_ass_subscript</a></td>
 </tr>
 
@@ -26861,6 +29469,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2746>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_iter</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_listobject.c.html#L2746>load</a> because it is clobbered by <a href=Objects_listobject.c.html#L2746>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">list_iter</td>
+</tr>
+
+<tr>
 <td><a name="L2747">2747</a></td>
 <td></td>
 <td></td>
@@ -27402,6 +30026,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct.PyListObject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listiter_setstate</td>
+</tr>
+
+<tr>
 <td><a name="L2814">2814</a></td>
 <td></td>
 <td></td>
@@ -27455,6 +30087,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listiter_setstate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2811>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">listiter_setstate</td>
 </tr>
 
@@ -28060,6 +30700,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2898>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listreviter_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2898>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listreviter_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L2900">2900</a></td>
 <td></td>
 <td></td>
@@ -28529,6 +31185,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct.PyListObject* not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2955>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listreviter_setstate</td>
+</tr>
+
+<tr>
 <td><a name="L2959">2959</a></td>
 <td></td>
 <td></td>
@@ -28582,6 +31246,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2955>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">listreviter_setstate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_listobject.c.html#L2956>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">listreviter_setstate</td>
 </tr>
 

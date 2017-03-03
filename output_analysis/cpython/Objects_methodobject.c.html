@@ -344,7 +344,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L36>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCFunction_NewEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L32>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_methodobject.c.html#L19>PyCFunction_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L36>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_methodobject.c.html#L19>PyCFunction_New</a></td>
 </tr>
 
@@ -367,6 +383,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L42>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCFunction_NewEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L32>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCFunction_NewEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L36>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyCFunction_NewEx</td>
 </tr>
 
@@ -404,7 +436,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L46>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCFunction_NewEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_methodobject.c.html#L46>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L46>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyCFunction_NewEx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L36>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_methodobject.c.html#L19>PyCFunction_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L46>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_methodobject.c.html#L19>PyCFunction_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_methodobject.c.html#L46>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L46>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_methodobject.c.html#L19>PyCFunction_New</a></td>
 </tr>
 
@@ -2075,6 +2139,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L234>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyCFunction_FastCallDict</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L234>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyCFunction_FastCallDict</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L231>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyCFunction_FastCallDict</td>
+</tr>
+
+<tr>
 <td><a name="L237">237</a></td>
 <td></td>
 <td></td>
@@ -2236,6 +2324,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_methodobject.c.html#L251>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L253>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyCFunction_FastCallDict</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_methodobject.c.html#L251>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L251>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyCFunction_FastCallDict</td>
 </tr>
 
@@ -2575,6 +2671,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L295>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyCFunction_FastCallKeywords</td>
+</tr>
+
+<tr>
 <td><a name="L297">297</a></td>
 <td></td>
 <td></td>
@@ -2705,6 +2809,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L307>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L311">311</a></td>
 <td></td>
 <td></td>
@@ -2720,6 +2832,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L309>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L312">312</a></td>
 <td></td>
 <td></td>
@@ -2731,6 +2859,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L307>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L309>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L310>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">meth_dealloc</td>
 </tr>
 
@@ -3422,6 +3566,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_methodobject.c.html#L382>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L383>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_get__qualname__</td>
+</tr>
+
+<tr>
 <td><a name="L386">386</a></td>
 <td></td>
 <td></td>
@@ -3477,6 +3629,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_methodobject.c.html#L389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">meth_get__qualname__</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_methodobject.c.html#L382>load</a> because it is clobbered by <a href=Objects_methodobject.c.html#L389>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">meth_get__qualname__</td>
 </tr>
 

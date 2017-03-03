@@ -1741,6 +1741,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
@@ -1757,6 +1765,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
@@ -1767,6 +1783,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L244>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L244>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L244>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
 </tr>
 
@@ -1813,6 +1869,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L760>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L771>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L757>handle_legacy_finalizers</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -1829,8 +1893,128 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of load because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of load because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of load because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* eliminated in favor of <a href=Modules_gcmodule.c.html#L244>phi</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L763>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L771>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -2093,6 +2277,38 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
 </tr>
@@ -2101,7 +2317,79 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -2140,6 +2428,38 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
 </tr>
@@ -2148,7 +2468,79 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -2286,6 +2678,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L281>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
@@ -2336,6 +2736,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L237>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L281>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L281>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -2475,7 +2883,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L763>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L757>handle_legacy_finalizers</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L771>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L757>handle_legacy_finalizers</a></td>
 </tr>
 
@@ -2500,6 +2932,206 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L237>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L283>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L237>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L283>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L237>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L237>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1040>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L297>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L763>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L771>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -2553,6 +3185,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L297>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L237>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L297>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -4317,6 +4957,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of load because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of load because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
 <td><a name="L515">515</a></td>
 <td></td>
 <td></td>
@@ -4555,6 +5211,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L299>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -6046,7 +6734,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -6153,7 +6857,87 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -6183,6 +6967,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L238>store</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L599>handle_weakrefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -6193,6 +7001,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -6439,6 +7271,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
 <td><a name="L761">761</a></td>
 <td></td>
 <td></td>
@@ -6457,6 +7297,158 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1040>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L299>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -6599,6 +7591,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L763>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L757>handle_legacy_finalizers</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -6609,6 +7609,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L771>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1040>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L763>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7024,7 +8040,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Modules_gcmodule.c.html#L805>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L784>finalize_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Modules_gcmodule.c.html#L805>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7508,6 +8540,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -7518,6 +8566,134 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7555,6 +8731,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -7565,6 +8757,150 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L299>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7630,7 +8966,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Modules_gcmodule.c.html#L865>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Modules_gcmodule.c.html#L865>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7674,6 +9026,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L244>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated in favor of <a href=Modules_gcmodule.c.html#L244>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
@@ -7684,6 +9052,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -7736,7 +9120,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L852>delete_garbage</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -8709,6 +10125,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
 <td><a name="L971">971</a></td>
 <td></td>
 <td></td>
@@ -9028,6 +10468,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -9375,6 +10863,142 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L809>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L810>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L645>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L926>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L399>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L486>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L519>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L582>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L716>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L862>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L867>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L917>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L868>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L744>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -9862,6 +11486,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1058>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1056>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1072>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
 <td><a name="L1074">1074</a></td>
 <td></td>
 <td></td>
@@ -9877,6 +11525,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1058>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1056>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1072>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
 <td><a name="L1075">1075</a></td>
 <td></td>
 <td></td>
@@ -9888,6 +11560,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1070>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1058>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1056>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1072>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L902>collect</a></td>
 </tr>
 
@@ -10165,6 +11861,38 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1094>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1094>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1094>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1112>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1094>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
 <td class="column-entry-yellow">invoke_gc_callback</td>
@@ -10217,6 +11945,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> loop not vectorized: control flow cannot be substituted for a select&nbsp;</span></td>
 <td class="column-entry-yellow">invoke_gc_callback</td>
@@ -10260,6 +11996,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1112>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1112>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1112>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1111>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
 <td><a name="L1116">1116</a></td>
 <td></td>
 <td></td>
@@ -10278,6 +12054,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1115>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1114>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1112>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">invoke_gc_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1111>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">invoke_gc_callback</td>
 </tr>
 
@@ -10868,6 +12684,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1724>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1702>_PyObject_GC_Alloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L1720>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1724>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1702>_PyObject_GC_Alloc</a></td>
 </tr>
 
@@ -12673,6 +14497,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1338>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1349>gc_get_referrers</a></td>
+</tr>
+
+<tr>
 <td><a name="L1359">1359</a></td>
 <td></td>
 <td></td>
@@ -12896,6 +14728,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Modules_gcmodule.c.html#L1385>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1394>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_referents</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Modules_gcmodule.c.html#L1385>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_referents</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow">gc_get_referents</td>
@@ -12928,6 +14776,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Modules_gcmodule.c.html#L1387>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_referents</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=Modules_gcmodule.c.html#L1387>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">gc_get_referents</td>
 </tr>
 
@@ -13016,6 +14872,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1394>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_referents</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1394>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">gc_get_referents</td>
 </tr>
 
@@ -13224,6 +15088,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L325>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1408>gc_get_objects</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L325>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1408>gc_get_objects</a></td>
 </tr>
 
@@ -13580,6 +15452,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1458>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
 <td><a name="L1460">1460</a></td>
 <td></td>
 <td></td>
@@ -13648,6 +15528,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1459>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1459>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1451>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1459>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1458>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">gc_get_stats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1451>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">gc_get_stats</td>
 </tr>
 
@@ -15127,6 +17047,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Modules_gcmodule.c.html#L1632>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1644>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
 <td><a name="L1649">1649</a></td>
 <td></td>
 <td></td>
@@ -15153,6 +17081,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1633>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1647>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1633>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1644>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
 </tr>
 
@@ -15191,6 +17127,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1650>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
 </tr>
 
@@ -15260,6 +17204,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1654>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1654>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
 <td><a name="L1660">1660</a></td>
 <td></td>
 <td></td>
@@ -15271,6 +17239,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1659>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1659>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1652>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1659>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyGC_DumpShutdownStats</td>
 </tr>
 
@@ -15498,6 +17490,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1689>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyObject_GC_Track</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Modules_gcmodule.c.html#L1689>load</a> because it is clobbered by <a href=Modules_gcmodule.c.html#L1689>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyObject_GC_Track</td>
 </tr>
 
@@ -15760,6 +17760,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1714>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1702>_PyObject_GC_Alloc</a></td>
+</tr>
+
+<tr>
 <td><a name="L1720">1720</a></td>
 <td></td>
 <td></td>
@@ -15771,6 +17779,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1712>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1702>_PyObject_GC_Alloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Modules_gcmodule.c.html#L1714>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Modules_gcmodule.c.html#L1702>_PyObject_GC_Alloc</a></td>
 </tr>
 

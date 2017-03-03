@@ -2543,6 +2543,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i32 eliminated in favor of <a href=._Modules__tracemalloc.c.html#L330>phi</a>&nbsp;</span></td>
+<td class="column-entry-yellow">hashtable_compare_traceback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow">hashtable_compare_traceback</td>
@@ -2751,6 +2759,38 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L450>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
@@ -2761,6 +2801,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L450>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L414>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
 </tr>
 
@@ -2777,6 +2849,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L450>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L414>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -4081,6 +4185,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of load because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of load because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of load because it is clobbered by <a href=._Modules__tracemalloc.c.html#L358>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
@@ -4091,6 +4219,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L358>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L414>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
 </tr>
 
@@ -4107,6 +4259,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L358>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L414>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -4136,6 +4312,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L443>traceback_get_frames</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
@@ -4146,6 +4346,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L396>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
 </tr>
 
@@ -4162,6 +4386,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L396>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -4332,6 +4580,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.traceback_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L482>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.traceback_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L482>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.traceback_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L482>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L414>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
@@ -4441,6 +4713,86 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L450>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L396>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L471>traceback_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L450>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L355>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L405>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L396>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L430>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -5480,7 +5832,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tracemalloc_remove_trace</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tracemalloc_remove_trace</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tracemalloc_remove_trace</td>
 </tr>
 
@@ -5496,7 +5864,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1793>_PyTraceMalloc_Untrack</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1793>_PyTraceMalloc_Untrack</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1793>_PyTraceMalloc_Untrack</a></td>
 </tr>
 
@@ -5512,7 +5896,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L696>tracemalloc_realloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L696>tracemalloc_realloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L696>tracemalloc_realloc</a></td>
 </tr>
 
@@ -5528,7 +5928,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L887>tracemalloc_raw_realloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L887>tracemalloc_raw_realloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L887>tracemalloc_raw_realloc</a></td>
 </tr>
 
@@ -5544,7 +5960,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L747>tracemalloc_free</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L747>tracemalloc_free</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L747>tracemalloc_free</a></td>
 </tr>
 
@@ -5560,7 +5992,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L805>tracemalloc_realloc_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L805>tracemalloc_realloc_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L805>tracemalloc_realloc_gil</a></td>
 </tr>
 
@@ -5908,6 +6356,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L630>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
 <td><a name="L636">636</a></td>
 <td></td>
 <td></td>
@@ -5934,6 +6390,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L627>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L630>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -5970,6 +6434,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* eliminated in favor of <a href=._Modules__tracemalloc.c.html#L635>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=._Modules__tracemalloc.c.html#L635>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -6126,6 +6598,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L651>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                              </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
@@ -6143,6 +6623,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L627>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L630>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L648>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L651>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L602>tracemalloc_add_trace</a></td>
 </tr>
 
@@ -6399,6 +6903,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L680>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tracemalloc_alloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L680>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L873>tracemalloc_raw_malloc</a></td>
 </tr>
 
@@ -6415,6 +6927,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L678>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L766>tracemalloc_alloc_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L680>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L766>tracemalloc_alloc_gil</a></td>
 </tr>
 
@@ -7245,6 +7765,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L760>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L747>tracemalloc_free</a></td>
+</tr>
+
+<tr>
 <td><a name="L763">763</a></td>
 <td></td>
 <td></td>
@@ -7854,6 +8382,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L819>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L805>tracemalloc_realloc_gil</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L819>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L805>tracemalloc_realloc_gil</a></td>
 </tr>
 
@@ -8763,6 +9299,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L902>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L887>tracemalloc_raw_realloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L902>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L887>tracemalloc_raw_realloc</a></td>
 </tr>
 
@@ -10711,6 +11255,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1066>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1054>tracemalloc_deinit</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1066>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1755>_PyTraceMalloc_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1070>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1755>_PyTraceMalloc_Fini</a></td>
 </tr>
 
@@ -10754,7 +11314,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1054>tracemalloc_deinit</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1054>tracemalloc_deinit</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1755>_PyTraceMalloc_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1755>_PyTraceMalloc_Fini</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1076>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1755>_PyTraceMalloc_Fini</a></td>
 </tr>
 
@@ -11999,7 +12591,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1209>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">frame_to_pyobject</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1209>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1209>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
 </tr>
 
@@ -12244,6 +12852,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct.traceback_t* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1243>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
@@ -12307,6 +12923,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1233>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1214>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1233>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1211>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1233>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1209>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1233>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1202>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
 </tr>
 
@@ -12379,6 +13019,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1233>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1247>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1247>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1247>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1220>traceback_to_pyobject</a></td>
 </tr>
 
@@ -12602,7 +13258,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">trace_to_pyobject</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1270>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
 </tr>
 
@@ -12683,7 +13355,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1277>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">trace_to_pyobject</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1277>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1277>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
 </tr>
 
@@ -12788,7 +13476,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">trace_to_pyobject</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1284>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
 </tr>
 
@@ -13109,6 +13813,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1325>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1325>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1302>tracemalloc_get_traces_fill</a></td>
 </tr>
 
@@ -13783,6 +14495,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
 <td><a name="L1401">1401</a></td>
 <td></td>
 <td></td>
@@ -13808,6 +14536,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1362>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1362>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1400>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1362>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1386>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1362>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1377>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
 </tr>
 
@@ -13879,6 +14631,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1361>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1361>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1400>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1361>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1386>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._Py_hashtable_t* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1361>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
 <td><a name="L1409">1409</a></td>
 <td></td>
 <td></td>
@@ -13919,6 +14703,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1409>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1406>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1363>store</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1400>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1355>py_tracemalloc_get_traces</a></td>
 </tr>
 
@@ -14185,7 +14993,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1431>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tracemalloc_get_traceback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1428>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1486>_PyMem_DumpTraceback</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1431>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1486>_PyMem_DumpTraceback</a></td>
 </tr>
 
@@ -14201,7 +15025,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1431>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1809>_PyTraceMalloc_GetTraceback</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1428>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1451>py_tracemalloc_get_object_traceback</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1425>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1431>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1451>py_tracemalloc_get_object_traceback</a></td>
 </tr>
 
@@ -14834,6 +15674,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1496>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1486>_PyMem_DumpTraceback</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1497>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1481>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1486>_PyMem_DumpTraceback</a></td>
 </tr>
 
@@ -16501,7 +17349,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1684>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">parse_sys_xoptions</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1684>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1684>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
 </tr>
 
@@ -16952,6 +17816,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1734>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
 <td><a name="L1736">1736</a></td>
 <td></td>
 <td></td>
@@ -17050,6 +17922,110 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1735>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1735>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1680>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1686>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1685>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1685>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1684>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1685>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1686>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1680>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1677>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1735>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__tracemalloc.c.html#L1734>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1696>_PyTraceMalloc_Init</a></td>
 </tr>
 
@@ -17600,6 +18576,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1801>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L584>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1793>_PyTraceMalloc_Untrack</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=._Modules__tracemalloc.c.html#L1801>load</a> because it is clobbered by <a href=._Modules__tracemalloc.c.html#L587>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__tracemalloc.c.html#L1793>_PyTraceMalloc_Untrack</a></td>
 </tr>
 

@@ -619,6 +619,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L75>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
 <td><a name="L77">77</a></td>
 <td></td>
 <td></td>
@@ -680,6 +688,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L72>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L76>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L76>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L75>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">copy_grouping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L72>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">copy_grouping</td>
 </tr>
 
@@ -1434,8 +1482,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L146>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1457,8 +1529,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L176>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1517,6 +1613,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L178>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
 <td><a name="L179">179</a></td>
 <td></td>
 <td></td>
@@ -1548,8 +1652,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L178>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1571,8 +1699,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1594,8 +1746,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1617,8 +1793,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L184>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1677,6 +1877,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
 <td><a name="L187">187</a></td>
 <td></td>
 <td></td>
@@ -1701,8 +1909,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1724,8 +1956,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1747,8 +2003,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1770,8 +2050,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1793,8 +2097,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1816,8 +2144,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1839,8 +2191,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1862,8 +2238,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1885,8 +2285,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1908,8 +2332,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyLocale_localeconv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L197>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L197>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -1946,6 +2394,462 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L197>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L185>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L177>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L176>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L178>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L178>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L184>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L186>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L197>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L197>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L196>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L193>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L192>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L190>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L188>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L182>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L181>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L178>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L175>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L177>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyLocale_localeconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L185>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyLocale_localeconv</td>
 </tr>
 
@@ -4873,6 +5777,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L541>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyIntl_bindtextdomain</td>
+</tr>
+
+<tr>
 <td><a name="L543">543</a></td>
 <td></td>
 <td></td>
@@ -4913,6 +5825,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__localemodule.c.html#L524>store</a> because it is clobbered by <a href=._Modules__localemodule.c.html#L545>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyIntl_bindtextdomain</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L545>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyIntl_bindtextdomain</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L545>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyIntl_bindtextdomain</td>
 </tr>
 
@@ -5774,6 +6702,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L647>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__locale</td>
+</tr>
+
+<tr>
 <td><a name="L650">650</a></td>
 <td></td>
 <td></td>
@@ -5909,6 +6845,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L661>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__locale</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__localemodule.c.html#L661>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyInit__locale</td>
 </tr>
 

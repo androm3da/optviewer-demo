@@ -123,6 +123,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L10>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">descr_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L13">13</a></td>
 <td></td>
 <td></td>
@@ -2600,6 +2608,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L246>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L212>methoddescr_call</a></td>
+</tr>
+
+<tr>
 <td><a name="L248">248</a></td>
 <td></td>
 <td></td>
@@ -3080,6 +3096,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L294>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L252>classmethoddescr_call</a></td>
+</tr>
+
+<tr>
 <td><a name="L296">296</a></td>
 <td></td>
 <td></td>
@@ -3472,6 +3496,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L334>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L299>wrapperdescr_call</a></td>
+</tr>
+
+<tr>
 <td><a name="L336">336</a></td>
 <td></td>
 <td></td>
@@ -3807,7 +3839,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_descrobject.c.html#L368>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L369>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calculate_qualname</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L369>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L380>descr_get_qualname</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_descrobject.c.html#L368>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L369>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L380>descr_get_qualname</a></td>
 </tr>
 
@@ -3882,7 +3930,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_descrobject.c.html#L368>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L375>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calculate_qualname</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L375>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L380>descr_get_qualname</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_descrobject.c.html#L368>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L375>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L380>descr_get_qualname</a></td>
 </tr>
 
@@ -6150,7 +6214,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">descr_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L686>PyDescr_NewMethod</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L686>PyDescr_NewMethod</a></td>
 </tr>
 
@@ -6166,7 +6246,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L698>PyDescr_NewClassMethod</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L710>PyDescr_NewMember</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L710>PyDescr_NewMember</a></td>
 </tr>
 
@@ -6182,7 +6278,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L722>PyDescr_NewGetSet</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L734>PyDescr_NewWrapper</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L674>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L734>PyDescr_NewWrapper</a></td>
 </tr>
 
@@ -8006,6 +8118,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L899>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">mappingproxy_check_mapping</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L899>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L910>mappingproxy_new</a></td>
 </tr>
@@ -8014,7 +8134,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L899>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L910>mappingproxy_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L899>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L975>PyDictProxy_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L899>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L975>PyDictProxy_New</a></td>
 </tr>
 
@@ -8338,6 +8474,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L924>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L910>mappingproxy_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L929>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L910>mappingproxy_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L929>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L929>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L910>mappingproxy_new</a></td>
 </tr>
 
@@ -8796,6 +8948,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L987>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L975>PyDictProxy_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L987>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L987>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L975>PyDictProxy_New</a></td>
+</tr>
+
+<tr>
 <td><a name="L988">988</a></td>
 <td></td>
 <td></td>
@@ -9003,6 +9171,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1009>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">wrapper_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L1013">1013</a></td>
 <td></td>
 <td></td>
@@ -9035,8 +9211,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _PyTrash_thread_deposit_object will not be inlined into wrapper_dealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">wrapper_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1013>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">wrapper_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1013>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">wrapper_dealloc</td>
 </tr>
 
@@ -9776,6 +9968,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type %struct.PyDescrObject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1106>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">wrapper_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1106>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">wrapper_reduce</td>
 </tr>
 
@@ -10954,6 +11154,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyWrapper_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L1248>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyWrapper_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1242>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L299>wrapperdescr_call</a></td>
 </tr>
@@ -10962,7 +11178,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L299>wrapperdescr_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L1248>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L299>wrapperdescr_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L157>wrapperdescr_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L157>wrapperdescr_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L1248>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L1248>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_descrobject.c.html#L157>wrapperdescr_get</a></td>
 </tr>
 
@@ -11774,6 +12022,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L1354">1354</a></td>
 <td></td>
 <td></td>
@@ -11789,6 +12045,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L1355">1355</a></td>
 <td></td>
 <td></td>
@@ -11800,6 +12072,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1354>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1351>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1352>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1353>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_dealloc</td>
 </tr>
 
@@ -12003,6 +12299,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %union._gc_head* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1377>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_descr_get</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1380>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_descr_get</td>
+</tr>
+
+<tr>
 <td><a name="L1381">1381</a></td>
 <td></td>
 <td></td>
@@ -12106,6 +12418,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1384>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_descr_get</td>
+</tr>
+
+<tr>
 <td><a name="L1390">1390</a></td>
 <td></td>
 <td></td>
@@ -12146,6 +12466,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1384>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_descr_get</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1393>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_descr_get</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_descrobject.c.html#L1393>load</a> because it is clobbered by <a href=Objects_descrobject.c.html#L1393>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_descr_get</td>
 </tr>
 
@@ -12506,6 +12842,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
 <td><a name="L1438">1438</a></td>
 <td></td>
 <td></td>
@@ -12517,6 +12861,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_copy</td>
 </tr>
 
@@ -12550,6 +12902,38 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
 <td><a name="L1442">1442</a></td>
 <td></td>
 <td></td>
@@ -12561,6 +12945,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_copy</td>
 </tr>
 
@@ -12594,6 +12994,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
 <td><a name="L1446">1446</a></td>
 <td></td>
 <td></td>
@@ -12605,6 +13061,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1445>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_copy</td>
 </tr>
 
@@ -12627,6 +13107,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1445>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_copy</td>
 </tr>
 
@@ -12674,6 +13178,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1441>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1437>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1432>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
 <td><a name="L1454">1454</a></td>
 <td></td>
 <td></td>
@@ -12714,6 +13242,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1456>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_copy</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1456>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_copy</td>
 </tr>
 
@@ -12972,6 +13508,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1481>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_init</td>
+</tr>
+
+<tr>
 <td><a name="L1484">1484</a></td>
 <td></td>
 <td></td>
@@ -13005,6 +13549,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1484>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_init</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1483>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_init</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1482>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_init</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1481>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_init</td>
 </tr>
 
@@ -13193,6 +13761,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1505>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_init</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1505>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_init</td>
 </tr>
 
@@ -13911,6 +14487,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1591>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L1593">1593</a></td>
 <td></td>
 <td></td>
@@ -13922,6 +14506,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1591>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1590>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">property_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_descrobject.c.html#L1592>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">property_traverse</td>
 </tr>
 

@@ -2079,6 +2079,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_hashtable_get_entry</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L354>_Py_hashtable_get</a></td>
@@ -2089,6 +2097,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L266>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L354>_Py_hashtable_get</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L262>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L354>_Py_hashtable_get</a></td>
 </tr>
 
@@ -2328,6 +2344,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L275>_Py_hashtable_pop_entry</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L370>_Py_hashtable_pop</a></td>
@@ -2338,6 +2362,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L284>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L370>_Py_hashtable_pop</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i32 (%struct._Py_hashtable_t*, i8*, %struct._Py_hashtable_entry_t*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L289>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L370>_Py_hashtable_pop</a></td>
 </tr>
 
@@ -2516,6 +2548,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L302>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L275>_Py_hashtable_pop_entry</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L302>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L370>_Py_hashtable_pop</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L370>_Py_hashtable_pop</a></td>
 </tr>
 
@@ -2919,6 +2967,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._Py_slist_t* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L342>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
+</tr>
+
+<tr>
 <td><a name="L345">345</a></td>
 <td></td>
 <td></td>
@@ -2930,6 +2986,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L340>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L342>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
 </tr>
 
@@ -2952,6 +3016,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=._Modules_hashtable.c.html#L331>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L342>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=._Modules_hashtable.c.html#L331>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L340>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
 </tr>
 
@@ -3704,6 +3776,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i8* (i64)* not eliminated in favor of <a href=._Modules_hashtable.c.html#L333>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L342>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i8* (i64)* not eliminated in favor of <a href=._Modules_hashtable.c.html#L333>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L340>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L312>_Py_hashtable_set</a></td>
 </tr>
 
@@ -4524,6 +4604,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated in favor of <a href=._Modules_hashtable.c.html#L177>store</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
+</tr>
+
+<tr>
 <td><a name="L484">484</a></td>
 <td></td>
 <td></td>
@@ -4571,6 +4659,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated in favor of <a href=._Modules_hashtable.c.html#L177>store</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type void (i8*)* not eliminated in favor of <a href=._Modules_hashtable.c.html#L177>store</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L483>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
 </tr>
 
@@ -4786,6 +4882,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
@@ -4819,6 +4923,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._Py_slist_t* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._Py_slist_t* not eliminated because it is clobbered by <a href=._Modules_hashtable.c.html#L177>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
 </tr>
 
@@ -4872,6 +4984,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=._Modules_hashtable.c.html#L496>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L516>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=._Modules_hashtable.c.html#L496>load</a> because it is clobbered by <a href=._Modules_hashtable.c.html#L177>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules_hashtable.c.html#L493>_Py_hashtable_copy</a></td>
 </tr>
 

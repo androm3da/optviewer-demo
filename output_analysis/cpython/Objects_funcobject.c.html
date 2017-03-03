@@ -368,6 +368,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L38>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyFunction_NewWithQualName</td>
+</tr>
+
+<tr>
 <td><a name="L40">40</a></td>
 <td></td>
 <td></td>
@@ -490,6 +498,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_funcobject.c.html#L15>load</a> because it is clobbered by <a href=Objects_funcobject.c.html#L37>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyFunction_NewWithQualName</td>
+</tr>
+
+<tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
@@ -595,6 +611,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyFunction_NewWithQualName</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L64>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyFunction_NewWithQualName</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.anon* not eliminated in favor of <a href=Objects_funcobject.c.html#L64>load</a> because it is clobbered by <a href=Objects_funcobject.c.html#L64>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyFunction_NewWithQualName</td>
 </tr>
 
@@ -3988,6 +4020,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> hosting <a href=Objects_funcobject.c.html#L491>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L492">492</a></td>
 <td></td>
 <td></td>
@@ -4164,6 +4204,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L506>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L508">508</a></td>
 <td></td>
 <td></td>
@@ -4182,6 +4230,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L71>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L507>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
 </tr>
 
@@ -4218,6 +4274,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L71>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L507>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_funcobject.c.html#L439>func_new</a></td>
 </tr>
 
@@ -4359,6 +4423,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L529">529</a></td>
 <td></td>
 <td></td>
@@ -4370,6 +4442,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_dealloc</td>
 </tr>
 
@@ -4389,6 +4477,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L531">531</a></td>
 <td></td>
 <td></td>
@@ -4400,6 +4512,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_dealloc</td>
 </tr>
 
@@ -4419,6 +4563,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L533">533</a></td>
 <td></td>
 <td></td>
@@ -4430,6 +4614,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L531>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_dealloc</td>
 </tr>
 
@@ -4449,6 +4681,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L531>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L535">535</a></td>
 <td></td>
 <td></td>
@@ -4460,6 +4748,70 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L531>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L533>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_dealloc</td>
 </tr>
 
@@ -4479,6 +4831,78 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L531>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L533>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L537">537</a></td>
 <td></td>
 <td></td>
@@ -4490,6 +4914,86 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L536>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L530>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L528>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L527>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L526>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L531>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L532>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L533>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L535>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_dealloc</td>
 </tr>
 
@@ -4638,6 +5142,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L554">554</a></td>
 <td></td>
 <td></td>
@@ -4649,6 +5161,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_traverse</td>
 </tr>
 
@@ -4668,6 +5196,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L556">556</a></td>
 <td></td>
 <td></td>
@@ -4679,6 +5231,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L555>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_traverse</td>
 </tr>
 
@@ -4698,6 +5282,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L556>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L558">558</a></td>
 <td></td>
 <td></td>
@@ -4709,6 +5333,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L556>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L557>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_traverse</td>
 </tr>
 
@@ -4728,6 +5400,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L556>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L558>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L560">560</a></td>
 <td></td>
 <td></td>
@@ -4743,6 +5471,70 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L557>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L556>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L559>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
 <td><a name="L561">561</a></td>
 <td></td>
 <td></td>
@@ -4754,6 +5546,78 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L559>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L558>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L557>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L556>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L555>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L554>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L553>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L552>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L551>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">func_traverse</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L560>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">func_traverse</td>
 </tr>
 
@@ -5045,6 +5909,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L593>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">function_call</td>
+</tr>
+
+<tr>
 <td><a name="L595">595</a></td>
 <td></td>
 <td></td>
@@ -5223,6 +6095,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L604>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">function_call</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L604>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">function_call</td>
 </tr>
 
@@ -5885,6 +6765,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L701>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cm_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L700>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">cm_dealloc</td>
 </tr>
 
@@ -7270,6 +8158,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L884>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">sm_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_funcobject.c.html#L883>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">sm_dealloc</td>
 </tr>
 

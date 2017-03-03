@@ -109,6 +109,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> completely unrolled loop with 3 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L27>_Py_parse_inf_or_nan</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=Python_pystrtod.c.html#L12>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L27>_Py_parse_inf_or_nan</a></td>
@@ -1098,6 +1106,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_set_387controlword will not be inlined into _PyOS_ascii_strtod because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_PyOS_ascii_strtod</td>
+</tr>
+
+<tr>
 <td><a name="L142">142</a></td>
 <td></td>
 <td></td>
@@ -1154,6 +1170,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyOS_ascii_strtod</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L143>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
 </tr>
 
@@ -2650,6 +2682,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Python_pystrtod.c.html#L139>store</a> because it is clobbered by <a href=Python_pystrtod.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Python_pystrtod.c.html#L139>store</a> because it is clobbered by <a href=Python_pystrtod.c.html#L143>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
 <td><a name="L350">350</a></td>
 <td></td>
 <td></td>
@@ -2709,6 +2757,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L143>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
 <td><a name="L355">355</a></td>
 <td></td>
 <td></td>
@@ -2757,6 +2821,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L143>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
 </tr>
 
@@ -2866,6 +2946,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L358>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L362>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L338>PyOS_string_to_double</a></td>
 </tr>
 
@@ -3121,6 +3209,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L410>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_string_to_number_with_underscores</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L398>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_string_to_number_with_underscores</td>
 </tr>
 
@@ -7440,6 +7536,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _Py_set_387controlword will not be inlined into format_float_short because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
 <td><a name="L1008">1008</a></td>
 <td></td>
 <td></td>
@@ -7503,6 +7607,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1008>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1008>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1010>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -7576,6 +7696,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1008>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1008>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1010>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -7606,6 +7742,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1010>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1010>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1008>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -7821,7 +7973,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Python_pystrtod.c.html#L1021>load</a> because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Python_pystrtod.c.html#L1021>load</a> because it is clobbered by <a href=Python_pystrtod.c.html#L1032>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=Python_pystrtod.c.html#L1021>load</a> because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -7852,7 +8020,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1032>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -7925,7 +8109,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1032>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by store&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 
@@ -9188,7 +9388,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">format_float_short</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1208>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_pystrtod.c.html#L1212>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_pystrtod.c.html#L1243>PyOS_double_to_string</a></td>
 </tr>
 

@@ -418,6 +418,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> PyObject_Init will not be inlined into PyCapsule_New because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyCapsule_New</td>
+</tr>
+
+<tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
@@ -1916,6 +1924,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_capsule.c.html#L226>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
+</tr>
+
+<tr>
 <td><a name="L228">228</a></td>
 <td></td>
 <td></td>
@@ -2061,6 +2077,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_capsule.c.html#L227>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_capsule.c.html#L220>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_capsule.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
+</tr>
+
+<tr>
 <td><a name="L243">243</a></td>
 <td></td>
 <td></td>
@@ -2107,6 +2147,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_capsule.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_capsule.c.html#L73>load</a> because it is clobbered by <a href=Objects_capsule.c.html#L242>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_capsule.c.html#L194>PyCapsule_Import</a></td>
 </tr>
 

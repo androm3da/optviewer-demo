@@ -440,6 +440,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L52>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tb_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
@@ -472,8 +480,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> _PyTrash_thread_deposit_object will not be inlined into tb_dealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">tb_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tb_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L56>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">tb_dealloc</td>
 </tr>
 
@@ -1015,7 +1039,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L121>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">newtracebackobject</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L119>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L121>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
 </tr>
 
@@ -1212,6 +1252,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L119>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
+</tr>
+
+<tr>
 <td><a name="L140">140</a></td>
 <td></td>
 <td></td>
@@ -1252,6 +1300,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L142>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L132>PyTraceBack_Here</a></td>
 </tr>
 
@@ -1442,6 +1506,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
 <td><a name="L166">166</a></td>
 <td></td>
 <td></td>
@@ -1494,6 +1566,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
 <td><a name="L170">170</a></td>
 <td></td>
 <td></td>
@@ -1505,6 +1585,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
 
@@ -1563,6 +1667,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L170>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
@@ -1571,7 +1691,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
 
@@ -1610,6 +1762,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L176>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
 
@@ -1661,6 +1821,46 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L165>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L160>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
@@ -1669,7 +1869,87 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L165>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L160>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L169>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L163>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PyTraceback_Add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L165>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_PyTraceback_Add</td>
 </tr>
 
@@ -2207,7 +2487,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -2259,7 +2555,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -2305,6 +2617,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -2456,7 +2784,343 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L246>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_FindSourceFile</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L246>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L246>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -2754,6 +3418,126 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L258>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L258>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L258>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L215>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L218>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L221>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L230>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L228>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L235>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L238>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L239>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L251>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L246>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L202>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L294">294</a></td>
 <td></td>
 <td></td>
@@ -2826,6 +3610,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L299>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L302">302</a></td>
 <td></td>
 <td></td>
@@ -2837,6 +3629,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L301>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L301>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L299>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -2936,6 +3752,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L312">312</a></td>
 <td></td>
 <td></td>
@@ -2947,6 +3771,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L311>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L311>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L310>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3006,6 +3854,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L316>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L316>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3091,6 +3947,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L323>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L325">325</a></td>
 <td></td>
 <td></td>
@@ -3109,6 +3973,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L324>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L324>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L323>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3164,6 +4052,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L318>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L332">332</a></td>
 <td></td>
 <td></td>
@@ -3212,6 +4108,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L331>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L318>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L331>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L318>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3318,6 +4238,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L343>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L346">346</a></td>
 <td></td>
 <td></td>
@@ -3355,6 +4283,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L345>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L343>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L349">349</a></td>
 <td></td>
 <td></td>
@@ -3370,6 +4338,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L343>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L350">350</a></td>
 <td></td>
 <td></td>
@@ -3381,6 +4373,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L348>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L348>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3436,6 +4436,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L348>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L356">356</a></td>
 <td></td>
 <td></td>
@@ -3447,6 +4455,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L348>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L343>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L345>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3470,6 +4502,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L348>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L343>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L345>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3509,6 +4565,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=Python_traceback.c.html#L358>trunc</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=Python_traceback.c.html#L358>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3589,6 +4653,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L364>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Python_traceback.c.html#L349>load</a> because it is clobbered by <a href=Python_traceback.c.html#L364>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
 </tr>
 
@@ -3795,6 +4867,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L374>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L387>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L374>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L379>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L262>_Py_DisplaySourceLine</a></td>
+</tr>
+
+<tr>
 <td><a name="L389">389</a></td>
 <td></td>
 <td></td>
@@ -3963,6 +5075,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L406>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">tb_displayline</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L406>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
 </tr>
@@ -3971,7 +5091,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L406>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L406>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L406>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4350,7 +5486,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4381,6 +5533,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %struct._frame* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L444>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %struct._frame* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L444>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %struct._frame* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4404,6 +5572,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L444>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L444>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4552,7 +5736,63 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L407>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L402>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L444>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L443>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L411>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L412>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L412>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct._traceback* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L411>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4648,7 +5888,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L465>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L416>tb_printinternal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L465>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L465>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -4949,6 +6205,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L497>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
 <td><a name="L499">499</a></td>
 <td></td>
 <td></td>
@@ -4960,6 +6224,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L493>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L497>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L498>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -5032,6 +6312,22 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L492>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L493>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L491>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
@@ -5040,7 +6336,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L492>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L493>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L491>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L492>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L493>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L473>PyTraceBack_Print</a></td>
 </tr>
 
@@ -5632,6 +6960,30 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L561>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L568>_Py_DumpASCII</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L625>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L568>_Py_DumpASCII</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L621>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L568>_Py_DumpASCII</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L726>write_thread_id</a></td>
@@ -5642,6 +6994,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L730>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L726>write_thread_id</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L732>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L726>write_thread_id</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L561>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L726>write_thread_id</a></td>
 </tr>
 
@@ -5658,6 +7026,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L730>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L746>_Py_DumpTracebackThreads</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L732>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L746>_Py_DumpTracebackThreads</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Python_traceback.c.html#L561>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L746>_Py_DumpTracebackThreads</a></td>
 </tr>
 
@@ -6597,7 +7981,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L655>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L642>dump_frame</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L657>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L682>dump_traceback</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L655>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L682>dump_traceback</a></td>
 </tr>
 
@@ -7324,7 +8724,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L730>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L726>write_thread_id</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L732>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_traceback.c.html#L746>_Py_DumpTracebackThreads</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Python_traceback.c.html#L730>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Python_traceback.c.html#L746>_Py_DumpTracebackThreads</a></td>
 </tr>
 

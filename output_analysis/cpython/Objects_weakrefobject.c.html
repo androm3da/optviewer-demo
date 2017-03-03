@@ -528,6 +528,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L56">56</a></td>
 <td></td>
 <td></td>
@@ -609,6 +633,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L63">63</a></td>
 <td></td>
 <td></td>
@@ -650,6 +690,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L119>gc_clear</a></td>
 </tr>
@@ -666,7 +714,47 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L540>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L536>proxy_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
 
@@ -705,6 +793,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L119>gc_clear</a></td>
 </tr>
@@ -721,7 +817,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L540>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L536>proxy_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
 
@@ -744,7 +872,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">clear_weakref</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L88>_PyWeakref_ClearRef</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L88>_PyWeakref_ClearRef</a></td>
 </tr>
 
@@ -760,7 +904,31 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L119>gc_clear</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L119>gc_clear</a></td>
 </tr>
 
@@ -776,7 +944,71 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L540>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L536>proxy_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L536>proxy_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L930>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L930>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L930>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L930>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L65>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._PyWeakReference* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
 
@@ -835,6 +1067,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
 </tr>
 
@@ -1144,6 +1392,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L72>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L102>weakref_dealloc</a></td>
 </tr>
 
@@ -1692,6 +1956,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L161>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L167>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_repr</td>
+</tr>
+
+<tr>
 <td><a name="L172">172</a></td>
 <td></td>
 <td></td>
@@ -1789,6 +2061,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L175>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L168>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L175>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">weakref_repr</td>
 </tr>
 
@@ -1916,6 +2212,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_weakrefobject.c.html#L195>load</a> because it is clobbered by <a href=Objects_weakrefobject.c.html#L195>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L196">196</a></td>
 <td></td>
 <td></td>
@@ -1927,6 +2231,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L195>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">weakref_richcompare</td>
 </tr>
 
@@ -1953,6 +2265,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L199">199</a></td>
 <td></td>
 <td></td>
@@ -1964,6 +2284,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L194>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">weakref_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L195>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">weakref_richcompare</td>
 </tr>
 
@@ -2855,6 +3183,22 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of <a href=Objects_weakrefobject.c.html#L284>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L274>weakref___new__</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct._typeobject* eliminated in favor of <a href=Objects_weakrefobject.c.html#L284>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L274>weakref___new__</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L284>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L274>weakref___new__</a></td>
 </tr>
 
@@ -4257,6 +4601,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L460>proxy_getattr</a></td>
+</tr>
+
+<tr>
 <td><a name="L463">463</a></td>
 <td></td>
 <td></td>
@@ -4296,6 +4648,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L461>proxy_str</a></td>
+</tr>
+
+<tr>
 <td><a name="L464">464</a></td>
 <td></td>
 <td></td>
@@ -4331,6 +4691,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L462>proxy_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L462>proxy_call</a></td>
 </tr>
 
@@ -4501,6 +4869,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L477>proxy_setattr</a></td>
+</tr>
+
+<tr>
 <td><a name="L483">483</a></td>
 <td></td>
 <td></td>
@@ -4567,6 +4943,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L485>proxy_richcompare</a></td>
+</tr>
+
+<tr>
 <td><a name="L489">489</a></td>
 <td></td>
 <td></td>
@@ -4594,6 +4978,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L485>proxy_richcompare</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L485>proxy_richcompare</a></td>
 </tr>
 
@@ -4673,6 +5065,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L492>proxy_add</a></td>
+</tr>
+
+<tr>
 <td><a name="L495">495</a></td>
 <td></td>
 <td></td>
@@ -4708,6 +5108,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L493>proxy_sub</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L493>proxy_sub</a></td>
 </tr>
 
@@ -4751,6 +5159,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L494>proxy_mul</a></td>
+</tr>
+
+<tr>
 <td><a name="L497">497</a></td>
 <td></td>
 <td></td>
@@ -4786,6 +5202,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L495>proxy_floor_div</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L495>proxy_floor_div</a></td>
 </tr>
 
@@ -4829,6 +5253,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L496>proxy_true_div</a></td>
+</tr>
+
+<tr>
 <td><a name="L499">499</a></td>
 <td></td>
 <td></td>
@@ -4864,6 +5296,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L497>proxy_mod</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L497>proxy_mod</a></td>
 </tr>
 
@@ -4907,6 +5347,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L498>proxy_divmod</a></td>
+</tr>
+
+<tr>
 <td><a name="L501">501</a></td>
 <td></td>
 <td></td>
@@ -4942,6 +5390,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L499>proxy_pow</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L499>proxy_pow</a></td>
 </tr>
 
@@ -4985,6 +5441,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L500>proxy_neg</a></td>
+</tr>
+
+<tr>
 <td><a name="L503">503</a></td>
 <td></td>
 <td></td>
@@ -5020,6 +5484,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L501>proxy_pos</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L501>proxy_pos</a></td>
 </tr>
 
@@ -5063,6 +5535,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L502>proxy_abs</a></td>
+</tr>
+
+<tr>
 <td><a name="L505">505</a></td>
 <td></td>
 <td></td>
@@ -5098,6 +5578,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L503>proxy_invert</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L503>proxy_invert</a></td>
 </tr>
 
@@ -5141,6 +5629,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L504>proxy_lshift</a></td>
+</tr>
+
+<tr>
 <td><a name="L507">507</a></td>
 <td></td>
 <td></td>
@@ -5176,6 +5672,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L505>proxy_rshift</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L505>proxy_rshift</a></td>
 </tr>
 
@@ -5219,6 +5723,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L506>proxy_and</a></td>
+</tr>
+
+<tr>
 <td><a name="L509">509</a></td>
 <td></td>
 <td></td>
@@ -5254,6 +5766,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L507>proxy_xor</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L507>proxy_xor</a></td>
 </tr>
 
@@ -5297,6 +5817,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L508>proxy_or</a></td>
+</tr>
+
+<tr>
 <td><a name="L511">511</a></td>
 <td></td>
 <td></td>
@@ -5332,6 +5860,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L509>proxy_int</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L509>proxy_int</a></td>
 </tr>
 
@@ -5375,6 +5911,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L510>proxy_float</a></td>
+</tr>
+
+<tr>
 <td><a name="L513">513</a></td>
 <td></td>
 <td></td>
@@ -5410,6 +5954,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L511>proxy_iadd</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L511>proxy_iadd</a></td>
 </tr>
 
@@ -5453,6 +6005,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L512>proxy_isub</a></td>
+</tr>
+
+<tr>
 <td><a name="L515">515</a></td>
 <td></td>
 <td></td>
@@ -5488,6 +6048,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L513>proxy_imul</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L513>proxy_imul</a></td>
 </tr>
 
@@ -5531,6 +6099,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L514>proxy_ifloor_div</a></td>
+</tr>
+
+<tr>
 <td><a name="L517">517</a></td>
 <td></td>
 <td></td>
@@ -5566,6 +6142,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L515>proxy_itrue_div</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L515>proxy_itrue_div</a></td>
 </tr>
 
@@ -5609,6 +6193,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L516>proxy_imod</a></td>
+</tr>
+
+<tr>
 <td><a name="L519">519</a></td>
 <td></td>
 <td></td>
@@ -5644,6 +6236,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L517>proxy_ipow</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L517>proxy_ipow</a></td>
 </tr>
 
@@ -5687,6 +6287,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L518>proxy_ilshift</a></td>
+</tr>
+
+<tr>
 <td><a name="L521">521</a></td>
 <td></td>
 <td></td>
@@ -5722,6 +6330,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L519>proxy_irshift</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L519>proxy_irshift</a></td>
 </tr>
 
@@ -5765,6 +6381,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L520>proxy_iand</a></td>
+</tr>
+
+<tr>
 <td><a name="L523">523</a></td>
 <td></td>
 <td></td>
@@ -5800,6 +6424,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L521>proxy_ixor</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L521>proxy_ixor</a></td>
 </tr>
 
@@ -5843,6 +6475,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L522>proxy_ior</a></td>
+</tr>
+
+<tr>
 <td><a name="L525">525</a></td>
 <td></td>
 <td></td>
@@ -5878,6 +6518,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L523>proxy_index</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L523>proxy_index</a></td>
 </tr>
 
@@ -6159,6 +6807,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L547>proxy_contains</a></td>
+</tr>
+
+<tr>
 <td><a name="L553">553</a></td>
 <td></td>
 <td></td>
@@ -6268,6 +6924,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L558>proxy_length</a></td>
+</tr>
+
+<tr>
 <td><a name="L564">564</a></td>
 <td></td>
 <td></td>
@@ -6317,6 +6981,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L564>proxy_getitem</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L564>proxy_getitem</a></td>
 </tr>
 
@@ -6532,6 +7204,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L582>proxy_iter</a></td>
+</tr>
+
+<tr>
 <td><a name="L588">588</a></td>
 <td></td>
 <td></td>
@@ -6620,6 +7300,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L590>proxy_iternext</a></td>
+</tr>
+
+<tr>
 <td><a name="L596">596</a></td>
 <td></td>
 <td></td>
@@ -6676,6 +7364,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L597>proxy_bytes</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_weakrefobject.c.html#L396>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L597>proxy_bytes</a></td>
 </tr>
 
@@ -7965,6 +8661,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L39>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L731>PyWeakref_NewRef</a></td>
+</tr>
+
+<tr>
 <td><a name="L771">771</a></td>
 <td></td>
 <td></td>
@@ -7976,6 +8680,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L770>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L731>PyWeakref_NewRef</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L770>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L731>PyWeakref_NewRef</a></td>
 </tr>
 
@@ -8534,6 +9246,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type void (%struct._object*)* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L822>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L790>PyWeakref_NewProxy</a></td>
+</tr>
+
+<tr>
 <td><a name="L834">834</a></td>
 <td></td>
 <td></td>
@@ -8545,6 +9265,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L833>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L790>PyWeakref_NewProxy</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L833>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L790>PyWeakref_NewProxy</a></td>
 </tr>
 
@@ -8935,7 +9663,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">handle_callback</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
 
@@ -9379,6 +10123,54 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L917">917</a></td>
 <td></td>
 <td></td>
@@ -9584,6 +10376,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Objects_weakrefobject.c.html#L935>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L936">936</a></td>
 <td></td>
 <td></td>
@@ -9717,6 +10517,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> hosting <a href=Objects_weakrefobject.c.html#L946>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L947">947</a></td>
 <td></td>
 <td></td>
@@ -9797,6 +10605,110 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L935>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
 <td><a name="L955">955</a></td>
 <td></td>
 <td></td>
@@ -9837,6 +10749,78 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L954>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L916>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
@@ -9845,7 +10829,151 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L954>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L916>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L873>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L870>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L875>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L62>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L907>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L923>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L936>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L939>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_weakrefobject.c.html#L954>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_weakrefobject.c.html#L884>PyObject_ClearWeakRefs</a></td>
 </tr>
 

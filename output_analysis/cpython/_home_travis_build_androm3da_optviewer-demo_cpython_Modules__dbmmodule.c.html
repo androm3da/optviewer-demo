@@ -498,7 +498,7 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L64>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -528,8 +528,8 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
-<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">newdbmobject</td>
 </tr>
 
 <tr>
@@ -537,6 +537,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L65>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L127>dbmopen</a></td>
 </tr>
 
@@ -792,6 +816,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L85>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L94>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">dbm_length</td>
+</tr>
+
+<tr>
 <td><a name="L96">96</a></td>
 <td></td>
 <td></td>
@@ -947,6 +979,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L108>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">dbm_subscript</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L108>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">dbm_subscript</td>
 </tr>
 
@@ -1423,6 +1463,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L150>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">dbm_ass_sub</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L137>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L150>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">dbm_ass_sub</td>
 </tr>
 
@@ -1924,6 +1972,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
@@ -1934,6 +1990,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
 </tr>
 
@@ -1978,7 +2042,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L214>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L214>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L214>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
 </tr>
 
@@ -2030,7 +2110,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
 </tr>
 
@@ -2061,6 +2157,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_keys_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L219>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L220>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L35>_dbm_dbm_keys</a></td>
 </tr>
 
@@ -2882,6 +3026,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
 <td><a name="L326">326</a></td>
 <td></td>
 <td></td>
@@ -3113,6 +3265,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L325>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L337>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_setdefault_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L326>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L337>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_dbm_dbm_setdefault_impl</td>
 </tr>
@@ -3138,6 +3298,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L325>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L330>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.DBM* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L325>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L337>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
 </tr>
 
@@ -3198,7 +3366,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_dbm_dbm_setdefault_impl</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L347>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L347>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_clinic__dbmmodule.c.h.html#L88>_dbm_dbm_setdefault</a></td>
 </tr>
 
@@ -3866,7 +4050,7 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L439>load</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -3888,7 +4072,7 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L439>load</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -3918,7 +4102,7 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L439>load</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -3940,7 +4124,7 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L439>load</a>&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -3969,7 +4153,7 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into dbmopen_impl because its definition is unavailable&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -4013,7 +4197,7 @@
 <td></td>
 <td class="column-entry-white">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L56>newdbmobject</a> can be inlined into dbmopen_impl with cost=-14875 (threshold=250)&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -4021,7 +4205,7 @@
 <td></td>
 <td class="column-entry-green">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L56>newdbmobject</a> inlined into dbmopen_impl&nbsp;</span></td>
-<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__gdbmmodule.c.html#L565>dbmopen_impl</a></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L434>dbmopen_impl</a></td>
 </tr>
 
 <tr>
@@ -4356,6 +4540,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L490>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__dbm</td>
+</tr>
+
+<tr>
 <td><a name="L492">492</a></td>
 <td></td>
 <td></td>
@@ -4374,6 +4566,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L485>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L488>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__dbm</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L485>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L490>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__dbm</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L485>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L491>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyInit__dbm</td>
 </tr>
 
@@ -4419,6 +4627,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L495>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit__dbm</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__dbmmodule.c.html#L495>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyInit__dbm</td>
 </tr>
 

@@ -479,6 +479,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_lower&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
 <td><a name="L57">57</a></td>
 <td></td>
 <td></td>
@@ -519,7 +535,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L56>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_lower</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L56>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_lower</td>
 </tr>
 
@@ -611,6 +643,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_upper&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
@@ -651,7 +699,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L68>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_upper</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L68>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_upper</td>
 </tr>
 
@@ -743,6 +807,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_title&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
 <td><a name="L81">81</a></td>
 <td></td>
 <td></td>
@@ -783,7 +863,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L80>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_title</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L80>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_title</td>
 </tr>
 
@@ -875,6 +971,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_capitalize&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
 <td><a name="L93">93</a></td>
 <td></td>
 <td></td>
@@ -915,7 +1027,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L92>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_capitalize</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L92>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_capitalize</td>
 </tr>
 
@@ -1007,6 +1135,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> too costly to inline (cost=280, threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=Objects_bytearrayobject.c.html#L107>PyByteArray_FromStringAndSize</a> will not be inlined into stringlib_swapcase&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
 <td><a name="L105">105</a></td>
 <td></td>
 <td></td>
@@ -1047,7 +1191,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_ctype.h.html#L104>load</a> because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">stringlib_swapcase</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_stringlib_ctype.h.html#L104>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">stringlib_swapcase</td>
 </tr>
 

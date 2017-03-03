@@ -258,7 +258,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L30>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L30>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_namespaceobject.c.html#L247>_PyNamespace_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L30>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_namespaceobject.c.html#L247>_PyNamespace_New</a></td>
 </tr>
 
@@ -536,6 +552,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L62>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L62>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L64">64</a></td>
 <td></td>
 <td></td>
@@ -547,6 +579,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L63>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L62>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_dealloc</td>
 </tr>
 
@@ -1043,6 +1083,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
 <td><a name="L117">117</a></td>
 <td></td>
 <td></td>
@@ -1075,6 +1123,54 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_namespaceobject.c.html#L104>load</a> because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_namespaceobject.c.html#L104>load</a> because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_namespaceobject.c.html#L104>load</a> because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_repr</td>
 </tr>
 
@@ -1173,6 +1269,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
 <td><a name="L131">131</a></td>
 <td></td>
 <td></td>
@@ -1224,6 +1328,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
 <td><a name="L136">136</a></td>
 <td></td>
 <td></td>
@@ -1253,6 +1365,182 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
 <td><a name="L139">139</a></td>
 <td></td>
 <td></td>
@@ -1264,6 +1552,182 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L138>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L138>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L96>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L99>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L138>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_repr</td>
 </tr>
 
@@ -1283,6 +1747,182 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
 <td><a name="L141">141</a></td>
 <td></td>
 <td></td>
@@ -1294,6 +1934,206 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L140>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L140>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L130>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L129>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L103>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L110>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L115>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L135>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L139>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L140>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_repr</td>
 </tr>
 
@@ -1542,6 +2382,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                  </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L167>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L170">170</a></td>
 <td></td>
 <td></td>
@@ -1557,6 +2405,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                  </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L167>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_richcompare</td>
+</tr>
+
+<tr>
 <td><a name="L171">171</a></td>
 <td></td>
 <td></td>
@@ -1568,6 +2424,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L167>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_richcompare</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L168>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_richcompare</td>
 </tr>
 
@@ -1713,6 +2577,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L185>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">namespace_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L185>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">namespace_reduce</td>
 </tr>
 
@@ -2250,6 +3122,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L256>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_namespaceobject.c.html#L247>_PyNamespace_New</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_namespaceobject.c.html#L256>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_namespaceobject.c.html#L247>_PyNamespace_New</a></td>
 </tr>
 

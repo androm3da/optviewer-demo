@@ -270,6 +270,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into PyStructSequence_New because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L102>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L104>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
@@ -343,6 +351,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into PyStructSequence_New because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L35>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L37>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_New</td>
@@ -375,6 +391,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L44>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_New</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L44>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_New</td>
 </tr>
 
@@ -537,6 +561,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> _PyDict_GetItemId will not be inlined into structseq_dealloc because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_dealloc because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_dealloc</td>
 </tr>
 
@@ -846,6 +878,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L94>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L94>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L98">98</a></td>
 <td></td>
 <td></td>
@@ -891,6 +939,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L87>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
@@ -914,6 +970,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L102>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L102>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
@@ -931,6 +995,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> _PyDict_GetItemId will not be inlined into structseq_new because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_new because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
 </tr>
 
@@ -1024,6 +1096,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L108>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L108>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L112">112</a></td>
 <td></td>
 <td></td>
@@ -1108,6 +1196,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L116>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L116>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
 </tr>
 
@@ -1207,6 +1311,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L125>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L129">129</a></td>
 <td></td>
 <td></td>
@@ -1280,6 +1400,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L136">136</a></td>
 <td></td>
 <td></td>
@@ -1334,6 +1462,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> loop not vectorized: control flow cannot be substituted for a select&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
@@ -1358,6 +1494,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">             </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L141>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L141>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
 </tr>
 
@@ -1417,6 +1561,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L141>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> loop not vectorized: control flow cannot be substituted for a select&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
@@ -1450,6 +1610,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L151>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L44>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L141>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
 </tr>
 
@@ -1504,6 +1688,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L151>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
 <td><a name="L152">152</a></td>
 <td></td>
 <td></td>
@@ -1529,6 +1721,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L42>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L141>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_structseq.c.html#L76>store</a> because it is clobbered by <a href=Objects_structseq.c.html#L151>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_structseq.c.html#L73>structseq_new</a></td>
 </tr>
 
@@ -1770,6 +1978,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_structseq.c.html#L183>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L214>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_structseq.c.html#L183>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L212>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_repr</td>
@@ -1836,6 +2060,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L212>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type %struct.PyMemberDef* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L181>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
 <td><a name="L188">188</a></td>
 <td></td>
 <td></td>
@@ -1866,6 +2106,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L212>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L179>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
 <td><a name="L190">190</a></td>
 <td></td>
 <td></td>
@@ -1877,6 +2133,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=Objects_structseq.c.html#L177>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L214>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=Objects_structseq.c.html#L177>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L212>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=Objects_structseq.c.html#L177>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L181>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_repr</td>
 </tr>
 
@@ -1964,6 +2236,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L197>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L197>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_repr</td>
 </tr>
 
@@ -2129,6 +2409,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L212>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
 <td><a name="L215">215</a></td>
 <td></td>
 <td></td>
@@ -2175,6 +2463,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L217>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L217>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_repr</td>
 </tr>
 
@@ -2349,6 +2645,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_reduce because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L243">243</a></td>
 <td></td>
 <td></td>
@@ -2381,8 +2685,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> PyLong_AsSsize_t will not be inlined into structseq_reduce because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_structseq.c.html#L242>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L242>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L242>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_reduce</td>
 </tr>
 
@@ -2512,6 +2832,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=Objects_structseq.c.html#L255>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L256">256</a></td>
 <td></td>
 <td></td>
@@ -2568,6 +2896,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L249>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L255>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated in favor of <a href=Objects_structseq.c.html#L244>load</a> because it is clobbered by <a href=Objects_structseq.c.html#L260>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_reduce</td>
 </tr>
 
@@ -2645,6 +2989,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L264>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L267">267</a></td>
 <td></td>
 <td></td>
@@ -2656,6 +3008,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L266>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L266>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L266>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L264>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_reduce</td>
 </tr>
 
@@ -2703,6 +3079,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L249>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L273">273</a></td>
 <td></td>
 <td></td>
@@ -2714,6 +3114,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">structseq_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L260>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">structseq_reduce</td>
 </tr>
 
@@ -3402,6 +3810,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L350>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
 <td><a name="L358">358</a></td>
 <td></td>
 <td></td>
@@ -3661,8 +4077,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyStructSequence_InitType2 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L371>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L388>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L388>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_InitType2</td>
 </tr>
 
@@ -3684,8 +4124,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyStructSequence_InitType2 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L389>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L389>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_InitType2</td>
 </tr>
 
@@ -3707,8 +4163,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyDict_SetItemString will not be inlined into PyStructSequence_InitType2 because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L390>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_InitType2</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L390>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_InitType2</td>
 </tr>
 
@@ -3897,6 +4369,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L409>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">PyStructSequence_NewType</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_structseq.c.html#L409>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">PyStructSequence_NewType</td>
 </tr>
 

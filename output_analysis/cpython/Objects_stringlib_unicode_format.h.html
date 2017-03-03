@@ -521,6 +521,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
@@ -538,6 +546,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1170>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
 </tr>
@@ -547,6 +563,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L999>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
 </tr>
 
@@ -999,6 +1023,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
 <td><a name="L89">89</a></td>
 <td></td>
 <td></td>
@@ -1067,6 +1099,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L348>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
 </tr>
 
@@ -1600,6 +1640,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L146>getattr</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
 </tr>
@@ -1608,7 +1656,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -1788,6 +1852,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">getitem_idx</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
 </tr>
@@ -1796,7 +1868,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -1927,6 +2015,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L179>getitem_str</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
 </tr>
@@ -1935,7 +2031,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -2292,6 +2404,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L221>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_FieldNameIterator_attr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
@@ -2302,6 +2422,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L280>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L216>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L221>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
 </tr>
 
@@ -2616,6 +2744,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L249>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_FieldNameIterator_item</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
@@ -2626,6 +2762,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L280>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L244>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L249>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
 </tr>
 
@@ -3131,7 +3275,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L291>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L285>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L292>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L291>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L285>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
 </tr>
 
@@ -3155,6 +3331,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L216>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L291>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L292>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L273>FieldNameIterator_next</a></td>
 </tr>
 
@@ -3361,6 +3553,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L330>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L330>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
 </tr>
 
@@ -3594,7 +3794,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L55>store</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L56>store</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L348>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L56>store</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
 </tr>
 
@@ -3734,6 +3950,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
 <td><a name="L370">370</a></td>
 <td></td>
 <td></td>
@@ -3860,6 +4084,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L348>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L349>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L320>field_name_split</a></td>
 </tr>
 
@@ -4245,6 +4477,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L407>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L421>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L407>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L421>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -4267,7 +4531,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L422>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L422>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L422>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -4304,7 +4584,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L421>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L421>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L421>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -4808,6 +5104,214 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -4872,7 +5376,311 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L396>get_field_object</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L446>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L170>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L153>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L154>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L187>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L173>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L174>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -5070,6 +5878,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L476>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L828>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L826>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -5455,7 +6279,55 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -5478,7 +6350,71 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">render_field</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -5790,8 +6726,40 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L568>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L563>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L563>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
 </tr>
 
@@ -5808,6 +6776,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L568>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -5968,8 +6952,48 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L568>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L569>phi</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L563>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L568>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L563>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L569>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=Objects_stringlib_unicode_format.h.html#L569>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
 </tr>
 
@@ -5986,6 +7010,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L563>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L568>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L563>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L563>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -6252,6 +7284,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L597>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of load&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
@@ -6262,6 +7302,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L563>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L582>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L597>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -6321,8 +7369,32 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L600>phi</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L600>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L597>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L600>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -6563,6 +7635,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L614>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L545>parse_field</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
@@ -6573,6 +7653,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L610>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L614>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L611>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of load because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L616>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -7397,6 +8501,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L700>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L683>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> sinking <a href=Objects_stringlib_unicode_format.h.html#L700>ptrtoint</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
@@ -7536,6 +8656,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L700>load</a> because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L700>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of <a href=Objects_stringlib_unicode_format.h.html#L715>phi</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L668>MarkupIterator_next</a></td>
 </tr>
 
@@ -8468,6 +9596,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L764>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L762>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L815>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L815>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L766>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L764>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L762>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
 <td><a name="L820">820</a></td>
 <td></td>
 <td></td>
@@ -8637,6 +9821,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L828>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
 <td><a name="L835">835</a></td>
 <td></td>
 <td></td>
@@ -8741,6 +9933,166 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L772>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L776>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L815>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L766>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L764>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L762>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L772>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L776>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L815>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L766>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L764>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L762>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L826>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L828>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L540>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L529>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L534>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L539>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L521>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L525>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L513>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L799>output_markup</a></td>
 </tr>
 
@@ -11047,6 +12399,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1026>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2247>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1045>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1045>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2247>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1026>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
 <td><a name="L1049">1049</a></td>
 <td></td>
 <td></td>
@@ -11058,6 +12466,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
 </tr>
 
@@ -11077,6 +12509,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1026>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
 <td><a name="L1051">1051</a></td>
 <td></td>
 <td></td>
@@ -11088,6 +12576,94 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1050>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1050>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1026>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_unicodeobject.c.html#L2247>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1048>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1049>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1050>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L990>formatteriter_next</a></td>
 </tr>
 
@@ -12189,6 +13765,46 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
 <td><a name="L1187">1187</a></td>
 <td></td>
 <td></td>
@@ -12200,6 +13816,38 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1186>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1186>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1176>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1186>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1152>fieldnameiter_next</a></td>
 </tr>
 
@@ -12974,6 +14622,62 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1264>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1264>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1278>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
 <td><a name="L1282">1282</a></td>
 <td></td>
 <td></td>
@@ -12985,6 +14689,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1281>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1281>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1270>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L67>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1264>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=Objects_stringlib_unicode_format.h.html#L1281>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=Objects_stringlib_unicode_format.h.html#L1235>formatter_field_name_split</a></td>
 </tr>
 

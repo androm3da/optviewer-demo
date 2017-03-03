@@ -188,6 +188,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L21>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L24>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_addfirstsets</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_addfirstsets</td>
@@ -233,6 +241,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct.dfa* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L20>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_Py_addfirstsets</td>
+</tr>
+
+<tr>
 <td><a name="L23">23</a></td>
 <td></td>
 <td></td>
@@ -250,7 +266,7 @@
 <td></td>
 <td></td>
 <td class="column-entry-white">inline</td>
-<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=Parser_firstsets.c.html#L30>calcfirstset</a> too costly to inline (cost=645, threshold=625)&nbsp;</span></td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=Parser_firstsets.c.html#L30>calcfirstset</a> too costly to inline (cost=640, threshold=625)&nbsp;</span></td>
 <td class="column-entry-yellow">_Py_addfirstsets</td>
 </tr>
 
@@ -473,6 +489,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L44>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=Parser_firstsets.c.html#L48>phi</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
@@ -505,7 +529,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L44>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                        </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 
@@ -554,6 +594,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
 <td><a name="L54">54</a></td>
 <td></td>
 <td></td>
@@ -565,6 +613,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L44>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 
@@ -621,6 +677,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct.label* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct.label* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L53>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
 <td><a name="L59">59</a></td>
 <td></td>
 <td></td>
@@ -632,6 +704,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L44>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L47>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L53>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 
@@ -778,6 +866,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L69>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L69>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L69>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
 <td><a name="L70">70</a></td>
 <td></td>
 <td></td>
@@ -805,6 +917,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct.arc* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct.arc* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct.arc* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct.arc* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L66>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 
@@ -850,6 +986,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> hosting <a href=Parser_firstsets.c.html#L72>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> hosting <a href=Parser_firstsets.c.html#L72>sext</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
@@ -859,6 +1003,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L93>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 
@@ -1248,6 +1408,30 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L43>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L43>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=Parser_firstsets.c.html#L43>load</a> because it is clobbered by <a href=Parser_firstsets.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
 <td><a name="L104">104</a></td>
 <td></td>
 <td></td>
@@ -1267,6 +1451,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L66>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L93>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L86>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">calcfirstset</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                           </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=Parser_firstsets.c.html#L98>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">calcfirstset</td>
 </tr>
 

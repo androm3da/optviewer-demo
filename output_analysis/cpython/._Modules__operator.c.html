@@ -499,6 +499,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyBool_FromLong will not be inlined into truth because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">truth</td>
+</tr>
+
+<tr>
 <td><a name="L69">69</a></td>
 <td></td>
 <td></td>
@@ -510,6 +518,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_add because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_add</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Add will not be inlined into op_add because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_add</td>
 </tr>
 
@@ -539,6 +555,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Subtract will not be inlined into op_sub because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_sub</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L70>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_sub</td>
@@ -556,6 +580,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_mul because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_mul</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Multiply will not be inlined into op_mul because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_mul</td>
 </tr>
 
@@ -585,6 +617,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_MatrixMultiply will not be inlined into op_matmul because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_matmul</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L72>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_matmul</td>
@@ -602,6 +642,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_floordiv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_floordiv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_FloorDivide will not be inlined into op_floordiv because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_floordiv</td>
 </tr>
 
@@ -631,6 +679,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_TrueDivide will not be inlined into op_truediv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_truediv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L74>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_truediv</td>
@@ -648,6 +704,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_mod because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_mod</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Remainder will not be inlined into op_mod because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_mod</td>
 </tr>
 
@@ -752,6 +816,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Lshift will not be inlined into op_lshift because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_lshift</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L81>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_lshift</td>
@@ -769,6 +841,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_rshift because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_rshift</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Rshift will not be inlined into op_rshift because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_rshift</td>
 </tr>
 
@@ -796,6 +876,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyBool_FromLong will not be inlined into op_not_ because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_not_</td>
+</tr>
+
+<tr>
 <td><a name="L84">84</a></td>
 <td></td>
 <td></td>
@@ -807,6 +895,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_and_ because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_and_</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_And will not be inlined into op_and_ because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_and_</td>
 </tr>
 
@@ -836,6 +932,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Xor will not be inlined into op_xor because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_xor</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L85>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_xor</td>
@@ -853,6 +957,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_or_ because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_or_</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_Or will not be inlined into op_or_ because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_or_</td>
 </tr>
 
@@ -882,6 +994,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceAdd will not be inlined into op_iadd because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_iadd</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L87>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_iadd</td>
@@ -899,6 +1019,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_isub because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_isub</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceSubtract will not be inlined into op_isub because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_isub</td>
 </tr>
 
@@ -928,6 +1056,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceMultiply will not be inlined into op_imul because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_imul</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L89>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_imul</td>
@@ -945,6 +1081,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_imatmul because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_imatmul</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceMatrixMultiply will not be inlined into op_imatmul because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_imatmul</td>
 </tr>
 
@@ -974,6 +1118,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceFloorDivide will not be inlined into op_ifloordiv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ifloordiv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L91>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_ifloordiv</td>
@@ -991,6 +1143,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_itruediv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_itruediv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceTrueDivide will not be inlined into op_itruediv because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_itruediv</td>
 </tr>
 
@@ -1020,6 +1180,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceRemainder will not be inlined into op_imod because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_imod</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L93>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_imod</td>
@@ -1037,6 +1205,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_ilshift because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ilshift</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceLshift will not be inlined into op_ilshift because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_ilshift</td>
 </tr>
 
@@ -1066,6 +1242,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceRshift will not be inlined into op_irshift because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_irshift</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L95>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_irshift</td>
@@ -1083,6 +1267,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_iand because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_iand</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceAnd will not be inlined into op_iand because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_iand</td>
 </tr>
 
@@ -1112,6 +1304,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceXor will not be inlined into op_ixor because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ixor</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L97>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_ixor</td>
@@ -1129,6 +1329,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_ior because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ior</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyNumber_InPlaceOr will not be inlined into op_ior because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_ior</td>
 </tr>
 
@@ -1158,6 +1366,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PySequence_Concat will not be inlined into op_concat because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_concat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L99>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_concat</td>
@@ -1175,6 +1391,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_iconcat because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_iconcat</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PySequence_InPlaceConcat will not be inlined into op_iconcat because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_iconcat</td>
 </tr>
 
@@ -1204,6 +1428,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PySequence_Contains will not be inlined into op_contains because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_contains</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyBool_FromLong will not be inlined into op_contains because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_contains</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L101>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_contains</td>
@@ -1221,6 +1461,22 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into indexOf because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">indexOf</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PySequence_Index will not be inlined into indexOf because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">indexOf</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyLong_FromSsize_t will not be inlined into indexOf because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">indexOf</td>
 </tr>
 
@@ -1250,6 +1506,22 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PySequence_Count will not be inlined into countOf because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">countOf</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyLong_FromSsize_t will not be inlined into countOf because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">countOf</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L103>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">countOf</td>
@@ -1267,6 +1539,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_getitem because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_getitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_GetItem will not be inlined into op_getitem because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_getitem</td>
 </tr>
 
@@ -1296,8 +1576,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_DelItem will not be inlined into op_delitem because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_delitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L105>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">op_delitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L105>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_delitem</td>
 </tr>
 
@@ -1319,8 +1615,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_SetItem will not be inlined into op_setitem because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_setitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L106>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">op_setitem</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L106>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_setitem</td>
 </tr>
 
@@ -1336,6 +1648,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_lt because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_lt</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_lt because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_lt</td>
 </tr>
 
@@ -1365,6 +1685,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_le because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_le</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L108>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_le</td>
@@ -1382,6 +1710,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_eq because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_eq</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_eq because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_eq</td>
 </tr>
 
@@ -1411,6 +1747,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_ne because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ne</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L110>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_ne</td>
@@ -1434,6 +1778,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_gt because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_gt</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L111>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">op_gt</td>
@@ -1451,6 +1803,14 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyArg_UnpackTuple will not be inlined into op_ge because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">op_ge</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyObject_RichCompare will not be inlined into op_ge because its definition is unavailable&nbsp;</span></td>
 <td class="column-entry-yellow">op_ge</td>
 </tr>
 
@@ -2785,6 +3145,14 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L261>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L261>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L262>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
 </tr>
@@ -2801,6 +3169,22 @@
 <td></td>
 <td class="column-entry-red">inline</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyErr_SetString will not be inlined into compare_digest because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L262>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L256>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
 </tr>
 
@@ -2967,6 +3351,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* eliminated in favor of <a href=._Modules__operator.c.html#L261>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L256>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
@@ -3021,6 +3413,14 @@
 <td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._object* eliminated in favor of <a href=._Modules__operator.c.html#L261>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* eliminated in favor of <a href=._Modules__operator.c.html#L261>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L250>compare_digest</a></td>
 </tr>
 
@@ -4393,6 +4793,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L445>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L445>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L447">447</a></td>
 <td></td>
 <td></td>
@@ -4706,6 +5122,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L479>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_call</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow">itemgetter_call</td>
@@ -4716,6 +5140,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L485>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_call</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L473>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">itemgetter_call</td>
 </tr>
 
@@ -4751,6 +5183,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L473>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_call</td>
+</tr>
+
+<tr>
 <td><a name="L481">481</a></td>
 <td></td>
 <td></td>
@@ -4769,6 +5209,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L480>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_call</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L480>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">itemgetter_call</td>
 </tr>
 
@@ -4798,6 +5246,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L485>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">itemgetter_call</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L485>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">itemgetter_call</td>
 </tr>
 
@@ -5791,6 +6247,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L608>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L609">609</a></td>
 <td></td>
 <td></td>
@@ -5856,6 +6320,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L680>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L602>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L616">616</a></td>
 <td></td>
 <td></td>
@@ -5874,6 +6354,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L602>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L615>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L615>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L615>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
 </tr>
 
@@ -6048,6 +6544,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L631>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L632">632</a></td>
 <td></td>
 <td></td>
@@ -6141,6 +6645,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L637>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L637>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
 </tr>
 
@@ -6277,6 +6789,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L652>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> loop not vectorized: could not determine number of loop iterations&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
@@ -6336,6 +6856,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L608>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L640>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L656">656</a></td>
 <td></td>
 <td></td>
@@ -6372,6 +6900,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L655>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L660">660</a></td>
 <td></td>
 <td></td>
@@ -6383,6 +6919,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L602>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L659>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L602>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L655>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
 </tr>
 
@@ -6435,6 +6979,14 @@
 <td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L664>getelementptr</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
 </tr>
 
@@ -6513,6 +7065,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L608>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L664>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L671">671</a></td>
 <td></td>
 <td></td>
@@ -6542,6 +7102,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L670>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L674">674</a></td>
 <td></td>
 <td></td>
@@ -6553,6 +7121,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L602>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L673>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L602>store</a> because it is clobbered by <a href=._Modules__operator.c.html#L670>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_new</td>
 </tr>
 
@@ -6720,6 +7296,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L685>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L685>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_new</td>
+</tr>
+
+<tr>
 <td><a name="L688">688</a></td>
 <td></td>
 <td></td>
@@ -6845,6 +7437,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L701>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L701>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">attrgetter_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L701>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">attrgetter_dealloc</td>
 </tr>
 
@@ -7056,6 +7664,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L727>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">dotted_getattr</td>
+</tr>
+
+<tr>
 <td><a name="L728">728</a></td>
 <td></td>
 <td></td>
@@ -7089,7 +7705,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L728>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">dotted_getattr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L728>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L728>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
 </tr>
 
@@ -7449,6 +8081,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L768>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
@@ -7459,6 +8099,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L774>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L762>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
 </tr>
 
@@ -7502,6 +8150,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L762>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
 <td><a name="L770">770</a></td>
 <td></td>
 <td></td>
@@ -7520,6 +8176,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L737>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L729>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L728>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L729>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L737>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
 </tr>
 
@@ -7549,6 +8245,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L774>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L774>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L746>attrgetter_call</a></td>
 </tr>
 
@@ -7813,6 +8517,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L788>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
@@ -7852,6 +8564,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L805>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
@@ -7862,6 +8582,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L812>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L800>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
 </tr>
 
@@ -7911,6 +8639,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L788>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
 <td><a name="L809">809</a></td>
 <td></td>
 <td></td>
@@ -7922,6 +8658,46 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L784>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L808>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L808>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L788>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L808>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L784>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
 </tr>
 
@@ -7955,6 +8731,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L812>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
 <td><a name="L813">813</a></td>
 <td></td>
 <td></td>
@@ -7973,6 +8757,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L800>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L800>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L795>attrgetter_args</a></td>
 </tr>
 
@@ -8182,6 +8974,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                  </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L788>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L818>attrgetter_repr</a></td>
+</tr>
+
+<tr>
 <td><a name="L834">834</a></td>
 <td></td>
 <td></td>
@@ -8193,6 +8993,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L833>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L818>attrgetter_repr</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L833>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L818>attrgetter_repr</a></td>
 </tr>
 
@@ -8296,6 +9104,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L841>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Modules__operator.c.html#L818>attrgetter_repr</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L841>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=._Modules__operator.c.html#L818>attrgetter_repr</a></td>
 </tr>
 
@@ -9267,6 +10083,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L962>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_new</td>
+</tr>
+
+<tr>
 <td><a name="L965">965</a></td>
 <td></td>
 <td></td>
@@ -9375,6 +10199,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L975>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L975>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L977">977</a></td>
 <td></td>
 <td></td>
@@ -9390,6 +10230,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L975>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_dealloc</td>
+</tr>
+
+<tr>
 <td><a name="L978">978</a></td>
 <td></td>
 <td></td>
@@ -9401,6 +10249,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L977>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L975>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_dealloc</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L976>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_dealloc</td>
 </tr>
 
@@ -9668,6 +10532,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1002>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_call</td>
+</tr>
+
+<tr>
 <td><a name="L1004">1004</a></td>
 <td></td>
 <td></td>
@@ -9906,6 +10778,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type %struct.PyVarObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1020>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1030">1030</a></td>
 <td></td>
 <td></td>
@@ -9953,7 +10833,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1012>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1020>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1012>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10114,6 +11010,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                          </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1038>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1046">1046</a></td>
 <td></td>
 <td></td>
@@ -10139,6 +11043,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L1048>getelementptr</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L1048>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10205,6 +11117,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L1019>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L1038>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L1019>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L1048>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L1019>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L1062>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L1019>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L1055>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10329,6 +11265,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=._Modules__operator.c.html#L1062>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1063">1063</a></td>
 <td></td>
 <td></td>
@@ -10369,6 +11313,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1062>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1055>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1054>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10474,6 +11434,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1078">1078</a></td>
 <td></td>
 <td></td>
@@ -10518,6 +11486,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1082">1082</a></td>
 <td></td>
 <td></td>
@@ -10533,6 +11509,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
 <td><a name="L1083">1083</a></td>
 <td></td>
 <td></td>
@@ -10544,6 +11528,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1081>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1081>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10573,6 +11565,126 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1045>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1070>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1083>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1083>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1072>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1077>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1077>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1077>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1076>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1072>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1081>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1083>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1066>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1062>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1055>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_repr</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1045>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_repr</td>
 </tr>
 
@@ -10791,6 +11903,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> load of type %struct.PyTupleObject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1102>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1105">1105</a></td>
 <td></td>
 <td></td>
@@ -10831,6 +11951,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1106>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                   </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1102>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_reduce</td>
 </tr>
 
@@ -10950,6 +12078,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1122">1122</a></td>
 <td></td>
 <td></td>
@@ -10986,6 +12122,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1126">1126</a></td>
 <td></td>
 <td></td>
@@ -10997,6 +12141,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1121>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1120>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_reduce</td>
 </tr>
 
@@ -11024,6 +12176,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                      </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=._Modules__operator.c.html#L1095>load</a> because it is clobbered by <a href=._Modules__operator.c.html#L1120>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
 <td><a name="L1128">1128</a></td>
 <td></td>
 <td></td>
@@ -11042,6 +12202,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1127>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1127>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_reduce</td>
 </tr>
 
@@ -11065,6 +12233,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1127>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">methodcaller_reduce</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=._Modules__operator.c.html#L1129>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow">methodcaller_reduce</td>
 </tr>
 

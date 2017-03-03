@@ -436,6 +436,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> completely unrolled loop with 3 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> completely unrolled loop with 4 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
+</tr>
+
+<tr>
 <td><a name="L60">60</a></td>
 <td></td>
 <td></td>
@@ -453,8 +469,24 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L204>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L60>load</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L249>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
 </tr>
 
@@ -1152,6 +1184,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L142>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">scan_dpoint_exp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">gvn</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L60>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L193>mpd_qset_string</a></td>
@@ -1223,6 +1263,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L135>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L147>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">scan_dpoint_exp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L135>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L136>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow">scan_dpoint_exp</td>
 </tr>
 
@@ -1643,6 +1691,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">scan_payload</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L184>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow">scan_payload</td>
 </tr>
 
@@ -3559,6 +3615,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L383>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-white">loop-vectorize</td>
 <td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: value that could not be identified as reduction is used outside the loop&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
@@ -3606,6 +3670,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L383>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">coeff_to_string</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
@@ -3616,6 +3688,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L383>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L388>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
 </tr>
 
@@ -3905,6 +3985,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">coeff_to_string_dot</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-red">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
@@ -3915,6 +4003,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L404>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L409>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
 </tr>
 
@@ -4509,6 +4605,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L475>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L471>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
 </tr>
 
@@ -5412,6 +5516,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
 <td><a name="L588">588</a></td>
 <td></td>
 <td></td>
@@ -5461,6 +5573,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L517>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L383>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L517>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L388>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L591>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L439>_mpd_to_string</a></td>
 </tr>
 
@@ -6674,6 +6802,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L732>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_copy_utf8</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L732>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L727>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
 </tr>
 
@@ -7817,6 +7961,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i16* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L824>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L839>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L845>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L845>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
 <td><a name="L847">847</a></td>
 <td></td>
 <td></td>
@@ -8030,6 +8190,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L779>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L829>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L779>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L850>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
 <td><a name="L866">866</a></td>
 <td></td>
 <td></td>
@@ -8211,6 +8387,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L873>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L859>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L766>mpd_parse_fmt_str</a></td>
 </tr>
 
@@ -8453,6 +8637,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>and</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>sub</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L907">907</a></td>
 <td></td>
 <td></td>
@@ -8520,6 +8720,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L913>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
@@ -8549,6 +8757,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L915">915</a></td>
 <td></td>
 <td></td>
@@ -8568,6 +8784,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -8598,6 +8822,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -8692,6 +8924,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L925>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
@@ -8721,6 +8961,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L927">927</a></td>
 <td></td>
 <td></td>
@@ -8740,6 +8988,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -8770,6 +9026,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -8864,6 +9128,14 @@
 <tr>
 <td></td>
 <td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L937>bitcast</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
@@ -8893,6 +9165,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L939">939</a></td>
 <td></td>
 <td></td>
@@ -8912,6 +9192,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -8942,6 +9230,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -9535,6 +9831,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L1009">1009</a></td>
 <td></td>
 <td></td>
@@ -9577,7 +9881,23 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -9671,6 +9991,30 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L939>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L927>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -9813,6 +10157,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                         </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L977>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L1035">1035</a></td>
 <td></td>
 <td></td>
@@ -9852,7 +10204,71 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L927>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L939>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L927>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L915>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L915>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -9945,6 +10361,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L929>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
 <td><a name="L1047">1047</a></td>
 <td></td>
 <td></td>
@@ -9956,6 +10380,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L944>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L906>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L969>_mpd_add_sep_dot</a></td>
 </tr>
 
@@ -10267,6 +10699,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">           </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1088>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_apply_lconv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1088>load</a>&nbsp;</span></td>
 <td class="column-entry-yellow">_mpd_apply_lconv</td>
 </tr>
 
@@ -10808,6 +11248,22 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1349>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1123>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
 <td><a name="L1136">1136</a></td>
 <td></td>
 <td></td>
@@ -10907,6 +11363,14 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1342>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1123>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -11263,6 +11727,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1176>and</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
 <td><a name="L1177">1177</a></td>
 <td></td>
 <td></td>
@@ -11298,6 +11770,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>and</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>icmp</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -11369,6 +11849,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1182>and</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
 <td><a name="L1183">1183</a></td>
 <td></td>
 <td></td>
@@ -11404,6 +11892,14 @@
 <td></td>
 <td class="column-entry-green">licm</td>
 <td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>and</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>icmp</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -11447,7 +11943,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1145>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1145>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -11470,7 +11998,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1131>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1131>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -11493,7 +12053,39 @@
 <td></td>
 <td></td>
 <td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_mpd_add_pad</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1174>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i8* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1183>store</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -12307,6 +12899,14 @@
 </tr>
 
 <tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                  </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1254>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
 <td><a name="L1285">1285</a></td>
 <td></td>
 <td></td>
@@ -12671,6 +13271,70 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1274>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1300>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1310>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1210>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1214>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1216>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1206>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1319>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1267>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1318>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
@@ -13040,6 +13704,22 @@
 <td></td>
 <td class="column-entry-red">gvn</td>
 <td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1123>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1349>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1342>call</a>&nbsp;</span></td>
 <td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__decimal_libmpdec_io.c.html#L1226>mpd_qformat_spec</a></td>
 </tr>
 
