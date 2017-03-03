@@ -94,3 +94,8 @@ benefit the most from improved optimization.
 
 For more info on PGO, see [the `clang` manual on 
 PGO](https://clang.llvm.org/docs/UsersManual.html#profile-guided-optimization).
+
+
+## Appendix
+
+* `opt-viewer` was introduced in "Compiler-assisted Performance Analysis", 2016 Bay Area LLVM Developer's Meeting ([slides](http://llvm.org/devmtg/2016-11/Slides/Nemet-Compiler-assistedPerformanceAnalysis.pdf), [video](https://youtu.be/qq0q1hfzidg))
