@@ -1,5 +1,16 @@
 dist: trusty
+compiler: clang
 sudo: required
+
+# for kfr:
+addons:
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+      packages:
+        - libmpfr-dev
+# ^^ for kfr
+
 before_install:
   - wget -nv -O - http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
   - sudo apt-add-repository -y 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-4.0 main'

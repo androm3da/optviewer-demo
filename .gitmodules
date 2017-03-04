@@ -7,3 +7,6 @@
 [submodule "thrift"]
 	path = thrift
 	url = https://github.com/apache/thrift
+[submodule "kfr"]
+	path = kfr
+	url = https://github.com/kfrlib/kfr
