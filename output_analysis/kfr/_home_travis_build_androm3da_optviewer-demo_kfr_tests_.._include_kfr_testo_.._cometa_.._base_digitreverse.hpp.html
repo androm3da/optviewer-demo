@@ -1,0 +1,846 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup shuffle</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Copyright (C) 2016 D Levin (https://www.kfrlib.com)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  This file is part of KFR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is free software: you can redistribute it and/or modify</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  it under the terms of the GNU General Public License as published by</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  the Free Software Foundation, either version 3 of the License, or</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  (at your option) any later version.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is distributed in the hope that it will be useful,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  GNU General Public License for more details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  You should have received a copy of the GNU General Public License</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  along with KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  If GPL is not suitable for your project, you must purchase a commercial license to use KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Buying a commercial license is mandatory as soon as you develop commercial activities without</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  disclosing the source code of your own applications.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  See https://www.kfrlib.com for details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;shuffle.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;types.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">kfr</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">internal</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">push</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">ignored</span> <span class="s">&quot;-Wshift-count-overflow&quot;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">ignored</span> <span class="s">&quot;-Wshift-count-negative&quot;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">bit_permute_step_impl</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">,</span> <span class="n">cvals_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="n">u32</span> <span class="n">m</span><span class="p">,</span> <span class="n">u32</span> <span class="n">shift</span><span class="p">,</span> <span class="n">u32</span><span class="p">...</span> <span class="n">values</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">bit_permute_step_impl</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">,</span> <span class="n">cvals_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">shift</span><span class="p">,</span> <span class="n">values</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">bit_permute_step_impl</span><span class="p">(((</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">shift</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">shift</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">m</span><span class="p">),</span> <span class="n">cvals_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="p">,</span> <span class="n">values</span><span class="p">...</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">bits</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">digitreverse_impl</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">,</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">bit_permute_step_impl</span><span class="p">(</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>               <span class="n">x</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>               <span class="n">cvals_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="p">,</span> <span class="mh">0x55555555</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x33333333</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mh">0x0f0f0f0f</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0x00ff00ff</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mh">0x0000ffff</span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span><span class="p">())</span> <span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>           <span class="p">(</span><span class="mi">32</span> <span class="o">-</span> <span class="n">bits</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">bits</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">digitreverse_impl</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">,</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">bit_permute_step_impl</span><span class="p">(</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>               <span class="n">x</span><span class="p">,</span> <span class="n">cvals_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="p">,</span> <span class="mh">0x33333333</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mh">0x0f0f0f0f</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0x00ff00ff</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mh">0x0000ffff</span><span class="p">,</span> <span class="mi">16</span><span class="o">&gt;</span><span class="p">())</span> <span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>           <span class="p">(</span><span class="mi">32</span> <span class="o">-</span> <span class="n">bits</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">pop</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">radix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">bits</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">shuffle_index_digitreverse</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="kr">inline</span> <span class="kt">size_t</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span> <span class="k">const</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">digitreverse_impl</span><span class="o">&lt;</span><span class="n">bits</span><span class="o">&gt;</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">u32</span><span class="o">&gt;</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="n">radix</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">radix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">group</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">digitreverse</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">scale</span><span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span><span class="p">(</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L226>_ZNK3kfr3vecIfLm16EE7shuffleIJLm0ELm4ELm8ELm12ELm1ELm5ELm9ELm13ELm2ELm6ELm10ELm14ELm3ELm7ELm11ELm15EEEENS0_IfXsZT_EEEN6cometa7cvals_tImJXspT_EEEE</a> can be inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;) with cost=-25 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L226>_ZNK3kfr3vecIfLm16EE7shuffleIJLm0ELm4ELm8ELm12ELm1ELm5ELm9ELm13ELm2ELm6ELm10ELm14ELm3ELm7ELm11ELm15EEEENS0_IfXsZT_EEEN6cometa7cvals_tImJXspT_EEEE</a> inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L693>auto cometa::scale&lt;1ul, 0ul, 4ul, 8ul, 12ul, 1ul, 5ul, 9ul, 13ul, 2ul, 6ul, 10ul, 14ul, 3ul, 7ul, 11ul, 15ul, 16ul&gt;(cometa::cvals_t&lt;unsigned long, 0ul, 4ul, 8ul, 12ul, 1ul, 5ul, 9ul, 13ul, 2ul, 6ul, 10ul, 14ul, 3ul, 7ul, 11ul, 15ul&gt;)</a> can be inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;) with cost=-30 (threshold=487)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L693>auto cometa::scale&lt;1ul, 0ul, 4ul, 8ul, 12ul, 1ul, 5ul, 9ul, 13ul, 2ul, 6ul, 10ul, 14ul, 3ul, 7ul, 11ul, 15ul, 16ul&gt;(cometa::cvals_t&lt;unsigned long, 0ul, 4ul, 8ul, 12ul, 1ul, 5ul, 9ul, 13ul, 2ul, 6ul, 10ul, 14ul, 3ul, 7ul, 11ul, 15ul&gt;)</a> inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">csizeseq_t</span><span class="o">&lt;</span><span class="n">N</span> <span class="o">/</span> <span class="n">group</span><span class="o">&gt;</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="n">internal</span><span class="o">::</span><span class="n">shuffle_index_digitreverse</span><span class="o">&lt;</span><span class="n">radix</span><span class="p">,</span> <span class="n">ilog2</span><span class="p">(</span><span class="n">N</span> <span class="o">/</span> <span class="n">group</span><span class="p">)</span><span class="o">&gt;</span><span class="p">())));</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L429>cometa::cvals_t&lt;unsigned long, static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(0ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(1ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(2ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(3ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(4ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(5ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(6ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(7ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(8ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(9ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(10ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(11ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(12ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(13ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(14ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(15ul))&gt; cometa::cvals_t&lt;unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul, 5ul, 6ul, 7ul, 8ul, 9ul, 10ul, 11ul, 12ul, 13ul, 14ul, 15ul&gt;::map&lt;kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt; &gt;(kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;&amp;&amp;)</a> can be inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;) with cost=-40 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L429>cometa::cvals_t&lt;unsigned long, static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(0ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(1ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(2ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(3ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(4ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(5ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(6ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(7ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(8ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(9ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(10ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(11ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(12ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(13ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(14ul)), static_cast&lt;unsigned long&gt;(((kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;)())(15ul))&gt; cometa::cvals_t&lt;unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul, 5ul, 6ul, 7ul, 8ul, 9ul, 10ul, 11ul, 12ul, 13ul, 14ul, 15ul&gt;::map&lt;kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt; &gt;(kfr::internal::shuffle_index_digitreverse&lt;4ul, 4ul&gt;&amp;&amp;)</a> inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L77>kfr::vec<float, 16ul> kfr::digitreverse<4ul, 1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">groupsize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">bitreverse</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">digitreverse</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="n">groupsize</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">groupsize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">digitreverse4</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">digitreverse</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">,</span> <span class="n">groupsize</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L79>kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L90>kfr::vec<float, 16ul> kfr::digitreverse4<1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L79>kfr::vec&lt;float, 16ul&gt; kfr::digitreverse&lt;4ul, 1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)</a> inlined into kfr::vec&lt;float, 16ul&gt; kfr::digitreverse4&lt;1ul, float, 16ul&gt;(kfr::vec&lt;float, 16ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_digitreverse.hpp.html#L90>kfr::vec<float, 16ul> kfr::digitreverse4<1ul, float, 16ul>(kfr::vec<float, 16ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">bits</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">bitreverse</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">internal</span><span class="o">::</span><span class="n">digitreverse_impl</span><span class="o">&lt;</span><span class="n">bits</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">bits</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">u32</span> <span class="n">digitreverse4</span><span class="p">(</span><span class="n">u32</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">internal</span><span class="o">::</span><span class="n">digitreverse_impl</span><span class="o">&lt;</span><span class="n">bits</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

@@ -1,3 +1,785 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ed179157e171e3d060e282d514281ce80023044049a35a7145aa4cc67786361
-size 23364
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* snprintf() wrappers.  If the platform has vsnprintf, we use it, else we</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   emulate it in a half-hearted way.  Even if the platform has it, we wrap</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   it because platforms differ in what vsnprintf does in case the buffer</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   is too small:  C99 behavior is to return the number of characters that</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   would have been written had the buffer not been too small, and to set</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   the last byte of the buffer to \0.  At least MS _vsnprintf returns a</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   negative value instead, and fills the entire buffer with non-\0 data.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   The wrappers ensure that str[size-1] is always \0 upon return.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   PyOS_snprintf and PyOS_vsnprintf never write more than size bytes</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   (including the trailing &#39;\0&#39;) into str.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   If the platform doesn&#39;t have vsnprintf, and the buffer size needed to</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   avoid truncation exceeds size by more than 512, Python aborts with a</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   Py_FatalError.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   Return value (rv):</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    When 0 &lt;= rv &lt; size, the output conversion was unexceptional, and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    rv characters were written to str (excluding a trailing \0 byte at</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    str[rv]).</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    When rv &gt;= size, output conversion was truncated, and a buffer of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    size rv+1 would have been needed to avoid truncation.  str[size-1]</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    is \0 in this case.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    When rv &lt; 0, &quot;something bad happened&quot;.  str[size-1] is \0 in this</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    case too, but the rest of str is unreliable.  It could be that</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    an error in format codes was detected by libc, or on platforms</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    with a non-C99 vsnprintf simply that the buffer wasn&#39;t big enough</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    to avoid truncation, or on platforms without any vsnprintf that</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    PyMem_Malloc couldn&#39;t obtain space for a temp buffer.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   CAUTION:  Unlike C99, str != NULL and size &gt; 0 are required.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">*/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kt">int</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">PyOS_snprintf</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span>  <span class="kt">char</span>  <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="p">...)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">rc</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">va_list</span> <span class="n">va</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">va_start</span><span class="p">(</span><span class="n">va</span><span class="p">,</span> <span class="n">format</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">rc</span> <span class="o">=</span> <span class="n">PyOS_vsnprintf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="n">va</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=Python_mysnprintf.c.html#L54>PyOS_vsnprintf</a> can be inlined into PyOS_snprintf with cost=35 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_mysnprintf.c.html#L40>PyOS_snprintf</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> <a href=Python_mysnprintf.c.html#L54>PyOS_vsnprintf</a> inlined into PyOS_snprintf&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Python_mysnprintf.c.html#L40>PyOS_snprintf</a></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">va_end</span><span class="p">(</span><span class="n">va</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">rc</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kt">int</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">PyOS_vsnprintf</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span>  <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="kt">va_list</span> <span class="n">va</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>  <span class="cm">/* # bytes written, excluding \0 */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef HAVE_SNPRINTF</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define _PyOS_vsnprintf_EXTRA_SPACE 1</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define _PyOS_vsnprintf_EXTRA_SPACE 512</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">char</span> <span class="o">*</span><span class="n">buffer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">assert</span><span class="p">(</span><span class="n">str</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">assert</span><span class="p">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">assert</span><span class="p">(</span><span class="n">format</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* We take a size_t as input but return an int.  Sanity check</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * our input so that it won&#39;t cause an overflow in the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * vsnprintf return value or the buffer malloc size.  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="n">INT_MAX</span> <span class="o">-</span> <span class="n">_PyOS_vsnprintf_EXTRA_SPACE</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">666</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">Done</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef HAVE_SNPRINTF</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">len</span> <span class="o">=</span> <span class="n">vsnprintf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="n">va</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">          </pre><span class="column-entry-yellow"> vsnprintf will not be inlined into PyOS_vsnprintf because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyOS_vsnprintf</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Emulate it. */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">buffer</span> <span class="o">=</span> <span class="n">PyMem_MALLOC</span><span class="p">(</span><span class="n">size</span> <span class="o">+</span> <span class="n">_PyOS_vsnprintf_EXTRA_SPACE</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">buffer</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">len</span> <span class="o">=</span> <span class="o">-</span><span class="mi">666</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">goto</span> <span class="n">Done</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">len</span> <span class="o">=</span> <span class="n">vsprintf</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="n">va</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="cm">/* ignore the error */</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="kt">size_t</span><span class="p">)</span><span class="n">len</span> <span class="o">&gt;=</span> <span class="n">size</span> <span class="o">+</span> <span class="n">_PyOS_vsnprintf_EXTRA_SPACE</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_FatalError</span><span class="p">(</span><span class="s">&quot;Buffer overflow in PyOS_snprintf/PyOS_vsnprintf&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">const</span> <span class="kt">size_t</span> <span class="n">to_copy</span> <span class="o">=</span> <span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="n">len</span> <span class="o">&lt;</span> <span class="n">size</span> <span class="o">?</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                <span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="nl">len</span> <span class="p">:</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">assert</span><span class="p">(</span><span class="n">to_copy</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">memcpy</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">to_copy</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">str</span><span class="p">[</span><span class="n">to_copy</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyMem_FREE</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nl">Done</span><span class="p">:</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">str</span><span class="p">[</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">len</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#undef _PyOS_vsnprintf_EXTRA_SPACE</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

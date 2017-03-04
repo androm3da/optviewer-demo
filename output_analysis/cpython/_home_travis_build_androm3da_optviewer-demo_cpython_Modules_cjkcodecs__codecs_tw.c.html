@@ -1,3 +1,1418 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:870a74bcae1bd3b961e9ab147dec23370a437457b92fed109a55d8bee30314f7
-size 44068
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * _codecs_tw.c: Codecs collection for Taiwan&#39;s encodings</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Written by Hye-Shik Chang &lt;perky@FreeBSD.org&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;cjkcodecs.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;mappings_tw.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * BIG5 codec</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">ENCODER</span><span class="p">(</span><span class="n">big5</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="n">inlen</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of add&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INCHAR1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L17>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L17>icmp</a>&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">DBCHAR</span> <span class="n">code</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="o">**</span><span class="n">outbuf</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">c</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;</span> <span class="mh">0xFFFF</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE1</span><span class="p">(</span><span class="n">code</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE2</span><span class="p">(</span><span class="n">code</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L37>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L37>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_encode</td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">DECODER</span><span class="p">(</span><span class="n">big5</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="n">inleft</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INBYTE1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">decoded</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">c</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> _PyUnicodeWriter_WriteChar will not be inlined into big5_decode because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_INBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> _PyUnicodeWriter_WriteChar will not be inlined into big5_decode because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">big5_decode</td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * CP950 codec</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">ENCODER</span><span class="p">(</span><span class="n">cp950</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">inpos</span> <span class="o">&lt;</span> <span class="n">inlen</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 eliminated in favor of add&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INCHAR1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L76>bitcast</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">licm</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> hosting <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L76>icmp</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">DBCHAR</span> <span class="n">code</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">WRITEBYTE1</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">c</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;</span> <span class="mh">0xFFFF</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_OUTBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">cp950ext</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">TRYMAP_ENC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE1</span><span class="p">(</span><span class="n">code</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">OUTBYTE2</span><span class="p">(</span><span class="n">code</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i8* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L96>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L96>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">NEXT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_encode</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">DECODER</span><span class="p">(</span><span class="n">cp950</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">while</span> <span class="p">(</span><span class="n">inleft</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: loop control flow is not understood by vectorizer&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">INBYTE1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by store&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_UCS4</span> <span class="n">decoded</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mh">0x80</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">c</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> _PyUnicodeWriter_WriteChar will not be inlined into cp950_decode because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">continue</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">REQUIRE_INBUF</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">cp950ext</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> _PyUnicodeWriter_WriteChar will not be inlined into cp950_decode because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">TRYMAP_DEC</span><span class="p">(</span><span class="n">big5</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">INBYTE2</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8* eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L120>phi</a>&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">OUTCHAR</span><span class="p">(</span><span class="n">decoded</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> _PyUnicodeWriter_WriteChar will not be inlined into cp950_decode because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">NEXT_IN</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow">cp950_decode</td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">BEGIN_MAPPINGS_LIST</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="n">MAPPING_ENCDEC</span><span class="p">(</span><span class="n">big5</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="n">MAPPING_ENCDEC</span><span class="p">(</span><span class="n">cp950ext</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">END_MAPPINGS_LIST</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">BEGIN_CODECS_LIST</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="n">CODEC_STATELESS</span><span class="p">(</span><span class="n">big5</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="n">CODEC_STATELESS</span><span class="p">(</span><span class="n">cp950</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">END_CODECS_LIST</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">I_AM_A_MODULE_FOR</span><span class="p">(</span><span class="n">tw</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> PyModule_Create2 will not be inlined into PyInit__codecs_tw because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L141>PyInit__codecs_tw</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs_cjkcodecs.h.html#L305>register_maps</a> can be inlined into PyInit__codecs_tw with cost=-14760 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L141>PyInit__codecs_tw</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs_cjkcodecs.h.html#L305>register_maps</a> inlined into PyInit__codecs_tw&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_cjkcodecs__codecs_tw.c.html#L141>PyInit__codecs_tw</a></td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

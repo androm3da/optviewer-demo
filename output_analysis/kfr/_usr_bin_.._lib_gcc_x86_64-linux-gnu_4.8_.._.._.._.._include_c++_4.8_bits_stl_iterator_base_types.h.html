@@ -1,0 +1,1781 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="c1">// Types used in iterator implementation -*- C++ -*-</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// Copyright (C) 2001-2013 Free Software Foundation, Inc.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">//</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// This file is part of the GNU ISO C++ Library.  This library is free</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// software; you can redistribute it and/or modify it under the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// terms of the GNU General Public License as published by the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// Free Software Foundation; either version 3, or (at your option)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// any later version.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// This library is distributed in the hope that it will be useful,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// GNU General Public License for more details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// Under Section 7 of GPL version 3, you are granted additional</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// permissions described in the GCC Runtime Library Exception, version</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// 3.1, as published by the Free Software Foundation.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// You should have received a copy of the GNU General Public License and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// a copy of the GCC Runtime Library Exception along with this program;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// &lt;http://www.gnu.org/licenses/&gt;.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Copyright (c) 1994</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Hewlett-Packard Company</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Permission to use, copy, modify, distribute and sell this software</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * and its documentation for any purpose is hereby granted without fee,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * provided that the above copyright notice appear in all copies and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * that both that copyright notice and this permission notice appear</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * in supporting documentation.  Hewlett-Packard Company makes no</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * representations about the suitability of this software for any</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * purpose.  It is provided &quot;as is&quot; without express or implied warranty.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Copyright (c) 1996-1998</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Silicon Graphics Computer Systems, Inc.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Permission to use, copy, modify, distribute and sell this software</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * and its documentation for any purpose is hereby granted without fee,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * provided that the above copyright notice appear in all copies and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * that both that copyright notice and this permission notice appear</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * in supporting documentation.  Silicon Graphics makes no</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * representations about the suitability of this software for any</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * purpose.  It is provided &quot;as is&quot; without express or implied warranty.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/** @file bits/stl_iterator_base_types.h</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  This is an internal header file, included by other library headers.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  Do not attempt to use it directly. @headername{iterator}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  This file contains all of the general iterator-related utility types,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  such as iterator_traits and struct iterator.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifndef _STL_ITERATOR_BASE_TYPES_H</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define _STL_ITERATOR_BASE_TYPES_H 1</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma GCC system_header</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;bits/c++config.h&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if __cplusplus &gt;= 201103L</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp"># include &lt;type_traits&gt;  </span><span class="c1">// For _GLIBCXX_HAS_NESTED_TYPE, is_convertible</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">std</span> <span class="nf">_GLIBCXX_VISIBILITY</span><span class="p">(</span><span class="k">default</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">_GLIBCXX_BEGIN_NAMESPACE_VERSION</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  @defgroup iterators Iterators</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  Abstractions for uniform iterating through various underlying types.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">//@{ </span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  @defgroup iterator_tags Iterator Tags</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  These are empty types, used to distinguish different iterators.  The</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  distinction is not made by what they contain, but simply by what they</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  are.  Different underlying algorithms can then be used based on the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  different operations supported by different iterator types.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">//@{ </span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">///  Marking input iterators.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">struct</span> <span class="n">input_iterator_tag</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">///  Marking output iterators.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">struct</span> <span class="n">output_iterator_tag</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// Forward iterators support a superset of input iterator operations.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">struct</span> <span class="nl">forward_iterator_tag</span> <span class="p">:</span> <span class="k">public</span> <span class="n">input_iterator_tag</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// Bidirectional iterators support a superset of forward iterator</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// operations.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">struct</span> <span class="nl">bidirectional_iterator_tag</span> <span class="p">:</span> <span class="k">public</span> <span class="n">forward_iterator_tag</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// Random-access iterators support a superset of bidirectional</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// iterator operations.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">struct</span> <span class="nl">random_access_iterator_tag</span> <span class="p">:</span> <span class="k">public</span> <span class="n">bidirectional_iterator_tag</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">//@}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  @brief  Common %iterator class.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  This class does nothing but define nested typedefs.  %Iterator classes</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  can inherit from this class to save some work.  The typedefs are then</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  used in specializations and overloading.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  In particular, there are no default implementations of requirements</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  such as @c operator++ and the like.  (How could there be?)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Category</span><span class="p">,</span> <span class="k">typename</span> <span class="n">_Tp</span><span class="p">,</span> <span class="k">typename</span> <span class="n">_Distance</span> <span class="o">=</span> <span class="kt">ptrdiff_t</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>           <span class="k">typename</span> <span class="n">_Pointer</span> <span class="o">=</span> <span class="n">_Tp</span><span class="o">*</span><span class="p">,</span> <span class="k">typename</span> <span class="n">_Reference</span> <span class="o">=</span> <span class="n">_Tp</span><span class="o">&amp;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">iterator</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="c1">/// One of the @link iterator_tags tag types@endlink.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Category</span>  <span class="n">iterator_category</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="c1">/// The type &quot;pointed to&quot; by the iterator.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Tp</span>        <span class="n">value_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="c1">/// Distance between iterators is represented as this type.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Distance</span>  <span class="n">difference_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="c1">/// This type represents a pointer-to-value_type.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Pointer</span>   <span class="n">pointer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="c1">/// This type represents a reference-to-value_type.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Reference</span> <span class="n">reference</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  @brief  Traits class for iterators.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  This class does nothing but define nested typedefs.  The general</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  version simply @a forwards the nested typedefs from the Iterator</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  argument.  Specialized versions for pointers and pointers-to-const</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  provide tighter, more correct semantics.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if __cplusplus &gt;= 201103L</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">_GLIBCXX_HAS_NESTED_TYPE</span><span class="p">(</span><span class="n">iterator_category</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>	   <span class="kt">bool</span> <span class="o">=</span> <span class="n">__has_iterator_category</span><span class="o">&lt;</span><span class="n">_Iterator</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">__iterator_traits</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">__iterator_traits</span><span class="o">&lt;</span><span class="n">_Iterator</span><span class="p">,</span> <span class="nb">true</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">iterator_category</span> <span class="n">iterator_category</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">value_type</span>        <span class="n">value_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">difference_type</span>   <span class="n">difference_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">pointer</span>           <span class="n">pointer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">reference</span>         <span class="n">reference</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="nl">iterator_traits</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">:</span> <span class="k">public</span> <span class="n">__iterator_traits</span><span class="o">&lt;</span><span class="n">_Iterator</span><span class="o">&gt;</span> <span class="p">{</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">iterator_traits</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">iterator_category</span> <span class="n">iterator_category</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">value_type</span>        <span class="n">value_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">difference_type</span>   <span class="n">difference_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">pointer</span>           <span class="n">pointer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">reference</span>         <span class="n">reference</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L173">173</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// Partial specialization for pointer types.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L174">174</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Tp</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L175">175</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">iterator_traits</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">*&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L176">176</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L177">177</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">random_access_iterator_tag</span> <span class="n">iterator_category</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L178">178</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Tp</span>                         <span class="n">value_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L179">179</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="kt">ptrdiff_t</span>                   <span class="n">difference_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L180">180</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Tp</span><span class="o">*</span>                        <span class="n">pointer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L181">181</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Tp</span><span class="o">&amp;</span>                        <span class="n">reference</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L182">182</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L183">183</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L184">184</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">/// Partial specialization for const pointer types.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Tp</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">iterator_traits</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">_Tp</span><span class="o">*&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L187">187</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L188">188</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">random_access_iterator_tag</span> <span class="n">iterator_category</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L189">189</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Tp</span>                         <span class="n">value_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L190">190</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="kt">ptrdiff_t</span>                   <span class="n">difference_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L191">191</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">const</span> <span class="n">_Tp</span><span class="o">*</span>                  <span class="n">pointer</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">const</span> <span class="n">_Tp</span><span class="o">&amp;</span>                  <span class="n">reference</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L194">194</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L195">195</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L196">196</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  This function is not a part of the C++ standard but is syntactic</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L197">197</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">   *  sugar for internal library use only.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L198">198</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L199">199</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iter</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L200">200</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kr">inline</span> <span class="k">typename</span> <span class="n">iterator_traits</span><span class="o">&lt;</span><span class="n">_Iter</span><span class="o">&gt;::</span><span class="n">iterator_category</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L201">201</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">__iterator_category</span><span class="p">(</span><span class="k">const</span> <span class="n">_Iter</span><span class="o">&amp;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L202">202</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span> <span class="k">return</span> <span class="k">typename</span> <span class="n">iterator_traits</span><span class="o">&lt;</span><span class="n">_Iter</span><span class="o">&gt;::</span><span class="n">iterator_category</span><span class="p">();</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L203">203</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L204">204</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">//@}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L205">205</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L206">206</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">// If _Iterator has a base returns it otherwise _Iterator is returned</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L207">207</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="c1">// untouched</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L208">208</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">_HasBase</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L209">209</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">_Iter_base</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L210">210</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L211">211</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="n">_Iterator</span> <span class="n">iterator_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L212">212</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">static</span> <span class="n">iterator_type</span> <span class="n">_S_base</span><span class="p">(</span><span class="n">_Iterator</span> <span class="n">__it</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L213">213</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="p">{</span> <span class="k">return</span> <span class="n">__it</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L214">214</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L215">215</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L216">216</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Iterator</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L217">217</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">struct</span> <span class="n">_Iter_base</span><span class="o">&lt;</span><span class="n">_Iterator</span><span class="p">,</span> <span class="nb">true</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L218">218</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L219">219</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">typedef</span> <span class="k">typename</span> <span class="n">_Iterator</span><span class="o">::</span><span class="n">iterator_type</span> <span class="n">iterator_type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L220">220</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="k">static</span> <span class="n">iterator_type</span> <span class="n">_S_base</span><span class="p">(</span><span class="n">_Iterator</span> <span class="n">__it</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L221">221</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="p">{</span> <span class="k">return</span> <span class="n">__it</span><span class="p">.</span><span class="n">base</span><span class="p">();</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;testo::test_case**&gt;::base() const</a> can be inlined into std::_Iter_base&lt;std::move_iterator&lt;testo::test_case**&gt;, true&gt;::_S_base(std::move_iterator&lt;testo::test_case**&gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<testo::test_case**>, true>::_S_base(std::move_iterator<testo::test_case**>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;testo::test_case**&gt;::base() const</a> inlined into std::_Iter_base&lt;std::move_iterator&lt;testo::test_case**&gt;, true&gt;::_S_base(std::move_iterator&lt;testo::test_case**&gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<testo::test_case**>, true>::_S_base(std::move_iterator<testo::test_case**>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;::base() const</a> can be inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<long double>*, std::vector<kfr::complex<long double>, std::allocator<kfr::complex<long double> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<long double>*, std::vector<kfr::complex<long double>, std::allocator<kfr::complex<long double> > > >)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;::base() const</a> inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;long double&gt;*, std::vector&lt;kfr::complex&lt;long double&gt;, std::allocator&lt;kfr::complex&lt;long double&gt; &gt; &gt; &gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<long double>*, std::vector<kfr::complex<long double>, std::allocator<kfr::complex<long double> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<long double>*, std::vector<kfr::complex<long double>, std::allocator<kfr::complex<long double> > > >)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;::base() const</a> can be inlined into std::_Iter_base&lt;std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;, true&gt;::_S_base(std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<kfr::complex<float>*>, true>::_S_base(std::move_iterator<kfr::complex<float>*>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;::base() const</a> inlined into std::_Iter_base&lt;std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;, true&gt;::_S_base(std::move_iterator&lt;kfr::complex&lt;float&gt;*&gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<kfr::complex<float>*>, true>::_S_base(std::move_iterator<kfr::complex<float>*>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;::base() const</a> can be inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<float>*, std::vector<kfr::complex<float>, std::allocator<kfr::complex<float> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<float>*, std::vector<kfr::complex<float>, std::allocator<kfr::complex<float> > > >)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;::base() const</a> inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;float&gt;*, std::vector&lt;kfr::complex&lt;float&gt;, std::allocator&lt;kfr::complex&lt;float&gt; &gt; &gt; &gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<float>*, std::vector<kfr::complex<float>, std::allocator<kfr::complex<float> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<float>*, std::vector<kfr::complex<float>, std::allocator<kfr::complex<float> > > >)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;::base() const</a> can be inlined into std::_Iter_base&lt;std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;, true&gt;::_S_base(std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<kfr::complex<double>*>, true>::_S_base(std::move_iterator<kfr::complex<double>*>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L959>std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;::base() const</a> inlined into std::_Iter_base&lt;std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;, true&gt;::_S_base(std::move_iterator&lt;kfr::complex&lt;double&gt;*&gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<std::move_iterator<kfr::complex<double>*>, true>::_S_base(std::move_iterator<kfr::complex<double>*>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;::base() const</a> can be inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<double>*, std::vector<kfr::complex<double>, std::allocator<kfr::complex<double> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<double>*, std::vector<kfr::complex<double>, std::allocator<kfr::complex<double> > > >)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator.h.html#L791>__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;::base() const</a> inlined into std::_Iter_base&lt;__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;, true&gt;::_S_base(__gnu_cxx::__normal_iterator&lt;kfr::complex&lt;double&gt;*, std::vector&lt;kfr::complex&lt;double&gt;, std::allocator&lt;kfr::complex&lt;double&gt; &gt; &gt; &gt;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_iterator_base_types.h.html#L219>std::_Iter_base<__gnu_cxx::__normal_iterator<kfr::complex<double>*, std::vector<kfr::complex<double>, std::allocator<kfr::complex<double> > > >, true>::_S_base(__gnu_cxx::__normal_iterator<kfr::complex<double>*, std::vector<kfr::complex<double>, std::allocator<kfr::complex<double> > > >)</a></td>
+</tr>
+
+<tr>
+<td><a name="L222">222</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L223">223</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L224">224</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if __cplusplus &gt;= 201103L</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L225">225</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">_InIter</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L226">226</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">_RequireInputIter</span> <span class="o">=</span> <span class="k">typename</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L227">227</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>      <span class="n">enable_if</span><span class="o">&lt;</span><span class="n">is_convertible</span><span class="o">&lt;</span><span class="k">typename</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L228">228</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>		<span class="n">iterator_traits</span><span class="o">&lt;</span><span class="n">_InIter</span><span class="o">&gt;::</span><span class="n">iterator_category</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L229">229</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>			       <span class="n">input_iterator_tag</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L230">230</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L231">231</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L232">232</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">_GLIBCXX_END_NAMESPACE_VERSION</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L233">233</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span> <span class="c1">// namespace</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L234">234</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L235">235</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif </span><span class="cm">/* _STL_ITERATOR_BASE_TYPES_H */</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L236">236</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L237">237</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L238">238</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

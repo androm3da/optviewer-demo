@@ -1,0 +1,718 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../cometa.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_MSVC</span><span class="p">(</span><span class="n">warning</span><span class="p">(</span><span class="n">push</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_MSVC</span><span class="p">(</span><span class="n">warning</span><span class="p">(</span><span class="nl">disable</span> <span class="p">:</span> <span class="mi">4814</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">named_arg</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;int, std::allocator&lt;int&gt; &gt;::~vector()</a> can be inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;::~named_arg() with cost=15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<int, std::allocator<int> > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;int, std::allocator&lt;int&gt; &gt;::~vector()</a> inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;::~named_arg()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<int, std::allocator<int> > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;double, std::allocator&lt;double&gt; &gt;::~vector()</a> can be inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;::~named_arg() with cost=15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<double, std::allocator<double> > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;double, std::allocator&lt;double&gt; &gt;::~vector()</a> inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;::~named_arg()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<double, std::allocator<double> > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;::~vector()</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;::~named_arg() with cost=15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;::~vector()</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;::~named_arg()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;::~vector()</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;::~named_arg() with cost=15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;::~vector()</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;::~named_arg()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;::~vector()</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;::~named_arg() with cost=15 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">       </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L415>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;::~vector()</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;::~named_arg()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L12>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >::~named_arg()</a></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T</span> <span class="n">value</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">named</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="n">named</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">)</span> <span class="k">noexcept</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">CMT_INTRIN</span> <span class="k">constexpr</span> <span class="n">named_arg</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;&amp;</span> <span class="n">value</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">named_arg</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">name</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&>(cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;signed char, 1ul&gt;, kfr::vec&lt;signed char, 2ul&gt;, kfr::vec&lt;signed char, 4ul&gt;, kfr::vec&lt;signed char, 8ul&gt;, kfr::vec&lt;signed char, 16ul&gt;, kfr::vec&lt;signed char, 3ul&gt;, kfr::vec&lt;short, 1ul&gt;, kfr::vec&lt;short, 2ul&gt;, kfr::vec&lt;short, 4ul&gt;, kfr::vec&lt;short, 8ul&gt;, kfr::vec&lt;short, 16ul&gt;, kfr::vec&lt;short, 3ul&gt;, kfr::vec&lt;int, 1ul&gt;, kfr::vec&lt;int, 2ul&gt;, kfr::vec&lt;int, 4ul&gt;, kfr::vec&lt;int, 8ul&gt;, kfr::vec&lt;int, 16ul&gt;, kfr::vec&lt;int, 3ul&gt;, kfr::vec&lt;long, 1ul&gt;, kfr::vec&lt;long, 2ul&gt;, kfr::vec&lt;long, 4ul&gt;, kfr::vec&lt;long, 8ul&gt;, kfr::vec&lt;long, 16ul&gt;, kfr::vec&lt;long, 3ul&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&>(cometa::ctypes_t<kfr::vec<signed char, 1ul>, kfr::vec<signed char, 2ul>, kfr::vec<signed char, 4ul>, kfr::vec<signed char, 8ul>, kfr::vec<signed char, 16ul>, kfr::vec<signed char, 3ul>, kfr::vec<short, 1ul>, kfr::vec<short, 2ul>, kfr::vec<short, 4ul>, kfr::vec<short, 8ul>, kfr::vec<short, 16ul>, kfr::vec<short, 3ul>, kfr::vec<int, 1ul>, kfr::vec<int, 2ul>, kfr::vec<int, 4ul>, kfr::vec<int, 8ul>, kfr::vec<int, 16ul>, kfr::vec<int, 3ul>, kfr::vec<long, 1ul>, kfr::vec<long, 2ul>, kfr::vec<long, 4ul>, kfr::vec<long, 8ul>, kfr::vec<long, 16ul>, kfr::vec<long, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<int, std::allocator<int> > > cometa::named::operator=<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<int, std::allocator<int> > > cometa::named::operator=<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;int, std::allocator&lt;int&gt; &gt;::vector(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;) with cost=20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<int, std::allocator<int> > > cometa::named::operator=<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;int, std::allocator&lt;int&gt; &gt;::vector(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;int, std::allocator&lt;int&gt; &gt; &gt;(std::vector&lt;int, std::allocator&lt;int&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<int, std::allocator<int> > > cometa::named::operator=<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<int, std::allocator<int> > > cometa::named::operator=<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&>(cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;float, 1ul&gt;, kfr::vec&lt;float, 2ul&gt;, kfr::vec&lt;float, 4ul&gt;, kfr::vec&lt;float, 8ul&gt;, kfr::vec&lt;float, 16ul&gt;, kfr::vec&lt;float, 3ul&gt;, kfr::vec&lt;double, 1ul&gt;, kfr::vec&lt;double, 2ul&gt;, kfr::vec&lt;double, 4ul&gt;, kfr::vec&lt;double, 8ul&gt;, kfr::vec&lt;double, 16ul&gt;, kfr::vec&lt;double, 3ul&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&>(cometa::ctypes_t<kfr::vec<float, 1ul>, kfr::vec<float, 2ul>, kfr::vec<float, 4ul>, kfr::vec<float, 8ul>, kfr::vec<float, 16ul>, kfr::vec<float, 3ul>, kfr::vec<double, 1ul>, kfr::vec<double, 2ul>, kfr::vec<double, 4ul>, kfr::vec<double, 8ul>, kfr::vec<double, 16ul>, kfr::vec<double, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<double, std::allocator<double> > > cometa::named::operator=<std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<double, std::allocator<double> > > cometa::named::operator=<std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;double, std::allocator&lt;double&gt; &gt;::vector(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;) with cost=20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<double, std::allocator<double> > > cometa::named::operator=<std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;double, std::allocator&lt;double&gt; &gt;::vector(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;double, std::allocator&lt;double&gt; &gt; &gt;(std::vector&lt;double, std::allocator&lt;double&gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<double, std::allocator<double> > > cometa::named::operator=<std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<double, std::allocator<double> > > cometa::named::operator=<std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > > cometa::named::operator=<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >(std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > > cometa::named::operator=<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >(std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;) with cost=20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > > cometa::named::operator=<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >(std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;double, double&gt;, std::allocator&lt;std::pair&lt;double, double&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > > cometa::named::operator=<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >(std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > > cometa::named::operator=<std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > > >(std::vector<std::pair<double, double>, std::allocator<std::pair<double, double> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > cometa::named::operator=<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >(std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > cometa::named::operator=<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >(std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;) with cost=20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > cometa::named::operator=<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >(std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > cometa::named::operator=<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >(std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > cometa::named::operator=<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >(std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&>(cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;&gt;(cometa::ctypes_t&lt;kfr::vec&lt;unsigned char, 1ul&gt;, kfr::vec&lt;unsigned char, 2ul&gt;, kfr::vec&lt;unsigned char, 4ul&gt;, kfr::vec&lt;unsigned char, 8ul&gt;, kfr::vec&lt;unsigned char, 16ul&gt;, kfr::vec&lt;unsigned char, 3ul&gt;, kfr::vec&lt;unsigned short, 1ul&gt;, kfr::vec&lt;unsigned short, 2ul&gt;, kfr::vec&lt;unsigned short, 4ul&gt;, kfr::vec&lt;unsigned short, 8ul&gt;, kfr::vec&lt;unsigned short, 16ul&gt;, kfr::vec&lt;unsigned short, 3ul&gt;, kfr::vec&lt;unsigned int, 1ul&gt;, kfr::vec&lt;unsigned int, 2ul&gt;, kfr::vec&lt;unsigned int, 4ul&gt;, kfr::vec&lt;unsigned int, 8ul&gt;, kfr::vec&lt;unsigned int, 16ul&gt;, kfr::vec&lt;unsigned int, 3ul&gt;, kfr::vec&lt;unsigned long, 1ul&gt;, kfr::vec&lt;unsigned long, 2ul&gt;, kfr::vec&lt;unsigned long, 4ul&gt;, kfr::vec&lt;unsigned long, 8ul&gt;, kfr::vec&lt;unsigned long, 16ul&gt;, kfr::vec&lt;unsigned long, 3ul&gt; &gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&> cometa::named::operator=<cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&>(cometa::ctypes_t<kfr::vec<unsigned char, 1ul>, kfr::vec<unsigned char, 2ul>, kfr::vec<unsigned char, 4ul>, kfr::vec<unsigned char, 8ul>, kfr::vec<unsigned char, 16ul>, kfr::vec<unsigned char, 3ul>, kfr::vec<unsigned short, 1ul>, kfr::vec<unsigned short, 2ul>, kfr::vec<unsigned short, 4ul>, kfr::vec<unsigned short, 8ul>, kfr::vec<unsigned short, 16ul>, kfr::vec<unsigned short, 3ul>, kfr::vec<unsigned int, 1ul>, kfr::vec<unsigned int, 2ul>, kfr::vec<unsigned int, 4ul>, kfr::vec<unsigned int, 8ul>, kfr::vec<unsigned int, 16ul>, kfr::vec<unsigned int, 3ul>, kfr::vec<unsigned long, 1ul>, kfr::vec<unsigned long, 2ul>, kfr::vec<unsigned long, 4ul>, kfr::vec<unsigned long, 8ul>, kfr::vec<unsigned long, 16ul>, kfr::vec<unsigned long, 3ul> > const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > > cometa::named::operator=<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >(std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp; std::forward&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::remove_reference&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > > cometa::named::operator=<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >(std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;) with cost=20 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > > cometa::named::operator=<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >(std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_stl_vector.h.html#L328>std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;::vector(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt; cometa::named::operator=&lt;std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt; &gt;(std::vector&lt;std::pair&lt;unsigned int, unsigned int&gt;, std::allocator&lt;std::pair&lt;unsigned int, unsigned int&gt; &gt; &gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > > cometa::named::operator=<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >(std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                     </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L177>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > > cometa::named::operator=<std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > > >(std::vector<std::pair<unsigned int, unsigned int>, std::allocator<std::pair<unsigned int, unsigned int> > >&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;float, double&gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;(cometa::ctypes_t&lt;float, double&gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<float, double> const&> cometa::named::operator=<cometa::ctypes_t<float, double> const&>(cometa::ctypes_t<float, double> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;float, double&gt; const&amp; std::forward&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;(std::remove_reference&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;(cometa::ctypes_t&lt;float, double&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<float, double> const&> cometa::named::operator=<cometa::ctypes_t<float, double> const&>(cometa::ctypes_t<float, double> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::tuple&lt;bool, bool&gt;&amp;&amp; std::forward&lt;std::tuple&lt;bool, bool&gt; &gt;(std::remove_reference&lt;std::tuple&lt;bool, bool&gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt; cometa::named::operator=&lt;std::tuple&lt;bool, bool&gt; &gt;(std::tuple&lt;bool, bool&gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::tuple<bool, bool> > cometa::named::operator=<std::tuple<bool, bool> >(std::tuple<bool, bool>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>std::tuple&lt;bool, bool&gt;&amp;&amp; std::forward&lt;std::tuple&lt;bool, bool&gt; &gt;(std::remove_reference&lt;std::tuple&lt;bool, bool&gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt; cometa::named::operator=&lt;std::tuple&lt;bool, bool&gt; &gt;(std::tuple&lt;bool, bool&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::tuple<bool, bool> > cometa::named::operator=<std::tuple<bool, bool> >(std::tuple<bool, bool>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L544>std::tuple&lt;bool, bool&gt;::tuple(std::tuple&lt;bool, bool&gt;&amp;&amp;)</a> can be inlined into cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt; cometa::named::operator=&lt;std::tuple&lt;bool, bool&gt; &gt;(std::tuple&lt;bool, bool&gt;&amp;&amp;) with cost=-30 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::tuple<bool, bool> > cometa::named::operator=<std::tuple<bool, bool> >(std::tuple<bool, bool>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L544>std::tuple&lt;bool, bool&gt;::tuple(std::tuple&lt;bool, bool&gt;&amp;&amp;)</a> inlined into cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt; cometa::named::operator=&lt;std::tuple&lt;bool, bool&gt; &gt;(std::tuple&lt;bool, bool&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<std::tuple<bool, bool> > cometa::named::operator=<std::tuple<bool, bool> >(std::tuple<bool, bool>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;unsigned long&gt;&amp;&amp; std::forward&lt;cometa::range&lt;unsigned long&gt; &gt;(std::remove_reference&lt;cometa::range&lt;unsigned long&gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::range&lt;unsigned long&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;unsigned long&gt; &gt;(cometa::range&lt;unsigned long&gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<unsigned long> > cometa::named::operator=<cometa::range<unsigned long> >(cometa::range<unsigned long>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;unsigned long&gt;&amp;&amp; std::forward&lt;cometa::range&lt;unsigned long&gt; &gt;(std::remove_reference&lt;cometa::range&lt;unsigned long&gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::range&lt;unsigned long&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;unsigned long&gt; &gt;(cometa::range&lt;unsigned long&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<unsigned long> > cometa::named::operator=<cometa::range<unsigned long> >(cometa::range<unsigned long>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;float, double&gt;&amp;&amp; std::forward&lt;cometa::ctypes_t&lt;float, double&gt; &gt;(std::remove_reference&lt;cometa::ctypes_t&lt;float, double&gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; &gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;float, double&gt; &gt;(cometa::ctypes_t&lt;float, double&gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<float, double> > cometa::named::operator=<cometa::ctypes_t<float, double> >(cometa::ctypes_t<float, double>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::ctypes_t&lt;float, double&gt;&amp;&amp; std::forward&lt;cometa::ctypes_t&lt;float, double&gt; &gt;(std::remove_reference&lt;cometa::ctypes_t&lt;float, double&gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; &gt; cometa::named::operator=&lt;cometa::ctypes_t&lt;float, double&gt; &gt;(cometa::ctypes_t&lt;float, double&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::ctypes_t<float, double> > cometa::named::operator=<cometa::ctypes_t<float, double> >(cometa::ctypes_t<float, double>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;double&gt;&amp;&amp; std::forward&lt;cometa::range&lt;double&gt; &gt;(std::remove_reference&lt;cometa::range&lt;double&gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::range&lt;double&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;double&gt; &gt;(cometa::range&lt;double&gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<double> > cometa::named::operator=<cometa::range<double> >(cometa::range<double>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;double&gt;&amp;&amp; std::forward&lt;cometa::range&lt;double&gt; &gt;(std::remove_reference&lt;cometa::range&lt;double&gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::range&lt;double&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;double&gt; &gt;(cometa::range&lt;double&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<double> > cometa::named::operator=<cometa::range<double> >(cometa::range<double>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;int&gt;&amp;&amp; std::forward&lt;cometa::range&lt;int&gt; &gt;(std::remove_reference&lt;cometa::range&lt;int&gt; &gt;::type&amp;)</a> can be inlined into cometa::named_arg&lt;cometa::range&lt;int&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;int&gt; &gt;(cometa::range&lt;int&gt;&amp;&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<int> > cometa::named::operator=<cometa::range<int> >(cometa::range<int>&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>cometa::range&lt;int&gt;&amp;&amp; std::forward&lt;cometa::range&lt;int&gt; &gt;(std::remove_reference&lt;cometa::range&lt;int&gt; &gt;::type&amp;)</a> inlined into cometa::named_arg&lt;cometa::range&lt;int&gt; &gt; cometa::named::operator=&lt;cometa::range&lt;int&gt; &gt;(cometa::range&lt;int&gt;&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_named_arg.hpp.html#L24>cometa::named_arg<cometa::range<int> > cometa::named::operator=<cometa::range<int> >(cometa::range<int>&&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="n">named</span> <span class="k">operator</span><span class="s">&quot;&quot;</span><span class="n">_arg</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">size_t</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">name</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_MSVC</span><span class="p">(</span><span class="n">warning</span><span class="p">(</span><span class="n">pop</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

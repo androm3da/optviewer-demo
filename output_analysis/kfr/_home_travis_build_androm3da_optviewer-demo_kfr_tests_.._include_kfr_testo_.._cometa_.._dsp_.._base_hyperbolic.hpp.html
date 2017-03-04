@@ -1,0 +1,2215 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup math</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Copyright (C) 2016 D Levin (https://www.kfrlib.com)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  This file is part of KFR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is free software: you can redistribute it and/or modify</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  it under the terms of the GNU General Public License as published by</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  the Free Software Foundation, either version 3 of the License, or</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  (at your option) any later version.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is distributed in the hope that it will be useful,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  GNU General Public License for more details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  You should have received a copy of the GNU General Public License</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  along with KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  If GPL is not suitable for your project, you must purchase a commercial license to use KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Buying a commercial license is mandatory as soon as you develop commercial activities without</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  disclosing the source code of your own applications.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  See https://www.kfrlib.com for details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;abs.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;constants.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;function.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;log_exp.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;min_max.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;operators.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;select.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">kfr</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">intrinsics</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">sinh</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">xx</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L139>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L139>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span> <span class="o">-</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">xx</span><span class="p">))</span> <span class="o">*</span> <span class="n">Tout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L166>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-35 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L166>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L166>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-35 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L166>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L41>kfr::vec<double, 1ul> kfr::intrinsics::sinh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">cosh</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">xx</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L139>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L139>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span> <span class="o">+</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">xx</span><span class="p">))</span> <span class="o">*</span> <span class="n">Tout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L165>kfr::operator+(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-35 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L165>kfr::operator+(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L637>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;double, double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, double const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L165>kfr::operator+(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-35 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L165>kfr::operator+(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                      </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L162>kfr::operator-(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L48>kfr::vec<double, 1ul> kfr::intrinsics::cosh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">tanh</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;int, double, 1ul, double&gt;(int const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;int, double, 1ul, double&gt;(int const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;int, 1ul&gt; kfr::operators::operator*&lt;int, int, 1ul, int&gt;(int const&amp;, kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;int, 1ul&gt; kfr::operators::operator*&lt;int, int, 1ul, int&gt;(int const&amp;, kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L316>kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::exp&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;314&gt;::type)314&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=290 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L316>kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::exp&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;314&gt;::type)314&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L55>kfr::vec<double, 1ul> kfr::intrinsics::tanh<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">coth</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;int, double, 1ul, double&gt;(int const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator*&lt;int, double, 1ul, double&gt;(int const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L186>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::exp&lt;1ul&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;int, 1ul&gt; kfr::operators::operator*&lt;int, int, 1ul, int&gt;(int const&amp;, kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L658>kfr::vec&lt;int, 1ul&gt; kfr::operators::operator*&lt;int, int, 1ul, int&gt;(int const&amp;, kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L316>kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::exp&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;314&gt;::type)314&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=290 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_log_exp.hpp.html#L316>kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::exp&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;314&gt;::type)314&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<double, 1ul, double>(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;) with cost=-30 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L168>kfr::operator/(kfr::vec&lt;double, 1ul&gt; const&amp;, kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L632>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator-&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_vec.hpp.html#L627>kfr::vec&lt;double, 1ul&gt; kfr::operators::operator+&lt;double, int, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;, int const&amp;)</a> inlined into kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L62>kfr::vec<double, 1ul> kfr::intrinsics::coth<int, 1ul, double>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">sinhcosh</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="nf">subadd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">Tout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">coshsinh</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="nf">addsub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">Tout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">sinh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> can be inlined into double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;) with cost=-25 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> inlined into double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;) with cost=-30 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L43>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L43>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L83>double kfr::intrinsics::sinh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">cosh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> can be inlined into double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;) with cost=-25 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> inlined into double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;) with cost=-30 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L50>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L50>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L84>double kfr::intrinsics::cosh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">tanh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> can be inlined into double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;) with cost=-25 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> inlined into double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;) with cost=-30 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L57>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L57>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::tanh<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">coth</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> can be inlined into double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;) with cost=-25 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L128>kfr::vec&lt;double, 1ul&gt;::vec&lt;int, void&gt;(int const&amp;)</a> inlined into double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> can be inlined into double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;) with cost=-30 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._base_function.hpp.html#L240>double kfr::intrinsics::to_scalar&lt;double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L64>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline"></pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L64>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;double, 1ul, double&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::coth<int, , double>(int const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">sinhcosh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">coshsinh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">sinh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">cosh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">tanh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">coth</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">sinhcosh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">coshsinh</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">sinh</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">sinh</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L99>kfr::internal::flt_type_impl<int>::type kfr::sinh<int, (cometa::details::unique_enum_impl<99>::type)99>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L85>double kfr::intrinsics::sinh&lt;int, , double&gt;(int const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;int&gt;::type kfr::sinh&lt;int, (cometa::details::unique_enum_impl&lt;99&gt;::type)99&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L99>kfr::internal::flt_type_impl<int>::type kfr::sinh<int, (cometa::details::unique_enum_impl<99>::type)99>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L43>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L99>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::sinh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<99>::type)99>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L43>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::sinh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::sinh&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;99&gt;::type)99&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L99>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::sinh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<99>::type)99>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">sinh</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">sinh</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">sinh</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">cosh</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">cosh</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L111>kfr::internal::flt_type_impl<int>::type kfr::cosh<int, (cometa::details::unique_enum_impl<111>::type)111>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L86>double kfr::intrinsics::cosh&lt;int, , double&gt;(int const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;int&gt;::type kfr::cosh&lt;int, (cometa::details::unique_enum_impl&lt;111&gt;::type)111&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L111>kfr::internal::flt_type_impl<int>::type kfr::cosh<int, (cometa::details::unique_enum_impl<111>::type)111>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L50>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L111>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::cosh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<111>::type)111>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L50>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::cosh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::cosh&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;111&gt;::type)111&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L111>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::cosh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<111>::type)111>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">cosh</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">cosh</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">cosh</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">tanh</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L87>double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L123>kfr::internal::flt_type_impl<int>::type kfr::tanh<int, (cometa::details::unique_enum_impl<123>::type)123>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L87>double kfr::intrinsics::tanh&lt;int, , double&gt;(int const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;int&gt;::type kfr::tanh&lt;int, (cometa::details::unique_enum_impl&lt;123&gt;::type)123&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L123>kfr::internal::flt_type_impl<int>::type kfr::tanh<int, (cometa::details::unique_enum_impl<123>::type)123>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L57>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L123>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::tanh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<123>::type)123>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L57>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::tanh&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::tanh&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;123&gt;::type)123&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L123>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::tanh<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<123>::type)123>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">tanh</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">tanh</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">tanh</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">coth</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">coth</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L88>double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L135>kfr::internal::flt_type_impl<int>::type kfr::coth<int, (cometa::details::unique_enum_impl<135>::type)135>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L88>double kfr::intrinsics::coth&lt;int, , double&gt;(int const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;int&gt;::type kfr::coth&lt;int, (cometa::details::unique_enum_impl&lt;135&gt;::type)135&gt;(int const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L135>kfr::internal::flt_type_impl<int>::type kfr::coth<int, (cometa::details::unique_enum_impl<135>::type)135>(int const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L64>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L135>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::coth<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<135>::type)135>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L64>kfr::vec&lt;double, 1ul&gt; kfr::intrinsics::coth&lt;int, 1ul, double&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)</a> inlined into kfr::internal::flt_type_impl&lt;kfr::vec&lt;int, 1ul&gt; &gt;::type kfr::coth&lt;kfr::vec&lt;int, 1ul&gt;, (cometa::details::unique_enum_impl&lt;135&gt;::type)135&gt;(kfr::vec&lt;int, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_hyperbolic.hpp.html#L135>kfr::internal::flt_type_impl<kfr::vec<int, 1ul> >::type kfr::coth<kfr::vec<int, 1ul>, (cometa::details::unique_enum_impl<135>::type)135>(kfr::vec<int, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">coth</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">coth</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">coth</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">sinhcosh</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">sinhcosh</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">sinhcosh</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">sinhcosh</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">sinhcosh</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">coshsinh</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">coshsinh</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_FUNC</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">coshsinh</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">coshsinh</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">coshsinh</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

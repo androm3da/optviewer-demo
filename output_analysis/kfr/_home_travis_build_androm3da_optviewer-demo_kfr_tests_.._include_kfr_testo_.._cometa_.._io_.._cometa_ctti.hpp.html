@@ -1,0 +1,1725 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../cometa.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;cstring.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">pconstvoid</span> <span class="o">=</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">type_id_t</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="n">type_id_t</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">id</span><span class="p">)</span> <span class="k">noexcept</span> <span class="o">:</span> <span class="n">id</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">type_id_t</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="n">id</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">type_id_t</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="n">id</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="k">const</span> <span class="n">id</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">details</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">type_id_t</span> <span class="n">typeident_impl</span><span class="p">()</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">type_id_t</span><span class="p">(</span><span class="n">pconstvoid</span><span class="p">(</span><span class="o">&amp;</span><span class="n">typeident_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef CMT_COMPILER_CLANG</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">typename_prefix</span>  <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="s">&quot;auto cometa::ctype_name() [T = &quot;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">typename_postfix</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">typename_prefix</span>  <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="s">&quot;constexpr auto cometa::ctype_name() [with T = &quot;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">typename_postfix</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span><span class="p">...</span> <span class="n">indices</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">Nout</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="k">sizeof</span><span class="p">...(</span><span class="n">indices</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">cstring</span><span class="o">&lt;</span><span class="n">Nout</span><span class="o">&gt;</span> <span class="n">gettypename_impl</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span><span class="p">,</span> <span class="n">csizes_t</span><span class="o">&lt;</span><span class="n">indices</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">cstring</span><span class="o">&lt;</span><span class="n">Nout</span><span class="o">&gt;</span><span class="p">{</span> <span class="p">{</span> <span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">indices</span><span class="p">])...,</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="k">auto</span> <span class="n">ctype_name</span><span class="p">()</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">details</span><span class="o">::</span><span class="n">gettypename_impl</span><span class="p">(</span><span class="n">CMT_FUNC_SIGNATURE</span> <span class="o">+</span> <span class="n">details</span><span class="o">::</span><span class="n">typename_prefix</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                     <span class="n">csizeseq_t</span><span class="o">&lt;</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">CMT_FUNC_SIGNATURE</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">details</span><span class="o">::</span><span class="n">typename_prefix</span> <span class="o">-</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                                 <span class="n">details</span><span class="o">::</span><span class="n">typename_postfix</span><span class="p">)</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Gets the fully qualified name of the type, including namespace and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * template parameters (if any)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @tparam T    type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @return      name of the type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">type_name</span><span class="p">()</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="k">const</span> <span class="k">auto</span> <span class="n">name</span> <span class="o">=</span> <span class="n">ctype_name</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">name</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;25ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;signed char, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<signed char, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;short, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<short, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;17ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;int, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<int, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;18ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;long, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<long, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;19ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;float, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<float, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;21ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;21ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;20ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;double, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<double, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned char, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned char, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;29ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;29ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned short, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned short, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;26ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned int, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned int, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 1ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 1ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 1ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 2ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 2ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 2ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 4ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 4ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 4ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 8ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 8ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 8ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 16ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;28ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 16ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 16ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 3ul&gt; &gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;27ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;kfr::vec&lt;unsigned long, 3ul&gt; &gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<kfr::vec<unsigned long, 3ul> >()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;6ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;float&gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<float>()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;6ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;float&gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<float>()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;7ul&gt;::c_str() const</a> can be inlined into char const* cometa::type_name&lt;double&gt;() with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<double>()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_cstring.hpp.html#L24>cometa::cstring&lt;7ul&gt;::c_str() const</a> inlined into char const* cometa::type_name&lt;double&gt;()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._io_.._cometa_ctti.hpp.html#L59>char const* cometa::type_name<double>()</a></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Gets the fully qualified name of the type, including namespace and</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * template parameters (if any)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @param x      value of specific type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @return      name of the type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">type_name</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span> <span class="k">noexcept</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">x</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">type_name</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Gets unique value associated with the type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @tparam T    type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @return      value of type that supports operator== and operator!=</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">type_id_t</span> <span class="n">ctypeid</span><span class="p">()</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">details</span><span class="o">::</span><span class="n">typeident_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Gets unique value associated with the type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @param x     value of specific type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @return      value of type that supports operator== and operator!=</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kr">inline</span> <span class="n">type_id_t</span> <span class="n">ctypeid</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">x</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">details</span><span class="o">::</span><span class="n">typeident_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,774 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup math</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Copyright (C) 2016 D Levin (https://www.kfrlib.com)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  This file is part of KFR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is free software: you can redistribute it and/or modify</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  it under the terms of the GNU General Public License as published by</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  the Free Software Foundation, either version 3 of the License, or</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  (at your option) any later version.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is distributed in the hope that it will be useful,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  GNU General Public License for more details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  You should have received a copy of the GNU General Public License</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  along with KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  If GPL is not suitable for your project, you must purchase a commercial license to use KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Buying a commercial license is mandatory as soon as you develop commercial activities without</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  disclosing the source code of your own applications.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  See https://www.kfrlib.com for details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;function.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">kfr</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">intrinsics</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if defined CMT_ARCH_SSE2 &amp;&amp; defined KFR_NATIVE_INTRINSICS</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f32x1</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f32x1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">slice</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f32x4</span><span class="p">(</span><span class="n">_mm_sqrt_ss</span><span class="p">(</span><span class="o">*</span><span class="n">extend</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">))));</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                                               </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L72>kfr::vec&lt;float, 4ul&gt; kfr::extend&lt;4ul, float, 1ul, (cometa::details::unique_enum_impl&lt;70&gt;::type)70&gt;(kfr::vec&lt;float, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                                               </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L72>kfr::vec&lt;float, 4ul&gt; kfr::extend&lt;4ul, float, 1ul, (cometa::details::unique_enum_impl&lt;70&gt;::type)70&gt;(kfr::vec&lt;float, 1ul&gt; const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L84>kfr::vec&lt;float, 1ul&gt; kfr::slice&lt;0ul, 1ul, float, 4ul&gt;(kfr::vec&lt;float, 4ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L84>kfr::vec&lt;float, 1ul&gt; kfr::slice&lt;0ul, 1ul, float, 4ul&gt;(kfr::vec&lt;float, 4ul&gt; const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L141>kfr::vec&lt;float, 4ul&gt;::vec(float __vector(4) const&amp;)</a> can be inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;) with cost=-40 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L141>kfr::vec&lt;float, 4ul&gt;::vec(float __vector(4) const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                                  </pre><span class="column-entry-yellow"> _mm_sqrt_ss(float __vector(4)) should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                                  </pre><span class="column-entry-yellow"> _mm_sqrt_ss(float __vector(4)) inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                                              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L292>kfr::vec&lt;float, 4ul&gt;::operator*()</a> can be inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                                              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L292>kfr::vec&lt;float, 4ul&gt;::operator*()</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;float, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_sqrt.hpp.html#L36>kfr::intrinsics::sqrt(kfr::vec<float, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f64x1</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f64x1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">slice</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f64x2</span><span class="p">(</span><span class="n">_mm_sqrt_sd</span><span class="p">(</span><span class="n">_mm_setzero_pd</span><span class="p">(),</span> <span class="o">*</span><span class="n">extend</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">))));</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L84>kfr::vec&lt;double, 1ul&gt; kfr::slice&lt;0ul, 1ul, double, 2ul&gt;(kfr::vec&lt;double, 2ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L84>kfr::vec&lt;double, 1ul&gt; kfr::slice&lt;0ul, 1ul, double, 2ul&gt;(kfr::vec&lt;double, 2ul&gt; const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L141>kfr::vec&lt;double, 2ul&gt;::vec(double __vector(2) const&amp;)</a> can be inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-40 (threshold=562)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L141>kfr::vec&lt;double, 2ul&gt;::vec(double __vector(2) const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> _mm_sqrt_sd(double __vector(2), double __vector(2)) should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                             </pre><span class="column-entry-yellow"> _mm_sqrt_sd(double __vector(2), double __vector(2)) inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L292>kfr::vec&lt;double, 2ul&gt;::operator*()</a> can be inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;) with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L292>kfr::vec&lt;double, 2ul&gt;::operator*()</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L72>kfr::vec&lt;double, 2ul&gt; kfr::extend&lt;2ul, double, 1ul, (cometa::details::unique_enum_impl&lt;70&gt;::type)70&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_shuffle.hpp.html#L72>kfr::vec&lt;double, 2ul&gt; kfr::extend&lt;2ul, double, 1ul, (cometa::details::unique_enum_impl&lt;70&gt;::type)70&gt;(kfr::vec&lt;double, 1ul&gt; const&amp;)</a> inlined into kfr::intrinsics::sqrt(kfr::vec&lt;double, 1ul&gt; const&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dsp_.._base_sqrt.hpp.html#L38>kfr::intrinsics::sqrt(kfr::vec<double, 1ul> const&)</a></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f32sse</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f32sse</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_mm_sqrt_ps</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f64sse</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f64sse</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_mm_sqrt_pd</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if defined CMT_ARCH_AVX</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f32avx</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f32avx</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_mm256_sqrt_ps</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">f64avx</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">f64avx</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_mm256_sqrt_pd</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_HANDLE_ALL_SIZES_FLT_1</span><span class="p">(</span><span class="n">sqrt</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// fallback</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Tout</span> <span class="o">=</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_SINTRIN</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">Tout</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">vec</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">apply</span><span class="p">([](</span><span class="n">Tout</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">},</span> <span class="n">cast</span><span class="o">&lt;</span><span class="n">Tout</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FLT_CONVERTER</span><span class="p">(</span><span class="n">sqrt</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_I_FN</span><span class="p">(</span><span class="n">sqrt</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Returns the positive square root of the x. \f$\sqrt{x}\f$</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_numeric</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_INTRIN</span> <span class="n">flt_type</span><span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">intrinsics</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * @brief Returns template expression that returns the positive square root of the x. \f$\sqrt{x}\f$</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E1</span><span class="p">,</span> <span class="n">KFR_ENABLE_IF</span><span class="p">(</span><span class="n">is_input_expression</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">)</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">KFR_INTRIN</span> <span class="n">internal</span><span class="o">::</span><span class="n">expression_function</span><span class="o">&lt;</span><span class="n">fn</span><span class="o">::</span><span class="n">sqrt</span><span class="p">,</span> <span class="n">E1</span><span class="o">&gt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">E1</span><span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">{</span> <span class="n">fn</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">E1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

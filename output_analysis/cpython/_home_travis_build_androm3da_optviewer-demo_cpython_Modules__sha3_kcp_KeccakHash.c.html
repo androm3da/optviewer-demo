@@ -1,3 +1,951 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bbadc56d22860a6334cf2631be71f832b8ae7cd2a7b119ec41230ef7a05059a5
-size 45217
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Implementation by the Keccak, Keyak and Ketje Teams, namely, Guido Bertoni,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Joan Daemen, Michaël Peeters, Gilles Van Assche and Ronny Van Keer, hereby</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">denoted as &quot;the implementer&quot;.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">For more information, feedback or questions, please refer to our websites:</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">http://keccak.noekeon.org/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">http://keyak.noekeon.org/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">http://ketje.noekeon.org/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">To the extent possible under law, the implementer has waived all copyright</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">and related or neighboring rights to the source code in this file.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">http://creativecommons.org/publicdomain/zero/1.0/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">*/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;KeccakHash.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* ---------------------------------------------------------------- */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">HashReturn</span> <span class="nf">Keccak_HashInitialize</span><span class="p">(</span><span class="n">Keccak_HashInstance</span> <span class="o">*</span><span class="n">instance</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">rate</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">capacity</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">hashbitlen</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">delimitedSuffix</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">HashReturn</span> <span class="n">result</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">delimitedSuffix</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">FAIL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeInitialize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">capacity</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L144>_PySHA3_KeccakWidth1600_SpongeInitialize</a> can be inlined into _PySHA3_Keccak_HashInitialize with cost=45 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L20>_PySHA3_Keccak_HashInitialize</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                         </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L144>_PySHA3_KeccakWidth1600_SpongeInitialize</a> inlined into _PySHA3_Keccak_HashInitialize&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L20>_PySHA3_Keccak_HashInitialize</a></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">!=</span> <span class="n">SUCCESS</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">result</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">instance</span><span class="o">-&gt;</span><span class="n">fixedOutputLength</span> <span class="o">=</span> <span class="n">hashbitlen</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">instance</span><span class="o">-&gt;</span><span class="n">delimitedSuffix</span> <span class="o">=</span> <span class="n">delimitedSuffix</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* ---------------------------------------------------------------- */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">HashReturn</span> <span class="nf">Keccak_HashUpdate</span><span class="p">(</span><span class="n">Keccak_HashInstance</span> <span class="o">*</span><span class="n">instance</span><span class="p">,</span> <span class="k">const</span> <span class="n">BitSequence</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">DataLength</span> <span class="n">databitlen</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">((</span><span class="n">databitlen</span> <span class="o">%</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeAbsorb</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">databitlen</span><span class="o">/</span><span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> too costly to inline (cost=660, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> will not be inlined into _PySHA3_Keccak_HashUpdate&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> too costly to inline (cost=660, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L186>py_sha3_new_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> will not be inlined into py_sha3_new_impl&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L186>py_sha3_new_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> too costly to inline (cost=660, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L14>py_sha3_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> will not be inlined into py_sha3_new&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L14>py_sha3_new</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> too costly to inline (cost=660, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L367>_sha3_sha3_224_update</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> will not be inlined into _sha3_sha3_224_update&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L367>_sha3_sha3_224_update</a></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">HashReturn</span> <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeAbsorb</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">databitlen</span><span class="o">/</span><span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">==</span> <span class="n">SUCCESS</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="cm">/* The last partial byte is assumed to be aligned on the least significant bits */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">lastByte</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">databitlen</span><span class="o">/</span><span class="mi">8</span><span class="p">];</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                     </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="cm">/* Concatenate the last few bits provided here with those of the suffix */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">delimitedLastBytes</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span><span class="p">)((</span><span class="kt">unsigned</span> <span class="kt">short</span><span class="p">)</span><span class="n">lastByte</span> <span class="o">|</span> <span class="p">((</span><span class="kt">unsigned</span> <span class="kt">short</span><span class="p">)</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">delimitedSuffix</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">databitlen</span> <span class="o">%</span> <span class="mi">8</span><span class="p">)));</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                                       </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L40>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">if</span> <span class="p">((</span><span class="n">delimitedLastBytes</span> <span class="o">&amp;</span> <span class="mh">0xFF00</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x0000</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                <span class="n">instance</span><span class="o">-&gt;</span><span class="n">delimitedSuffix</span> <span class="o">=</span> <span class="n">delimitedLastBytes</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">oneByte</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                <span class="n">oneByte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">delimitedLastBytes</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeAbsorb</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">oneByte</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> too costly to inline (cost=650, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                  </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L161>_PySHA3_KeccakWidth1600_SpongeAbsorb</a> will not be inlined into _PySHA3_Keccak_HashUpdate&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashUpdate</td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                <span class="n">instance</span><span class="o">-&gt;</span><span class="n">delimitedSuffix</span> <span class="o">=</span> <span class="p">(</span><span class="n">delimitedLastBytes</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* ---------------------------------------------------------------- */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">HashReturn</span> <span class="nf">Keccak_HashFinal</span><span class="p">(</span><span class="n">Keccak_HashInstance</span> <span class="o">*</span><span class="n">instance</span><span class="p">,</span> <span class="n">BitSequence</span> <span class="o">*</span><span class="n">hashval</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">HashReturn</span> <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeAbsorbLastFewBits</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">instance</span><span class="o">-&gt;</span><span class="n">delimitedSuffix</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L226>_PySHA3_KeccakWidth1600_SpongeAbsorbLastFewBits</a> can be inlined into _PySHA3_Keccak_HashFinal with cost=150 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L65>_PySHA3_Keccak_HashFinal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                 </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L226>_PySHA3_KeccakWidth1600_SpongeAbsorbLastFewBits</a> inlined into _PySHA3_Keccak_HashFinal&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L65>_PySHA3_Keccak_HashFinal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L309>_sha3_sha3_224_digest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L317>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L62>_sha3_sha3_224_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L336>_sha3_sha3_224_hexdigest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L345>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L80>_sha3_sha3_224_hexdigest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                                      </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L613>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">==</span> <span class="n">SUCCESS</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeSqueeze</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">hashval</span><span class="p">,</span> <span class="n">instance</span><span class="o">-&gt;</span><span class="n">fixedOutputLength</span><span class="o">/</span><span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L65>_PySHA3_Keccak_HashFinal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _PySHA3_Keccak_HashFinal&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L65>_PySHA3_Keccak_HashFinal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakHash.c.html#L65>_PySHA3_Keccak_HashFinal</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L309>_sha3_sha3_224_digest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _sha3_sha3_224_digest_impl&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L309>_sha3_sha3_224_digest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L309>_sha3_sha3_224_digest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L62>_sha3_sha3_224_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _sha3_sha3_224_digest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L62>_sha3_sha3_224_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L62>_sha3_sha3_224_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L336>_sha3_sha3_224_hexdigest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _sha3_sha3_224_hexdigest_impl&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L336>_sha3_sha3_224_hexdigest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L336>_sha3_sha3_224_hexdigest_impl</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L80>_sha3_sha3_224_hexdigest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _sha3_sha3_224_hexdigest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L80>_sha3_sha3_224_hexdigest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_clinic_sha3module.c.h.html#L80>_sha3_sha3_224_hexdigest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _SHAKE_digest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                                                                               </pre><span class="column-entry-yellow"> load of type i32 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L260>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* ---------------------------------------------------------------- */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">HashReturn</span> <span class="nf">Keccak_HashSqueeze</span><span class="p">(</span><span class="n">Keccak_HashInstance</span> <span class="o">*</span><span class="n">instance</span><span class="p">,</span> <span class="n">BitSequence</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">DataLength</span> <span class="n">databitlen</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">((</span><span class="n">databitlen</span> <span class="o">%</span> <span class="mi">8</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">FAIL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="p">(</span><span class="n">HashReturn</span><span class="p">)</span><span class="n">KeccakWidth1600_SpongeSqueeze</span><span class="p">(</span><span class="o">&amp;</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">sponge</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">databitlen</span><span class="o">/</span><span class="mi">8</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashSqueeze</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _PySHA3_Keccak_HashSqueeze&nbsp;</span></td>
+<td class="column-entry-yellow">_PySHA3_Keccak_HashSqueeze</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> too costly to inline (cost=635, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_kcp_KeccakSponge.inc.html#L272>_PySHA3_KeccakWidth1600_SpongeSqueeze</a> will not be inlined into _SHAKE_digest&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules__sha3_sha3module.c.html#L595>_SHAKE_digest</a></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

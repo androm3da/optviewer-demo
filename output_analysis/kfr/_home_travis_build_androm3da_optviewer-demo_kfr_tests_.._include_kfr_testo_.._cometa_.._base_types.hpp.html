@@ -1,0 +1,3715 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup types</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Copyright (C) 2016 D Levin (https://www.kfrlib.com)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  This file is part of KFR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is free software: you can redistribute it and/or modify</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  it under the terms of the GNU General Public License as published by</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  the Free Software Foundation, either version 3 of the License, or</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  (at your option) any later version.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  KFR is distributed in the hope that it will be useful,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  GNU General Public License for more details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  You should have received a copy of the GNU General Public License</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  along with KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  If GPL is not suitable for your project, you must purchase a commercial license to use KFR.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  Buying a commercial license is mandatory as soon as you develop commercial activities without</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  disclosing the source code of your own applications.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  See https://www.kfrlib.com for details.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;kfr.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;intrinsics.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">push</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">ignored</span> <span class="s">&quot;-Wshadow&quot;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef KFR_TESTING</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../testo/testo.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../cometa.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define KFR_ENABLE_IF CMT_ENABLE_IF</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @brief Internal macro for functions</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define KFR_FN(FN)                                                                                           \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    namespace fn                                                                                             \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    {                                                                                                        \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    struct FN                                                                                                \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    {                                                                                                        \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        template &lt;typename... Args&gt;                                                                          \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        CMT_INLINE_MEMBER decltype(::kfr::FN(std::declval&lt;Args&gt;()...)) operator()(Args&amp;&amp;... args) const      \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        {                                                                                                    \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">            return ::kfr::FN(std::forward&lt;Args&gt;(args)...);                                                   \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        }                                                                                                    \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    };                                                                                                       \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    }</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/**</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @brief Internal macro for functions</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define KFR_I_FN(FN)                                                                                         \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    namespace fn                                                                                             \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    {                                                                                                        \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    struct FN                                                                                                \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    {                                                                                                        \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        template &lt;typename... Args&gt;                                                                          \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        CMT_INLINE_MEMBER decltype(::kfr::intrinsics::FN(std::declval&lt;Args&gt;()...)) operator()(               \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">            Args&amp;&amp;... args) const                                                                            \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        {                                                                                                    \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">            return ::kfr::intrinsics::FN(std::forward&lt;Args&gt;(args)...);                                       \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">        }                                                                                                    \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    };                                                                                                       \</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">    }</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">kfr</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">// Include all from CoMeta library</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="k">namespace</span> <span class="n">cometa</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief Short names for common types</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">f32</span>  <span class="o">=</span> <span class="kt">float</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">f64</span>  <span class="o">=</span> <span class="kt">double</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">i8</span>   <span class="o">=</span> <span class="kt">int8_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">i16</span>  <span class="o">=</span> <span class="kt">int16_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">i32</span>  <span class="o">=</span> <span class="kt">int32_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">i64</span>  <span class="o">=</span> <span class="kt">int64_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">u8</span>   <span class="o">=</span> <span class="kt">uint8_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">u16</span>  <span class="o">=</span> <span class="kt">uint16_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">u32</span>  <span class="o">=</span> <span class="kt">uint32_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">u64</span>  <span class="o">=</span> <span class="kt">uint64_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">umax</span> <span class="o">=</span> <span class="kt">uint64_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">imax</span> <span class="o">=</span> <span class="kt">int64_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">fmax</span> <span class="o">=</span> <span class="kt">double</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">f80</span>  <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#if defined(KFR_BASETYPE_F32) || defined(KFR_NO_NATIVE_F64)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief Floating point type used by default</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">fbase</span> <span class="o">=</span> <span class="n">f32</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief Floating point type used by default</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">fbase</span> <span class="o">=</span> <span class="n">f64</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">f32</span><span class="o">&gt;</span> <span class="n">ctype_f32</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">f64</span><span class="o">&gt;</span> <span class="n">ctype_f64</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">i8</span><span class="o">&gt;</span> <span class="n">ctype_i8</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">i16</span><span class="o">&gt;</span> <span class="n">ctype_i16</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">i32</span><span class="o">&gt;</span> <span class="n">ctype_i32</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">i64</span><span class="o">&gt;</span> <span class="n">ctype_i64</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">u8</span><span class="o">&gt;</span> <span class="n">ctype_u8</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">u16</span><span class="o">&gt;</span> <span class="n">ctype_u16</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">u32</span><span class="o">&gt;</span> <span class="n">ctype_u32</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">u64</span><span class="o">&gt;</span> <span class="n">ctype_u64</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">umax</span><span class="o">&gt;</span> <span class="n">ctype_umax</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">imax</span><span class="o">&gt;</span> <span class="n">ctype_imax</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">fmax</span><span class="o">&gt;</span> <span class="n">ctype_fmax</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">f80</span><span class="o">&gt;</span> <span class="n">ctype_f80</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">ctype_t</span><span class="o">&lt;</span><span class="n">fbase</span><span class="o">&gt;</span> <span class="n">ctype_base</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">u24</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u8</span> <span class="n">raw</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">i24</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u8</span> <span class="n">raw</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">f16</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u16</span> <span class="n">raw</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief An enumeration representing data type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">range</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T1</span> <span class="n">min</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T1</span> <span class="n">max</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T1</span> <span class="nf">distance</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">max</span> <span class="o">-</span> <span class="n">min</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief An enumeration representing data type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">enum</span> <span class="k">class</span> <span class="nc">datatype</span> <span class="o">:</span> <span class="kt">int</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">typebits_mask</span>       <span class="o">=</span> <span class="mh">0xFF</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">f</span>                   <span class="o">=</span> <span class="mh">0x100</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i</span>                   <span class="o">=</span> <span class="mh">0x200</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u</span>                   <span class="o">=</span> <span class="mh">0x300</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">c</span>                   <span class="o">=</span> <span class="mh">0x400</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">typeclass_mask</span>      <span class="o">=</span> <span class="mh">0xF00</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">x1</span>                  <span class="o">=</span> <span class="mh">0x1000</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">x2</span>                  <span class="o">=</span> <span class="mh">0x2000</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">x3</span>                  <span class="o">=</span> <span class="mh">0x3000</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">x4</span>                  <span class="o">=</span> <span class="mh">0x4000</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">typecomponents_mask</span> <span class="o">=</span> <span class="mh">0xF000</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">f16</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">16</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">f32</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">32</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">f64</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">64</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">f80</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">80</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i8</span>                  <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">8</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i16</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">16</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i24</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">24</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i32</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">32</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">i64</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">64</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u8</span>                  <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">8</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u16</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">16</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u24</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">24</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u32</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">32</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L173">173</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">u64</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span> <span class="o">|</span> <span class="mi">64</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L174">174</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">c32</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span> <span class="o">|</span> <span class="mi">32</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L175">175</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">c64</span>                 <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span> <span class="o">|</span> <span class="mi">64</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L176">176</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L177">177</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L178">178</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="n">datatype</span> <span class="k">operator</span><span class="o">|</span><span class="p">(</span><span class="n">datatype</span> <span class="n">x</span><span class="p">,</span> <span class="n">datatype</span> <span class="n">y</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L179">179</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L180">180</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">type</span> <span class="o">=</span> <span class="n">underlying_type</span><span class="o">&lt;</span><span class="n">datatype</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L181">181</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">datatype</span><span class="o">&gt;</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">y</span><span class="p">));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L182">182</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L183">183</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L184">184</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="n">datatype</span> <span class="k">operator</span><span class="o">&amp;</span><span class="p">(</span><span class="n">datatype</span> <span class="n">x</span><span class="p">,</span> <span class="n">datatype</span> <span class="n">y</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">type</span> <span class="o">=</span> <span class="n">underlying_type</span><span class="o">&lt;</span><span class="n">datatype</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L187">187</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">datatype</span><span class="o">&gt;</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">|</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">y</span><span class="p">));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L188">188</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L189">189</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L190">190</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L191">191</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">datatype</span> <span class="n">typeclass</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">is_floating_point</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">subtype</span><span class="o">&gt;::</span><span class="n">value</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                   <span class="o">?</span> <span class="n">datatype</span><span class="o">::</span><span class="nl">f</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                   <span class="p">:</span> <span class="n">std</span><span class="o">::</span><span class="n">is_integral</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">subtype</span><span class="o">&gt;::</span><span class="n">value</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L194">194</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                         <span class="o">?</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_unsigned</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">subtype</span><span class="o">&gt;::</span><span class="n">value</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L195">195</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                                <span class="o">?</span> <span class="n">datatype</span><span class="o">::</span><span class="nl">u</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L196">196</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                                <span class="p">:</span> <span class="n">datatype</span><span class="o">::</span><span class="n">i</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L197">197</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                         <span class="o">:</span> <span class="n">datatype</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L198">198</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L199">199</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L200">200</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">is_f_class</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">typeclass</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">==</span> <span class="n">datatype</span><span class="o">::</span><span class="n">f</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L201">201</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L202">202</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">is_u_class</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">typeclass</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">==</span> <span class="n">datatype</span><span class="o">::</span><span class="n">u</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L203">203</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L204">204</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">is_i_class</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">integral_constant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">typeclass</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">==</span> <span class="n">datatype</span><span class="o">::</span><span class="n">i</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L205">205</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L206">206</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L207">207</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">typebits</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L208">208</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L209">209</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">static_assert</span><span class="p">(</span><span class="n">is_number</span><span class="o">&lt;</span><span class="n">deep_subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L210">210</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">size_t</span> <span class="n">bits</span>  <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">subtype</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L211">211</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">size_t</span> <span class="n">width</span> <span class="o">=</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">is_scalar</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">width</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L212">212</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">subtype</span>                 <span class="o">=</span> <span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">subtype</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L213">213</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L214">214</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L215">215</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">fn</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L216">216</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L217">217</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::pass_through</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L218">218</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">pass_through</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_pass_through</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L219">219</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L220">220</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::noop</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L221">221</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">noop</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_noop</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L222">222</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L223">223</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::get_first</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L224">224</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">get_first</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_get_first</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L225">225</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L226">226</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::get_second</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L227">227</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">get_second</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_get_second</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L228">228</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L229">229</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::get_third</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L230">230</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">get_third</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_get_third</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L231">231</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L232">232</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">///@copybrief cometa::returns</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L233">233</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L234">234</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">returns</span> <span class="o">=</span> <span class="n">cometa</span><span class="o">::</span><span class="n">fn_returns</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L235">235</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L236">236</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L237">237</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L238">238</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">ftype</span> <span class="o">=</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L239">239</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="k">template</span> <span class="n">deep_rebind</span><span class="o">&lt;</span><span class="n">float_type</span><span class="o">&lt;</span><span class="n">typebits</span><span class="o">&lt;</span><span class="n">deep_subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;::</span><span class="n">bits</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L240">240</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L241">241</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">itype</span> <span class="o">=</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L242">242</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="k">template</span> <span class="n">deep_rebind</span><span class="o">&lt;</span><span class="n">int_type</span><span class="o">&lt;</span><span class="n">typebits</span><span class="o">&lt;</span><span class="n">deep_subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;::</span><span class="n">bits</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L243">243</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L244">244</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">utype</span> <span class="o">=</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L245">245</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">typename</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="k">template</span> <span class="n">deep_rebind</span><span class="o">&lt;</span><span class="n">unsigned_type</span><span class="o">&lt;</span><span class="n">typebits</span><span class="o">&lt;</span><span class="n">deep_subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;::</span><span class="n">bits</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L246">246</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L247">247</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L248">248</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">fsubtype</span> <span class="o">=</span> <span class="n">ftype</span><span class="o">&lt;</span><span class="n">subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L249">249</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L250">250</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">isubtype</span> <span class="o">=</span> <span class="n">itype</span><span class="o">&lt;</span><span class="n">subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L251">251</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L252">252</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">usubtype</span> <span class="o">=</span> <span class="n">utype</span><span class="o">&lt;</span><span class="n">subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L253">253</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L254">254</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">internal</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L255">255</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L256">256</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L257">257</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">flt_type_impl</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L258">258</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L259">259</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">type</span> <span class="o">=</span> <span class="n">fbase</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L260">260</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L261">261</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L262">262</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L263">263</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">flt_type_impl</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L264">264</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L265">265</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">type</span> <span class="o">=</span> <span class="kt">float</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L266">266</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L267">267</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L268">268</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">flt_type_impl</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L269">269</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L270">270</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">type</span> <span class="o">=</span> <span class="kt">double</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L271">271</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L272">272</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L273">273</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L274">274</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L275">275</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">flt_type</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">internal</span><span class="o">::</span><span class="n">flt_type_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L276">276</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L277">277</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">internal</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L278">278</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L279">279</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef CMT_COMPILER_CLANG</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L280">280</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define builtin_addressof(x) __builtin_addressof(x)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L281">281</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L282">282</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L283">283</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kr">inline</span> <span class="n">T</span><span class="o">*</span> <span class="n">builtin_addressof</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">arg</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L284">284</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L285">285</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="k">const</span> <span class="k">volatile</span> <span class="kt">char</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">arg</span><span class="p">)));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L286">286</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L287">287</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L288">288</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L289">289</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef CMT_COMPILER_GNU</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L290">290</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f32</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f32</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">__builtin_sqrtf</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> sqrtf will not be inlined into kfr::internal::builtin_sqrt(float) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">kfr::internal::builtin_sqrt(float)</td>
+</tr>
+
+<tr>
+<td><a name="L291">291</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f64</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f64</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">__builtin_sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                            </pre><span class="column-entry-yellow"> sqrt will not be inlined into kfr::internal::builtin_sqrt(double) because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">kfr::internal::builtin_sqrt(double)</td>
+</tr>
+
+<tr>
+<td><a name="L292">292</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f80</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f80</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">__builtin_sqrtl</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L293">293</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">builtin_memcpy</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">dest</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">src</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L294">294</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L295">295</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">__builtin_memcpy</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L296">296</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L297">297</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">builtin_memset</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">dest</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="n">__builtin_memset</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L298">298</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L299">299</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L300">300</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f32</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f32</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">::</span><span class="n">sqrtf</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L301">301</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f64</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f64</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L302">302</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="n">f80</span> <span class="n">builtin_sqrt</span><span class="p">(</span><span class="n">f80</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">::</span><span class="n">sqrtl</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L303">303</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">builtin_memcpy</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">dest</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">src</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L304">304</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">builtin_memset</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">dest</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span> <span class="o">::</span><span class="n">memset</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L305">305</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L306">306</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L307">307</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L308">308</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">push</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L309">309</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">ignored</span> <span class="s">&quot;-Wattributes&quot;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L310">310</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L311">311</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">A</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L312">312</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">struct_with_alignment</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L313">313</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L314">314</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T</span> <span class="n">value</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L315">315</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">KFR_INTRIN</span> <span class="kt">void</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L316">316</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L317">317</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L318">318</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L319">319</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">struct_with_alignment</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="nb">false</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L320">320</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L321">321</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">T</span> <span class="n">value</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L322">322</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">KFR_INTRIN</span> <span class="kt">void</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L323">323</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L324">324</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef CMT_GNU_ATTRIBUTES</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L325">325</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">__attribute__</span><span class="p">((</span><span class="n">__packed__</span><span class="p">,</span> <span class="n">__may_alias__</span><span class="p">))</span> <span class="c1">//</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L326">326</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L327">327</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L328">328</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L329">329</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">pop</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L330">330</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L331">331</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L332">332</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief Fills a value with zeros</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L333">333</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L334">334</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">zeroize</span><span class="p">(</span><span class="n">T1</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L335">335</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L336">336</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">internal</span><span class="o">::</span><span class="n">builtin_memset</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">builtin_addressof</span><span class="p">(</span><span class="n">value</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">T1</span><span class="p">));</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L337">337</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L338">338</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L339">339</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="c1">/// @brief Used to determine the initial value for reduce functions</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L340">340</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L341">341</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">initialvalue</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L342">342</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L343">343</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L344">344</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L345">345</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">internal</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L346">346</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L347">347</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">width</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Fn</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L348">348</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">block_process_impl</span><span class="p">(</span><span class="kt">size_t</span><span class="o">&amp;</span> <span class="n">i</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="n">Fn</span><span class="o">&amp;&amp;</span> <span class="n">fn</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L349">349</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L350">350</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">CMT_LOOP_NOUNROLL</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L351">351</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span> <span class="o">/</span> <span class="n">width</span> <span class="o">*</span> <span class="n">width</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">width</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                       </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L351>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_simd_clang.hpp.html#L85>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1027>kfr::dft_plan_real<double>::dft_plan_real<true, true>(unsigned long, cometa::cvals_t<bool, true, true>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_convolution.hpp.html#L107>kfr::convolve_filter<double>::set_data(kfr::univector<double, 18446744073709551615ul> const&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_convolution.hpp.html#L133>kfr::convolve_filter<double>::process_buffer(double*, double const*, unsigned long)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1355>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1027>kfr::dft_plan_real<float>::dft_plan_real<true, true>(unsigned long, cometa::cvals_t<bool, true, true>)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization and interleaving are explicitly disabled, or vectorize width and interleave count are both set to 1&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1355>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a></td>
+</tr>
+
+<tr>
+<td><a name="L352">352</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">fn</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">csize_t</span><span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm8EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_ with cost=125 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm8EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm1EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_ with cost=365 (threshold=974)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm1EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm8EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=140 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm8EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=130 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm16EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_ with cost=125 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm16EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm1EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_ with cost=460 (threshold=974)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1034>_ZZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEENKUlmT_E_clINS3_6cval_tImLm1EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm16EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=140 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm16EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS6_</a> can be inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=130 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1085>_ZZNK3kfr13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS6_</a> inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1135>_ZZNK3kfr13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS3_NS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm8EEEEEDamS8_</a> can be inlined into _ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=145 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1135>_ZZNK3kfr13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS3_NS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm8EEEEEDamS8_</a> inlined into _ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1135>_ZZNK3kfr13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS3_NS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS8_</a> can be inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_ with cost=135 (threshold=730)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._dft_fft.hpp.html#L1135>_ZZNK3kfr13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS3_NS_15dft_pack_formatEENKUlmT_E_clIN6cometa6cval_tImLm1EEEEEDamS8_</a> inlined into _ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L347>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a></td>
+</tr>
+
+<tr>
+<td><a name="L353">353</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L354">354</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L355">355</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L356">356</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span><span class="p">...</span> <span class="n">widths</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Fn</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L357">357</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_INLINE</span> <span class="kt">void</span> <span class="n">block_process</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="n">csizes_t</span><span class="o">&lt;</span><span class="n">widths</span><span class="p">...</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Fn</span><span class="o">&amp;&amp;</span> <span class="n">fn</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L358">358</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L359">359</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L360">360</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">swallow</span><span class="p">{</span> <span class="p">(</span><span class="n">internal</span><span class="o">::</span><span class="n">block_process_impl</span><span class="o">&lt;</span><span class="n">widths</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">Fn</span><span class="o">&gt;</span><span class="p">(</span><span class="n">fn</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)...</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> can be inlined into _ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_ with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZN3kfr13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNS_13dft_plan_realIdEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIdE6to_fmtEPNS0_7complexIdEENS0_15dft_pack_formatEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> can be inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_ with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIdE6to_fmtEPNS0_7complexIdEENS0_15dft_pack_formatEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE6to_fmtEPNS_7complexIdEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> can be inlined into _ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_ with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZN3kfr13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm16EZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNS_13dft_plan_realIfEC1ILb1ELb1EEEmN6cometa7cvals_tIbJXT_EXT0_EEEEEUlmT_E_EEvmNS5_ImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIfE6to_fmtEPNS0_7complexIfEENS0_15dft_pack_formatEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> can be inlined into _ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_ with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIfE6to_fmtEPNS0_7complexIfEENS0_15dft_pack_formatEEUlmT_E_EOS7_RNSt16remove_referenceIS7_E4typeE</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm16EZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm16ELm1EEZNKS_13dft_plan_realIfE6to_fmtEPNS_7complexIfEENS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIdE8from_fmtEPNS0_7complexIdEEPKS4_NS0_15dft_pack_formatEEUlmT_E_EOS9_RNSt16remove_referenceIS9_E4typeE</a> can be inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_ with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                                            </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZNK3kfr13dft_plan_realIdE8from_fmtEPNS0_7complexIdEEPKS4_NS0_15dft_pack_formatEEUlmT_E_EOS9_RNSt16remove_referenceIS9_E4typeE</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm1EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L349>_ZN3kfr8internal18block_process_implILm8EZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS5_NS_15dft_pack_formatEEUlmT_E_EEvRmmOT0_</a> inlined into _ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_types.hpp.html#L356>_ZN3kfr13block_processIJLm8ELm1EEZNKS_13dft_plan_realIdE8from_fmtEPNS_7complexIdEEPKS4_NS_15dft_pack_formatEEUlmT_E_EEvmN6cometa7cvals_tImJXspT_EEEEOT0_</a></td>
+</tr>
+
+<tr>
+<td><a name="L361">361</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L362">362</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L363">363</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L364">364</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="nl">is_simd_type</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L365">365</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">:</span> <span class="n">std</span><span class="o">::</span><span class="n">integral_constant</span><span class="o">&lt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L366">366</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>          <span class="kt">bool</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L367">367</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                    <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">signed</span> <span class="kt">char</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L368">368</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                    <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">short</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L369">369</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                    <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L370">370</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                    <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">long</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L371">371</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                    <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L372">372</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L373">373</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L374">374</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L375">375</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">N</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L376">376</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">vec_t</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L377">377</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L378">378</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">static_assert</span><span class="p">(</span><span class="n">N</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">N</span> <span class="o">&lt;=</span> <span class="mi">256</span><span class="p">,</span> <span class="s">&quot;Invalid vector size&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L379">379</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L380">380</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">static_assert</span><span class="p">(</span><span class="n">is_simd_type</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">||</span> <span class="o">!</span><span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">is_scalar</span><span class="p">,</span> <span class="s">&quot;Invalid vector type&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L381">381</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L382">382</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">value_type</span> <span class="o">=</span> <span class="n">T</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L383">383</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">size_t</span> <span class="nf">size</span><span class="p">()</span> <span class="k">noexcept</span> <span class="p">{</span> <span class="k">return</span> <span class="n">N</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L384">384</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="nf">vec_t</span><span class="p">()</span> <span class="k">noexcept</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L385">385</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L386">386</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">using</span> <span class="n">scalar_type</span> <span class="o">=</span> <span class="n">subtype</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L387">387</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">constexpr</span> <span class="k">static</span> <span class="kt">size_t</span> <span class="nf">scalar_size</span><span class="p">()</span> <span class="k">noexcept</span> <span class="p">{</span> <span class="k">return</span> <span class="n">N</span> <span class="o">*</span> <span class="n">compound_type_traits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">width</span><span class="p">;</span> <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L388">388</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L389">389</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L390">390</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">index_undefined</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L391">391</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L392">392</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">czeros_t</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L393">393</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L394">394</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L395">395</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">cones_t</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L396">396</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L397">397</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L398">398</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">czeros_t</span> <span class="n">czeros</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L399">399</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">cones_t</span> <span class="n">cones</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L400">400</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L401">401</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">caligned_t</span>   <span class="o">=</span> <span class="n">cbool_t</span><span class="o">&lt;</span><span class="nb">true</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L402">402</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">cunaligned_t</span> <span class="o">=</span> <span class="n">cbool_t</span><span class="o">&lt;</span><span class="nb">false</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L403">403</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L404">404</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">caligned_t</span> <span class="n">caligned</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L405">405</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">constexpr</span> <span class="n">cunaligned_t</span> <span class="n">cunaligned</span><span class="p">{};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L406">406</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L407">407</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef CMT_INTRINSICS_IS_CONSTEXPR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L408">408</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define KFR_I_CE constexpr</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L409">409</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#else</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L410">410</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define KFR_I_CE</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L411">411</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L412">412</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L413">413</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L414">414</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">CMT_PRAGMA_GNU</span><span class="p">(</span><span class="n">GCC</span> <span class="n">diagnostic</span> <span class="n">pop</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L415">415</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L416">416</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

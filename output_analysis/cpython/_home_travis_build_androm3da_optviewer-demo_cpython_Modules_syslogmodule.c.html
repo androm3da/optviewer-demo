@@ -1,3 +1,3419 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4436e29e156f7086d0755cc4ed74ce2e19f14a5e289da57d668d8a0cec0db738
-size 124402
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/***********************************************************</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Copyright 1994 by Lance Ellinghouse,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Cathedral City, California Republic, United States of America.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">                        All Rights Reserved</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Permission to use, copy, modify, and distribute this software and its</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">documentation for any purpose and without fee is hereby granted,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">provided that the above copyright notice appear in all copies and that</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">both that copyright notice and this permission notice appear in</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">supporting documentation, and that the name of Lance Ellinghouse</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">not be used in advertising or publicity pertaining to distribution</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">of the software without specific, written prior permission.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">LANCE ELLINGHOUSE DISCLAIMS ALL WARRANTIES WITH REGARD TO</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">FITNESS, IN NO EVENT SHALL LANCE ELLINGHOUSE BE LIABLE FOR ANY SPECIAL,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">******************************************************************/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/******************************************************************</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">Revision history:</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">2010/04/20 (Sean Reifschneider)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Use basename(sys.argv[0]) for the default &quot;ident&quot;.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Arguments to openlog() are now keyword args and are all optional.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - syslog() calls openlog() if it hasn&#39;t already been called.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">1998/04/28 (Sean Reifschneider)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - When facility not specified to syslog() method, use default from openlog()</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">    (This is how it was claimed to work in the documentation)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Potential resource leak of o_ident, now cleaned up in closelog()</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Minor comment accuracy fix.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">95/06/29 (Steve Clift)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Changed arg parsing to use PyArg_ParseTuple.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Added PyErr_Clear() call(s) where needed.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Fix core dumps if user message contains format specifiers.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Change openlog arg defaults to match normal syslog behavior.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Plug memory leak in openlog().</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">  - Fix setlogmask() to return previous mask value.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">******************************************************************/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* syslog module */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;Python.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;osdefs.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;syslog.h&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*  only one instance, only one syslog, so globals should be ok  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">S_ident_o</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>                      <span class="cm">/*  identifier, held by openlog()  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">char</span> <span class="n">S_log_open</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_get_argv</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Figure out what to use for as the program &quot;ident&quot; for openlog().</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * This swallows exceptions and continues rather than failing out,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * because the syslog module can still be used because openlog(3)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * is optional.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_ssize_t</span> <span class="n">argv_len</span><span class="p">,</span> <span class="n">scriptlen</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">scriptobj</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_ssize_t</span> <span class="n">slash</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">argv</span> <span class="o">=</span> <span class="n">PySys_GetObject</span><span class="p">(</span><span class="s">&quot;argv&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                     </pre><span class="column-entry-yellow"> PySys_GetObject will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">argv</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">argv_len</span> <span class="o">=</span> <span class="n">PyList_Size</span><span class="p">(</span><span class="n">argv</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> PyList_Size will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">argv_len</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyErr_Clear</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyErr_Clear will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">argv_len</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">scriptobj</span> <span class="o">=</span> <span class="n">PyList_GetItem</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> PyList_GetItem will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyUnicode_Check</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">scriptlen</span> <span class="o">=</span> <span class="n">PyUnicode_GET_LENGTH</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">scriptlen</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">slash</span> <span class="o">=</span> <span class="n">PyUnicode_FindChar</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">,</span> <span class="n">SEP</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">scriptlen</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> PyUnicode_FindChar will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">slash</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">slash</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="n">PyUnicode_Substring</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">,</span> <span class="n">slash</span><span class="p">,</span> <span class="n">scriptlen</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> PyUnicode_Substring will not be inlined into syslog_get_argv because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_get_argv</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span><span class="p">(</span><span class="n">scriptobj</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_openlog</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span> <span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span> <span class="n">args</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">kwds</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">logopt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">facility</span> <span class="o">=</span> <span class="n">LOG_USER</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">new_S_ident_o</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">static</span> <span class="kt">char</span> <span class="o">*</span><span class="n">keywords</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;ident&quot;</span><span class="p">,</span> <span class="s">&quot;logoption&quot;</span><span class="p">,</span> <span class="s">&quot;facility&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">char</span> <span class="o">*</span><span class="n">ident</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTupleAndKeywords</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> PyArg_ParseTupleAndKeywords will not be inlined into syslog_openlog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                          <span class="s">&quot;|Ull:openlog&quot;</span><span class="p">,</span> <span class="n">keywords</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">new_S_ident_o</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">logopt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">facility</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">new_S_ident_o</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L117>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L121>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">new_S_ident_o</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/*  get sys.argv[0] or NULL if we can&#39;t for some reason  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">new_S_ident_o</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">new_S_ident_o</span> <span class="o">=</span> <span class="n">syslog_get_argv</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L64>syslog_get_argv</a> can be inlined into syslog_openlog with cost=-14695 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L64>syslog_get_argv</a> inlined into syslog_openlog&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_XDECREF</span><span class="p">(</span><span class="n">S_ident_o</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L102>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L82>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L74>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L121>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">S_ident_o</span> <span class="o">=</span> <span class="n">new_S_ident_o</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> load eliminated by PRE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* At this point, S_ident_o should be INCREF()ed.  openlog(3) does not</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * make a copy, and syslog(3) later uses it.  We can&#39;t garbagecollect it</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     * If NULL, just let openlog figure it out (probably using C argv[0]).</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">     */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">S_ident_o</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">ident</span> <span class="o">=</span> <span class="n">PyUnicode_AsUTF8</span><span class="p">(</span><span class="n">S_ident_o</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                </pre><span class="column-entry-yellow"> PyUnicode_AsUTF8 will not be inlined into syslog_openlog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L143">143</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="n">ident</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L144">144</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L145">145</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L146">146</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L147">147</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">openlog</span><span class="p">(</span><span class="n">ident</span><span class="p">,</span> <span class="n">logopt</span><span class="p">,</span> <span class="n">facility</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> openlog will not be inlined into syslog_openlog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L104>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L102>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L82>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L74>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L126>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L134>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L115>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L142>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L104>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L102>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L98>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L89>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L82>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L80>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L74>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L126>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L134>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                           </pre><span class="column-entry-yellow"> load of type i64 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L116>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L134>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L148">148</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">S_log_open</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L149">149</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L150">150</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">Py_None</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L147>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L112>syslog_openlog</a></td>
+</tr>
+
+<tr>
+<td><a name="L151">151</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">Py_None</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L152">152</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L153">153</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L154">154</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L155">155</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L156">156</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_syslog</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span> <span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span> <span class="n">args</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L157">157</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L158">158</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">message_object</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L159">159</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">message</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L160">160</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">int</span>   <span class="n">priority</span> <span class="o">=</span> <span class="n">LOG_INFO</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L161">161</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L162">162</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;iU;[priority,] message string&quot;</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> PyArg_ParseTuple will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L163">163</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                          <span class="o">&amp;</span><span class="n">priority</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">message_object</span><span class="p">))</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L164">164</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyErr_Clear</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyErr_Clear will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L165">165</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;U;[priority,] message string&quot;</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">             </pre><span class="column-entry-yellow"> PyArg_ParseTuple will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L166">166</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                              <span class="o">&amp;</span><span class="n">message_object</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L167">167</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L168">168</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L169">169</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L170">170</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">message</span> <span class="o">=</span> <span class="n">PyUnicode_AsUTF8</span><span class="p">(</span><span class="n">message_object</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> PyUnicode_AsUTF8 will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L162>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                               </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L165>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L171">171</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">message</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L172">172</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L173">173</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L174">174</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/*  if log is not opened, open it now  */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L175">175</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">S_log_open</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L176">176</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyObject</span> <span class="o">*</span><span class="n">openargs</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L177">177</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L178">178</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="cm">/* Continue even if PyTuple_New fails, because openlog(3) is optional.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L179">179</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">         * So, we can still do loggin in the unlikely event things are so hosed</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L180">180</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">         * that we can&#39;t do this tuple.</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L181">181</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">         */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L182">182</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">if</span> <span class="p">((</span><span class="n">openargs</span> <span class="o">=</span> <span class="n">PyTuple_New</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> PyTuple_New will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L183">183</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">PyObject</span> <span class="o">*</span><span class="n">openlog_ret</span> <span class="o">=</span> <span class="n">syslog_openlog</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">openargs</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L114>syslog_openlog</a> too costly to inline (cost=630, threshold=625)&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                                    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L114>syslog_openlog</a> will not be inlined into syslog_syslog&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L184">184</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">Py_XDECREF</span><span class="p">(</span><span class="n">openlog_ret</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L185">185</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">Py_DECREF</span><span class="p">(</span><span class="n">openargs</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L184>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L183>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L184>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L186">186</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L187">187</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L188">188</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L189">189</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_BEGIN_ALLOW_THREADS</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyEval_SaveThread will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L190">190</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">syslog</span><span class="p">(</span><span class="n">priority</span><span class="p">,</span> <span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> syslog will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i32 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L160>store</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L189>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L191">191</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_END_ALLOW_THREADS</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyEval_RestoreThread will not be inlined into syslog_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L192">192</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_RETURN_NONE</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L191>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L193">193</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L194">194</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L195">195</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L196">196</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_closelog</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">unused</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L197">197</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L198">198</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">S_log_open</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L199">199</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">closelog</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> closelog will not be inlined into syslog_closelog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td><a name="L200">200</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_CLEAR</span><span class="p">(</span><span class="n">S_ident_o</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._object* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L199>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L199>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> load of type %struct._typeobject* not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L199>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td><a name="L201">201</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">S_log_open</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L202">202</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L203">203</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_INCREF</span><span class="p">(</span><span class="n">Py_None</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L199>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L200>store</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L200>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_closelog</td>
+</tr>
+
+<tr>
+<td><a name="L204">204</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">Py_None</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L205">205</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L206">206</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L207">207</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L208">208</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_setlogmask</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L209">209</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L210">210</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">maskpri</span><span class="p">,</span> <span class="n">omaskpri</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L211">211</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L212">212</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;l;mask for priority&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">maskpri</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> PyArg_ParseTuple will not be inlined into syslog_setlogmask because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_setlogmask</td>
+</tr>
+
+<tr>
+<td><a name="L213">213</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L214">214</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">omaskpri</span> <span class="o">=</span> <span class="n">setlogmask</span><span class="p">(</span><span class="n">maskpri</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">               </pre><span class="column-entry-yellow"> setlogmask will not be inlined into syslog_setlogmask because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_setlogmask</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                          </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L212>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_setlogmask</td>
+</tr>
+
+<tr>
+<td><a name="L215">215</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyLong_FromLong</span><span class="p">(</span><span class="n">omaskpri</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> PyLong_FromLong will not be inlined into syslog_setlogmask because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_setlogmask</td>
+</tr>
+
+<tr>
+<td><a name="L216">216</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L217">217</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L218">218</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L219">219</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_log_mask</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L220">220</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L221">221</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">mask</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L222">222</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">pri</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L223">223</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;l:LOG_MASK&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pri</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> PyArg_ParseTuple will not be inlined into syslog_log_mask because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_mask</td>
+</tr>
+
+<tr>
+<td><a name="L224">224</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L225">225</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">mask</span> <span class="o">=</span> <span class="n">LOG_MASK</span><span class="p">(</span><span class="n">pri</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L223>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_mask</td>
+</tr>
+
+<tr>
+<td><a name="L226">226</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyLong_FromLong</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> PyLong_FromLong will not be inlined into syslog_log_mask because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_mask</td>
+</tr>
+
+<tr>
+<td><a name="L227">227</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L228">228</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L229">229</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L230">230</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">syslog_log_upto</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L231">231</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L232">232</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">mask</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L233">233</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">long</span> <span class="n">pri</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L234">234</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;l:LOG_UPTO&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pri</span><span class="p">))</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">         </pre><span class="column-entry-yellow"> PyArg_ParseTuple will not be inlined into syslog_log_upto because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_upto</td>
+</tr>
+
+<tr>
+<td><a name="L235">235</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L236">236</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">mask</span> <span class="o">=</span> <span class="n">LOG_UPTO</span><span class="p">(</span><span class="n">pri</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type i64 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_cpython_Modules_syslogmodule.c.html#L234>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_upto</td>
+</tr>
+
+<tr>
+<td><a name="L237">237</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">PyLong_FromLong</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> PyLong_FromLong will not be inlined into syslog_log_upto because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">syslog_log_upto</td>
+</tr>
+
+<tr>
+<td><a name="L238">238</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L239">239</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L240">240</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* List of functions defined in the module */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L241">241</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L242">242</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="n">PyMethodDef</span> <span class="n">syslog_methods</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L243">243</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;openlog&quot;</span><span class="p">,</span>         <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span> <span class="n">syslog_openlog</span><span class="p">,</span>           <span class="n">METH_VARARGS</span> <span class="o">|</span> <span class="n">METH_KEYWORDS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L244">244</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;closelog&quot;</span><span class="p">,</span>        <span class="n">syslog_closelog</span><span class="p">,</span>        <span class="n">METH_NOARGS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L245">245</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;syslog&quot;</span><span class="p">,</span>          <span class="n">syslog_syslog</span><span class="p">,</span>          <span class="n">METH_VARARGS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L246">246</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;setlogmask&quot;</span><span class="p">,</span>      <span class="n">syslog_setlogmask</span><span class="p">,</span>      <span class="n">METH_VARARGS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L247">247</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;LOG_MASK&quot;</span><span class="p">,</span>        <span class="n">syslog_log_mask</span><span class="p">,</span>        <span class="n">METH_VARARGS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L248">248</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="s">&quot;LOG_UPTO&quot;</span><span class="p">,</span>        <span class="n">syslog_log_upto</span><span class="p">,</span>        <span class="n">METH_VARARGS</span><span class="p">},</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L249">249</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span>              <span class="nb">NULL</span><span class="p">,</span>                   <span class="mi">0</span><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L250">250</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L251">251</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L252">252</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* Initialization function for the module */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L253">253</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L254">254</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L255">255</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="k">struct</span> <span class="n">PyModuleDef</span> <span class="n">syslogmodule</span> <span class="o">=</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L256">256</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModuleDef_HEAD_INIT</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L257">257</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="s">&quot;syslog&quot;</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L258">258</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L259">259</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="o">-</span><span class="mi">1</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L260">260</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">syslog_methods</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L261">261</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L262">262</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L263">263</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span><span class="p">,</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L264">264</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="nb">NULL</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L265">265</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L266">266</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L267">267</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="n">PyMODINIT_FUNC</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L268">268</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="nf">PyInit_syslog</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L269">269</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L270">270</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L271">271</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L272">272</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Create the module and add the functions */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L273">273</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">m</span> <span class="o">=</span> <span class="n">PyModule_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">syslogmodule</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyModule_Create2 will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L274">274</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L275">275</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L276">276</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L277">277</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Add some symbolic constants to the module */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L278">278</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L279">279</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Priorities */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L280">280</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_EMERG</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L281">281</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_ALERT</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L282">282</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_CRIT</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L283">283</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_ERR</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L284">284</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_WARNING</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L285">285</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_NOTICE</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L286">286</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_INFO</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L287">287</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_DEBUG</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L288">288</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L289">289</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* openlog() option flags */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L290">290</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_PID</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L291">291</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_CONS</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L292">292</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_NDELAY</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L293">293</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef LOG_ODELAY</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L294">294</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_ODELAY</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L295">295</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L296">296</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef LOG_NOWAIT</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L297">297</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_NOWAIT</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L298">298</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L299">299</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef LOG_PERROR</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L300">300</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_PERROR</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L301">301</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L302">302</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L303">303</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Facilities */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L304">304</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_KERN</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L305">305</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_USER</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L306">306</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_MAIL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L307">307</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_DAEMON</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L308">308</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_AUTH</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L309">309</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LPR</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L310">310</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL0</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L311">311</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL1</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L312">312</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL2</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L313">313</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL3</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L314">314</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL4</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L315">315</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL5</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L316">316</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL6</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L317">317</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_LOCAL7</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L318">318</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L319">319</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifndef LOG_SYSLOG</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L320">320</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define LOG_SYSLOG              LOG_DAEMON</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L321">321</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L322">322</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifndef LOG_NEWS</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L323">323</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define LOG_NEWS                LOG_MAIL</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L324">324</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L325">325</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifndef LOG_UUCP</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L326">326</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define LOG_UUCP                LOG_MAIL</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L327">327</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L328">328</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifndef LOG_CRON</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L329">329</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#define LOG_CRON                LOG_DAEMON</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L330">330</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L331">331</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L332">332</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_SYSLOG</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L333">333</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_CRON</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L334">334</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_UUCP</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L335">335</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_NEWS</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L336">336</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L337">337</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef LOG_AUTHPRIV</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L338">338</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyModule_AddIntMacro</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">LOG_AUTHPRIV</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyModule_AddIntConstant will not be inlined into PyInit_syslog because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">PyInit_syslog</td>
+</tr>
+
+<tr>
+<td><a name="L339">339</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L340">340</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L341">341</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="n">m</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L342">342</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L343">343</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L344">344</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

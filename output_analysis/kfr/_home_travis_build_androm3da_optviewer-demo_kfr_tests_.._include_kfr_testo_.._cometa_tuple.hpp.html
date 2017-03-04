@@ -1,0 +1,870 @@
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cm">/** @addtogroup cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *  @{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#pragma once</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../cident.h&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;tuple&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">cometa</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="p">...</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">cvals_t</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span><span class="p">...</span> <span class="n">values</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">using</span> <span class="n">csizes_t</span> <span class="o">=</span> <span class="n">cvals_t</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="n">values</span><span class="p">...</span><span class="o">&gt;</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">swallow</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">namespace</span> <span class="n">details</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">Nsize</span><span class="p">,</span> <span class="n">T</span> <span class="n">Nstart</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">ptrdiff_t</span> <span class="n">Nstep</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">struct</span> <span class="n">cvalseq_impl</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Ts</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Fn</span><span class="p">,</span> <span class="kt">size_t</span><span class="p">...</span> <span class="n">indices</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kt">void</span> <span class="n">cforeach_tuple_impl</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;&amp;</span> <span class="n">tuple</span><span class="p">,</span> <span class="n">Fn</span><span class="o">&amp;&amp;</span> <span class="n">fn</span><span class="p">,</span> <span class="n">csizes_t</span><span class="o">&lt;</span><span class="n">indices</span><span class="p">...</span><span class="o">&gt;</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">swallow</span><span class="p">{</span> <span class="p">(</span><span class="n">fn</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">indices</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tuple</span><span class="p">)),</span> <span class="kt">void</span><span class="p">(),</span> <span class="mi">0</span><span class="p">)...</span> <span class="p">};</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;0ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;0ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> can be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;0ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;0ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;1ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;1ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> can be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;1ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;1ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;0ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;0ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> can be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;0ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;0ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> should always be inlined (cost=always)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1003>cometa::swallow::swallow&lt;int, int&gt;(int&amp;&amp;, int&amp;&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;1ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;1ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> can be inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE with cost=-35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_tuple.html#L767>std::__add_c_ref&lt;std::tuple_element&lt;1ul, std::tuple&lt;bool, bool&gt; &gt;::type&gt;::type std::get&lt;1ul, bool, bool&gt;(std::tuple&lt;bool, bool&gt; const&amp;)</a> inlined into _ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L28>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1353>_ZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1332>_ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1332>_ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1332>_ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1332>_ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1332>_ZN6cometa7details19cforeach_types_implIfJdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_EUlSF_E_JLm0ELm1EEEEvNS3_IJSF_DpT0_EEEST_NS_7cvals_tImJXspT2_EEEE</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1339>_ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1339>_ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1339>_ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1339>_ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1339>_ZN6cometa8cforeachIJfdEZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_EUlSE_E_EEvNS2_IJDpT_EEESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into _ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1352>_ZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into void testo::matrix&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;, std::tuple&lt;bool, bool&gt;, cometa::range&lt;unsigned long&gt;, test_function_fft_accuracy()::$_0&gt;(cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;&amp;&amp;, cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt;&amp;&amp;, cometa::named_arg&lt;cometa::range&lt;unsigned long&gt; &gt;&amp;&amp;, test_function_fft_accuracy()::$_0&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into void testo::matrix&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;, std::tuple&lt;bool, bool&gt;, cometa::range&lt;unsigned long&gt;, test_function_fft_accuracy()::$_0&gt;(cometa::named_arg&lt;cometa::ctypes_t&lt;float, double&gt; const&amp;&gt;&amp;&amp;, cometa::named_arg&lt;std::tuple&lt;bool, bool&gt; &gt;&amp;&amp;, cometa::named_arg&lt;cometa::range&lt;unsigned long&gt; &gt;&amp;&amp;, test_function_fft_accuracy()::$_0&amp;&amp;)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._testo_testo.hpp.html#L494>void testo::matrix<cometa::ctypes_t<float, double> const&, std::tuple<bool, bool>, cometa::range<unsigned long>, test_function_fft_accuracy()::$_0>(cometa::named_arg<cometa::ctypes_t<float, double> const&>&&, cometa::named_arg<std::tuple<bool, bool> >&&, cometa::named_arg<cometa::range<unsigned long> >&&, test_function_fft_accuracy()::$_0&&)</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIdEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into test_function_fft_accuracy()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> too costly to inline (cost=815, threshold=812)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">              </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_.._base_.._cometa.hpp.html#L1357>_ZZZN6cometa8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS4_S6_S8_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSC_IT0_EEONSC_IT1_EEOT2_EUlSD_SG_SJ_E_EEvOSD_OSG_OSJ_SN_ENKUlSD_E_clINS_7ctype_tIfEEEEDaSD_ENKUlSD_E_clIbEESW_SD_</a> will not be inlined into test_function_fft_accuracy()&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 eliminated in favor of 0&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                 </pre><span class="column-entry-yellow"> load of type i8 not eliminated in favor of <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>load</a> because it is clobbered by <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L31>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_dft_test.cpp.html#L55>test_function_fft_accuracy()</a></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Ts</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Fn</span><span class="o">&gt;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kt">void</span> <span class="n">cforeach</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;&amp;</span> <span class="n">tuple</span><span class="p">,</span> <span class="n">Fn</span><span class="o">&amp;&amp;</span> <span class="n">fn</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">details</span><span class="o">::</span><span class="n">cforeach_tuple_impl</span><span class="p">(</span><span class="n">tuple</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">Fn</span><span class="o">&gt;</span><span class="p">(</span><span class="n">fn</span><span class="p">),</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZZN6cometa8cforeachIRKNS0_8ctypes_tIJfdEEESt5tupleIJbbEENS0_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS0_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS0_7ctype_tIfEEEEDaSE_EUlSE_E_ESQ_RNSt16remove_referenceISE_E4typeE</a> can be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_ with cost=-15035 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZZN6cometa8cforeachIRKNS0_8ctypes_tIJfdEEESt5tupleIJbbEENS0_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS0_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS0_7ctype_tIfEEEEDaSE_EUlSE_E_ESQ_RNSt16remove_referenceISE_E4typeE</a> inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L30>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a> can be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_ with cost=-14940 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L30>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIfEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a> inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIfEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZZN6cometa8cforeachIRKNS0_8ctypes_tIJfdEEESt5tupleIJbbEENS0_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS0_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS0_7ctype_tIdEEEEDaSE_EUlSE_E_ESQ_RNSt16remove_referenceISE_E4typeE</a> can be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_ with cost=-15035 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">                                        </pre><span class="column-entry-yellow"> <a href=_usr_bin_.._lib_gcc_x86_64-linux-gnu_4.8_.._.._.._.._include_c++_4.8_bits_move.h.html#L77>_ZSt7forwardIZZN6cometa8cforeachIRKNS0_8ctypes_tIJfdEEESt5tupleIJbbEENS0_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS0_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS0_7ctype_tIdEEEEDaSE_EUlSE_E_ESQ_RNSt16remove_referenceISE_E4typeE</a> inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L30>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a> can be inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_ with cost=-14940 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L30>_ZN6cometa7details19cforeach_tuple_implIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS6_S8_SA_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSE_IT0_EEONSE_IT1_EEOT2_EUlSF_SI_SL_E_EEvOSF_OSI_OSL_SP_ENKUlSF_E_clINS_7ctype_tIdEEEEDaSF_EUlSF_E_JLm0ELm1EEEEvRKS7_IJDpT_EESS_NS_7cvals_tImJXspT1_EEEE</a> inlined into _ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=_home_travis_build_androm3da_optviewer-demo_kfr_tests_.._include_kfr_testo_.._cometa_tuple.hpp.html#L35>_ZN6cometa8cforeachIJbbEZZNS_8cforeachIRKNS_8ctypes_tIJfdEEESt5tupleIJbbEENS_5rangeImEEZN5testo6matrixIS5_S7_S9_ZL26test_function_fft_accuracyvE3$_0EEvONS_9named_argIT_EEONSD_IT0_EEONSD_IT1_EEOT2_EUlSE_SH_SK_E_EEvOSE_OSH_OSK_SO_ENKUlSE_E_clINS_7ctype_tIdEEEEDaSE_EUlSE_E_EEvRKS6_IJDpT_EESR_</a></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>                                 <span class="k">typename</span> <span class="n">details</span><span class="o">::</span><span class="n">cvalseq_impl</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">...(</span><span class="n">Ts</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">());</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&quot;../cometa.hpp&quot;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>

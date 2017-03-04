@@ -1,3 +1,1605 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:357f7412cb8aab57e8d571aecbd0e25f749ac20868df272e9d7088fdaff4b92e
-size 58134
+
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+<div class="centered">
+<table>
+<tr>
+<td>Line</td>
+<td>Hotness</td>
+<td>Optimization</td>
+<td>Source</td>
+<td>Inline Context</td>
+</tr>
+
+<tr>
+<td><a name="L1">1</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Python.h&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L2">2</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L3">3</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L4">4</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*********************************************************</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L5">5</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Embedded interpreter tests that need a custom exe</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L6">6</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L7">7</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Executed via &#39;EmbeddingTests&#39; in Lib/test/test_capi.py</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L8">8</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *********************************************************/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L9">9</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L10">10</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">_testembed_Py_Initialize</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L11">11</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L12">12</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* HACK: the &quot;./&quot; at front avoids a search along the PATH in</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L13">13</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">       Modules/getpath.c */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L14">14</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_SetProgramName</span><span class="p">(</span><span class="sa">L</span><span class="s">&quot;./_testembed&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_SetProgramName will not be inlined into _testembed_Py_Initialize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_testembed_Py_Initialize</td>
+</tr>
+
+<tr>
+<td><a name="L15">15</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_Initialize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Initialize will not be inlined into _testembed_Py_Initialize because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">_testembed_Py_Initialize</td>
+</tr>
+
+<tr>
+<td><a name="L16">16</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L17">17</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L18">18</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L19">19</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*****************************************************</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L20">20</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Test repeated initialisation and subinterpreters</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L21">21</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *****************************************************/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L22">22</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L23">23</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">print_subinterp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L24">24</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L25">25</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Just output some debug stuff */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L26">26</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyThreadState</span> <span class="o">*</span><span class="n">ts</span> <span class="o">=</span> <span class="n">PyThreadState_Get</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                        </pre><span class="column-entry-yellow"> PyThreadState_Get will not be inlined into print_subinterp because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td><a name="L27">27</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;interp %p, thread state %p: &quot;</span><span class="p">,</span> <span class="n">ts</span><span class="o">-&gt;</span><span class="n">interp</span><span class="p">,</span> <span class="n">ts</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> printf will not be inlined into print_subinterp because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type %struct._is* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L26>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type %struct._is* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L26>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">                                               </pre><span class="column-entry-yellow"> load of type %struct._is* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L26>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L28">28</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> fflush will not be inlined into print_subinterp because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L27>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L27>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated in favor of <a href=._Programs__testembed.c.html#L28>load</a> because it is clobbered by <a href=._Programs__testembed.c.html#L27>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">licm</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> failed to move load with loop-invariant address because the loop may invalidate its value&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L27>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated in favor of <a href=._Programs__testembed.c.html#L28>load</a> because it is clobbered by <a href=._Programs__testembed.c.html#L27>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L29">29</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyRun_SimpleString</span><span class="p">(</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyRun_SimpleStringFlags will not be inlined into print_subinterp because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow">print_subinterp</td>
+</tr>
+
+<tr>
+<td><a name="L30">30</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;import sys;&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L31">31</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;print(&#39;id(modules) =&#39;, id(sys.modules));&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L32">32</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;sys.stdout.flush()&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L33">33</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L34">34</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L35">35</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L36">36</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">test_repeated_init_and_subinterpreters</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L37">37</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L38">38</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyThreadState</span> <span class="o">*</span><span class="n">mainstate</span><span class="p">,</span> <span class="o">*</span><span class="n">substate</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L39">39</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef WITH_THREAD</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L40">40</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyGILState_STATE</span> <span class="n">gilstate</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L41">41</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L42">42</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L43">43</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L44">44</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">15</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">loop-vectorize</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> loop not vectorized: vectorization is not beneficial and is not explicitly forced&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L45">45</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;--- Pass %d ---</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> printf will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L46">46</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">_testembed_Py_Initialize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L11>_testembed_Py_Initialize</a> can be inlined into test_repeated_init_and_subinterpreters with cost=-14965 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L11>_testembed_Py_Initialize</a> inlined into test_repeated_init_and_subinterpreters&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L47">47</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">mainstate</span> <span class="o">=</span> <span class="n">PyThreadState_Get</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                    </pre><span class="column-entry-yellow"> PyThreadState_Get will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L48">48</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L49">49</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef WITH_THREAD</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L50">50</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyEval_InitThreads</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyEval_InitThreads will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L51">51</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyEval_ReleaseThread</span><span class="p">(</span><span class="n">mainstate</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyEval_ReleaseThread will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L52">52</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L53">53</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">gilstate</span> <span class="o">=</span> <span class="n">PyGILState_Ensure</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                   </pre><span class="column-entry-yellow"> PyGILState_Ensure will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L54">54</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L55">55</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">print_subinterp</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> can be inlined into test_repeated_init_and_subinterpreters with cost=130 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> inlined into test_repeated_init_and_subinterpreters&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L56">56</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyThreadState_Swap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyThreadState_Swap will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L57">57</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L58">58</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">loop-unroll</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> completely unrolled loop with 3 iterations&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L59">59</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">substate</span> <span class="o">=</span> <span class="n">Py_NewInterpreter</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">                       </pre><span class="column-entry-yellow"> Py_NewInterpreter will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L60">60</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">print_subinterp</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> can be inlined into test_repeated_init_and_subinterpreters with cost=130 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> inlined into test_repeated_init_and_subinterpreters&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L61">61</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>            <span class="n">Py_EndInterpreter</span><span class="p">(</span><span class="n">substate</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">            </pre><span class="column-entry-yellow"> Py_EndInterpreter will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L62">62</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L63">63</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L64">64</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyThreadState_Swap</span><span class="p">(</span><span class="n">mainstate</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyThreadState_Swap will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L65">65</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">print_subinterp</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> can be inlined into test_repeated_init_and_subinterpreters with cost=-14870 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L24>print_subinterp</a> inlined into test_repeated_init_and_subinterpreters&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L66">66</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#ifdef WITH_THREAD</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L67">67</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyGILState_Release</span><span class="p">(</span><span class="n">gilstate</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyGILState_Release will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L68">68</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cp">#endif</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L69">69</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L70">70</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">PyEval_RestoreThread</span><span class="p">(</span><span class="n">mainstate</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> PyEval_RestoreThread will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L71">71</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">Py_Finalize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> Py_Finalize will not be inlined into test_repeated_init_and_subinterpreters because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L35>test_repeated_init_and_subinterpreters</a></td>
+</tr>
+
+<tr>
+<td><a name="L72">72</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L73">73</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L74">74</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L75">75</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/*****************************************************</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L76">76</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> * Test forcing a particular IO encoding</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L77">77</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm"> *****************************************************/</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L78">78</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L79">79</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">check_stdio_details</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">encoding</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">errors</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L80">80</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L81">81</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Output info for the test case to check */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L82">82</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">encoding</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L83">83</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expected encoding: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> printf will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L84">84</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L85">85</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expected encoding: default</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> puts will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L86">86</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L87">87</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">errors</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L88">88</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expected errors: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> printf will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L89">89</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L90">90</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expected errors: default</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> puts will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L91">91</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L92">92</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> fflush will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L90>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L90>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated in favor of <a href=._Programs__testembed.c.html#L92>load</a> because it is clobbered by <a href=._Programs__testembed.c.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated because it is clobbered by <a href=._Programs__testembed.c.html#L90>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">gvn</td>
+<td><pre style="display:inline">           </pre><span class="column-entry-yellow"> load of type %struct._IO_FILE* not eliminated in favor of <a href=._Programs__testembed.c.html#L92>load</a> because it is clobbered by <a href=._Programs__testembed.c.html#L88>call</a>&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L93">93</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Force the given IO encoding */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L94">94</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_SetStandardStreamEncoding</span><span class="p">(</span><span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_SetStandardStreamEncoding will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L95">95</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">_testembed_Py_Initialize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L11>_testembed_Py_Initialize</a> can be inlined into check_stdio_details with cost=35 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L11>_testembed_Py_Initialize</a> inlined into check_stdio_details&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L96">96</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">PyRun_SimpleString</span><span class="p">(</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> PyRun_SimpleStringFlags will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L97">97</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;import sys;&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L98">98</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;print(&#39;stdin: {0.encoding}:{0.errors}&#39;.format(sys.stdin));&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L99">99</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;print(&#39;stdout: {0.encoding}:{0.errors}&#39;.format(sys.stdout));&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L100">100</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;print(&#39;stderr: {0.encoding}:{0.errors}&#39;.format(sys.stderr));&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L101">101</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="s">&quot;sys.stdout.flush()&quot;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L102">102</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L103">103</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_Finalize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Finalize will not be inlined into check_stdio_details because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L78>check_stdio_details</a></td>
+</tr>
+
+<tr>
+<td><a name="L104">104</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L105">105</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L106">106</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">test_forced_io_encoding</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L107">107</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L108">108</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Check various combinations */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L109">109</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;--- Use defaults ---</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> puts will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L110">110</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">check_stdio_details</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> can be inlined into test_forced_io_encoding with cost=245 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> inlined into test_forced_io_encoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L111">111</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;--- Set errors only ---</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> puts will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L112">112</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">check_stdio_details</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&quot;ignore&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> can be inlined into test_forced_io_encoding with cost=250 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> inlined into test_forced_io_encoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L113">113</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;--- Set encoding only ---</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> puts will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L114">114</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">check_stdio_details</span><span class="p">(</span><span class="s">&quot;latin-1&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> can be inlined into test_forced_io_encoding with cost=250 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> inlined into test_forced_io_encoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L115">115</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;--- Set encoding and errors ---</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> puts will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L116">116</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">check_stdio_details</span><span class="p">(</span><span class="s">&quot;latin-1&quot;</span><span class="p">,</span> <span class="s">&quot;replace&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> can be inlined into test_forced_io_encoding with cost=-14745 (threshold=375)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L80>check_stdio_details</a> inlined into test_forced_io_encoding&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L117">117</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L118">118</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* Check calling after initialization fails */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L119">119</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_Initialize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Initialize will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L120">120</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L121">121</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">Py_SetStandardStreamEncoding</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> Py_SetStandardStreamEncoding will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L122">122</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Unexpected success calling Py_SetStandardStreamEncoding&quot;</span><span class="p">);</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> printf will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L123">123</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L124">124</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="n">Py_Finalize</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-red">inline</td>
+<td><pre style="display:inline">    </pre><span class="column-entry-yellow"> Py_Finalize will not be inlined into test_forced_io_encoding because its definition is unavailable&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=._Programs__testembed.c.html#L105>test_forced_io_encoding</a></td>
+</tr>
+
+<tr>
+<td><a name="L125">125</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L126">126</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L127">127</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="cm">/* Different embedding tests */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L128">128</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L129">129</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L130">130</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L131">131</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="cm">/* TODO: Check the argument string to allow for more test cases */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L132">132</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L133">133</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="cm">/* For now: assume &quot;forced_io_encoding */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L134">134</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">test_forced_io_encoding</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L107>test_forced_io_encoding</a> can be inlined into main with cost=-13585 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L107>test_forced_io_encoding</a> inlined into main&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L135">135</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L136">136</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="cm">/* Run the original embedding test case by default */</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L137">137</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>        <span class="n">test_repeated_init_and_subinterpreters</span><span class="p">();</span></pre></div></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-white">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L37>test_repeated_init_and_subinterpreters</a> can be inlined into main with cost=-13620 (threshold=250)&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td class="column-entry-green">inline</td>
+<td><pre style="display:inline">        </pre><span class="column-entry-yellow"> <a href=._Programs__testembed.c.html#L37>test_repeated_init_and_subinterpreters</a> inlined into main&nbsp;</span></td>
+<td class="column-entry-yellow"><a href=Parser_pgenmain.c.html#L49>main</a></td>
+</tr>
+
+<tr>
+<td><a name="L138">138</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L139">139</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L140">140</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre><span class="p">}</span></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L141">141</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+<tr>
+<td><a name="L142">142</a></td>
+<td></td>
+<td></td>
+<td><div class="highlight"><pre></pre></div></td>
+</tr>
+
+</table>
+</body>
+</html>
