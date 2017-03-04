@@ -21,13 +21,13 @@ CMake Warning:
 
 -- Build files have been written to: /home/travis/build/androm3da/optviewer-demo/kfr_build
 +make -j4
-Scanning dependencies of target dft
-Scanning dependencies of target sample_rate_conversion
 Scanning dependencies of target biquads
 Scanning dependencies of target fir
-[ 12%] [ 12%] [ 18%] [ 25%] Building CXX object examples/CMakeFiles/dft.dir/dft.cpp.o
-Building CXX object examples/CMakeFiles/fir.dir/fir.cpp.o
+[  6%] Scanning dependencies of target dft
 Building CXX object examples/CMakeFiles/biquads.dir/biquads.cpp.o
+[ 12%] Building CXX object examples/CMakeFiles/dft.dir/dft.cpp.o
+[ 18%] Scanning dependencies of target sample_rate_conversion
+[ 25%] Building CXX object examples/CMakeFiles/fir.dir/fir.cpp.o
 Building CXX object examples/CMakeFiles/sample_rate_conversion.dir/sample_rate_conversion.cpp.o
 Linking CXX executable ../bin/biquads
 [ 25%] Built target biquads
@@ -36,8 +36,8 @@ Scanning dependencies of target window
 Linking CXX executable ../bin/fir
 [ 31%] Built target fir
 Scanning dependencies of target base_test
-[ 37%] Linking CXX executable ../bin/sample_rate_conversion
-Building CXX object tests/CMakeFiles/base_test.dir/base_test.cpp.o
+[ 37%] Building CXX object tests/CMakeFiles/base_test.dir/base_test.cpp.o
+Linking CXX executable ../bin/sample_rate_conversion
 [ 37%] Built target sample_rate_conversion
 Scanning dependencies of target complex_test
 [ 43%] Building CXX object tests/CMakeFiles/complex_test.dir/complex_test.cpp.o
