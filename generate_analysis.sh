@@ -36,5 +36,8 @@ build_kfr()
 
 
 build_kfr 2>&1 | tee ${OUTPUT}/kfr/build.log
-KFR_YAML=$(find kfr_build -name '*.opt.yaml')
+#KFR_YAML=$(find kfr_build -name '*.opt.yaml')
+# FIXME: hack until we get git LFS figured out (index.html
+#       is greater than allowed limit)
+KFR_YAML=$(find kfr_build -name '*.opt.yaml' | head -4)
 ./llvm/utils/opt-viewer/opt-viewer.py -source-dir kfr/ ${KFR_YAML} ${OUTPUT}/kfr/
